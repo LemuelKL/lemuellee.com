@@ -1,30 +1,30 @@
-<div class="h-screen flex flex-col divide-y-8">
-	<div class="bg-hk w-full h-2/6 px-12 flex flex-col">
-		<div class="outline bg-white bg-opacity-40 h-1/2 my-auto flex items-center justify-between">
-			<div class="w-1/3 p-3">
-				<p>Computer Science</p>
-				<p>HKU & RHUL</p>
-			</div>
-			<img class="h-24 rounded-full border-2 avatar" src="lemuel.jpg" alt="lemuel" />
-			<div class="w-1/3 p-3">"The path to less suffering is through suffering."</div>
-		</div>
+<script>
+	import Layout from './Layout.svelte';
+</script>
+
+<Layout>
+	<div slot="banner-left">
+		<p>Computer Science</p>
+		<p>HKU & RHUL</p>
 	</div>
-	<div class="w-full h-4/6 flex flex-col items-center p-3 gap-1">
-		<p class="place-self-start text-2xl italic">Introduction</p>
+	<img slot="banner-center" src="lemuel.jpg" class="h-24 rounded-full border-2" alt="lemuel" />
+	<p slot="banner-right">"The path to less suffering is through suffering."</p>
+	<div slot="content" class="flex flex-col items-start p-4 gap-1">
+		<p class="text-2xl italic">Introduction</p>
 		<p>
 			I was born and raised in Hong Kong. I am pursuing a BEng(CompSc) from The University of Hong
 			Kong. Right now, I am in the UK, being an exchange student at Royal Holloway, University of
 			London.
 		</p>
 
-		<p class="place-self-start text-2xl italic">Philosophy</p>
+		<p class="text-2xl italic">Philosophy</p>
 		<p>
 			I believe the fundamental narrative of life is suffering. I have accepted the terrible
 			repsonsibility conciousness implies, and have decided to carry on this burden and face the
 			neccessary challenges with my shoulders back.
 		</p>
 
-		<p class="place-self-start text-2xl italic">Personality</p>
+		<p class="text-2xl italic">Personality</p>
 		<p>
 			I try be honest with people. I speak directly and see discussion as the way to resolving
 			problems in life. Of course I am not naive and expect people in return. I am capable of great
@@ -43,7 +43,7 @@
 			trace them back to your past actions.
 		</p>
 		<p>
-			On the MBTI 16 Personalities Test, I am an INTJ. I first came across this test in 2019 from a
+			On the MBTI 16 Personalities Test, I am an INTJ. I came across this test in 2019 from a
 			teacher. I have since been doing it once a year and the results remain unchanged.
 		</p>
 
@@ -68,12 +68,4 @@
 			such. As I mature, I have started to add in some religious and philisophical texts to my list.
 		</p>
 	</div>
-</div>
-
-<style>
-	.bg-hk {
-		background-image: url('/wallhaven-zx5qzj_2560x1440.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-</style>
+</Layout>
