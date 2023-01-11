@@ -4,13 +4,10 @@
 </script>
 
 <Navbar />
-<main class="bg-gray-200"><slot /></main>
+<main><slot /></main>
 
 <style>
 	main {
-		background-image: url('texture.svg');
-		background-repeat: repeat;
-		background-position: center;
-		background-size: 2;
+		font-family: 'Times New Roman', Times, serif;
 	}
 </style>

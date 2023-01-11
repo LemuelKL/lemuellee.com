@@ -17,7 +17,7 @@
 			viewBox="0 0 24 24"
 			stroke-width="1.5"
 			stroke="currentColor"
-			class="w-7 h-7"
+			class="w-7 h-7 animate-pulse"
 		>
 			<path
 				stroke-linecap="round"
@@ -32,11 +32,12 @@
 		{#each items as item}
 			<a
 				href={item.href}
-				class="p-2 hover:bg-gray-800"
+				class="p-2"
 				class:text-gray-400={$page.url.pathname !== item.href}
-                class:underline={$page.url.pathname === item.href}>
-                {item.title}
-            </a>
+				class:underline={$page.url.pathname === item.href}
+			>
+				{item.title}
+			</a>
 		{/each}
 	</div>
 </div>

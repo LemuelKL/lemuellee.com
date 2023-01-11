@@ -1,5 +1,5 @@
 <div class="h-screen font-serif">
-	<div class="w-full h-1/6 bg-emerald-300 bg-signal">
+	<div class="w-full h-1/6 bg-signal">
 		<div class="flex justify-center items-center h-full text-3xl">
 			<div class="bg-white p-2 shadow-inner shadow-gray-900">Contact Me</div>
 		</div>
@@ -8,7 +8,7 @@
 		<div class="w-11/12 bg-gray-300 outline flex justify-center gap-4 p-3">
 			<div class="flex items-center gap-1">
 				<img src="github-mark/github-mark.png" alt="github logo" class="w-6 h-6" />
-				<a href="https://www.github.com/LemuelKL">LemueLKL</a>
+				<a href="https://www.github.com/LemuelKL">LemuelKL</a>
 			</div>
 			<div class="flex items-center gap-1">
 				<img src="linkedin.svg" alt="github logo" class="w-6 h-6" />
@@ -49,7 +49,7 @@
 
 <style>
 	.bg-signal {
-		background-color: #000000;
+		background-color: #13589976;
 		background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 	}
 
