@@ -4,7 +4,6 @@
 	export let title = '';
 	export let tags: string[] = [];
 	export let description = '';
-	export let date = '';
 	export let url = '';
 
 	function gotoProject() {
@@ -13,17 +12,14 @@
 </script>
 
 <div
-	class="outline bg-opacity-95 bg-gray-400 p-3 flex justify-between hover:cursor-pointer hover:bg-amber-400"
+	class="outline bg-opacity-95 bg-gray-300 p-3 flex flex-col gap-2 hover:cursor-pointer hover:bg-amber-400"
 	on:mouseup={gotoProject}
 >
-	<div class="flex flex-col">
-		<h1 class="text-xl">{title}</h1>
-		<p class="flex gap-2">
-			{#each tags as tag}
-				<span class="outline outline-1 outline-gray-700 px-1 text-gray-700 text-sm">{tag}</span>
-			{/each}
-		</p>
-		<p>{description}</p>
-	</div>
-	<div>{date}</div>
+	<h1 class="text-xl">{title}</h1>
+	<p class="flex gap-2 flex-wrap">
+		{#each tags as tag}
+			<span class="outline outline-1 outline-gray-700 px-1 text-gray-700 text-sm hover:bg-white">{tag}</span>
+		{/each}
+	</p>
+	<p>{description}</p>
 </div>

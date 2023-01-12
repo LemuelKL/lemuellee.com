@@ -3,7 +3,7 @@
 </script>
 
 <Layout>
-	<div slot="banner-left">
+	<div slot="banner-left" class="font-bold">
 		<p>Computer Science</p>
 		<p>HKU & RHUL</p>
 	</div>

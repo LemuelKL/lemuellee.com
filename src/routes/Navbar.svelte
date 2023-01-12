@@ -8,7 +8,7 @@
 	];
 </script>
 
-<div class="bg-black flex justify-center">
+<div class="bg-black flex justify-center sticky top-0 z-50">
 	<div class="bg-black max-w-5xl w-full text-white font-serif flex justify-between">
 		<!-- Icon & Title -->
 		<div class="flex items-center gap-1 p-2">

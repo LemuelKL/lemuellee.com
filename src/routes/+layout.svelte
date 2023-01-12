@@ -3,8 +3,8 @@
 	import './../app.css';
 </script>
 
-<Navbar />
-<main><slot /></main>
+<Navbar/>
+<main class="relative h-[calc(100vh-48px)]"><slot /></main>
 
 <style>
 	main {
