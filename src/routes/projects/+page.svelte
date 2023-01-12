@@ -72,25 +72,23 @@
 
 <Layout bgImgUrl="14961556102_13f1b039b4_o.jpg">
 	<div slot="banner-left" class="text-left font-semibold">
-		<p>Functional Programming</p>
-		<p>Software Language</p>
-		<p>Machine Learning</p>
-		<p>Database</p>
-		<p>Web Development</p>
+		<p>AI & Robotics</p>
+		<p>Big Data Analytics</p>
+		<p>Systems and Networking</p>
+		<p>Theoretical Computer Science</p>
 	</div>
 	<div slot="banner-center" class="text-center font-semibold">
 		<p>Python</p>
-		<p>Java</p>
+		<p>Java, C#</p>
 		<p>C/C++</p>
 		<p>JavaScript & TypeScript</p>
-		<p>C#</p>
 	</div>
 	<div slot="banner-right" class="text-right font-semibold">
-		<p>Algorithmic Trading</p>
-		<p>Computer Vision</p>
-		<p>Cyber Security</p>
-		<p>Computional Optimisation</p>
-		<p>Operating System</p>
+		<p>Qt, PyQt, Unity</p>
+		<p>ReactJS, VueJS, SvelteKit</p>
+		<p>MySQL, Firebase, Supabase</p>
+		<p>Linux, Arduino, Processing</p>
+		<!-- <p>Operating System</p> -->
 	</div>
 	<div slot="content" class="h-screen font-serif bg-circuit p-4 gap-3 grid md:grid-cols-3">
 		{#each projects as project}

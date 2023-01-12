@@ -7,7 +7,12 @@
 		<p>Computer Science</p>
 		<p>HKU & RHUL</p>
 	</div>
-	<img slot="banner-center" src="lemuel.jpg" class="h-24 rounded-full border-2" alt="lemuel" />
+	<img
+		slot="banner-center"
+		src="lemuel.jpg"
+		class="h-24 rounded-full border-2"
+		alt="lemuel"
+	/>
 	<p slot="banner-right">"The path to less suffering is through suffering."</p>
 	<div slot="content" class="flex flex-col items-start p-4 gap-1">
 		<p class="text-2xl italic">Introduction</p>
