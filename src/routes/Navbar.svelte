@@ -6,19 +6,20 @@
 		{ title: 'Projects', href: '/projects' },
 		{ title: 'Blog', href: '/blog' }
 	];
+	let mobileMenu = false;
 </script>
 
 <div class="bg-black flex justify-center sticky top-0 z-50">
 	<div class="bg-black max-w-5xl w-full text-white font-serif flex justify-between">
 		<!-- Icon & Title -->
-		<div class="flex items-center gap-1 p-2">
+		<div class="flex items-start gap-1 p-2">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
 				viewBox="0 0 24 24"
 				stroke-width="1.5"
 				stroke="currentColor"
-				class="w-7 h-7 animate-pulse"
+				class="w-8 h-8 animate-pulse"
 			>
 				<path
 					stroke-linecap="round"
@@ -28,8 +29,8 @@
 			</svg>
 			<p class="font-semibold text-2xl">LEMuel</p>
 		</div>
-		<!--  -->
-		<div class="flex items-center divide-x divide-gray-500">
+		<!-- Desktop Menu -->
+		<div class="hidden sm:flex items-center divide-x divide-gray-500">
 			{#each items as item}
 				<a
 					href={item.href}
@@ -40,6 +41,36 @@
 					{item.title}
 				</a>
 			{/each}
+		</div>
+		<!-- Mobile Menu -->
+		<div class="sm:hidden flex flex-col items-end p-3 hover:cursor-pointer">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-6 w-6 hover:cursor-pointer"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+				on:mousedown={() => (mobileMenu = !mobileMenu)}
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M4 6h16M4 12h16M4 18h16"
+				/>
+			</svg>
+			{#if mobileMenu}
+				{#each items as item}
+					<a
+						href={item.href}
+						class="p-1 text-right"
+						class:text-gray-400={$page.url.pathname !== item.href}
+						class:underline={$page.url.pathname === item.href}
+					>
+						{item.title}
+					</a>
+				{/each}
+			{/if}
 		</div>
 	</div>
 </div>
