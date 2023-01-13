@@ -20,7 +20,7 @@
 	];
 </script>
 
-<div class="h-full">
+<div class="h-full border-b-4">
 	{#each wallpapers as wallpaper}
 		{#if $page.url.pathname === wallpaper.route}
 			<div class="h-full bg-center bg-cover" style="background-image: url({wallpaper.uri})" />

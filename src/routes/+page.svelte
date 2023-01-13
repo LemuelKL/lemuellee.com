@@ -1,5 +1,9 @@
 <div class="absolute top-24 flex justify-center w-full">
-	<img src="lemuel.jpg" class="h-24 rounded-full border-2  top-24 z-49" alt="lemuel" />
+	<div
+		class="rounded-full h-24 p-1 bg-gradient-to-br from-gray-100 via-blue-gray-400 to-blue-gray-600 background-animate"
+	>
+		<img src="lemuel.jpg" class="rounded-full h-full" alt="lemuel" />
+	</div>
 </div>
 <div class="flex flex-col items-start p-4 gap-1">
 	<p class="text-2xl italic">Introduction</p>
@@ -59,3 +63,23 @@
 		such. As I mature, I have started to add in some religious and philisophical texts to my list.
 	</p>
 </div>
+
+<style>
+	.background-animate {
+		background-size: 400%;
+
+		-webkit-animation: AnimationName 3s ease infinite;
+		-moz-animation: AnimationName 3s ease infinite;
+		animation: AnimationName 3s ease infinite;
+	}
+
+	@keyframes AnimationName {
+		0%,
+		100% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+	}
+</style>

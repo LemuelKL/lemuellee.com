@@ -39,10 +39,14 @@
 </script>
 
 <div class="absolute top-24 flex justify-center w-full">
-	<img src="lemuel-pro.jpg" class="h-24 rounded-full border-2  top-24 z-49" alt="lemuel" />
+	<div
+		class="rounded-full h-24 p-1 bg-gradient-to-br from-green-100 via-blue-gray-400 to-blue-gray-600 background-animate"
+	>
+		<img src="lemuel-pro.jpg" class="rounded-full h-full" alt="lemuel" />
+	</div>
 </div>
 
-<div class="w-full flex flex-col items-center p-4 gap-4">
+<div class="w-full max-w-5xl flex flex-col items-center p-4 gap-4 mx-auto">
 	<div class="bg-gray-200 outline w-full flex justify-center gap-4 p-3">
 		{#each contactItems as item}
 			<div
@@ -56,7 +60,7 @@
 			</div>
 		{/each}
 	</div>
-	<div class="w-full max-w-5xl bg-gray-200 outline flex flex-col items-center gap-4 p-3">
+	<div class="w-full bg-gray-200 outline flex flex-col items-center gap-4 p-3">
 		<p>
 			I'm currently residing in <a
 				href="https://www.royalholloway.ac.uk/student-life/accommodation/undergraduate/kingswood-1-and-2/"
@@ -72,5 +76,22 @@
 <style>
 	a:hover {
 		text-decoration: underline;
+	}
+	.background-animate {
+		background-size: 400%;
+
+		-webkit-animation: AnimationName 3s ease infinite;
+		-moz-animation: AnimationName 3s ease infinite;
+		animation: AnimationName 3s ease infinite;
+	}
+
+	@keyframes AnimationName {
+		0%,
+		100% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
 	}
 </style>

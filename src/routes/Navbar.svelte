@@ -22,7 +22,7 @@
 </script>
 
 <div
-	class="h12 sticky top-0 z-50 bg-black text-white font-serif"
+	class="h12 sticky top-0 z-50 bg-black text-white font-serif transition-all duration-300"
 	class:bg-opacity-50={scrollY > 48}
 >
 	<div class="flex justify-center">
