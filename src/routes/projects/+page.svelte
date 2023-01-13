@@ -1,5 +1,4 @@
 <script>
-	import Layout from './../Layout.svelte';
 	import Project from './Project.svelte';
 
 	const projects = [
@@ -70,29 +69,8 @@
 	];
 </script>
 
-<Layout bgImgUrl="14961556102_13f1b039b4_o.jpg">
-	<div slot="banner-left" class="text-left font-semibold">
-		<p>AI & Robotics</p>
-		<p>Big Data Analytics</p>
-		<p>Systems and Networking</p>
-		<p>Theoretical Computer Science</p>
-	</div>
-	<div slot="banner-center" class="text-center font-semibold">
-		<p>Python</p>
-		<p>Java, C#</p>
-		<p>C/C++</p>
-		<p>JavaScript & TypeScript</p>
-	</div>
-	<div slot="banner-right" class="text-right font-semibold">
-		<p>Qt, PyQt, Unity</p>
-		<p>ReactJS, VueJS, SvelteKit</p>
-		<p>MySQL, Firebase, Supabase</p>
-		<p>Linux, Arduino, Processing</p>
-		<!-- <p>Operating System</p> -->
-	</div>
-	<div slot="content" class="h-screen font-serif bg-circuit p-4 gap-3 grid md:grid-cols-3">
-		{#each projects as project}
-			<Project {...project} />
-		{/each}
-	</div>
-</Layout>
+<div class="font-serif p-4 gap-3 grid md:grid-cols-3">
+	{#each projects as project}
+		<Project {...project} />
+	{/each}
+</div>
