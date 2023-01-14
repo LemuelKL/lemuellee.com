@@ -13,7 +13,7 @@
 	<title>Blog</title>
 </svelte:head>
 
-<ul class="justify-self-start w-full p-3">
+<ul class="justify-self-start w-full p-3 flex flex-col gap-3">
 	{#each data.posts as post}
 		<li
 			class="flex flex-col outline p-2 bg-gray-200 hover:bg-yellow-400 hover:cursor-pointer"
