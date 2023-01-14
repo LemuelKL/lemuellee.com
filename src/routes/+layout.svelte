@@ -12,7 +12,7 @@
 
 <Navbar {scrollY} on:scrollToTop={scrollToTop} />
 <div class="h-48 sticky -top-36"><Banner /></div>
-<main><slot /></main>
+<main class="mx-auto max-w-5xl flex justify-center"><slot /></main>
 <svelte:window bind:scrollY />
 
 <style>

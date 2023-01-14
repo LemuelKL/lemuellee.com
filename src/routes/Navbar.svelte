@@ -28,7 +28,7 @@
 	<div class="flex justify-center">
 		<div class="max-w-5xl w-full flex justify-between">
 			<!-- Icon & Title -->
-			<div class="flex items-start gap-1 p-2">
+			<div class="flex items-start gap-1 p-2 hover:cursor-default">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
