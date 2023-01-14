@@ -8,21 +8,21 @@
 <div class="flex flex-col items-start p-4 gap-1">
 	<p class="text-2xl italic">Introduction</p>
 	<p>
-		I was born and raised in Hong Kong. I am pursuing a BEng(CompSc) from The University of Hong
-		Kong. Right now, I am in the UK, being an exchange student at Royal Holloway, University of
-		London.
+		My name is Lee Kwok Lam. Please just call me Lemuel. I was born and raised in Hong Kong. I am
+		pursuing a BEng(CompSc) from The University of Hong Kong. But right now, I am in the UK, being
+		an exchange student at Royal Holloway, University of London.
 	</p>
 
 	<p class="text-2xl italic">Philosophy</p>
 	<p>
 		I believe the fundamental narrative of life is suffering. I have accepted the terrible
-		repsonsibility conciousness implies, and have decided to carry on this burden and face the
+		repsonsibility conciousness implies, and have decided to carry this burden and face the
 		neccessary challenges with my shoulders back.
 	</p>
 
 	<p class="text-2xl italic">Personality</p>
 	<p>
-		I try be honest with people. I speak directly and see discussion as the way to resolving
+		I try be honest with people. I tend to approach discussions directly and see them as the way to resolving
 		problems in life. Of course I am not naive and expect people in return. I am capable of great
 		destruction when neccessary.
 	</p>
@@ -42,8 +42,8 @@
 		it is the result of some decisions one made in the past.
 	</p>
 	<p>
-		On the MBTI 16 Personalities Test, I am an INTJ. I came across this test in 2019 from a teacher.
-		I have since been doing it once a year and the results remain unchanged.
+		On the MBTI 16 Personalities Test, I am an INTJ. A teacher of mine introduced me this test in
+		2019. I have since been doing it occasionally the results remain unchanged.
 	</p>
 
 	<p class="place-self-start text-2xl italic">Hobbies</p>
