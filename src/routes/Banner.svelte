@@ -18,11 +18,13 @@
 			uri: '/121134.jpg'
 		}
 	];
+
+	$: baseRoute = '/' + $page.url.pathname.split('/')[1];
 </script>
 
 <div class="h-full border-b-4">
 	{#each wallpapers as wallpaper}
-		{#if $page.url.pathname === wallpaper.route}
+		{#if baseRoute === wallpaper.route}
 			<div
 				class="h-full bg-center bg-cover"
 				style="background-image: url(/wallpaper/{wallpaper.uri})"
