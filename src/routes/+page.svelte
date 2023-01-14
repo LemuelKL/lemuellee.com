@@ -89,23 +89,3 @@
 		(like Love and Hope) despite the tragic of reality.
 	</p>
 </div>
-
-<style>
-	.background-animate {
-		background-size: 400%;
-
-		-webkit-animation: AnimationName 3s ease infinite;
-		-moz-animation: AnimationName 3s ease infinite;
-		animation: AnimationName 3s ease infinite;
-	}
-
-	@keyframes AnimationName {
-		0%,
-		100% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-	}
-</style>
