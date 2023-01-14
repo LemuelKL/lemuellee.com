@@ -69,6 +69,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Projects</title>
+</svelte:head>
+
 <div class="font-serif p-4 gap-3 grid md:grid-cols-3">
 	{#each projects as project}
 		<Project {...project} />

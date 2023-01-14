@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
+
 <div class="absolute top-24 flex justify-center w-full">
 	<div
 		class="rounded-full h-24 p-1 bg-gradient-to-br from-gray-100 via-blue-gray-400 to-blue-gray-600 background-animate"
@@ -22,9 +26,9 @@
 
 	<p class="text-2xl italic">Personality</p>
 	<p>
-		I try be honest with people. I tend to approach discussions directly and see them as the way to resolving
-		problems in life. Of course I am not naive and expect people in return. I am capable of great
-		destruction when neccessary.
+		I try be honest with people. I tend to approach discussions directly and see them as the way to
+		resolving problems in life. Of course I am not naive and expect people in return. I am capable
+		of great destruction when neccessary.
 	</p>
 	<p>
 		I employ self-improvement as the great strategy for life. I actively plan out my days and weeks.

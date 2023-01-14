@@ -38,6 +38,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Contact</title>
+</svelte:head>
+
 <div class="absolute top-24 flex justify-center w-full">
 	<div
 		class="rounded-full h-24 p-1 bg-gradient-to-br from-green-100 via-blue-gray-400 to-blue-gray-600 background-animate"
@@ -46,7 +50,9 @@
 	</div>
 </div>
 
-<div class="flex flex-col items-center p-4 gap-4 mx-auto">
+<div
+	class="flex flex-col items-center p-4 gap-4 mx-auto"
+>
 	<div class="bg-gray-200 outline w-full flex justify-center gap-4 p-3">
 		{#each contactItems as item}
 			<div
