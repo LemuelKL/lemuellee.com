@@ -12,7 +12,8 @@
 <Navbar {scrollY} on:scrollToTop={scrollToTop} />
 <div class="h-48 sticky -top-36"><Banner /></div>
 <main
-	class="mx-auto max-w-5xl flex justify-center h-full min-h-[calc(100vh-3rem)]"
+	class="mx-auto max-w-5xl flex justify-center h-full min-h-[calc(100vh-3rem)]
+	dark:bg-gray-900 dark:text-gray-200"
 >
 	<slot />
 </main>

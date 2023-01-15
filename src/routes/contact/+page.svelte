@@ -1,7 +1,12 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	export let data: PageData;
-	import { GithubBrand, LinkedinBrand, CircleUserSolid, EnvelopeSolid } from 'svelte-awesome-icons';
+	import {
+		GithubBrand,
+		LinkedinBrand,
+		AddressCardSolid,
+		AtSolid
+	} from 'svelte-awesome-icons';
 	interface ContactItem {
 		icon: any;
 		url: string;
@@ -20,12 +25,12 @@
 			text: 'lemuelkl'
 		},
 		{
-			icon: CircleUserSolid,
+			icon: AddressCardSolid,
 			url: 'https://www.overleaf.com/read/jwddjkzcgwgq',
 			text: 'Curriculum Vitae'
 		},
 		{
-			icon: EnvelopeSolid,
+			icon: AtSolid,
 			url: 'mailto:lemuellee.kl@gmail.com',
 			text: 'lemuellee.kl@gmail.com'
 		}
@@ -50,23 +55,25 @@
 	</div>
 </div>
 
-<div
-	class="flex flex-col items-center p-4 gap-4 mx-auto"
->
-	<div class="bg-gray-200 outline w-full flex justify-center gap-4 p-3">
+<div class="flex flex-col items-center p-4 gap-4 mx-auto">
+	<div class="bg-gray-200 dark:bg-gray-700 outline w-full flex justify-center gap-4 p-3">
 		{#each contactItems as item}
 			<div
 				class="flex items-center gap-1 hover:cursor-pointer group"
 				on:mousedown={gotoContact(item)}
 			>
 				<svelte:component this={item.icon} />
-				<div class="hidden sm:block group-hover:bg-yellow-400 group-hover:underline">
+				<div
+					class="hidden sm:block group-hover:bg-yellow-400 
+				dark:group-hover:bg-yellow-700
+				group-hover:underline"
+				>
 					{item.text}
 				</div>
 			</div>
 		{/each}
 	</div>
-	<div class="w-full bg-gray-200 outline flex flex-col items-center gap-4 p-3">
+	<div class="w-full bg-gray-200 dark:bg-gray-700 outline flex flex-col items-center gap-4 p-3">
 		<p>
 			I'm currently residing in <a
 				href="https://www.royalholloway.ac.uk/student-life/accommodation/undergraduate/kingswood-1-and-2/"
@@ -83,5 +90,4 @@
 	a:hover {
 		text-decoration: underline;
 	}
-	
 </style>

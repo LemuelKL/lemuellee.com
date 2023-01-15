@@ -18,11 +18,10 @@
 			uri: '/121134.jpg'
 		}
 	];
-
 	$: baseRoute = '/' + $page.url.pathname.split('/')[1];
 </script>
 
-<div class="h-full border-b-4">
+<div class="h-full border-b-2 dark:border-black">
 	{#each wallpapers as wallpaper}
 		{#if baseRoute === wallpaper.route}
 			<div

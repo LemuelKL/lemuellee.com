@@ -4,6 +4,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import Fingerprint from './Fingerprint.svelte';
 	import { BarsSolid, ChevronDownSolid } from 'svelte-awesome-icons';
+	import DarkModeToggle from './DarkModeToggle.svelte';
 	import NavMenu from './NavMenu.svelte';
 	import type { NavItem } from '$lib/types/navbar';
 	const navItems: NavItem[] = [
@@ -37,16 +38,24 @@
 				<p class="font-semibold text-2xl">LEMuel</p>
 			</div>
 			<!-- Desktop Menu -->
-			<div class="hidden sm:flex items-center gap-2 pr-3">
+			<div class="hidden sm:flex items-center gap-2 mr-3">
 				<NavMenu items={navItems} />
+				<div />
+				<DarkModeToggle />
 			</div>
 			<!-- Mobile Menu Button-->
-			<div class="sm:hidden p-3 hover:cursor-pointer" on:mousedown={handleMenuClick}>
-				{#if mobileMenu}
-					<ChevronDownSolid />
-				{:else}
-					<BarsSolid />
-				{/if}
+			<div class="sm:hidden flex">
+				<DarkModeToggle />
+				<div
+					class="p-3 hover:cursor-pointer hover:bg-slate-900"
+					on:mousedown={handleMenuClick}
+				>
+					{#if mobileMenu}
+						<ChevronDownSolid />
+					{:else}
+						<BarsSolid />
+					{/if}
+				</div>
 			</div>
 		</div>
 	</div>
