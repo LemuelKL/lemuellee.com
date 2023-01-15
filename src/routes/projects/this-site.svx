@@ -1,0 +1,8 @@
+---
+title: This Site
+date: '2023-01-15'
+published: true
+---
+
+This website is fully static with no backend. Frameworks used include SvelteKit for frontend, TailwindCSS for styling, MDsveX for markdown to HTML. This website is hosted on Netlify, accessible through `lemuel.pp.ua`.
+

@@ -1,0 +1,193 @@
+---
+title: Dynamic Markdown Source Loading in SvelteKit with MDsveX
+date: '2023-01-15'
+published: true
+---
+
+<script lang="ts">
+	import { browser } from '$app/environment';
+	import { compile as svelteCompile } from 'svelte/compiler';
+	import { compile as mdsvexCompile } from 'mdsvex/dist/browser-umd.js';
+	import { onMount } from 'svelte';
+
+	onMount(async () => {
+		await craft();
+	});
+
+	let disp: HTMLDivElement;
+	let mdUrl = '/demo.md';
+
+	const craft = async () => {
+		const response = await fetch(mdUrl);
+		const srcCode = await response.text();
+
+		const svelteCode = await mdsvexCompile(srcCode);
+		const pureJs = svelteCompile(svelteCode.code, { accessors: true });
+		let compiled = pureJs.js.code;
+		compiled = compiled.replace(
+			'svelte/internal',
+			'https://unpkg.com/svelte@3.55.1/internal/index.mjs'
+		);
+
+		const blob = new Blob([compiled], { type: 'text/javascript' });
+		const url = URL.createObjectURL(blob);
+
+		const module = await import(/* @vite-ignore */ url);
+		const componentClass = module.default;
+		new componentClass({ target: disp });
+
+		Prism.highlightAll();
+	};
+
+    const loadNewMd = () => {
+        disp.innerHTML = '';
+        craft();
+    }
+    const resetMd = () => {
+        mdUrl = '/demo.md';
+        disp.innerHTML = '';
+        craft();
+    }
+</script>
+
+This technical post shows how to load any markdown (actually MDsveX source which is a mix of markdown and Svelte) source into MDsveX compiler, then finally into a
+Svelte compiler. The markdown source could be in text form, from anywhere, including calling
+`fetch()` on an URL. In fact, the markdown shown below is fetched client-side from this website at
+`/demo.md` You can try other files on the internet too! I recommend those on GitHub.
+<div class="flex gap-3">
+	<input bind:value={mdUrl} class="outline dark:bg-gray-900 w-full" />
+	<button class="outline p-1 hover:bg-yellow-400 dark:hover:bg-yellow-700" on:mousedown={loadNewMd}>Load</button>
+	<button class="outline p-1 hover:bg-yellow-400 dark:hover:bg-yellow-700" on:mousedown={resetMd}>Reset</button>
+
+</div>
+<div class="flex justify-center font-mono text-2xl"><div>MARKDOWN STARTS HERE</div></div>
+
+<div bind:this={disp}/>
+
+<div class="flex justify-center font-mono text-2xl"><div>MARKDOWN ENDS HERE</div></div>
+
+
+## How is this done?
+
+The idea is as follows:
+1. Fetch the markdown source from anywhere, including the internet.
+2. Compile the markdown source into a Svelte component using MDsveX.
+3. Compile the Svelte component into pure JavaScript.
+4. Load the pure JavaScript as a Svelte component by invoking the generated constructor.
+
+Here is the code that does this:
+```ts
+const craft = async () => {
+	const response = await fetch(mdUrl);
+	const srcCode = await response.text();
+
+	const svelteCode = await mdsvexCompile(srcCode);
+	const pureJs = svelteCompile(svelteCode.code, {accessors: true });
+	let compiled = pureJs.js.code;
+	compiled = compiled.replace(
+		'svelte/internal',
+		'https://unpkg.com/svelte@3.55.1/internal/index.mjs'
+	);
+
+	const blob = new Blob([compiled], { type: 'textjavascript' });
+	const url = URL.createObjectURL(blob);
+
+	const module = await import(/* @vite-ignore */ url);
+	const componentClass = module.default;
+	new componentClass({ target: disp });
+
+	Prism.highlightAll();
+};
+```
+This method should be called on mount, and also when the markdown source changes.
+
+The `@vite-ignore` is needed because the URL is dynamically generated.
+
+The `Prism.highlightAll()` is needed to highlight the code blocks in the markdown. This assumes you follow the common installation of Prism which is to include the script in the `app.html` file and so it is available globally. We have to call this method manually instead of just relying on the default Prism CSS and JS script because the code blocks are dynamically injected into the DOM.
+
+We also have to replace the `svelte/internal` import with a URL. This is because the `svelte/internal` is not available in the browser. We use the `unpkg.com` CDN instead.
+
+`mdUrl` is a global variable that is bound to the input field. It is the URL of the markdown source.
+
+Also note that the `mdsvexCompile` are imported from the browser UMD version of MDsveX. This is because the normal import does not work in the browser. MDsveX uses `fs` which is not available in the browser.
+
+## Related work
+https://github.com/LemuelKL/quaestio-factorem.
+
+This is a previous work of mine that uses similar technique. This project is more involved. It is about making multiple choice question templates that can be pulled and run to generate those questions and answers purely client-side. It allows editing and fetching of Svelte + MDsveX components with a database. It pulls the pieces together and compile them into a working Svelte page. It supports KaTeX for beautiful math rendering. It also uses Microsoft's Monaco for code editting, and I got simple code highlighting and suggestion working. I am fairly busy lately and hope to come back to this project soon. For now it is using outdated SvelteKit which is pre 1.0.
+
+## Limitations
+Due to the nature of dynamic imports on the client side, we are pretty much doomed to run into module resolution issues. I have yet to find a systemic solution/ pattern to ensure robustness.
+
+## Complete source code
+Complete source of this page, you can find this on GitHub too.
+
+```ts
+---
+title: Dynamic Markdown Source Loading in SvelteKit with MDsveX
+date: '2023-01-15'
+published: true
+---
+
+<script lang="ts">
+	import { browser } from '$app/environment';
+	import { compile as svelteCompile } from 'svelte/compiler';
+	import { compile as mdsvexCompile } from 'mdsvex/dist/browser-umd.js';
+	import { onMount } from 'svelte';
+
+	onMount(async () => {
+		await craft();
+	});
+
+	let disp: HTMLDivElement;
+	let mdUrl = '/demo.md';
+
+	const craft = async () => {
+		const response = await fetch(mdUrl);
+		const srcCode = await response.text();
+
+		const svelteCode = await mdsvexCompile(srcCode);
+		const pureJs = svelteCompile(svelteCode.code, { accessors: true });
+		let compiled = pureJs.js.code;
+		compiled = compiled.replace(
+			'svelte/internal',
+			'https://unpkg.com/svelte@3.55.1/internal/index.mjs'
+		);
+
+		const blob = new Blob([compiled], { type: 'text/javascript' });
+		const url = URL.createObjectURL(blob);
+
+		const module = await import(/* @vite-ignore */ url);
+		const componentClass = module.default;
+		new componentClass({ target: disp });
+
+		Prism.highlightAll();
+	};
+
+    const loadNewMd = () => {
+        disp.innerHTML = '';
+        craft();
+    }
+    const resetMd = () => {
+        mdUrl = '/demo.md';
+        disp.innerHTML = '';
+        craft();
+    }
+</script>
+
+This technical post shows how to load any markdown (actually MDsveX source which is a mix of markdown and Svelte) source into MDsveX compiler, then finally into a
+Svelte compiler. The markdown source could be in text form, from anywhere, including calling
+`fetch()` on an URL. In fact, the markdown shown below is fetched client-side from this website at
+`/demo.md` You can try other files on the internet too! I recommend those on GitHub.
+<div class="flex gap-3">
+	<input bind:value={mdUrl} class="outline dark:bg-gray-900 w-full" />
+	<button class="outline p-1 hover:bg-yellow-400 dark:hover:bg-yellow-700" on:mousedown={loadNewMd}>Load</button>
+	<button class="outline p-1 hover:bg-yellow-400 dark:hover:bg-yellow-700" on:mousedown={resetMd}>Reset</button>
+
+</div>
+<div class="flex justify-center font-mono text-2xl"><div>MARKDOWN STARTS HERE</div></div>
+
+<div bind:this={disp}/>
+
+<div class="flex justify-center font-mono text-2xl"><div>MARKDOWN ENDS HERE</div></div>
+```
