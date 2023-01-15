@@ -1,7 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import '/src/prism.css'; // for code highlighting
-
 	export let data: PageData;
 </script>
 
