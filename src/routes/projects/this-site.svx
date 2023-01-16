@@ -6,15 +6,50 @@ published: true
 
 <script>
     import DarkModeToggle from '/src/routes/DarkModeToggle.svelte'
+    import ColorBar from '/src/routes/Projects/ColorBar.svelte'
 </script>
 
-This website is fully static with no backend. Frameworks used include SvelteKit for frontend, TailwindCSS for styling, MDsveX for markdown to HTML. This website is hosted on Netlify, accessible through `lemuel.pp.ua`.
+This website is fully static with no backend. This website is hosted on Netlify, accessible through [lemuel.pp.ua](https://lemuel.pp.ua).
+
+The frontend software components are all open-source and free. The source code of this website is also available on my GitHub at [repo link](https://github.com/LemuelKL/lemuel.pp.ua).
+
+The running cost of this website is free.
+
+## SvelteKit
+
+My personal favourite frontend framework. Svelte itself is very efficient and direct to work with. SvelteKit is a powerful addition with Vite and out-of-the-box file-based routing, my favourite also.
+
+-   https://vitejs.dev/
+-   https://svelte.dev/
+-   https://kit.svelte.dev/
+
+## MDsveX
+
+MDsveX is used to render markdown files into Svelte components. It also support a syntax which mixes markdown and Svelte (with a .svx extension). This is the backbone of my tailor-made CMS for my Projects and Blog sections of this website.
+
+I have also furthered in terms of technically to support dynamic loading of .svx files on the fly, client side. In a project post I demonstrated how to pull markdown sources from the internet and render it to be a part of the post.
+
+https://mdsvex.pngwn.io/
+
+## TailwindCSS
+
+One of my favourite styling framework. I personally don't mind the class soup too much. I have used rigid frameworks like bootstrap, Vuetify, and Quasar before. They appear to be convient and easy to use at first. However, when building specific-purpose sites they in fact will get in the way due to low flexibility. They also make my sites look like all the other ones, unideal for personal portfolio site.
+
+<div class="oultine w-16 h-16 p-3 outline">
+    <ColorBar />
+</div>
+
+https://tailwindcss.com/
+
+## Prism.js
 
 Prism.js is used for code highlighting, supporting basically all major languages.
+
 ```python
 myMsg = 'Hello World!'
 print(myMsg)
 ```
+
 ```cpp
 int main() {
     int n = 10;
@@ -25,12 +60,38 @@ int main() {
 }
 ```
 
+Additionally I have installed the line-number and toolbar plugins.
+
+https://prismjs.com/
+
+## HTML
+
 HTML elements are also supported:
+
 <h3>H3</h3>
 <h4>H4</h4>
 <h5>H5</h5>
 
 Svelte components as well, try clicking this dark mode toggle button:
+
 <div class="oultine w-16 h-16 p-3 outline">
     <DarkModeToggle />
 </div>
+
+## KaTeX
+
+Inline maths:
+$ax^2+bx+c=0$
+
+Display maths:
+
+$$
+x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+$$
+
+## Thanks
+
+In the making of this website, these resources have helped me tremendously:
+
+-   https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog
+-   https://mdsvex-math-starter.vercel.app/
