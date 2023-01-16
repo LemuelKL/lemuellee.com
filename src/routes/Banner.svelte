@@ -19,15 +19,14 @@
 		}
 	];
 	$: baseRoute = '/' + $page.url.pathname.split('/')[1];
+	$: currentWallpaper = wallpapers.find((wallpaper) => wallpaper.route === baseRoute);
 </script>
 
 <div class="h-full border-b-2 dark:border-black">
-	{#each wallpapers as wallpaper}
-		{#if baseRoute === wallpaper.route}
-			<div
-				class="h-full bg-center bg-cover"
-				style="background-image: url(/wallpaper/{wallpaper.uri})"
-			/>
-		{/if}
-	{/each}
+	<div
+		class="h-full bg-center bg-cover"
+		style="background-image: url(/wallpaper/{currentWallpaper
+			? currentWallpaper.uri
+			: 'eagle-3840x2160.jpg'})"
+	/>
 </div>
