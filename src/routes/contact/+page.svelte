@@ -1,12 +1,5 @@
 <script lang="ts">
-	import type { PageData } from './$types';
-	export let data: PageData;
-	import {
-		GithubBrand,
-		LinkedinBrand,
-		AddressCardSolid,
-		AtSolid
-	} from 'svelte-awesome-icons';
+	import { GithubBrand, LinkedinBrand, AddressCardSolid, AtSolid } from 'svelte-awesome-icons';
 	interface ContactItem {
 		icon: any;
 		url: string;
