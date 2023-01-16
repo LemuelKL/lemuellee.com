@@ -3,12 +3,18 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/fingerprint.svg" />
-		<link href="%sveltekit.assets%/prism/themes/prism-nord.css" rel="stylesheet" />
+		<link rel="stylesheet" href="%sveltekit.assets%/prism/prism-line-numbers.css" />
+		<link rel="stylesheet" href="%sveltekit.assets%/prism/prism-toolbar.css" />
+		<link
+			id="prism-style"
+			href="%sveltekit.assets%/prism/themes/prism-one-light.css"
+			rel="stylesheet"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
-		<script src="%sveltekit.assets%/prism/prism.js"></script>
+	<body data-sveltekit-preload-data="hover" class="line-numbers">
 		<div style="display: contents">%sveltekit.body%</div>
+		<script src="%sveltekit.assets%/prism/prism.js"></script>
 	</body>
 </html>

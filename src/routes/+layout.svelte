@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { darkMode } from './../stores.ts';
 	import Navbar from './Navbar.svelte';
 	import Banner from './Banner.svelte';
 	import './../app.css';
@@ -9,14 +10,18 @@
 	}
 </script>
 
-<Navbar {scrollY} on:scrollToTop={scrollToTop} />
-<div class="h-48 sticky -top-36"><Banner /></div>
-<main
-	class="mx-auto max-w-5xl flex justify-center h-full min-h-[calc(100vh-3rem)]
+<div class:dark={$darkMode}>
+	<Navbar {scrollY} on:scrollToTop={scrollToTop} />
+	<div class="h-48 sticky -top-36"><Banner /></div>
+	<main
+		class="mx-auto max-w-5xl flex justify-center h-full min-h-[calc(100vh-3rem)]
+	transition-colors
+	bg-gray-50
 	dark:bg-gray-900 dark:text-gray-200"
->
-	<slot />
-</main>
+	>
+		<slot />
+	</main>
+</div>
 <svelte:window bind:scrollY />
 
 <style>

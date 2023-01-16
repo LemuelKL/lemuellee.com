@@ -6,3 +6,8 @@ published: true
 
 This website is fully static with no backend. Frameworks used include SvelteKit for frontend, TailwindCSS for styling, MDsveX for markdown to HTML. This website is hosted on Netlify, accessible through `lemuel.pp.ua`.
 
+```python
+myMsg = 'Hello World!'
+print(myMsg)
+```
+
