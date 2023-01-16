@@ -4,10 +4,33 @@ date: '2023-01-15'
 published: true
 ---
 
+<script>
+    import DarkModeToggle from '/src/routes/DarkModeToggle.svelte'
+</script>
+
 This website is fully static with no backend. Frameworks used include SvelteKit for frontend, TailwindCSS for styling, MDsveX for markdown to HTML. This website is hosted on Netlify, accessible through `lemuel.pp.ua`.
 
+Prism.js is used for code highlighting, supporting basically all major languages.
 ```python
 myMsg = 'Hello World!'
 print(myMsg)
 ```
+```cpp
+int main() {
+    int n = 10;
+    for (int i = 0; i < n; i++) {
+        std::cout << "Hello World " << "x " << i << "\n";
+    }
+    return 0;
+}
+```
 
+HTML elements are also supported:
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+
+Svelte components as well, try clicking this dark mode toggle button:
+<div class="oultine w-16 h-16 p-3 outline">
+    <DarkModeToggle />
+</div>

@@ -120,7 +120,7 @@ This is a previous work of mine that uses similar technique. This project is mor
 Due to the nature of dynamic imports on the client side, we are pretty much doomed to run into module resolution issues. I have yet to find a systemic solution/ pattern to ensure robustness.
 
 ## Complete source code
-Complete source of this page, you can find this on GitHub too.
+Source of the demo part. You can also find this page on [GitHub](https://github.com/LemuelKL/lemuel.pp.ua/blob/main/src/routes/projects/dynamic-md.svx) too.
 
 ```ts
 ---

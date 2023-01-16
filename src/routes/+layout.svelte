@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { darkMode } from './../stores.ts';
-	import Navbar from './Navbar.svelte';
+	import NavBar from './NavBar.svelte';
 	import Banner from './Banner.svelte';
 	import './../app.css';
 
@@ -11,7 +11,7 @@
 </script>
 
 <div class:dark={$darkMode}>
-	<Navbar {scrollY} on:scrollToTop={scrollToTop} />
+	<NavBar {scrollY} on:scrollToTop={scrollToTop} />
 	<div class="h-48 sticky -top-36"><Banner /></div>
 	<main
 		class="mx-auto max-w-5xl flex justify-center h-full min-h-[calc(100vh-3rem)]
