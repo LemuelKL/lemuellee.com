@@ -6,7 +6,7 @@ published: true
 
 <script>
     import DarkModeToggle from '/src/routes/DarkModeToggle.svelte'
-    import ColorBar from '/src/routes/Projects/ColorBar.svelte'
+    import ColorBar from '/src/routes/projects/ColorBar.svelte'
 </script>
 
 This website is fully static with no backend. This website is hosted on Netlify, accessible through [lemuel.pp.ua](https://lemuel.pp.ua).
