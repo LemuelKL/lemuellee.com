@@ -13,7 +13,7 @@
 		prose prose-slate
 		min-w-full p-3
 		prose-pre:outline
-		dark:bg-gray-900 dark:text-gray-200 dark:prose-invert"
+		dark:prose-invert"
 >
 	<div class="first-letter:text-3xl text-2xl font-serif">{data.title}</div>
 	<div>{data.date}</div>

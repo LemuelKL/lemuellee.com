@@ -19,7 +19,11 @@
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover" class="line-numbers">
+	<body
+		id="body"
+		data-sveltekit-preload-data="hover"
+		class="line-numbers transition-colors bg-gray-50 dark:bg-gray-900 dark:text-gray-200 font-serif"
+	>
 		<div style="display: contents">%sveltekit.body%</div>
 		<script src="%sveltekit.assets%/prism/prism.js"></script>
 	</body>

@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { darkMode } from './../stores.ts';
+	import { darkMode } from './../stores';
 	import { fade } from 'svelte/transition';
 	import { SunSolid, MoonSolid } from 'svelte-awesome-icons';
 	function toggleDarkMode() {
-		console.log('Dark mode toggled');
 		darkMode.set(!$darkMode);
+		document.documentElement.classList.toggle('dark');
 		document.getElementById('prism-style').href =
 			'/prism/themes/prism-one-' + ($darkMode ? 'dark' : 'light') + '.css';
 		Prism.highlightAll();
