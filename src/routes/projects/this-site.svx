@@ -37,7 +37,7 @@ My favourite CSS framework. I personally don't mind the class soup too much. I h
 
 Here's something that resembles an absorption spectrum:
 
-<div class="oultine w-16 h-16 p-3 outline">
+<div class="oultine w-full p-3 outline">
     <ColorBar />
 </div>
 
