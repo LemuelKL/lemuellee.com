@@ -9,11 +9,11 @@ published: true
     import ColorBar from '/src/routes/projects/ColorBar.svelte'
 </script>
 
-This website is fully static with no backend. This website is hosted on Netlify, accessible through [lemuel.pp.ua](https://lemuel.pp.ua).
+This website is fully static with no backend. Hosted on Netlify, accessible through [lemuel.pp.ua](https://lemuel.pp.ua).
 
 The frontend software components are all open-source and free. The source code of this website is also available on my GitHub at [repo link](https://github.com/LemuelKL/lemuel.pp.ua).
 
-The running cost of this website is free.
+The running cost is free.
 
 ## SvelteKit
 
@@ -33,17 +33,43 @@ https://mdsvex.pngwn.io/
 
 ## TailwindCSS
 
-One of my favourite styling framework. I personally don't mind the class soup too much. I have used rigid frameworks like bootstrap, Vuetify, and Quasar before. They appear to be convient and easy to use at first. However, when building specific-purpose sites they in fact will get in the way due to low flexibility. They also make my sites look like all the other ones, unideal for personal portfolio site.
+My favourite CSS framework. I personally don't mind the class soup too much. I have used rigid frameworks like bootstrap, Vuetify, and Quasar before. They appear convenient at first. However, when building specific-purpose sites they will start to get in the way due to low customisability. They also make my sites look like all the other ones, unideal for personal portfolio site.
+
+Here's something that resembles an absorption spectrum:
 
 <div class="oultine w-16 h-16 p-3 outline">
     <ColorBar />
 </div>
 
+```html
+<div class="outline w-full flex items-center justify-between">
+	<div class="w-8 h-8 bg-red-400" />
+	<div class="w-full h-8 bg-gradient-to-r from-red-400 to bg-orange-400" />
+	<div class="w-8 h-8 bg-orange-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-orange-400 to bg-yellow-400" />
+	<div class="w-8 h-8 bg-yellow-400" />
+	<div class="w-full h-8 bg-gradient-to-r from-yellow-400 to bg-green-400" />
+	<div class="w-8 h-8 bg-green-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-green-400 to bg-cyan-400" />
+	<div class="w-8 h-8 bg-cyan-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-cyan-400 to bg-blue-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-8 h-8 bg-blue-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-blue-400 to bg-purple-400" />
+	<div class="w-8 h-8 bg-purple-400" />
+</div>
+```
+In fact, you could probably write some generative functions that yield a mathematically correct and to-scale spectrum by manipulating the width of each flex item. I'll leave that to you.
+
 https://tailwindcss.com/
 
 ## Prism.js
 
-Prism.js is used for code highlighting, supporting basically all major languages.
+Prism.js is used for code highlighting, supporting basically all major languages. I chose the "one" theme as it goes well with the overall theme of this website and it has light and dark variants.
 
 ```python
 myMsg = 'Hello World!'
@@ -60,7 +86,7 @@ int main() {
 }
 ```
 
-Additionally I have installed the line-number and toolbar plugins.
+Additionally I have installed the line-number and toolbar plugins. The toolbar plugin allows you to copy the code to clipboard, which is very useful.
 
 https://prismjs.com/
 
@@ -72,11 +98,15 @@ HTML elements are also supported:
 <h4>H4</h4>
 <h5>H5</h5>
 
+## Svelte Components
+
 Svelte components as well, try clicking this dark mode toggle button:
 
 <div class="oultine w-16 h-16 p-3 outline">
     <DarkModeToggle />
 </div>
+
+By the way, that colour spectrum is a Svelte component too.
 
 ## KaTeX
 
@@ -89,9 +119,11 @@ $$
 x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
 $$
 
-## Thanks
+## References
 
 In the making of this website, these resources have helped me tremendously:
 
 -   https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog
 -   https://mdsvex-math-starter.vercel.app/
+
+I have also done many toy Svelte projects before that have never been published. One particular however has some interesting prototyping values. It's called Quaestio Factorem, stands for Question Factory/Maker in Greek. It allows writing of question blueprints in the form of a Svelte components, with all the markdown and KaTeX supports. These blueprints can then be "populated" with real variables to make a multiple choice questions for teaching mathematics or physics. Code is available here on my GitHub: https://github.com/LemuelKL/quaestio-factorem. However, the code base is severely outdated given how fast Svelte and SvelteKit has moved in the past year. You would also need to setup a Supabase instance.

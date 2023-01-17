@@ -1,9 +1,20 @@
-<div class="outline w-full h-12 flex items-center justify-between p-4">
+<div class="outline w-full flex items-center justify-between">
 	<div class="w-8 h-8 bg-red-400" />
+	<div class="w-full h-8 bg-gradient-to-r from-red-400 to bg-orange-400" />
 	<div class="w-8 h-8 bg-orange-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-orange-400 to bg-yellow-400" />
 	<div class="w-8 h-8 bg-yellow-400" />
+	<div class="w-full h-8 bg-gradient-to-r from-yellow-400 to bg-green-400" />
 	<div class="w-8 h-8 bg-green-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-green-400 to bg-cyan-400" />
 	<div class="w-8 h-8 bg-cyan-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-cyan-400 to bg-blue-400" />
+	<div class="w-3 h-8 bg-black" />
 	<div class="w-8 h-8 bg-blue-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-blue-400 to bg-purple-400" />
 	<div class="w-8 h-8 bg-purple-400" />
 </div>
