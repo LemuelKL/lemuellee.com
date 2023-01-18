@@ -1,14 +1,13 @@
+import type { Post } from "$lib/types/blog";
 import { fetchMarkdownBlogs } from '$lib/utils/index'
 import { json } from '@sveltejs/kit'
 
 export const GET = async () => {
-  const allBlogs = await fetchMarkdownBlogs()
+  const allPosts = await fetchMarkdownBlogs()
 
-  const sortedBlogs = allBlogs.sort((a, b) => {
-    return b.meta.date - a.meta.date
+  const sortedPosts = allPosts.sort((a: Post, b: Post) => {
+    return b.meta.date > a.meta.date ? 1 : -1
   })
 
-  console.log(sortedBlogs)
-
-  return json(sortedBlogs)
+  return json(sortedPosts)
 }

@@ -12,7 +12,7 @@ This whole website is coded up by me from scratch! I have used open-source softw
 
 I have a love for Svelte. I have a kink for compiled languages, for their speed and efficiency. Svelte is very concise and small compared to other major front-end frameworks. It has easy and direct state and lifecycle management. I also highly prefer frameworks that write template code directly with variable placeholders instead of a generative approach like with React... yuck! For this reason you could have guessed I have used lots of Vue too, and you're right!
 
-The blog and projects section of this website are under the hood the same in terms of technicality, just different names. I have made myself a Content Management System (CMS) that's tailored to my needs. I have technical skills so I don't rely on laymen-targetting frameworks like WordPress and Wix which have limited customizations. I also aim to make this site fully static with no backend and database. Idealy, every post should be its own markdown file, with no limitation on filename. They should also be dynamically imported so that I don't have to manually add it to a "list of posts". So the final work-flow would be just writing a markdown file, put it into the "blog" folder in source, then just git push!
+The blog and projects section of this website are under the hood the same in terms of technicality, just different names. I have made myself a Content Management System (CMS) that's tailored to my needs. I have technical skills so I don't rely on laymen-targeting frameworks like WordPress and Wix which have limited customizations. I also aim to make this site fully static with no backend and database. Ideally, every post should be its own markdown file, with no limitation on filename. They should also be dynamically imported so that I don't have to manually add it to a "list of posts". So the final work-flow would be just writing a markdown file, put it into the "blog" folder in source, then just git push!
 
 This website is fully static with no backend. Hosted on Netlify, accessible through [lemuel.pp.ua](https://lemuel.pp.ua).
 
@@ -107,7 +107,7 @@ HTML elements are also supported:
 
 Svelte components as well, try clicking this dark mode toggle button:
 
-<div class="w-16 h-16 p-3 outline">
+<div class="w-full p-3 outline">
     <DarkModeToggle />
 </div>
 
@@ -131,4 +131,6 @@ In the making of this website, these resources have helped me tremendously:
 -   https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog
 -   https://mdsvex-math-starter.vercel.app/
 
-I have also done many toy Svelte projects before that have never been published. One particular however has some interesting prototyping values. It's called Quaestio Factorem, stands for Question Factory/Maker in Greek. It allows writing of question blueprints in the form of a Svelte components, with all the markdown and KaTeX supports. These blueprints can then be "populated" with real variables to make a multiple choice questions for teaching mathematics or physics. Code is available here on my GitHub: https://github.com/LemuelKL/quaestio-factorem. However, the code base is severely outdated given how fast Svelte and SvelteKit has moved in the past year. You would also need to setup a Supabase instance.
+I have also done many toy Svelte projects before that have never been published. One particular however has some interesting prototyping values. It's called Quaestio Factorem, stands for Question Factory/Maker in Greek. It allows writing of question blueprints in the form of a Svelte components, with all the markdown and KaTeX supports. These blueprints can then be "populated" with real variables to make a multiple choice questions for teaching mathematics or physics.
+
+Code is available here on my GitHub: https://github.com/LemuelKL/quaestio-factorem. However, the code base is severely outdated given how fast Svelte and SvelteKit has moved in the past year. You would also need to setup a Supabase instance.
