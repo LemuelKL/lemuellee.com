@@ -19,10 +19,10 @@
 			class="flex flex-col outline p-2 bg-gray-200 dark:bg-gray-700 hover:bg-yellow-400 dark:hover:bg-yellow-700 hover:cursor-pointer"
 			on:mousedown={() => gotoPost(post.path)}
 		>
-			<p class="text-3xl">
+			<div class="text-xl">
 				{post.meta.title}
-			</p>
-			Published {post.meta.date}
+			</div>
+			<div class="text-sm">Published {post.meta.date}</div>
 		</li>
 	{/each}
 </ul>
