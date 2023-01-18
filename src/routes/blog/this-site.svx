@@ -1,13 +1,18 @@
 ---
-title: This Site
+title: This Website
 date: '2023-01-15'
-published: true
 ---
 
 <script>
     import DarkModeToggle from '/src/routes/DarkModeToggle.svelte'
-    import ColorBar from '/src/routes/projects/ColorBar.svelte'
+    import ColorBar from '$lib/ColorBar.svelte'
 </script>
+
+This whole website is coded up by me from scratch! I have used open-source software and in particular: SvelteKit, MDsveX, TailwindCSS.
+
+I have a love for Svelte. I have a kink for compiled languages, for their speed and efficiency. Svelte is very concise and small compared to other major front-end frameworks. It has easy and direct state and lifecycle management. I also highly prefer frameworks that write template code directly with variable placeholders instead of a generative approach like with React... yuck! For this reason you could have guessed I have used lots of Vue too, and you're right!
+
+The blog and projects section of this website are under the hood the same in terms of technicality, just different names. I have made myself a Content Management System (CMS) that's tailored to my needs. I have technical skills so I don't rely on laymen-targetting frameworks like WordPress and Wix which have limited customizations. I also aim to make this site fully static with no backend and database. Idealy, every post should be its own markdown file, with no limitation on filename. They should also be dynamically imported so that I don't have to manually add it to a "list of posts". So the final work-flow would be just writing a markdown file, put it into the "blog" folder in source, then just git push!
 
 This website is fully static with no backend. Hosted on Netlify, accessible through [lemuel.pp.ua](https://lemuel.pp.ua).
 
@@ -37,7 +42,7 @@ My favourite CSS framework. I personally don't mind the class soup too much. I h
 
 Here's something that resembles an absorption spectrum:
 
-<div class="oultine w-full p-3 outline">
+<div class="w-full p-3 outline">
     <ColorBar />
 </div>
 
@@ -102,7 +107,7 @@ HTML elements are also supported:
 
 Svelte components as well, try clicking this dark mode toggle button:
 
-<div class="oultine w-16 h-16 p-3 outline">
+<div class="w-16 h-16 p-3 outline">
     <DarkModeToggle />
 </div>
 

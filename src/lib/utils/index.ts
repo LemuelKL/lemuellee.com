@@ -16,22 +16,3 @@ export const fetchMarkdownBlogs = async () => {
 
   return allBlogs
 }
-
-export const fetchMarkdownProjects = async () => {
-  const allProjectFiles = import.meta.glob('/src/routes/projects/*.svx')
-  const iterableProjectFiles = Object.entries(allProjectFiles)
-  
-  const allProjects = await Promise.all(
-    iterableProjectFiles.map(async ([path, resolver]) => {
-      const { metadata } = await resolver()
-      const projectPath = path.slice(11, -4)
-
-      return {
-        meta: metadata,
-        path: projectPath,
-      }
-    })
-  )
-
-  return allProjects
-}

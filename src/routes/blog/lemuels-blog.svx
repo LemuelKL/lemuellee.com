@@ -4,24 +4,8 @@ date: '2023-01-14'
 ---
 Hello World! This is my first blog post!
 
-I have decided to start blogging because expressing oneself is an innate instinct. Facebook is dead, and Instagram lacks the capcity for detailed logos in paragraphs which you need for important discussions.
+I have decided to start blogging because expressing oneself is an innate instinct. Facebook is dead, and Instagram lacks the capacity for detailed logos in paragraphs which you need for important discussions.
 
 I would probably talk about findings and unique perspectives on things. Some personal experiences with life. Places that I have visited.
 
-This whole website is coded up by me from scratch! I have used open-source software and in particular: SvelteKit, MDsveX, TailwindCSS.
-
-I have a love for Svelte. I have a kink for compiled languages, for their speed and efficiency. Svelte is very concise and small compared to other major front-end frameworks. It has easy and direct state and lifecycle management. I also highly prefer frameworks that write template code directly with variable placeholders instead of a generative approach like with React... yuck! For this reason you could have guessed I have used lots of Vue too, and you're right!
-
-The blog and projects section of this website are under the hood the same in terms of technicality, just different names. I have made myself a Content Management System (CMS) that's tailored to my needs. I have technical skills so I don't rely on laymen-targetting frameworks like WordPress and Wix which have limited customizations. I also aim to make this site fully static with no backend and database. Idealy, every post should be its own markdown file, with no limitation on filename. They should also be dynamically imported so that I don't have to manually add it to a "list of posts". So the final work-flow would be just writing a markdown file, put it into the "blog" folder in source, then just git push!
-
-Code block is also available! Prism.js is used for syntax highlighting. Here's a quick sort implementation in Haskell I was shown in my Functional Programming class recently.
-
-```haskell
-quicksort [] = []
-quicksort (p:xs) = (quicksort lesser) ++ [p] ++ (quicksort greater)
-    where
-        lesser = filter (< p) xs
-        greater = filter (>= p) xs
-```
- That would be it for now!
 

@@ -1,7 +1,6 @@
 ---
 title: KaTeX with MDsveX on Svelte
 date: '2023-01-16'
-published: true
 ---
 
 This technical post shows you how to set up SvelteKit + MDsveX + KaTeX.

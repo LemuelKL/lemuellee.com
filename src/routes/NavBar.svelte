@@ -9,8 +9,8 @@
 	import type { NavItem } from '$lib/types/navbar';
 	const navItems: NavItem[] = [
 		{ label: 'Home', route: '/' },
+		{ label: 'About', route: '/about' },
 		{ label: 'Contact', route: '/contact' },
-		{ label: 'Projects', route: '/projects' },
 		{ label: 'Blog', route: '/blog' }
 	];
 	let mobileMenu = false;

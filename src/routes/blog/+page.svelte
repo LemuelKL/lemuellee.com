@@ -17,7 +17,7 @@
 	{#each data.blogs as blog}
 		<li
 			class="flex flex-col outline p-2 bg-gray-200 dark:bg-gray-700 hover:bg-yellow-400 dark:hover:bg-yellow-700 hover:cursor-pointer"
-			on:mousedown={gotoBlog(blog.path)}
+			on:mousedown={() => gotoBlog(blog.path)}
 		>
 			<p class="text-3xl">
 				{blog.meta.title}

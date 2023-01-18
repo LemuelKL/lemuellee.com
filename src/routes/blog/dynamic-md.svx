@@ -1,7 +1,6 @@
 ---
 title: Dynamic Markdown Source Loading in SvelteKit with MDsveX
 date: '2023-01-15'
-published: true
 ---
 
 <script lang="ts">
@@ -126,7 +125,6 @@ Source of the demo part. You can also find this page on [GitHub](https://github.
 ---
 title: Dynamic Markdown Source Loading in SvelteKit with MDsveX
 date: '2023-01-15'
-published: true
 ---
 
 <script lang="ts">

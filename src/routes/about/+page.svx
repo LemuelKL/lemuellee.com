@@ -1,0 +1,49 @@
+
+## Introduction
+
+I'm Lemuel Lee. I was born and raised in Hong Kong. I'm currently pursuing a BEng(CompSc) degree from The University of Hong Kong. Right now, I'm being an international exchange student at Royal Holloway, University of London. I am a native in Cantonese and a fluent user of English and Mandarin.
+
+We might have crossed path in Hackthons, the two CS courses I tutored in HKU, or the STEM Camp organized by me and hosted by my secondary school Shatin Pui Ying College.
+
+
+## Philosophy
+
+I operate in terms of Judeo-Christian ethics. I am fairly conservative in traditional, especially religious values. However, that does not mean I am stubborn in practical terms. Traditional in values, innovative in practices.
+
+I believe the fundamental narrative of life is suffering. Consciousness implies a terrible philosophical burden which I have decided to bear forthrightly. The path to less suffering is through suffering. I am fully responsible for my life.
+
+
+## Personality
+
+I was nerdy throughout my childhood and adolescence. I have always liked things more than people. I read a lot non-frictions. I had a collection of books about military, astronomy, chemistry, geography, and much more.
+
+I am a very quiet person. Numerous teachers had told me I appear to be very "serious", "stoic", and "keep to myself". Indeed I am. Observing, reasoning, then seeing my predictions occur in reality is such joyful process. This is where my "soul" went during lessons and social events.
+
+A teacher of mine introduced me the MBTI 16 ersonality Test in 2019. I had since been doing it occasionally. My results show INTJ. This is a pretty accurate description.
+
+I have also done the Big Five test. I am high in Openness, high in Conscientiousness, low Extraversion, almost zero in Agreeableness, and very high in Neuroticism.
+
+
+## Hobbies
+
+When I was small, my hobbies were LEGO, diagram drawing, weaponry design, vehicle design, cyclopedia reading, museum visit, chemistry experiment, pillow fort construction, and so on.
+
+In my early teen years, I started to have growing interests in computer software.
+
+The experience of using a computer was absolutely amazing to me. It is like magic. You have a screen and it displays stuff dynamically. Other than people, I was not used to seeing things having so many "states". This mere fact might seem trivial but is the cornerstone of my pursuit in Computer Science.
+
+Now I study and write software every day. My recent interests are Software Language and Functional Programming. I am taking related courses in RHUL. They are technical and notorious for bad grades, but I only care about the contents and whether it suits my needs curiosity when choosing courses.
+
+
+## Taste
+
+I believe good men have good taste. Taste in some sense is the manifestation of one's orderliness and preference in the selection and arrangement of reality such that beauty is achieved. Beauty could be a subjective thing, but I argue it can only be so subjective. 
+
+There are some rules I follow: 
+- Simplicity with no unneeded complexity
+- Harmony of components within a system
+- Emphasis on the important and deemphasize the unimportant
+- Consistency in terms of patterns
+- Easy to digest when encountered novelly
+- Intuitive maintenance
+- Intuitive extension

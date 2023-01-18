@@ -8,5 +8,7 @@ export const GET = async () => {
     return b.meta.date - a.meta.date
   })
 
+  console.log(sortedBlogs)
+
   return json(sortedBlogs)
 }
