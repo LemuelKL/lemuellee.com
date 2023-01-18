@@ -22,7 +22,7 @@
 			<div class="text-xl">
 				{post.meta.title}
 			</div>
-			<div class="text-sm">Published {post.meta.date}</div>
+			<div class="text-sm">{post.meta.date}</div>
 		</li>
 	{/each}
 </ul>
