@@ -7,9 +7,9 @@
 	style="background-image: url('/wallpaper/pexels-mitchell-luo-3685201.jpg');"
 >
 	<div class="h-full w-full bg-black bg-opacity-50 flex justify-center items-center">
-		<div class="max-w-[72rem] md:max-h-[30rem] flex">
+		<div class="max-w-[72rem] md:max-h-[32rem] max-h-full flex md:mx-16">
 			<div
-				class="w-2/6 bg-orange-200 bg-opacity-50 backdrop-blur-sm p-8 flex flex-col items-center gap-6"
+				class="w-2/6 bg-orange-200 bg-opacity-50 backdrop-blur-sm md:p-8 p-2 flex flex-col justify-center items-center gap-6"
 			>
 				<img
 					src="/avatar/lemuel-pro.jpg"
@@ -31,9 +31,9 @@
 				</div>
 			</div>
 			<div
-				class="w-4/6 bg-black bg-opacity-40 backdrop-blur-sm p-8 flex flex-col items-start gap-4 text-white"
+				class="w-4/6 bg-black bg-opacity-40 backdrop-blur-sm md:p-8 p-4 flex flex-col items-start md:gap-4 gap-2 text-white overflow-scroll"
 			>
-				<div class="text-7xl font-bold">Hello</div>
+				<div class="md:text-7xl text-5xl font-bold">Hello</div>
 				<div>Here's who I am & what I do</div>
 				<div class="flex gap-2">
 					<div
@@ -47,7 +47,7 @@
 						WORKS
 					</div>
 				</div>
-				<div class="h-4" />
+				<div class="md:h-4 h-0" />
 				<div class="text-gray-200">
 					My study focuses on Theoretical Computer Science, such as Software Language,
 					Optimization, and Functional Programming. I am also educated in Machine

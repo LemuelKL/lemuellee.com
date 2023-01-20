@@ -26,14 +26,16 @@
 <div class="h-screen bg-zinc-200 flex flex-col">
 	<header class="bg-white h-14 px-8 flex items-center gap-2">
 		<!-- <div class="w-3 h-3 rounded-sm bg-orange-500" /> -->
-		<a
-			class="font-extrabold text-xl hover:text-orange-900 transition-all hover:-translate-y-1"
-			href="/"
-		>
-			Lemuel Lee
-		</a>
-		<div class="text-sm">/</div>
-		<div class="text-sm">HKU & RHUL CS</div>
+		<div class="flex items-center md:gap-2 flex-col md:flex-row">
+			<a
+				class="font-extrabold text-xl hover:text-orange-900 transition-all hover:-translate-y-1"
+				href="/"
+			>
+				Lemuel Lee
+			</a>
+			<div class="text-sm hidden md:block">/</div>
+			<div class="text-sm">HKU & RHUL CS</div>
+		</div>
 		<div class="mx-auto" />
 		<nav class="text-xs font-semibold flex justify-end gap-4">
 			{#each routes as route}
@@ -51,7 +53,7 @@
 		<slot />
 	</main>
 	<footer class="bg-white h-16 px-8 flex items-center gap-8 text-xs">
-		<div class="flex flex-col justify-end font-semibold">
+		<div class="hidden md:flex flex-col justify-end font-semibold">
 			<div>© 2023 Lemuel Lee</div>
 			<div>
 				with <a class="text-orange-700">Svelte</a> &
