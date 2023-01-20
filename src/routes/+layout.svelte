@@ -2,7 +2,6 @@
 	import './../app.css';
 	import { GithubBrand, LinkedinBrand } from 'svelte-awesome-icons';
 	import { page } from '$app/stores';
-	import DarkModeToggle from './DarkModeToggle.svelte';
 	import { darkMode } from './../stores';
 	import { onMount } from 'svelte';
 
@@ -30,34 +29,49 @@
 		darkMode.subscribe((value) => {
 			if (value) document.documentElement.classList.add('dark');
 			else document.documentElement.classList.remove('dark');
-			document.getElementById('prism-style').href =
-				'/prism/themes/prism-one-' + ($darkMode ? 'dark' : 'light') + '.css';
+			const elem = document.getElementById('prism-style') as HTMLLinkElement;
+			if (!elem) return;
+			elem.href = '/prism/themes/prism-one-' + ($darkMode ? 'dark' : 'light') + '.css';
 			Prism.highlightAll();
 		});
 	});
 </script>
 
-<div class="h-screen flex flex-col">
-	<header class="h-14 px-8 flex items-center gap-2 border-b">
-		<!-- <div class="w-3 h-3 rounded-sm bg-orange-500" /> -->
-		<div class="flex items-center md:gap-2 flex-col md:flex-row">
+<div class="flex h-screen flex-col">
+	<header class="flex h-14 items-center gap-2 border-b px-8">
+		<div class="flex flex-col items-center md:flex-row md:gap-2">
 			<a
-				class="font-extrabold text-xl hover:text-orange-900 transition-all hover:-translate-y-1"
+				class="text-xl font-extrabold transition-all hover:-translate-y-1 hover:text-orange-900"
 				href="/"
 			>
 				Lemuel Lee
 			</a>
-			<div class="text-sm hidden md:block">/</div>
-			<div class="text-sm">
-				<a class="text-green-800">HKU</a> <a class="text-gray-300 dark:text-gray-800">&</a>
-				<a class="text-orange-800">RHUL</a> CompSc
+			<div class="hidden text-sm md:block">/</div>
+			<div class="flex gap-1 text-sm">
+				<a
+					class="text-green-800"
+					href="https://www.hku.hk"
+					target="_blank"
+					rel="noreferrer"
+				>
+					HKU
+				</a>
+				<div class="text-gray-300 dark:text-gray-800">&</div>
+				<a
+					class="text-orange-800"
+					href="https://www.royalholloway.ac.uk/"
+					target="_blank"
+					rel="noreferrer"
+				>
+					RHUL
+				</a>CompSc
 			</div>
 		</div>
 		<div class="mx-auto" />
-		<nav class="text-xs font-semibold flex justify-end gap-4">
+		<nav class="flex justify-end gap-4 text-xs font-semibold">
 			{#each routes as route}
 				<a
-					class="hover:text-orange-500 transition-all hover:-translate-y-1 py-4"
+					class="py-4 transition-all hover:-translate-y-1 hover:text-orange-500"
 					href={route.href}
 					class:text-orange-500={route.href === $page.url.pathname}
 				>
@@ -66,14 +80,14 @@
 			{/each}
 		</nav>
 	</header>
-	<main class="grow-0 min-h-[calc(100vh-120px)] overflow-scroll">
+	<main class="min-h-[calc(100vh-120px)] grow-0 overflow-scroll">
 		<slot />
 	</main>
-	<footer class="h-16 px-8 flex items-center md:gap-8 gap-4 text-xs border-t">
-		<label class="relative inline-flex items-center cursor-pointer">
-			<input type="checkbox" bind:checked={$darkMode} class="sr-only peer" />
+	<footer class="flex h-16 items-center gap-4 border-t px-8 text-xs md:gap-8">
+		<label class="relative inline-flex cursor-pointer items-center">
+			<input type="checkbox" bind:checked={$darkMode} class="peer sr-only" />
 			<div
-				class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-800"
+				class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:bg-orange-800 peer-checked:after:translate-x-full peer-checked:after:border-white dark:border-gray-600 dark:bg-gray-700"
 			/>
 			<span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
 				{$darkMode ? 'Atra' : 'Lux'}
@@ -93,14 +107,14 @@
 			<div>lemuellee.kl@gmail.com</div>
 		</div>
 		<div class="flex items-center gap-2">
-			<a href="https://www.github.com/LemuelKL">
+			<a href="https://www.github.com/LemuelKL" target="_blank" rel="noreferrer">
 				<GithubBrand
-					class="hover:cursor-pointer hover:text-gray-700 transition-all hover:-translate-y-1"
+					class="transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-gray-700"
 				/>
 			</a>
-			<a href="https://www.linkedin.com/in/lemuelkl/">
+			<a href="https://www.linkedin.com/in/lemuelkl/" target="_blank" rel="noreferrer">
 				<LinkedinBrand
-					class="hover:cursor-pointer hover:text-blue-700 transition-all hover:-translate-y-1"
+					class="transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-blue-700"
 				/>
 			</a>
 		</div>
