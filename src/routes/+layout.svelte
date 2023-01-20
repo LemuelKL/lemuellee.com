@@ -38,7 +38,7 @@
 </script>
 
 <div class="h-screen flex flex-col">
-	<header class="h-14 px-8 flex items-center gap-2">
+	<header class="h-14 px-8 flex items-center gap-2 border-b">
 		<!-- <div class="w-3 h-3 rounded-sm bg-orange-500" /> -->
 		<div class="flex items-center md:gap-2 flex-col md:flex-row">
 			<a
@@ -69,7 +69,7 @@
 	<main class="grow-0 min-h-[calc(100vh-120px)] overflow-scroll">
 		<slot />
 	</main>
-	<footer class="h-16 px-8 flex items-center md:gap-8 gap-4 text-xs border-t-2">
+	<footer class="h-16 px-8 flex items-center md:gap-8 gap-4 text-xs border-t">
 		<label class="relative inline-flex items-center cursor-pointer">
 			<input type="checkbox" bind:checked={$darkMode} class="sr-only peer" />
 			<div
