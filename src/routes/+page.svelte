@@ -6,10 +6,12 @@
 	class="h-full w-full bg-cover saturate-[.5]"
 	style="background-image: url('/wallpaper/pexels-mitchell-luo-3685201.jpg');"
 >
-	<div class="h-full w-full bg-black bg-opacity-50 flex justify-center items-center">
+	<div
+		class="h-full w-full bg-black bg-opacity-5 dark:bg-opacity-50 flex justify-center items-center"
+	>
 		<div class="max-w-[72rem] md:max-h-[32rem] max-h-full flex md:mx-16">
 			<div
-				class="w-2/6 bg-orange-200 bg-opacity-50 backdrop-blur-sm md:p-8 p-2 flex flex-col justify-center items-center gap-6"
+				class="w-2/6 bg-orange-200 bg-opacity-20 backdrop-blur-md md:p-8 p-2 flex flex-col justify-center items-center gap-6 overflow-scroll"
 			>
 				<img
 					src="/avatar/lemuel-pro.jpg"
@@ -19,7 +21,7 @@
 					<div>Lemuel</div>
 					<div class="text-center">LEE Kwok Lam</div>
 				</div>
-				<div class="w-16 h-1 bg-orange-400 rounded-3xl" />
+				<div class="w-16 h-1 bg-orange-400 dark:bg-orange-300 rounded-3xl" />
 				<div class="text-sm flex flex-col items-center font-serif">
 					<div class="text-lg text-center">COMPUTER SCIENCE</div>
 					<div class="flex gap-2">

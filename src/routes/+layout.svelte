@@ -2,6 +2,9 @@
 	import './../app.css';
 	import { GithubBrand, LinkedinBrand } from 'svelte-awesome-icons';
 	import { page } from '$app/stores';
+	import DarkModeToggle from './DarkModeToggle.svelte';
+	import { darkMode } from './../stores';
+	import { onMount } from 'svelte';
 
 	let routes = [
 		{
@@ -21,10 +24,21 @@
 			href: '/blog'
 		}
 	];
+
+	onMount(() => {
+		if (localStorage.getItem('darkMode') === 'true') darkMode.set(true);
+		darkMode.subscribe((value) => {
+			if (value) document.documentElement.classList.add('dark');
+			else document.documentElement.classList.remove('dark');
+			document.getElementById('prism-style').href =
+				'/prism/themes/prism-one-' + ($darkMode ? 'dark' : 'light') + '.css';
+			Prism.highlightAll();
+		});
+	});
 </script>
 
-<div class="h-screen bg-zinc-200 flex flex-col">
-	<header class="bg-white h-14 px-8 flex items-center gap-2">
+<div class="h-screen flex flex-col">
+	<header class="h-14 px-8 flex items-center gap-2">
 		<!-- <div class="w-3 h-3 rounded-sm bg-orange-500" /> -->
 		<div class="flex items-center md:gap-2 flex-col md:flex-row">
 			<a
@@ -34,7 +48,10 @@
 				Lemuel Lee
 			</a>
 			<div class="text-sm hidden md:block">/</div>
-			<div class="text-sm">HKU & RHUL CS</div>
+			<div class="text-sm">
+				<a class="text-green-800">HKU</a> <a class="text-gray-300 dark:text-gray-800">&</a>
+				<a class="text-orange-800">RHUL</a> CompSc
+			</div>
 		</div>
 		<div class="mx-auto" />
 		<nav class="text-xs font-semibold flex justify-end gap-4">
@@ -49,17 +66,19 @@
 			{/each}
 		</nav>
 	</header>
-	<main class="grow max-h-[calc(100vh-120px)]">
+	<main class="grow-0 min-h-[calc(100vh-120px)] overflow-scroll">
 		<slot />
 	</main>
-	<footer class="bg-white h-16 px-8 flex items-center gap-8 text-xs">
-		<div class="hidden md:flex flex-col justify-end font-semibold">
-			<div>© 2023 Lemuel Lee</div>
-			<div>
-				with <a class="text-orange-700">Svelte</a> &
-				<a class="text-cyan-700">Tailwind</a>
-			</div>
-		</div>
+	<footer class="h-16 px-8 flex items-center md:gap-8 gap-4 text-xs border-t-2">
+		<label class="relative inline-flex items-center cursor-pointer">
+			<input type="checkbox" bind:checked={$darkMode} class="sr-only peer" />
+			<div
+				class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-800"
+			/>
+			<span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+				{$darkMode ? 'Atra' : 'Lux'}
+			</span>
+		</label>
 		<div class="mx-auto" />
 		<div class="flex flex-col items-center">
 			<div class="font-bold">Now at</div>
