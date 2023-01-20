@@ -3,19 +3,17 @@
 </svelte:head>
 
 <div
-	class="h-full w-full bg-cover saturate-[.5]"
+	class="h-full w-full bg-cover saturate-100"
 	style="background-image: url('/wallpaper/pexels-mitchell-luo-3685201.jpg');"
 >
-	<div
-		class="flex h-full w-full items-center justify-center bg-black bg-opacity-5 dark:bg-opacity-50"
-	>
+	<div class="flex h-full w-full items-center justify-center bg-black/5 dark:bg-black/50">
 		<div class="flex max-h-full max-w-[72rem] md:mx-16 md:max-h-[32rem]">
 			<div
-				class="flex w-2/6 flex-col items-center justify-center gap-6 overflow-scroll bg-orange-200 bg-opacity-20 p-2 backdrop-blur-md md:p-8"
+				class="flex w-2/6 flex-col items-center justify-center gap-6 overflow-scroll bg-orange-200/20 p-2 backdrop-blur-md md:p-8"
 			>
 				<img
 					src="/avatar/lemuel-pro.jpg"
-					class="h-48 w-32 rounded-full object-cover ring ring-blue-200 saturate-200 dark:ring-blue-700"
+					class="h-48 w-32 rounded-full object-cover ring ring-blue-200 dark:ring-blue-700"
 					alt="Lemuel Lee"
 				/>
 				<div class="flex flex-col items-center text-xl font-bold">
@@ -34,18 +32,18 @@
 				</div>
 			</div>
 			<div
-				class="flex w-4/6 flex-col items-start gap-2 overflow-scroll bg-black bg-opacity-40 p-4 text-white backdrop-blur-sm md:gap-4 md:p-8"
+				class="flex w-4/6 flex-col items-start gap-2 overflow-scroll bg-black/40 p-4 text-white backdrop-blur-sm md:gap-4 md:p-8"
 			>
 				<div class="text-5xl font-bold md:text-7xl">Hello</div>
 				<div>Here's who I am & what I do</div>
 				<div class="flex gap-2">
 					<div
-						class="rounded-3xl bg-red-600 py-1 px-6 text-sm ring-1 ring-white transition delay-150 hover:cursor-pointer  hover:bg-inherit hover:ring-0"
+						class="transform rounded-3xl bg-gradient-to-br from-orange-500 to-yellow-500 py-1 px-6 text-sm ring-1 ring-white transition-all delay-150 hover:scale-105 hover:cursor-pointer hover:from-orange-600 hover:to-yellow-600 dark:saturate-[.7]"
 					>
 						RESUME
 					</div>
 					<div
-						class="rounded-3xl py-1 px-6 text-sm ring-1 ring-white transition delay-150 hover:cursor-pointer hover:bg-red-600 hover:ring-0"
+						class="transform rounded-3xl bg-gradient-to-br from-orange-500 to-yellow-500 py-1 px-6 text-sm ring-1 ring-white transition-all delay-150 hover:scale-105 hover:cursor-pointer hover:from-orange-600 hover:to-yellow-600 dark:saturate-[.7]"
 					>
 						WORKS
 					</div>
