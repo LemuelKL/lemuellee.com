@@ -37,8 +37,8 @@
 	});
 </script>
 
-<div class="flex h-screen flex-col">
-	<header class="flex h-14 items-center gap-2 border-b px-8">
+<div class="flex h-screen w-screen flex-col">
+	<header class="flex h-14 items-center gap-2 border-b md:px-8 px-2 w-full">
 		<div class="flex flex-col items-center md:flex-row md:gap-2">
 			<a
 				class="text-xl font-extrabold transition-all hover:-translate-y-1 hover:text-orange-900"
@@ -83,7 +83,7 @@
 	<main class="min-h-[calc(100vh-120px)] grow-0 overflow-scroll">
 		<slot />
 	</main>
-	<footer class="flex h-16 items-center gap-4 border-t px-8 text-xs md:gap-8">
+	<footer class="flex h-16 items-center gap-4 border-t md:px-8 px-2 text-xs md:gap-8">
 		<label class="relative inline-flex cursor-pointer items-center">
 			<input type="checkbox" bind:checked={$darkMode} class="peer sr-only" />
 			<div
@@ -94,16 +94,20 @@
 			</span>
 		</label>
 		<div class="mx-auto" />
-		<div class="flex flex-col items-center">
+		<div class="hidden sm:flex flex-col items-center">
 			<div class="font-bold">Now at</div>
 			<div>Egham, UK</div>
 		</div>
-		<div class="flex flex-col items-center">
+		<div class="hidden sm:flex flex-col items-center">
 			<div class="font-bold">Call</div>
 			<div>+852 6238 2237</div>
 		</div>
-		<div class="flex flex-col items-center">
+		<div class="hidden sm:flex flex-col items-center">
 			<div class="font-bold">Write</div>
+			<div>lemuellee.kl@gmail.com</div>
+		</div>
+		<div class="sm:hidden flex flex-col">
+			<div>+852 6238 2237</div>
 			<div>lemuellee.kl@gmail.com</div>
 		</div>
 		<div class="flex items-center gap-2">
