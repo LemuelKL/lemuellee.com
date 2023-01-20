@@ -12,7 +12,7 @@
 				class="flex w-2/6 flex-col items-center justify-center gap-6 overflow-scroll bg-orange-200/20 p-2 backdrop-blur-md md:p-8"
 			>
 				<div
-					class="background-animate rounded-full bg-gradient-to-br from-orange-400 to-blue-400 dark:from-orange-700 dark:to-blue-700 p-1"
+					class="background-animate rounded-full bg-gradient-to-br from-orange-400 to-blue-400 p-1 dark:from-orange-700 dark:to-blue-700"
 				>
 					<img
 						src="/avatar/lemuel-pro.jpg"
@@ -25,7 +25,7 @@
 					<div>Lemuel</div>
 					<div class="text-center">LEE Kwok Lam</div>
 				</div>
-				<div class="h-1 w-16 rounded-3xl bg-orange-400 dark:bg-orange-300" />
+				<div class="h-1 w-16 rounded-3xl bg-orange-300 dark:bg-orange-400" />
 				<div class="flex flex-col items-center font-serif text-sm">
 					<div class="text-center text-lg">COMPUTER SCIENCE</div>
 					<div class="flex gap-2">

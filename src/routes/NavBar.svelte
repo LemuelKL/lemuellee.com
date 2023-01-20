@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 
 	let routes = [
@@ -19,6 +20,8 @@
 			href: '/blog'
 		}
 	];
+
+	$: baseRoute = $page.url.pathname.split('/')[1];
 </script>
 
 <header
@@ -53,7 +56,7 @@
 			<a
 				class="py-4 transition-all hover:-translate-y-1 hover:text-orange-500"
 				href={route.href}
-				class:text-orange-500={route.href === $page.url.pathname}
+				class:text-orange-500={route.href === '/' + baseRoute}
 			>
 				{route.label}
 			</a>
