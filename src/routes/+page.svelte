@@ -37,16 +37,18 @@
 				<div class="text-5xl font-bold md:text-7xl">Hello</div>
 				<div>Here's who I am & what I do</div>
 				<div class="flex gap-2">
-					<div
-						class="transform rounded-3xl bg-gradient-to-br from-orange-500 to-yellow-500 py-1 px-6 text-sm ring-1 ring-white transition-all delay-150 hover:scale-105 hover:cursor-pointer hover:from-orange-600 hover:to-yellow-600 dark:saturate-[.7]"
+					<a
+						class="flex h-8 items-center rounded-md px-4 text-sm text-white ring-2 ring-blue-200 transition-all duration-75 ease-in hover:bg-blue-700/50 dark:ring-blue-700 dark:hover:bg-gray-900"
+						href="/resume"
 					>
-						RESUME
-					</div>
-					<div
-						class="transform rounded-3xl bg-gradient-to-br from-orange-500 to-yellow-500 py-1 px-6 text-sm ring-1 ring-white transition-all delay-150 hover:scale-105 hover:cursor-pointer hover:from-orange-600 hover:to-yellow-600 dark:saturate-[.7]"
+						<div>RESUME</div>
+					</a>
+					<a
+						class="flex h-8 items-center rounded-md px-4 text-sm text-white ring-2 ring-blue-200 transition-all duration-75 ease-in hover:bg-blue-700/50 dark:ring-blue-700 dark:hover:bg-gray-900"
+						href="/works"
 					>
-						WORKS
-					</div>
+						<div>WORKS</div>
+					</a>
 				</div>
 				<div class="h-0 md:h-4" />
 				<div class="text-gray-200">

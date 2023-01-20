@@ -22,7 +22,7 @@
 	<label class="relative inline-flex cursor-pointer items-center">
 		<input type="checkbox" bind:checked={$darkMode} class="peer sr-only" />
 		<div
-			class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:bg-orange-800 peer-checked:after:translate-x-full peer-checked:after:border-white dark:border-gray-600 dark:bg-gray-700"
+			class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white dark:border-gray-600 dark:bg-gray-700"
 		/>
 		<span class="ml-3 text-sm font-light text-gray-900 dark:text-gray-300">
 			{$darkMode ? 'Atra' : 'Lux'}
