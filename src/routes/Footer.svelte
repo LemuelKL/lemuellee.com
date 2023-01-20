@@ -31,7 +31,7 @@
 	<div class="mx-auto" />
 	<div class="hidden flex-col items-center sm:flex">
 		<div class="font-bold">Now at</div>
-		<div>Egham, UK</div>
+		<div>London</div>
 	</div>
 	<div class="hidden flex-col items-center sm:flex">
 		<div class="font-bold">Call</div>

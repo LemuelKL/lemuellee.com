@@ -2,10 +2,12 @@
 title: Lemuel's Blog
 date: '2023-01-14'
 ---
-Hello World! This is my first blog post!
+Hello World!
 
 I have decided to start blogging because expressing oneself is an innate instinct. Facebook is dead, and Instagram lacks the capacity for detailed logos in paragraphs which you need for important discussions.
 
-I would probably talk about findings and unique perspectives on things. Some personal experiences with life. Places that I have visited.
+I have always liked to share my thoughts and ideas. Topics could range from the latest global news, to my personal life. I also like to reflect on my encounters with reality and the philosophical questions and lessons that arise.
 
+Some of the posts will be technical, covering my journey of laerning and exploring the realm of Computer Science. I will share findings I had on projects I worked on, and views on the latest technologies.
 
+I hope you enjoy my blog and find it useful.
