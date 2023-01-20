@@ -11,11 +11,16 @@
 			<div
 				class="flex w-2/6 flex-col items-center justify-center gap-6 overflow-scroll bg-orange-200/20 p-2 backdrop-blur-md md:p-8"
 			>
-				<img
-					src="/avatar/lemuel-pro.jpg"
-					class="h-48 w-32 rounded-full object-cover ring ring-blue-200 dark:ring-blue-700"
-					alt="Lemuel Lee"
-				/>
+				<div
+					class="background-animate rounded-full bg-gradient-to-br from-orange-400 to-blue-400 dark:from-orange-700 dark:to-blue-700 p-1"
+				>
+					<img
+						src="/avatar/lemuel-pro.jpg"
+						class="h-48 w-32 rounded-full object-cover"
+						alt="Lemuel Lee"
+					/>
+				</div>
+
 				<div class="flex flex-col items-center text-xl font-bold">
 					<div>Lemuel</div>
 					<div class="text-center">LEE Kwok Lam</div>
