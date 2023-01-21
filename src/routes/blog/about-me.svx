@@ -1,0 +1,61 @@
+---
+title: More About Lemuel
+date: '2023-01-21'
+description: A short story about Lemuel
+---
+
+This post is about who Lemuel is and what he does.
+
+## Background
+
+I was born and raised in Hong Kong. I speaks Cantonese natively and am a fluent user of English and Mandarin. I am currently pursuing a Bachelor of Engineering in Computer Science at The University of Hong Kong. Right now, I am a being an exchange student at Royal Holloway, University of London.
+
+## Study and work
+
+I am a self-taught programmer. I started programming when I was 12. I have been programming for 10 years. I have worked on a wide range of projects, from web development to machine learning. I have also worked on a few projects with my friends, including a in-production e-learning platform with my secondary school maths teacher.
+
+I am studying Computer Science with focus on Artificial Intelligence, and Theoritical Computer Science. I am intersted in topics like machine learning, deep learning, natural language processing, computational complexity, cyber security, software language, and functional programming.
+
+I have worked as Teaching Assistant for two programming courses in HKU. I have also worked with my secondary school on developing a MC question generator for Maths and Physics. I have also developed a fullstack e-ticketing system for the school's Musical show.
+
+
+## Interests
+
+I am interested in a wide range of topics, including but not limited to: Computer Science, Mathematics, Physics, Philosophy, Psychology, Economics, History, and Literature. I read, listen, write daily, and sometimes speak about these topics. 
+
+I like cycling. I enjoy the sense of freedom and autonomy. Seeing a fit cyclist riding a sleek bike at an ideal position is a majestic sight to behold.
+
+## Philosophy
+
+I operate in terms of Judeo-Christian ethics. They have heavy influences on my thoughts and actions. I believe the fundamental narrative of life is suffering and sacrifice. What brings meaning to life is "being", that is to regconize the terrible philosophical burden conciousness implies, and then "bear the cross" forthrightly.
+
+I see in the modern world, many people, especially my young peers are lost. Modern science and technology do not provide a framework for understanding reality and our existance. Now is a world of nihilism, and we have abandoned God. I hope one day we will be wise enough to know there is not really an alternative to belief...
+
+## Personality
+
+On the MBTI I am an INTJ. On the Big Five I am: fairly high in Openness, Conscientiousness, low in Extraversion, almost zero in Agreeableness, and very high in Neurotism.
+
+I am fairly quiet person. Numerous teachers had told me I seem too stoic and serious. I must confess during most social interactions my mind went into thinking about something else. I enjoy observing, making predictions, and testing my theories. Thoughts can give me a level of stimulation that is hard to match.
+
+For reasons unknown to me, I am pretty good at dark humor. Close friends know I have a twisted sense of humor. I am natural at making puns, and mimicking accents. I think jokes give us a good insight in some values and beliefs of us that we are not aware of.
+
+I have confidence people of my age do not possess. It is because I have experienced traumas that force a growth of confidence in me. I was also lucky to be given plently of opportunities for trial and error. I was also lucky to have good mentors who flourished me. They even taught me how to walk with shoulders back, head up, chest out, and at a brisk pace!
+
+## Music
+
+This is a big part of my life. It is one of the thing that brings me close to the divine, or at least the sense of it. I listen to music every day.
+
+My favourite genre is classical music. I am a big fan of Beethoven, Mozart, Bach, Chopin, Liszt, Schubert, Schumann, Brahms, Tchaikovsky, Rachmaninoff, and many others. I pick composers and pieces to listen according to my need.
+
+I also like pieces, could be from any genre, that has good vocals. Listening to a good singer sing from the heart reminds me of the human experience. It helps me digest pain and brings hope.
+
+Some of my favourites:
+- Vivaldi: Concerto in D Major RV 212, Alana Youssefian
+- Beethoven: Moonlight Sonata, Lang Lang
+- Chopin: Nocturne in E-flat major, Op. 9 No. 2, Lang Lang
+- Bach: Brandenburg Concerto No. 3 in G Major BWV 1048, Voices of Music
+- Mozart: Piano Concerto No. 21 in C Major K. 467, Yeol Eum Son
+- Mozart: Piano Concerto No. 9 in E-flat major K. 271
+- Alan Walker: Somebody Like U
+- Auferstanden aus Ruinen
+- The Lord is My Shepherd

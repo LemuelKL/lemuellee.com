@@ -7,7 +7,7 @@
 	export let data: LayoutData;
 </script>
 
-<div class="static h-screen w-screen">
+<div class="static h-screen w-screen overflow-hidden">
 	<NavBar />
 	<main>
 		<PageTransition url={data.url}>
