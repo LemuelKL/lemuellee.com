@@ -25,7 +25,7 @@
 					<div>Lemuel</div>
 					<div class="text-center">LEE Kwok Lam</div>
 				</div>
-				<div class="h-1 w-16 rounded-3xl bg-orange-300 dark:bg-orange-400" />
+				<div class="h-[1px] w-5/6 rounded-3xl bg-orange-300 dark:bg-orange-400" />
 				<div class="flex flex-col items-center font-serif text-sm">
 					<div class="text-center text-lg">COMPUTER SCIENCE</div>
 					<div class="flex gap-2">
