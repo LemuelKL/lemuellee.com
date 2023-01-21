@@ -28,11 +28,11 @@
  * --syntax-cursor-line: hsla(230, 8%, 24%, 0.05);
  */
 
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
 	background: hsl(230, 1%, 98%);
 	color: hsl(230, 8%, 24%);
-	font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+	font-family: 'Fira Code', 'Fira Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -49,22 +49,22 @@ pre[class*="language-"] {
 }
 
 /* Selection */
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] *::-moz-selection,
-pre[class*="language-"] *::-moz-selection {
+code[class*='language-']::-moz-selection,
+code[class*='language-'] *::-moz-selection,
+pre[class*='language-'] *::-moz-selection {
 	background: hsl(230, 1%, 90%);
 	color: inherit;
 }
 
-code[class*="language-"]::selection,
-code[class*="language-"] *::selection,
-pre[class*="language-"] *::selection {
+code[class*='language-']::selection,
+code[class*='language-'] *::selection,
+pre[class*='language-'] *::selection {
 	background: hsl(230, 1%, 90%);
 	color: inherit;
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*='language-'] {
 	padding: 1em;
 	margin: 0.5em 0;
 	overflow: auto;
@@ -72,7 +72,7 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*='language-'] {
 	padding: 0.2em 0.3em;
 	border-radius: 0.3em;
 	white-space: normal;
@@ -166,7 +166,10 @@ pre[class*="language-"] {
 	color: hsl(301, 63%, 40%);
 }
 
-.language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation {
+.language-javascript
+	.token.template-string
+	> .token.interpolation
+	> .token.interpolation-punctuation.punctuation {
 	color: hsl(344, 84%, 43%);
 }
 

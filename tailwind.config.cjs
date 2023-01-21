@@ -4,9 +4,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'manrope': 'Manrope',
-				'sofia': ['Sofia Sans', 'sans-serif']
-      		},
+				manrope: 'Manrope',
+				sofia: ['Sofia Sans', 'sans-serif']
+			},
 			animation: {
 				text: 'text 5s ease infinite'
 			},

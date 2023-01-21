@@ -5,8 +5,8 @@
  * Ported for PrismJS by Christopher Kapic [@christopher-kapic]
  */
 
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
 	color: #f8f8f2;
 	background: none;
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
@@ -27,22 +27,22 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*='language-'] {
 	padding: 1em;
-	margin: .5em 0;
+	margin: 0.5em 0;
 	overflow: auto;
 	border-radius: 0.3em;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: #263E52;
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+	background: #263e52;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
+:not(pre) > code[class*='language-'] {
+	padding: 0.1em;
+	border-radius: 0.3em;
 	white-space: normal;
 }
 
@@ -58,7 +58,7 @@ pre[class*="language-"] {
 }
 
 .namespace {
-	opacity: .7;
+	opacity: 0.7;
 }
 
 .token.property,
@@ -66,12 +66,12 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #F05E5D;
+	color: #f05e5d;
 }
 
 .token.boolean,
 .token.number {
-	color: #BC94F9;
+	color: #bc94f9;
 }
 
 .token.selector,
@@ -80,7 +80,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #FCFCD6;
+	color: #fcfcd6;
 }
 
 .token.operator,
@@ -96,16 +96,16 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.function,
 .token.class-name {
-	color: #66D8EF;
+	color: #66d8ef;
 }
 
 .token.keyword {
-	color: #6EB26E;
+	color: #6eb26e;
 }
 
 .token.regex,
 .token.important {
-	color: #F05E5D;
+	color: #f05e5d;
 }
 
 .token.important,

@@ -1,7 +1,7 @@
 ## Demo Markdown
 
-- [x] This is a complete item
-- [ ] This is an incomplete item
+-   [x] This is a complete item
+-   [ ] This is an incomplete item
 
 Here's a code block in Python:
 

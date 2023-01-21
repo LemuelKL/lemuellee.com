@@ -15,8 +15,8 @@
 		prose-pre:outline
 		dark:prose-invert"
 >
-	<div class="first-letter:text-3xl text-2xl font-serif">{data.title}</div>
+	<div class="font-serif text-2xl first-letter:text-3xl">{data.title}</div>
 	<div>{data.date}</div>
-	<div class="w-full bg-gray-400 h-[1px]" />
+	<div class="h-[1px] w-full bg-gray-400" />
 	<svelte:component this={data.content} />
 </div>

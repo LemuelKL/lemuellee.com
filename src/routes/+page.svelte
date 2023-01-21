@@ -9,7 +9,7 @@
 	<div class="flex h-full w-full items-center justify-center dark:bg-black/30">
 		<div class="flex max-h-full max-w-[72rem] md:mx-16 md:max-h-[36rem]">
 			<div
-				class="flex w-2/6 flex-col items-center justify-center gap-2 md:gap-6 overflow-scroll bg-orange-200/20 dark:bg-orange-900/20 p-2 backdrop-blur-md md:p-8"
+				class="dark:bg-orange-900/120 flex w-2/6 flex-col items-center justify-center gap-2 overflow-scroll bg-orange-200/20 p-2 backdrop-blur-md dark:bg-orange-900/10 md:gap-6 md:p-8"
 			>
 				<div
 					class="background-animate rounded-full bg-gradient-to-br from-orange-400 to-blue-400 p-1 dark:from-orange-700 dark:to-blue-700"
@@ -62,9 +62,9 @@
 					Learning, Deep Learning, and Computer Vision.
 				</div>
 				<div>
-					I have developed and maintained software in a team,
-					serving hundreds of users. I am skilled in web development with practical knowledge in
-					React, Vue, Svelte, Typescript, Node.js, MySQL, and MongoDB.
+					I have developed and maintained software in a team, serving hundreds of users. I
+					am skilled in web development with practical knowledge in React, Vue, Svelte,
+					Typescript, Node.js, MySQL, and MongoDB.
 				</div>
 				<div>I believe in simplicity and reliability.</div>
 				<a class="self-end hover:underline" href="/blog/about-me">Read more</a>

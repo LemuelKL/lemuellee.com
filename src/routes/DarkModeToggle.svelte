@@ -13,7 +13,7 @@
 
 <div
 	on:mousedown={toggleDarkMode}
-	class="flex flex-col justify-center items-center hover:cursor-pointer hover:bg-slate-900 w-8 h-8"
+	class="flex h-8 w-8 flex-col items-center justify-center hover:cursor-pointer hover:bg-slate-900"
 >
 	{#if $darkMode}
 		<div in:fade>

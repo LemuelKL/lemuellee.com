@@ -24,7 +24,7 @@
 
 <div class="h-full border-b-2 dark:border-black">
 	<div
-		class="h-full bg-center bg-cover"
+		class="h-full bg-cover bg-center"
 		style="background-image: url(/wallpaper/{currentWallpaper
 			? currentWallpaper.uri
 			: 'eagle-3840x2160.jpg'})"
