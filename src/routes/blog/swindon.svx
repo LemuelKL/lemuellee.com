@@ -21,7 +21,7 @@ All the conveniences didn't bother me too much though. Turned out my body was fa
 
 I took a nice shower, enjoyed a fantastic ramen prepared by my aunt, and went to bed early. I was exhausted.
 
-<img src="https://i.imgur.com/vupa3SS.jpeg" class="h-48 mx-auto outline"/>
+<img src="https://i.imgur.com/vupa3SS.jpeg" alt="" class="h-48 mx-auto outline"/>
 
 ### Weather
 
@@ -57,10 +57,10 @@ This experience gives me hope. It truly felt like I was in a socialist's dream o
 
 
 <div class="grid grid-cols-4 grid-rows-1 mx-auto content-center place-items-center h-48 w-full gap-2 m-16">
-<img src="https://imgur.com/Ytgy0hF.jpeg" class="aspect-square outline"/>
-<img src="https://imgur.com/htyTMNP.jpeg" class="aspect-square outline"/>
-<img src="https://imgur.com/JM1RQ09.jpeg" class="aspect-square outline"/>
-<img src="https://imgur.com/RcowreX.jpeg" class="aspect-square outline"/>
+<img src="https://imgur.com/Ytgy0hF.jpeg" alt="" class="aspect-square outline"/>
+<img src="https://imgur.com/htyTMNP.jpeg" alt="" class="aspect-square outline"/>
+<img src="https://imgur.com/JM1RQ09.jpeg" alt="" class="aspect-square outline"/>
+<img src="https://imgur.com/RcowreX.jpeg" alt="" class="aspect-square outline"/>
 </div>
 
 ### Swindon Designer Outlet
