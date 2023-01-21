@@ -1,6 +1,6 @@
 <div
 	class="h-full w-full bg-cover saturate-[.5]"
-	style="background-image: url('/wallpaper/pexels-ricardo-esquivel-1604141.jpg');"
+	style="background-image: url('/wallpaper/rostyslav-savchyn-oQbfAcVgb0M-unsplash.jpg');"
 >
 	<div class="flex h-full w-full items-center justify-center dark:bg-black/30">
 		<div class="h-64 w-64 bg-white/20 backdrop-blur-sm dark:bg-black/20">
