@@ -1,6 +1,8 @@
 ---
 title: My Stay in Swindon
 date: '2023-01-14'
+cover: https://imgur.com/JM1RQ09.jpeg
+summary: My first week in the UK, and my first time in a cold climate country. I had to stay at Swindon for a week before my accommodation move-in date. I was able to see my uncle and his family, and also went to Lydiard Park and the town centre.
 ---
 
 I have come to the UK for an international exchange programme. I have decided due to a combination of factors, to stay at my uncle's place in Swindon for a week prior to my accommodation move-in date.

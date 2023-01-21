@@ -1,6 +1,8 @@
 ---
 title: This Website
 date: '2023-01-15'
+cover: 'wallpaper/pexels-mitchell-luo-3685201.jpg'
+summary: Technical overview of this website. Explains the tech stack, workflow, and running cost. Highlighted features include custom CMS, fully static with no backend, markdown rendering, and maths typesetting.
 ---
 
 <script>

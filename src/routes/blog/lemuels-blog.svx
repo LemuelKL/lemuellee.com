@@ -1,6 +1,8 @@
 ---
 title: Lemuel's Blog
 date: '2023-01-14'
+cover: wallpaper/Fq14Fsk.jpeg
+summary: Hello World!
 ---
 Hello World!
 

@@ -1,6 +1,8 @@
 ---
 title: Picture Gallery and Drinks Reception
 date: '2023-01-18'
+cover: https://imgur.com/DoOHOx4.jpg
+summary: A visit to the Picture Gallery and a drinks reception. I had a good time. I met some new people and made some new friends.
 ---
 
 There was an event for visiting students in the evening. Started off with some slides on academic matters, then a drinks reception with a talk on the history of Royal Holloway and specifically the picture gallery. Lastly it was a social event where we could mingle with the students and staff.
