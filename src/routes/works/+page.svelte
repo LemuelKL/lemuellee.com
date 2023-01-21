@@ -21,8 +21,8 @@
 				'Netlify'
 			],
 			description:
-				'Personal website built with SvelteKit, TailwindCSS, MDsveX, KaTeX, Typescript, and Netlify. Includes a blog, a list of works, and my resume',
-			links: ['https://www.lemuel.pp.ua'],
+				'Personal website built with SvelteKit, TailwindCSS, MDsveX, KaTeX, Typescript, and Netlify. Includes a blog, a list of works, and my resume. Simple and fast.',
+			links: ['https://www.github.com/LemuelKL/lemuel.pp.ua', 'https://www.lemuel.pp.ua'],
 			thumbnail: 'https://example.com',
 			date: 'Jan 2023'
 		},

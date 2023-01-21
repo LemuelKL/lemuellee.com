@@ -9,7 +9,7 @@
 	<div class="flex h-full w-full items-center justify-center dark:bg-black/30">
 		<div class="flex max-h-full max-w-[72rem] md:mx-16 md:max-h-[36rem]">
 			<div
-				class="flex w-2/6 flex-col items-center justify-center gap-2 md:gap-6 overflow-scroll bg-orange-200/20 p-2 backdrop-blur-md md:p-8"
+				class="flex w-2/6 flex-col items-center justify-center gap-2 md:gap-6 overflow-scroll bg-orange-200/20 dark:bg-orange-900/20 p-2 backdrop-blur-md md:p-8"
 			>
 				<div
 					class="background-animate rounded-full bg-gradient-to-br from-orange-400 to-blue-400 p-1 dark:from-orange-700 dark:to-blue-700"
