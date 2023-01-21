@@ -17,12 +17,12 @@
 </script>
 
 <footer
-	class="absolute bottom-0 flex h-16 w-full items-center gap-4 border-t px-2 text-xs md:gap-8 md:px-8"
+	class="absolute bottom-0 flex h-12 w-full items-center gap-4 border-t bg-white px-2 text-xs dark:bg-zinc-900 md:gap-8 md:px-8"
 >
 	<label class="relative inline-flex cursor-pointer items-center">
 		<input type="checkbox" bind:checked={$darkMode} class="peer sr-only" />
 		<div
-			class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white dark:border-gray-600 dark:bg-gray-700"
+			class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:bg-gray-800 peer-checked:after:translate-x-full peer-checked:after:border-white dark:border-gray-600 dark:bg-gray-700"
 		/>
 		<span class="ml-3 text-sm font-light text-gray-900 dark:text-gray-300">
 			{$darkMode ? 'Atra' : 'Lux'}

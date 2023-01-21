@@ -3,7 +3,7 @@
 	export let url = '';
 </script>
 
-<div class="transition-outer absolute top-16 h-[calc(100vh-128px)] w-full overflow-scroll">
+<div class="transition-outer absolute top-12 h-[calc(100vh-96px)] w-full overflow-scroll">
 	{#key url}
 		<div
 			class="transition-inner"

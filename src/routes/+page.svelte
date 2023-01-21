@@ -1,12 +1,12 @@
 <svelte:head>
-	<title>Lemuel Lee</title>
+	<title>LemuelKL</title>
 </svelte:head>
 
 <div
 	class="h-full w-full bg-cover saturate-100"
-	style="background-image: url('/wallpaper/pexels-mitchell-luo-3685201.jpg');"
+	style="background-image: url('/wallpaper/xavier-teo-qK8Gjuds14k-unsplash.jpg');"
 >
-	<div class="flex h-full w-full items-center justify-center bg-black/5 dark:bg-black/50">
+	<div class="flex h-full w-full items-center justify-center dark:bg-black/30">
 		<div class="flex max-h-full max-w-[72rem] md:mx-16 md:max-h-[32rem]">
 			<div
 				class="flex w-2/6 flex-col items-center justify-center gap-6 overflow-scroll bg-orange-200/20 p-2 backdrop-blur-md md:p-8"
