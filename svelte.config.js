@@ -18,7 +18,7 @@ const config = {
 	extensions: ['.svelte', '.svx'],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter({precompress: true}),
 	}
 };
 

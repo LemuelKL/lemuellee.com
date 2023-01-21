@@ -5,3 +5,5 @@ export const load = (async ({ url }) => {
     url: url.pathname
   };
 }) satisfies LayoutServerLoad;
+
+export const prerender = true;

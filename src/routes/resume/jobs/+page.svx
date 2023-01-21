@@ -1,0 +1,4 @@
+# Test
+
+- Student Teaching Assistant of ENGG1330 Computer Programming I at The University of Hong Kong
+- Student Teaching Assistant of ENGG1340 Computer Programming II at The University of Hong Kong

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { darkMode } from './../stores';
-	import { GithubBrand, LinkedinBrand } from 'svelte-awesome-icons';
+	import { GithubBrand, LinkedinBrand, InstagramBrand } from 'svelte-awesome-icons';
 
 	onMount(() => {
 		if (localStorage.getItem('darkMode') === 'true') darkMode.set(true);
@@ -54,6 +54,11 @@
 		<a href="https://www.linkedin.com/in/lemuelkl/" target="_blank" rel="noreferrer">
 			<LinkedinBrand
 				class="transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-blue-700"
+			/>
+		</a>
+		<a href="https://www.instagram.com/lemuel.uk/" target="_blank" rel="noreferrer">
+			<InstagramBrand
+				class="transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-pink-700"
 			/>
 		</a>
 	</div>
