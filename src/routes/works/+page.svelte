@@ -161,7 +161,7 @@
 	];
 </script>
 
-<div class="h-full w-full p-8">
+<div class="mx-auto h-full max-w-5xl p-4">
 	<div class="flex h-full w-full flex-col items-start justify-center divide-y-2">
 		{#each works as work}
 			<div
@@ -172,7 +172,7 @@
 					<div>{work.date}</div>
 				</div>
 
-				<div class="flex items-center">
+				<div class="flex flex-wrap items-center">
 					{#each work.tags as tag}
 						<div class="text-xs">{tag}</div>
 						<div class="mx-2 h-1 w-1 rounded-full bg-zinc-400 last:hidden" />
