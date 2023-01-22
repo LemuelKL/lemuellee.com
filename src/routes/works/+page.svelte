@@ -22,7 +22,7 @@
 			],
 			description:
 				'Personal website built with SvelteKit, TailwindCSS, MDsveX, KaTeX, Typescript, and Netlify. Includes a blog, a list of works, and my resume. Simple and fast.',
-			links: ['https://www.github.com/LemuelKL/lemuel.pp.ua', 'https://www.lemuel.pp.ua'],
+			links: ['https://www.github.com/LemuelKL/lemuellee.com', 'https://lemuellee.com'],
 			thumbnail: 'https://example.com',
 			date: 'Jan 2023'
 		},
@@ -96,7 +96,7 @@
 			links: [
 				'https://innoacademy.engg.hku.hk/hack/',
 				'https://youtu.be/_CbzQMBAphA',
-				'https://www.github.com/LemuelKL/HackOS'
+				'https://github.com/LemuelKL/HackOS'
 			],
 			thumbnail: 'https://example.com',
 			date: 'May 2022'
@@ -188,7 +188,7 @@
 								rel="noreferrer"
 								class="text-sm text-blue-900 hover:underline dark:text-blue-200"
 							>
-								{link}
+								{link.split('://')[1]}
 							</a>
 						</div>
 					{/each}

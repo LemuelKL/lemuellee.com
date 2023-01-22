@@ -1,5 +1,5 @@
 ---
-title: Dynamic Markdown Source Loading in SvelteKit with MDsveX
+title: Dynamic Markdown Loading with SvelteKit & MDsveX
 date: '2023-01-15'
 cover: wallpaper/pexels-olia-danilevich-5883822.jpg
 summary: This technical post shows how to load any markdown source in plain text, from anywhere, including the internet, into MDsveX compiler, then finally into a Svelte compiler, generating a Svelte component that is loaded into the DOM dynamically.

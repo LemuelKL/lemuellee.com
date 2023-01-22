@@ -9,7 +9,6 @@
 
 <svelte:head>
 	<title>Blog - {data.title}</title>
-	<script src="/prism/prism.js"></script>
 </svelte:head>
 
 <div
@@ -28,6 +27,6 @@
 <style>
 	@import '$lib/assets/prism/prism-line-numbers.css';
 	@import '$lib/assets/prism/prism-toolbar.css';
-	@import '$lib/assets/prism/themes/prism-one-dark.css';
+	@import '$lib/assets/prism/prism-one-dark.css';
 	@import url('https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css');
 </style>

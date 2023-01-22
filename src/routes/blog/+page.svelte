@@ -16,12 +16,12 @@
 			href={post.path}
 		>
 			<img
-				class="aspect-square h-36 w-36 rounded-sm object-cover md:h-52 md:w-52"
+				class="aspect-square h-32 w-32 rounded-sm object-cover md:h-48 md:w-48"
 				src={post.meta.cover ?? defaultCover}
 				alt=""
 			/>
-			<div class="flex flex-col md:gap-1 md:py-2 lg:gap-2 lg:py-4">
-				<div class="text-2xl md:text-4xl">
+			<div class="flex flex-col md:gap-1 lg:gap-2">
+				<div class="text-2xl md:text-3xl">
 					{post.meta.title}
 				</div>
 				<div class="text">{post.meta.date}</div>
