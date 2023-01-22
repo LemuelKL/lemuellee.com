@@ -8,10 +8,6 @@
 		darkMode.subscribe((value) => {
 			if (value) document.documentElement.classList.add('dark');
 			else document.documentElement.classList.remove('dark');
-			const elem = document.getElementById('prism-style') as HTMLLinkElement;
-			if (!elem) return;
-			elem.href = '/prism/themes/prism-one-' + ($darkMode ? 'dark' : 'light') + '.css';
-			Prism.highlightAll();
 		});
 	});
 </script>

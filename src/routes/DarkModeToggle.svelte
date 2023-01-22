@@ -5,9 +5,6 @@
 	function toggleDarkMode() {
 		darkMode.set(!$darkMode);
 		document.documentElement.classList.toggle('dark');
-		document.getElementById('prism-style').href =
-			'/prism/themes/prism-one-' + ($darkMode ? 'dark' : 'light') + '.css';
-		Prism.highlightAll();
 	}
 </script>
 

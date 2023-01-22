@@ -1,11 +1,13 @@
+<script lang="ts">
+	import avatar from '$lib/assets/lemuel-pro.webp';
+	import wallpaper from '$lib/assets/xavier-teo-qK8Gjuds14k-unsplash.jpg';
+</script>
+
 <svelte:head>
 	<title>LemuelKL</title>
 </svelte:head>
 
-<div
-	class="h-full w-full bg-cover saturate-100"
-	style="background-image: url('/wallpaper/xavier-teo-qK8Gjuds14k-unsplash.jpg');"
->
+<div class="h-full w-full bg-cover saturate-100" style="background-image: url({wallpaper});">
 	<div class="flex h-full w-full items-center justify-center dark:bg-black/30">
 		<div class="flex max-h-full max-w-[72rem] md:mx-16 md:max-h-[36rem]">
 			<div
@@ -15,7 +17,7 @@
 					class="background-animate rounded-full bg-gradient-to-br from-orange-400 to-blue-400 p-1 dark:from-orange-700 dark:to-blue-700"
 				>
 					<img
-						src="/avatar/lemuel-pro.webp"
+						src={avatar}
 						class="h-48 w-32 rounded-full object-cover"
 						alt="Lemuel Lee"
 					/>

@@ -1,23 +1,12 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	export let data: PageData;
+
+	import defaultCover from '$lib/assets/ryan-shumway--n5F3fH0lIY-unsplash.jpg';
 </script>
 
 <svelte:head>
 	<title>Blog</title>
-	<link rel="stylesheet" href="%sveltekit.assets%/prism/prism-line-numbers.css" />
-	<link rel="stylesheet" href="%sveltekit.assets%/prism/prism-toolbar.css" />
-	<link
-		id="prism-style"
-		href="%sveltekit.assets%/prism/themes/prism-one-light.css"
-		rel="stylesheet"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
-		integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"
-		crossorigin="anonymous"
-	/>
 </svelte:head>
 
 <div class="flex w-full flex-col gap-3 justify-self-start p-3">
@@ -28,7 +17,7 @@
 		>
 			<img
 				class="aspect-square h-36 w-36 rounded-sm object-cover md:h-52 md:w-52"
-				src={post.meta.cover ?? '/wallpaper/121134.jpg'}
+				src={post.meta.cover ?? defaultCover}
 				alt=""
 			/>
 			<div class="flex flex-col md:gap-1 md:py-2 lg:gap-2 lg:py-4">
