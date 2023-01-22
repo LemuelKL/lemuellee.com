@@ -1,13 +1,13 @@
 <script lang="ts">
 	import avatar from '$lib/assets/lemuel-pro.webp';
-	import wallpaper from '$lib/assets/xavier-teo-qK8Gjuds14k-unsplash.jpg';
+	import wallpaper from '$lib/assets/xavier-teo-qK8Gjuds14k-unsplash.webp';
 </script>
 
 <svelte:head>
 	<title>LemuelKL</title>
 </svelte:head>
 
-<div class="h-full w-full bg-cover saturate-100" style="background-image: url({wallpaper});">
+<div class="h-full w-full bg-cover" style="background-image: url({wallpaper});">
 	<div class="flex h-full w-full items-center justify-center dark:bg-black/30">
 		<div class="flex max-h-full max-w-[72rem] md:mx-16 md:max-h-[36rem]">
 			<div
