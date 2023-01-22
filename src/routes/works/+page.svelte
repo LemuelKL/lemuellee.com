@@ -161,6 +161,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Works</title>
+</svelte:head>
+
 <div class="mx-auto h-full max-w-5xl p-4">
 	<div class="flex h-full w-full flex-col items-start justify-center divide-y-2">
 		{#each works as work}

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>LemuelKL</title>
+	<title>Lemuel Lee</title>
 </svelte:head>
 
 <div class="h-full w-full bg-cover" style="background-image: url({wallpaper});">
