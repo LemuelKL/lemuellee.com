@@ -162,7 +162,7 @@
 </script>
 
 <svelte:head>
-	<title>Works</title>
+	<title>Lemuel's Works</title>
 </svelte:head>
 
 <div class="mx-auto h-full max-w-5xl p-4">

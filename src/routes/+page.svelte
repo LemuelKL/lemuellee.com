@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Lemuel Lee</title>
+	<title>About Lemuel Lee</title>
 </svelte:head>
 
 <div class="h-full w-full bg-cover" style="background-image: url({wallpaper});">
@@ -26,6 +26,7 @@
 				<div class="flex flex-col items-center text-xl font-bold">
 					<div>Lemuel</div>
 					<div class="text-center">LEE Kwok Lam</div>
+					<div class="tracking-widest">李國臨</div>
 				</div>
 				<div class="h-[1px] w-5/6 rounded-3xl bg-orange-300 dark:bg-orange-400" />
 				<div class="flex flex-col items-center font-serif text-sm">

@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog - {data.title}</title>
+	<title>{data.title}</title>
 </svelte:head>
 
 <div

@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>Lemuel's Blog</title>
 </svelte:head>
 
 <div class="flex w-full flex-col gap-3 justify-self-start p-3">

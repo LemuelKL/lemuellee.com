@@ -1,4 +1,6 @@
-<svelte:head>Resume</svelte:head>
+<svelte:head>
+	<title>Lemuel's Resume</title>
+</svelte:head>
 
 <div class="h-full w-full">
 	<div class="flex h-full w-full items-center justify-center">
