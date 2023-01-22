@@ -10,6 +10,8 @@ export const GET = (async () => {
 	return new Response(sitemap(posts, pages));
 }) satisfies RequestHandler;
 
+export const prerender = true;
+
 const sitemap = (posts: Post[], pages: string[]) => `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
