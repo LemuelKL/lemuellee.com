@@ -5,6 +5,19 @@
 
 <svelte:head>
 	<title>Blog</title>
+	<link rel="stylesheet" href="%sveltekit.assets%/prism/prism-line-numbers.css" />
+	<link rel="stylesheet" href="%sveltekit.assets%/prism/prism-toolbar.css" />
+	<link
+		id="prism-style"
+		href="%sveltekit.assets%/prism/themes/prism-one-light.css"
+		rel="stylesheet"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+		integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"
+		crossorigin="anonymous"
+	/>
 </svelte:head>
 
 <div class="flex w-full flex-col gap-3 justify-self-start p-3">

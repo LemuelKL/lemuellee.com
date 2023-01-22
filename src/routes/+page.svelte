@@ -15,7 +15,7 @@
 					class="background-animate rounded-full bg-gradient-to-br from-orange-400 to-blue-400 p-1 dark:from-orange-700 dark:to-blue-700"
 				>
 					<img
-						src="/avatar/lemuel-pro.jpg"
+						src="/avatar/lemuel-pro.webp"
 						class="h-48 w-32 rounded-full object-cover"
 						alt="Lemuel Lee"
 					/>
@@ -67,7 +67,7 @@
 					Typescript, Node.js, MySQL, and MongoDB.
 				</div>
 				<div>I believe in simplicity and reliability.</div>
-				<a class="self-end hover:underline" href="/blog/about-me">Read more</a>
+				<a class="self-end hover:underline" href="/blog/about-me">More about me</a>
 			</div>
 		</div>
 	</div>
