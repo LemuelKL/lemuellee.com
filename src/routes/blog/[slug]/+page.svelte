@@ -2,8 +2,9 @@
 	import type { PageData } from './$types';
 	export let data: PageData;
 	import { onMount } from 'svelte';
+
 	onMount(() => {
-		Prism.highlightAll();
+		(window as any).Prism.highlightAll();
 	});
 </script>
 
