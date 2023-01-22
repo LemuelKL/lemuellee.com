@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 import rehypeKatexSvelte from 'rehype-katex-svelte';
@@ -20,7 +20,7 @@ const config = {
 	extensions: ['.svelte', '.svx'],
 
 	kit: {
-		adapter: adapter({ precompress: true })
+		adapter: adapter({ precompress: true }),
 	}
 };
 

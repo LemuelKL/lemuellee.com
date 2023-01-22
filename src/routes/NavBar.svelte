@@ -30,7 +30,7 @@
 	<img src="/icons8-eagle-100.png" class="hidden h-8 w-8 md:block" alt="" />
 	<a class="ml-1 text-xl font-extrabold hover:text-orange-900" href="/">LemuelKL</a>
 	<div class="mx-auto" />
-	<nav class="flex justify-end gap-4 text-xs font-extrabold">
+	<nav class="flex justify-end gap-4 text-xs font-extrabold" data-sveltekit-preload-code="eager">
 		{#each routes as route}
 			<a
 				class="py-4 transition-all hover:-translate-y-1 hover:text-orange-500"

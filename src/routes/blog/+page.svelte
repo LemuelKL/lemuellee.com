@@ -2,7 +2,7 @@
 	import type { PageData } from './$types';
 	export let data: PageData;
 
-	import defaultCover from '$lib/assets/ryan-shumway--n5F3fH0lIY-unsplash.jpg';
+	import defaultCover from '$lib/assets/ryan-shumway--n5F3fH0lIY-unsplash.webp';
 </script>
 
 <svelte:head>
