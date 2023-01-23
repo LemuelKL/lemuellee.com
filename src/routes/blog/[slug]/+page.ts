@@ -3,18 +3,20 @@ import type { PageLoad } from './$types';
 export const load = (async ({ params }) => {
 	try {
 		const post = await import(`../${params.slug}.svx`);
-		const { title, date } = post.metadata;
+		const { title, date, summary } = post.metadata;
 		const content = post.default;
 		return {
-			content,
 			title,
-			date
+			date,
+			summary,
+			content,
 		};
 	} catch {
 		return {
-			contet: null,
 			title: 'Post Not Found',
-			date: ''
+			date: '',
+			summary: '',
+			content: null,
 		};
 	}
 }) satisfies PageLoad;
