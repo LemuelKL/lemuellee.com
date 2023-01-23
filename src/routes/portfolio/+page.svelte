@@ -273,7 +273,7 @@
 	/>
 </svelte:head>
 
-<div class="mx-auto h-full max-w-5xl py-2 px-6">
+<div class="mx-auto h-full max-w-5xl py-2 px-2">
 	<div class="flex h-full w-full flex-col items-start justify-center divide-y-2">
 		{#each works as work}
 			<WorkDisplay {work} />
