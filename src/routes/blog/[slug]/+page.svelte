@@ -23,7 +23,7 @@
 
 <svelte:head>
 	<title>{data.title}</title>
-	<meta name="description" content="${data.summary}" />
+	<meta name="description" content={data.summary} />
 	<script type="application/ld+json">
     {
       "@context": "https://schema.org",
