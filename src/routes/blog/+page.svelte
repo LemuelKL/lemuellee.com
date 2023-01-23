@@ -3,6 +3,7 @@
 	export let data: PageData;
 
 	import defaultCover from '$lib/assets/ryan-shumway--n5F3fH0lIY-unsplash.webp';
+	import { humanDate } from '$lib/utils';
 
 	const firstPostMeta = data.posts[0].meta;
 </script>
@@ -11,7 +12,9 @@
 	<title>Blog - Lemuel LEE Kwok Lam</title>
 	<meta
 		name="description"
-		content={`${firstPostMeta.title}. ${firstPostMeta.date}. ${firstPostMeta.summary}`}
+		content={`Latest post on ${humanDate(firstPostMeta.date)}: ${firstPostMeta.title} - ${
+			firstPostMeta.summary
+		}`}
 	/>
 </svelte:head>
 
@@ -30,7 +33,7 @@
 				<div class="text-2xl md:text-3xl">
 					{post.meta.title}
 				</div>
-				<div class="text">{post.meta.date}</div>
+				<div class="text">{humanDate(post.meta.date)}</div>
 				<div class="text">{post.meta.summary ?? ''}</div>
 			</div>
 		</a>
