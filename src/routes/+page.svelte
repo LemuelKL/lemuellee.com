@@ -5,6 +5,10 @@
 
 <svelte:head>
 	<title>About Lemuel Lee</title>
+	<meta
+		name="description"
+		content="Lemuel LEE Kwok Lam, computer science student from The University of Hong Kong and Royal Holloway, University of London."
+	/>
 </svelte:head>
 
 <div class="h-full w-full bg-cover" style="background-image: url({wallpaper});">

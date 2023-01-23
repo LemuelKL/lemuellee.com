@@ -10,7 +10,7 @@
 	import 'prismjs/components/prism-clike';
 	import 'prismjs/components/prism-c';
 	import 'prismjs/components/prism-cpp';
-	import 'prismjs/components/prism-javascript'
+	import 'prismjs/components/prism-javascript';
 	import 'prismjs/components/prism-typescript';
 	import 'prismjs/components/prism-python';
 	import 'prismjs/components/prism-haskell';
@@ -22,6 +22,7 @@
 
 <svelte:head>
 	<title>{data.title}</title>
+	<meta name="description" content={data.summary ?? "Lemuel LEE Kwok Lam's blog."} />
 </svelte:head>
 
 <div
