@@ -9,14 +9,14 @@ export const load = (async ({ params }) => {
 			title,
 			date,
 			summary,
-			content,
+			content
 		};
 	} catch {
 		return {
 			title: 'Post Not Found',
 			date: '',
 			summary: '',
-			content: null,
+			content: null
 		};
 	}
 }) satisfies PageLoad;

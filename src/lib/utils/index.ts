@@ -19,4 +19,4 @@ export const fetchMarkdownBlogs = async () => {
 export const humanDate = (date: string) => {
 	const options = { year: 'numeric', month: 'short', day: 'numeric' };
 	return new Date(date).toLocaleDateString('en-US', options as Intl.DateTimeFormatOptions);
-}
+};
