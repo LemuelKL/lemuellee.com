@@ -6,7 +6,7 @@ const website = 'https://lemuellee.com';
 
 export const GET = (async () => {
 	const posts = await fetchMarkdownBlogs();
-	const pages = ['works', 'resume', 'blog'];
+	const pages = ['/portfolio', '/resume', '/blog'];
 	return new Response(sitemap(posts, pages));
 }) satisfies RequestHandler;
 
@@ -30,7 +30,7 @@ const sitemap = (posts: Post[], pages: string[]) => `<?xml version="1.0" encodin
 		.map(
 			(page) => `
   <url>
-    <loc>${website}/${page}</loc>
+    <loc>${website}${page}</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>

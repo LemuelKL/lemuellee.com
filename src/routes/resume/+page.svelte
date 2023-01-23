@@ -1,5 +1,9 @@
 <svelte:head>
-	<title>Lemuel's Resume</title>
+	<title>Resume - Lemuel LEE Kwok Lam</title>
+	<meta
+		name="description"
+		content="Tutor at HKU for ENGG1330 and ENGG1340 in 2021-22. Question Writer & Programmer at Shatin Pui Ying College in 2021-22. Fullstack Engineer at Shatin Pui Ying College in 2021-22."
+	/>
 </svelte:head>
 
 <div class="h-full w-full">

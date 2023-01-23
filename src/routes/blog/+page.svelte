@@ -3,10 +3,16 @@
 	export let data: PageData;
 
 	import defaultCover from '$lib/assets/ryan-shumway--n5F3fH0lIY-unsplash.webp';
+
+	const firstPostMeta = data.posts[0].meta;
 </script>
 
 <svelte:head>
-	<title>Lemuel's Blog</title>
+	<title>Blog - Lemuel LEE Kwok Lam</title>
+	<meta
+		name="description"
+		content={`${firstPostMeta.title}. ${firstPostMeta.date}. ${firstPostMeta.summary}`}
+	/>
 </svelte:head>
 
 <div class="flex w-full flex-col gap-3 justify-self-start p-3">

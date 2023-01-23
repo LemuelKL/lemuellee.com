@@ -1,13 +1,13 @@
 <script>
 	import { page } from '$app/stores';
-	let routes = [
+	export let routes = [
 		{
 			label: 'ABOUT',
 			href: '/'
 		},
 		{
-			label: 'WORKS',
-			href: '/works'
+			label: 'PORTFOLIO',
+			href: '/portfolio'
 		},
 		{
 			label: 'RESUME',

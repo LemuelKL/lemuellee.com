@@ -22,7 +22,7 @@
 
 <svelte:head>
 	<title>{data.title}</title>
-	<meta name="description" content={data.summary ?? "Lemuel LEE Kwok Lam's blog."} />
+	<meta name="description" content={`${data.date}. ${data.summary}`} />
 </svelte:head>
 
 <div

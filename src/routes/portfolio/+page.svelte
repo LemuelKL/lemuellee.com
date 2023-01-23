@@ -21,7 +21,7 @@
 				'Netlify'
 			],
 			description:
-				'Personal website built with SvelteKit, TailwindCSS, MDsveX, KaTeX, Typescript, and Netlify. Includes a blog, a list of works, and my resume. Simple and fast.',
+				'Personal website built with SvelteKit, TailwindCSS, MDsveX, KaTeX, Typescript, and Netlify. Includes my portfolio, resume, and blog. Simple and fast.',
 			links: ['https://www.github.com/LemuelKL/lemuellee.com', 'https://lemuellee.com'],
 			thumbnail: 'https://example.com',
 			date: 'Jan 2023'
@@ -162,7 +162,11 @@
 </script>
 
 <svelte:head>
-	<title>Lemuel's Works</title>
+	<title>Portfolio - Lemuel LEE Kwok Lam</title>
+	<meta
+		name="description"
+		content="Domain Specific Meta-language | Functional Programming | Algorithmic Trading | Machine Learning | Self-driving | Fullstack Web Dev | E-ticketing | Linux | Database | Operating System"
+	/>
 </svelte:head>
 
 <div class="mx-auto h-full max-w-5xl p-4">

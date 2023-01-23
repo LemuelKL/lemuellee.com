@@ -4,10 +4,10 @@
 </script>
 
 <svelte:head>
-	<title>About Lemuel Lee</title>
+	<title>About - Lemuel LEE Kwok Lam</title>
 	<meta
 		name="description"
-		content="Lemuel LEE Kwok Lam, computer science student from The University of Hong Kong and Royal Holloway, University of London."
+		content="Lemuel is studying Theoretical Computer Science in The University of Hong Kong. Exchange student at Royal Holloway, University of London. Tutor at HKU for ENGG1330 and ENGG1340 in 2021-22."
 	/>
 </svelte:head>
 
@@ -57,9 +57,9 @@
 					</a>
 					<a
 						class="flex h-8 items-center rounded-md px-4 text-sm text-white ring-2 ring-blue-200 transition-all duration-75 ease-in hover:bg-blue-700/50 dark:ring-blue-700 dark:hover:bg-gray-900"
-						href="/works"
+						href="/portfolio"
 					>
-						<div>WORKS</div>
+						<div>PORTFOLIO</div>
 					</a>
 				</div>
 				<div class="h-0 md:h-4" />
