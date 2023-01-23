@@ -1,25 +1,11 @@
 <script lang="ts">
-	interface Work {
-		title: string;
-		tags: string[];
-		description: string[];
-		date: string;
-		links: string[];
-		thumbnail: string;
-	}
+	import type { Work } from '$lib/types/portfolio';
+	import WorkDisplay from './Work.svelte';
 
 	const works: Work[] = [
 		{
 			title: 'Personal Website',
-			tags: [
-				'Web Development',
-				'SvelteKit',
-				'TailwindCSS',
-				'MDsveX',
-				'KaTeX',
-				'Typescript',
-				'Netlify'
-			],
+			tags: ['SvelteKit', 'TailwindCSS', 'MDsveX', 'KaTeX', 'Typescript'],
 			description: [
 				'SvelteKit, TailwindCSS, TypeScript, KaTeX, Vite, Netlify, MDsveX, PrismJS, RehypeJS.',
 				'Custom Content Management System for managing dynamic imports of markdown files.',
@@ -32,7 +18,7 @@
 			date: 'Jan 2023'
 		},
 		{
-			title: 'CMM - ALGOGENE Algo Crypto Trading Challenge 2022',
+			title: 'ALGOGENE Algo Crypto Trading Challenge',
 			tags: ['Cryptocurrency', 'Algorithmic Trading'],
 			description: [
 				'Market pattern detection of Order Block, RSI, MFI, MACD, and various candle patterns.',
@@ -68,7 +54,7 @@
 			thumbnail: 'https://example.com'
 		},
 		{
-			title: 'Jane Street Electronic Trading Challenge 2022',
+			title: 'Jane Street Electronic Trading Challenge',
 			tags: ['Algorithmic Trading', 'Python'],
 			description: [
 				'1st runner-up out of 17 teams in terms of final capital.',
@@ -80,8 +66,8 @@
 			date: 'Oct 2022'
 		},
 		{
-			title: 'J.P. Morgan Code for Good 2022 Challenge',
-			tags: ['Fullstack Web Development', 'Vue.js', 'Supabase'],
+			title: 'J.P. Morgan Code for Good',
+			tags: ['Fullstack', 'Vue.js', 'Supabase'],
 			description: [
 				'Developed for Junior Achievement Hong Kong, a job shadowing web app for secondary school students.'
 			],
@@ -103,7 +89,7 @@
 		},
 		{
 			title: 'Enoch Bible Reading Challenge',
-			tags: ['Fullstack Web Development', 'PWA', 'Vue.js', 'Supabase'],
+			tags: ['Fullstack', 'PWA', 'Vue.js', 'Supabase'],
 			description: [
 				'Bible reading challenge Progressive Web App tailored made for a church. Readers read 8 chapters weekly to finish all 1189. Includes leader-board and progress tracker.',
 				'Fully SPA, and installable as a PWA. Built with Vue.js, TailwindCSS, and Supabase. Deployed on Netlify.'
@@ -115,11 +101,11 @@
 
 		{
 			title: 'SPYC Musical E-ticketing',
-			tags: ['E-ticketing', 'Fullstack Web Development', 'Vue.js', 'Quasar', 'Supabase'],
+			tags: ['E-ticketing', 'Fullstack', 'Vue.js', 'Quasar', 'Supabase'],
 			description: [
-				'Worked as a team, developed a full-stack web application for managing electronic tickets for the 2022 Shatin Pui Ying College Musical.',
+				'Full-stack web app for managing electronic tickets for the 2022 Shatin Pui Ying College Musical.',
 				'Supports multiple ticket types, different guest roles, mail merge, and admission via QR code.',
-				'Admin dashboard for managing ticket sales, seat allocation, and user accounts. Supports CSV import and export, and real-time multi-user editing with different permission levels.'
+				'Admin dashboard for order management, seat allocation, and user accounts. Supports CSV import and export, and real-time multi-user editing with different permission levels.'
 			],
 			links: [],
 			thumbnail: 'https://example.com',
@@ -174,7 +160,7 @@
 			date: 'May 2022'
 		},
 		{
-			title: 'Cathay Pacific Hackathons 2021',
+			title: 'Cathay Pacific Hackathon',
 			tags: ['Hackathon', 'COVID-19', 'Mobile App Development', 'React Native'],
 			description: [
 				'Developed a React Native app to display a summary of COVID-19 travel restrictions on an interactive world map.'
@@ -223,9 +209,10 @@
 			date: 'Jun 2019'
 		},
 		{
-			title: 'STEM Camp 2019 - Shatin Pui Ying College',
+			title: 'STEM Camp 2019',
 			tags: ['STEM Education', 'Leadership', 'Event Management'],
 			description: [
+				'Hosted by Shatin Pui Ying College.',
 				'Appointed the Head of STEM Committee, organized a STEM day camp for visiting students from 16 primary schools.'
 			],
 			links: [],
@@ -234,7 +221,7 @@
 		},
 		{
 			title: 'Real-time Room Status System',
-			tags: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'RFID'],
+			tags: ['LAMP', 'RFID'],
 			description: [
 				'Developed and used for STEM Camp 2018 & 2019 at Shatin Pui Ying College. Students from 16 primary schools could view booth/room statuses on iPads, and check in & out by tapping RFID cards.'
 			],
@@ -243,7 +230,7 @@
 			thumbnail: 'https://example.com'
 		},
 		{
-			title: 'School Library Management System',
+			title: 'Library Management System',
 			tags: ['Qt', 'C++', 'SQLite'],
 			description: [
 				'Developed with Qt and SQLite, a GUI program that provides CRUD functionalities to common library administration, such as book categorization, borrow/return management, mass book record import, barcode scanning, and overdue alert. Object-oriented and separately compiled.'
@@ -263,8 +250,8 @@
 			thumbnail: 'https://example.com'
 		},
 		{
-			title: 'Arduino Car with Android App as Remote Controller via Bluetooth Low Energy',
-			tags: ['Arduino', 'Android', 'Bluetooth Low Energy', 'Robotics', 'Java', 'C++'],
+			title: 'Android Controlled Arduino Bluetooth Car',
+			tags: ['Arduino', 'Android', 'Bluetooth LE', 'Robotics'],
 			description: [
 				'EE International Summer Camp 2017 - City University of Hong Kong.',
 				'2nd runner-up prize in the Mini-robotic Car Competition',
@@ -282,44 +269,14 @@
 	<title>Portfolio - Lemuel LEE Kwok Lam</title>
 	<meta
 		name="description"
-		content="Domain Specific Meta-language | Functional Programming | Algorithmic Trading | Machine Learning | Self-driving | Fullstack Web Dev | E-ticketing | Linux | Database | Operating System"
+		content="Domain Specific Meta-language | Functional Programming | Algorithmic Trading | Machine Learning | Self-driving | Fullstack | E-ticketing | Linux | Database | Operating System"
 	/>
 </svelte:head>
 
 <div class="mx-auto h-full max-w-5xl py-2 px-6">
 	<div class="flex h-full w-full flex-col items-start justify-center divide-y-2">
 		{#each works as work}
-			<div class="flex w-full flex-col gap-1 p-2">
-				<div class="items-top flex justify-between">
-					<div class="text-2xl text-orange-700">{work.title}</div>
-					<div class="mt-1 whitespace-nowrap">{work.date}</div>
-				</div>
-
-				<div class="flex flex-wrap items-center">
-					{#each work.tags as tag}
-						<div class="text-xs">{tag}</div>
-						<div class="mx-2 h-1 w-1 rounded-full bg-zinc-400 last:hidden" />
-					{/each}
-				</div>
-				<ul class="flex list-disc flex-col gap-1 py-1 marker:text-orange-400">
-					{#each work.description as desc}
-						<li>{desc}</li>
-					{/each}
-				</ul>
-				<div class="flex flex-col">
-					{#each work.links as link}
-						<a
-							href={link}
-							target="_blank"
-							rel="noreferrer"
-							class="group self-end text-sm text-blue-900 hover:underline dark:text-blue-200"
-						>
-							<div class="hidden group-hover:flex">{link}</div>
-							<div class="flex group-hover:hidden">{link.split('/')[2]}</div>
-						</a>
-					{/each}
-				</div>
-			</div>
+			<WorkDisplay {work} />
 		{/each}
 	</div>
 </div>
