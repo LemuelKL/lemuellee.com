@@ -1,7 +1,7 @@
 ---
 title: More About Lemuel
 date: '2023-01-21'
-description: A short story about Lemuel
+summary: Hong Kongese. Coding since 12. Curious. Stoic. Confident. Authentic.
 ---
 
 This post is about who Lemuel is and what he does.

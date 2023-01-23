@@ -2,7 +2,7 @@
 title: Lemuel's Blog
 date: '2023-01-14'
 cover: wallpaper/Fq14Fsk.jpeg
-summary: Hello World!
+summary: Blogging is not dead in the age of social media. Instagram is fast food. Abstract logos require paragraphs and well formulated words.
 ---
 Hello World!
 
