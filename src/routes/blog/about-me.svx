@@ -12,18 +12,18 @@ I was born and raised in Hong Kong. I speaks Cantonese natively and am a fluent 
 
 ## Study and work
 
-I am a self-taught programmer. I started programming when I was 12. I have been programming for 10 years. I have worked on a wide range of projects, from web development to machine learning. I have also worked on a few projects with my friends, including a in-production e-learning platform with my secondary school maths teacher.
+I am a self-taught programmer since when I was 12, and it has already been a decade. I have worked on a wide range of projects such as e-learning, algo-trading, fullstack application, machine learning, robitic, mobile app development, and code generation. I have also worked on a few projects with friends, including a in-production e-learning platform with my secondary school maths teacher.
 
-I am studying Computer Science with focus on Artificial Intelligence, and Theoritical Computer Science. I am intersted in topics like machine learning, deep learning, natural language processing, computational complexity, cyber security, software language, and functional programming.
+I am mainly studying Theoritical Computer Science and Artificial Intellegence. I am intersted in topics like machine learning, deep learning, natural language processing, computational complexity, cyber security, software language, and functional programming.
 
 I have worked as Teaching Assistant for two programming courses in HKU. I have also worked with my secondary school on developing a MC question generator for Maths and Physics. I have also developed a fullstack e-ticketing system for the school's Musical show.
 
 
 ## Interests
 
-I am interested in a wide range of topics, including but not limited to: Computer Science, Mathematics, Physics, Philosophy, Psychology, Economics, History, and Literature. I read, listen, write daily, and sometimes speak about these topics. 
+I am interested in a wide range of topics, including but not limited to: Computer Science, Mathematics, Physics, Philosophy, Psychology, Economics, History, and Literature. I read, listen, write daily, and sometimes speak about these topics.
 
-I like cycling. I enjoy the sense of freedom and autonomy. Seeing a fit cyclist riding a sleek bike at an ideal position is a majestic sight to behold.
+I like cycling, for its sense of autonomy. Seeing a fit cyclist on a sleek bike in an ideal position is a majestic sight to behold.
 
 ## Philosophy
 
