@@ -12,7 +12,7 @@
 			class="flex h-64 w-64 flex-col items-center justify-center divide-y-2 bg-zinc-100 dark:bg-zinc-800"
 		>
 			<a
-				href="https://www.overleaf.com/read/jwddjkzcgwgq"
+				href="https://www.overleaf.com/read/gdnzsswwgkvs"
 				target="_blank"
 				rel="noreferrer"
 				class="text-xl hover:underline"
