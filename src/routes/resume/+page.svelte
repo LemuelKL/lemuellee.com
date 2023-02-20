@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { FilePdfRegular } from 'svelte-awesome-icons';
+</script>
+
 <svelte:head>
 	<title>Resume - Lemuel LEE Kwok Lam</title>
 	<meta
@@ -9,15 +13,16 @@
 <div class="h-full w-full">
 	<div class="flex h-full w-full items-center justify-center">
 		<div
-			class="flex h-64 w-64 flex-col items-center justify-center divide-y-2 bg-zinc-100 dark:bg-zinc-800"
+			class="flex h-auto w-auto flex-col items-center justify-center divide-y-2 bg-zinc-100 p-4 dark:bg-zinc-800"
 		>
 			<a
 				href="https://www.overleaf.com/read/gdnzsswwgkvs"
 				target="_blank"
 				rel="noreferrer"
-				class="text-xl hover:underline"
+				class="text-xl hover:underline flex gap-2"
 			>
-				Curriculum Vitae
+				<FilePdfRegular class="h-6 w-6" />
+				<div>Curriculum Vitae in LuaLaTeX on Overleaf</div>
 			</a>
 		</div>
 	</div>

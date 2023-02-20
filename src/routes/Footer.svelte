@@ -10,6 +10,10 @@
 			else document.documentElement.classList.remove('dark');
 		});
 	});
+
+	const location = 'London';
+	const phone = '+44 07597 243186';
+	const email = 'lemuellee.kl@gmail.com';
 </script>
 
 <footer
@@ -27,19 +31,19 @@
 	<div class="mx-auto" />
 	<div class="hidden flex-col items-center sm:flex">
 		<div class="font-bold">Now at</div>
-		<div>London</div>
+		<div>{location}</div>
 	</div>
 	<div class="hidden flex-col items-center sm:flex">
 		<div class="font-bold">Call</div>
-		<div>+852 6238 2237</div>
+		<div>{phone}</div>
 	</div>
 	<div class="hidden flex-col items-center sm:flex">
 		<div class="font-bold">Write</div>
-		<div>lemuellee.kl@gmail.com</div>
+		<div>{email}</div>
 	</div>
 	<div class="flex flex-col sm:hidden">
-		<div>+852 6238 2237</div>
-		<div>lemuellee.kl@gmail.com</div>
+		<div>{phone}</div>
+		<div>{email}</div>
 	</div>
 	<div class="flex items-center gap-2">
 		<a href="https://www.github.com/LemuelKL" target="_blank" rel="noreferrer">
