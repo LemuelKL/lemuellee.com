@@ -8,15 +8,15 @@ This post is about who Lemuel is and what he does.
 
 ## Background
 
-I was born and raised in Hong Kong. I speaks Cantonese natively and am a fluent user of English and Mandarin. I am currently pursuing a Bachelor of Engineering in Computer Science at The University of Hong Kong. Right now, I am a being an exchange student at Royal Holloway, University of London.
+I was born and raised in Hong Kong. Native in Cantonese and fluent in English and Mandarin. I am currently pursuing a Bachelor of Engineering in Computer Science at The University of Hong Kong. Right now, I am a being an exchange student at Royal Holloway, University of London.
 
 ## Study and work
 
-I am a self-taught programmer since when I was 12, and it has already been a decade. I have worked on a wide range of projects such as e-learning, algo-trading, fullstack application, machine learning, robitic, mobile app development, and code generation. I have also worked on a few projects with friends, including a in-production e-learning platform with my secondary school maths teacher.
+I am a self-taught programmer since 12, a decacde ago. I have worked on a wide range of projects such as e-learning, algo-trading, fullstack application, machine learning, robotic, mobile app development, and code generation. I have also worked on a few projects with friends, including a in-production e-learning platform with my secondary school maths teacher.
 
-I am mainly studying Theoritical Computer Science and Artificial Intellegence. I am intersted in topics like machine learning, deep learning, natural language processing, computational complexity, cyber security, software language, and functional programming.
+I am focusing my study on Theoritical Computer Science and Artificial Intellegence. I am intersted in topics like machine learning, deep learning, natural language processing, computational complexity, software language, compiling, and functional programming.
 
-I have worked as Teaching Assistant for two programming courses in HKU. I have also worked with my secondary school on developing a MC question generator for Maths and Physics. I have also developed a fullstack e-ticketing system for the school's Musical show.
+I have worked as Student Teaching Assistant for two programming courses in HKU. I have also worked with my secondary school on developing a MC question generator for Maths and Physics. I have also developed a fullstack e-ticketing system for the school's Musical show.
 
 
 ## Interests
@@ -27,6 +27,8 @@ I like cycling, for its sense of autonomy. Seeing a fit cyclist on a sleek bike 
 
 ## Philosophy
 
+Pretty much the classic Carl Jung and Existentialism.
+
 I operate in terms of Judeo-Christian ethics. They have heavy influences on my thoughts and actions. I believe the fundamental narrative of life is suffering and sacrifice. What brings meaning to life is "being", that is to regconize the terrible philosophical burden conciousness implies, and then "bear the cross" forthrightly.
 
 I see in the modern world, many people, especially my young peers are lost. Modern science and technology do not provide a framework for understanding reality and our existance. Now is a world of nihilism, and we have abandoned God. I hope one day we will be wise enough to know there is not really an alternative to belief...
@@ -35,11 +37,11 @@ I see in the modern world, many people, especially my young peers are lost. Mode
 
 On the MBTI I am an INTJ. On the Big Five I am: fairly high in Openness, Conscientiousness, low in Extraversion, almost zero in Agreeableness, and very high in Neurotism.
 
-I am fairly quiet person. Numerous teachers had told me I seem too stoic and serious. I must confess during most social interactions my mind went into thinking about something else. I enjoy observing, making predictions, and testing my theories. Thoughts can give me a level of stimulation that is hard to match.
+I am fairly quiet person. Numerous teachers pointed out I seem too stoic and serious. I must confess during most social interactions my mind went elsewhere. I enjoy observing, making predictions, and testing my theories. Thoughts can give me a level of stimulation that is hard to match.
 
 For reasons unknown to me, I am pretty good at dark humor. Close friends know I have a twisted sense of humor. I am natural at making puns, and mimicking accents. I think jokes give us a good insight in some values and beliefs of us that we are not aware of.
 
-I have confidence people of my age do not possess. It is because I have experienced traumas that force a growth of confidence in me. I was also lucky to be given plently of opportunities for trial and error. I was also lucky to have good mentors who flourished me. They even taught me how to walk with shoulders back, head up, chest out, and at a brisk pace!
+I have confidence people of my age do not possess, from a series of childhood and teenage events. Most importantly, I was lucky have plently of opportunities for trial and error. I also need to thank my good mentors who flourished me.
 
 ## Music
 
