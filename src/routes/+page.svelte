@@ -63,18 +63,17 @@
 					</a>
 				</div>
 				<div class="h-0 md:h-4" />
-				<div class="text-gray-200">
-					My study focuses on Theoretical Computer Science, such as Software Language,
-					Optimization, and Functional Programming. I am also educated in Machine
-					Learning, Deep Learning, and Computer Vision.
+				<div>
+					I am studying Theoretical Computer Science intensely, and very interested in topics such as Software Language, Optimization, and Functional Programming.
 				</div>
 				<div>
-					I have developed and maintained software in a team, serving hundreds of users. I
-					am skilled in web development with practical knowledge in React, Vue, Svelte,
-					Typescript, Node.js, MySQL, and MongoDB.
+					I have developed production software in a team, serving hundreds of users. I
+					am skilled in Full-stack development in most industry-standard frameworks and toolsets.
 				</div>
-				<div>I believe in simplicity and reliability.</div>
-				<a class="self-end hover:underline" href="/blog/about-me">More about me</a>
+				<div>
+					I was also a tutor in HKU for ENGG1330 and ENGG1340, so you may recognize me if you were in the class!
+				</div>
+				<a class="self-end hover:underline text-gray-200" href="/blog/about-me">More about me</a>
 			</div>
 		</div>
 	</div>
