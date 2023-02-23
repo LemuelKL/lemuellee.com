@@ -12,7 +12,7 @@
 </svelte:head>
 
 <div class="h-full w-full bg-cover" style="background-image: url({wallpaper});">
-	<div class="flex h-full w-full items-center justify-center dark:bg-black/30">
+	<div class="flex h-full w-full items-center justify-center dark:bg-black/70">
 		<div class="flex max-h-full max-w-[72rem] md:mx-16 md:max-h-[36rem]">
 			<div
 				class="dark:bg-orange-900/120 flex w-2/6 flex-col items-center justify-center gap-2 overflow-scroll bg-orange-200/20 p-2 backdrop-blur-md dark:bg-orange-900/10 md:gap-6 md:p-8"
@@ -22,7 +22,7 @@
 				>
 					<img
 						src={avatar}
-						class="h-48 w-32 rounded-full object-cover"
+						class="h-38 w-32 rounded-full object-cover"
 						alt="Lemuel Lee"
 					/>
 				</div>
@@ -32,7 +32,7 @@
 					<div class="text-center">LEE Kwok Lam</div>
 					<div class="tracking-widest">李國臨</div>
 				</div>
-				<div class="h-[1px] w-5/6 rounded-3xl bg-orange-300 dark:bg-orange-400" />
+				<div class="h-[1px] w-5/6 rounded-3xl bg-orange-300" />
 				<div class="flex flex-col items-center font-serif text-sm">
 					<div class="text-center text-lg">COMPUTER SCIENCE</div>
 					<div class="flex gap-2">
@@ -44,7 +44,7 @@
 				</div>
 			</div>
 			<div
-				class="flex w-4/6 flex-col items-start gap-2 overflow-scroll bg-black/40 p-4 text-white backdrop-blur-sm md:gap-4 md:p-8"
+				class="flex w-4/6 flex-col items-start gap-2 overflow-scroll bg-black/40  p-4 text-white backdrop-blur-sm md:gap-4 md:p-8"
 			>
 				<div class="text-5xl font-bold md:text-7xl">Hello</div>
 				<div>Here's who I am & what I do</div>
@@ -73,7 +73,7 @@
 				<div>
 					I was also a tutor in HKU for ENGG1330 and ENGG1340, so you may recognize me if you were in the class!
 				</div>
-				<a class="self-end hover:underline text-gray-200" href="/blog/about-me">More about me</a>
+				<a class="self-end hover:underline text-gray-200 dark:text-gray-400" href="/blog/about-me">More about me</a>
 			</div>
 		</div>
 	</div>
