@@ -71,7 +71,7 @@
 					am skilled in Full-stack development in most industry-standard frameworks and toolsets.
 				</div>
 				<div>
-					I was also a tutor in HKU for ENGG1330 and ENGG1340, so you may recognize me if you were in the class!
+					I was also a tutor in HKU for two semesters, so you may know me if you took ENGG1330 and ENGG1340!
 				</div>
 				<a class="self-end hover:underline text-gray-200 dark:text-gray-400" href="/blog/about-me">More about me</a>
 			</div>
