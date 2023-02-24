@@ -17,15 +17,11 @@
 			<div
 				class="dark:bg-orange-900/120 flex w-2/6 flex-col items-center justify-center gap-2 overflow-scroll bg-orange-200/20 p-2 backdrop-blur-md dark:bg-orange-900/10 md:gap-6 md:p-8"
 			>
-				<div
-					class="background-animate rounded-full bg-gradient-to-br from-orange-400 to-blue-400 p-1 dark:from-orange-700 dark:to-blue-700"
-				>
 					<img
 						src={avatar}
-						class="h-38 w-32 rounded-full object-cover"
+						class="h-38 w-32 rounded-lg object-cover"
 						alt="Lemuel Lee"
 					/>
-				</div>
 
 				<div class="flex flex-col items-center text-xl font-bold">
 					<div>Lemuel</div>
