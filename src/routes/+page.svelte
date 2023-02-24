@@ -35,7 +35,7 @@
 	>
 		<img
 			src={avatar}
-			class="max-w-[18em] object-cover outline saturate-[0.5] hover:saturate-100 lg:h-auto lg:w-1/4"
+			class="max-w-[18em] object-cover saturate-[0.5] hover:saturate-100 lg:h-auto lg:w-1/4"
 			alt=""
 		/>
 		<div class="flex flex-col justify-center gap-2 lg:flex-grow">
