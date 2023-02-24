@@ -10,10 +10,6 @@
 			href: '/portfolio'
 		},
 		{
-			label: 'RESUME',
-			href: '/resume'
-		},
-		{
 			label: 'BLOG',
 			href: '/blog'
 		}
