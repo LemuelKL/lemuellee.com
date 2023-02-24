@@ -1,5 +1,5 @@
 <script lang="ts">
-	import avatar from '$lib/assets/lemuel-casual.png';
+	import avatar from '$lib/assets/lemuel-casual.webp';
 
 	const identities = [
 		{
