@@ -53,7 +53,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="text-bold flex w-full max-w-5xl justify-end ">
+	<div class="text-bold flex w-full max-w-5xl justify-center lg:justify-end ">
 		<a
 			class="text-orange-400 hover:cursor-pointer hover:underline"
 			href="https://www.overleaf.com/read/gdnzsswwgkvs"
@@ -66,6 +66,6 @@
 <style>
 	.bg-pattern {
 		background-image: radial-gradient(#a4a4a4 0.5px, transparent 0.5px);
-		background-size: 12px 12px;
+		background-size: 16px 16px;
 	}
 </style>
