@@ -34,13 +34,9 @@
 		<div class="hidden whitespace-nowrap text-xs sm:block">{work.date}</div>
 	</div>
 	{#if isExpanded}
-		<ul class="flex list-disc list-inside flex-col gap-1 py-1 marker:text-orange-400">
+		<ul class="flex list-inside list-disc flex-col gap-1 py-1 marker:text-orange-400">
 			{#each work.description as desc, idx}
-				<li
-					class="tracking-tight"
-					out:fly={{ x: -100, duration: 300 }}
-					in:fly={{ x: -100, duration: 200 * (1.5 * idx + 1) }}
-				>
+				<li class="tracking-tight">
 					{desc}
 				</li>
 			{/each}
@@ -53,8 +49,6 @@
 						target="_blank"
 						rel="noreferrer"
 						class="w-full bg-blue-100 text-right text-sm text-blue-900 hover:underline dark:bg-slate-900 dark:text-blue-200"
-						in:fly={{ x: 200, duration: 200 * (2 * idx + 1) }}
-						out:fly={{ x: 200, duration: 300 }}
 					>
 						<div>{link}</div>
 					</a>
