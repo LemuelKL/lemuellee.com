@@ -4,6 +4,7 @@
 	import {
 		GithubBrand,
 		LinkedinBrand,
+		YoutubeBrand,
 		InstagramBrand,
 		LightbulbRegular,
 		LightbulbSolid
@@ -58,6 +59,11 @@
 		<a href="https://www.linkedin.com/in/lemuelkl/" target="_blank" rel="noreferrer">
 			<LinkedinBrand
 				class="transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-blue-700"
+			/>
+		</a>
+		<a href="https://www.youtube.com/c/Luv2049" target="_blank" rel="noreferrer">
+			<YoutubeBrand
+				class="transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-red-700"
 			/>
 		</a>
 		<a href="https://www.instagram.com/lemuel.uk/" target="_blank" rel="noreferrer">
