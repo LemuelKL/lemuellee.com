@@ -35,7 +35,7 @@
 	>
 		<img
 			src={avatar}
-			class="max-w-[18em] object-cover saturate-[0.5] hover:saturate-100 lg:h-auto lg:w-1/4"
+			class="max-w-[12em] object-cover saturate-[0.5] hover:saturate-100 sm:max-w-[16em] lg:h-auto lg:w-1/4"
 			alt=""
 		/>
 		<div class="flex flex-col justify-center gap-2 lg:flex-grow">
@@ -45,9 +45,9 @@
 			</div>
 			<div class="mb-2 h-1 w-full bg-orange-400" />
 			{#each identities as identity}
-				<div class="flex w-full items-center gap-4">
-					<div>{identity.title}</div>
-					<div class="flex-grow bg-purple-400" />
+				<div class="flex w-full flex-col items-center sm:flex-row sm:gap-4">
+					<div class="font-bold">{identity.title}</div>
+					<div class="bg-purple-400 sm:flex-grow" />
 					<div>{identity.organisation}</div>
 				</div>
 			{/each}
