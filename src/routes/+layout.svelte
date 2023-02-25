@@ -1,10 +1,7 @@
 <script lang="ts">
 	import './../app.css';
-	import PageTransition from './PageTransition.svelte';
 	import NavBar from './NavBar.svelte';
 	import Footer from './Footer.svelte';
-	import type { LayoutData } from './$types';
-	export let data: LayoutData;
 
 	import { darkMode } from './../stores';
 </script>
@@ -15,10 +12,8 @@
 
 <div class="static h-screen w-screen overflow-hidden">
 	<NavBar />
-	<main>
-		<PageTransition url={data.url}>
-			<slot />
-		</PageTransition>
+	<main class="absolute top-12 h-[calc(100vh-96px)] w-full overflow-scroll">
+		<slot />
 	</main>
 	<Footer />
 </div>

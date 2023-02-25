@@ -6,7 +6,7 @@ const website = 'https://lemuellee.com';
 
 export const GET = (async () => {
 	const posts = await fetchMarkdownBlogs();
-	const pages = ['/portfolio', '/resume', '/blog'];
+	const pages = ['/portfolio', '/blog'];
 	return new Response(sitemap(posts, pages));
 }) satisfies RequestHandler;
 
