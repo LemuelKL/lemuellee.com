@@ -8,8 +8,6 @@
 	const toggleExpand = () => {
 		isExpanded = !isExpanded;
 	};
-
-	import { fly } from 'svelte/transition';
 </script>
 
 <div

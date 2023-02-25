@@ -29,16 +29,16 @@
 	/>
 </svelte:head>
 
-<div class="bg-pattern flex h-full w-full flex-col items-center justify-center gap-4 p-4">
+<div class="bg-pattern flex h-full w-full p-2 sm:p-4">
 	<div
-		class="flex w-full max-w-5xl flex-col items-center justify-center gap-10 lg:flex-row lg:gap-24"
+		class="m-auto flex w-full max-w-5xl flex-col items-center justify-center gap-2 lg:flex-row lg:gap-24"
 	>
 		<img
 			src={avatar}
-			class="max-w-[12em] object-cover saturate-[0.5] hover:saturate-100 sm:max-w-[16em] lg:h-auto lg:w-1/4"
+			class="max-w-[12em] object-cover p-4 drop-shadow-[0_35px_65px_rgba(0,0,0,0.7)] dark:drop-shadow-[0_35px_65px_rgba(255,255,255,0.2)] sm:max-w-[16em] lg:h-auto lg:w-1/4"
 			alt=""
 		/>
-		<div class="flex flex-col justify-center gap-2 lg:flex-grow">
+		<div class="flex flex-grow flex-col justify-center gap-2">
 			<div class="text-center text-3xl font-bold lg:text-left">Lemuel Lee Kwok Lam</div>
 			<div class="text-center text-xl font-medium lg:text-left">
 				Theoretical Computer Science Student
@@ -47,19 +47,19 @@
 			{#each identities as identity}
 				<div class="flex w-full flex-col items-center sm:flex-row sm:gap-4">
 					<div class="font-bold">{identity.title}</div>
-					<div class="bg-purple-400 sm:flex-grow" />
+					<div class="sm:flex-grow" />
 					<div>{identity.organisation}</div>
 				</div>
 			{/each}
+			<div class="text-bold flex w-full max-w-5xl justify-center lg:justify-end">
+				<a
+					class="text-orange-400 hover:cursor-pointer hover:underline "
+					href="https://www.overleaf.com/read/gdnzsswwgkvs"
+					target="_blank"
+					rel="noreferrer">Résumé in LaTeX & PDF</a
+				>
+			</div>
 		</div>
-	</div>
-	<div class="text-bold flex w-full max-w-5xl justify-center lg:justify-end ">
-		<a
-			class="text-orange-400 hover:cursor-pointer hover:underline"
-			href="https://www.overleaf.com/read/gdnzsswwgkvs"
-			target="_blank"
-			rel="noreferrer">Résumé in LaTeX & PDF</a
-		>
 	</div>
 </div>
 
