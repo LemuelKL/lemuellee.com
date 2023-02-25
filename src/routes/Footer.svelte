@@ -24,7 +24,7 @@
 </script>
 
 <footer
-	class="absolute bottom-0 flex h-12 w-full items-center gap-4 border-t bg-white px-2 text-xs dark:bg-zinc-900 md:gap-8 md:px-8"
+	class="absolute bottom-0 flex h-10 sm:h-12 w-full items-center gap-4 border-t bg-white px-2 text-xs dark:bg-zinc-900 md:gap-8 md:px-8"
 >
 	<button on:click={() => darkMode.set(!$darkMode)} class="hover:cursor-pointer">
 		{#if $darkMode}

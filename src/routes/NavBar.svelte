@@ -19,7 +19,7 @@
 </script>
 
 <header
-	class="absolute flex h-12 w-full items-center gap-2 border-b bg-white px-4 dark:bg-zinc-900 sm:px-8"
+	class="absolute flex h-10 sm:h-12 w-full items-center gap-2 border-b bg-white px-4 dark:bg-zinc-900 sm:px-8"
 >
 	<img src="/favicon.png" class="hidden h-8 w-8 md:block" alt="" />
 	<a class="ml-1 text-xl font-extrabold hover:text-orange-900" href="/">LemuelKL</a>
