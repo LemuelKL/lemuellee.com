@@ -16,15 +16,144 @@ date: '2023-01-01'
 This website is built with [Svelte](https://svelte.dev/), [Tailwind](https://tailwindcss.com/), and [Netlify](https://www.netlify.com/). It uses [KaTeX](https://katex.org/) for math rendering and Markdown for content of Portfolio items and Blog posts. The source code is available on [GitHub](https://github.com/LemuelKL/lemuellee.com).
 
 
-## Why Svelte & Kit?
+<script>
+    import DarkModeToggle from '/src/routes/DarkModeToggle.svelte'
+    import ColorBar from '$lib/ColorBar.svelte'
+</script>
 
-## Why Tailwind CSS?
+This whole website is coded up by me from scratch! I have used open-source software and in particular: SvelteKit, MDsveX, TailwindCSS.
 
-## Why Netlify?
+## Svelte
 
-## Why KaTeX and Markdown?
+I have a love for Svelte. I have a kink for compiled languages, for their speed and efficiency. Svelte is very concise and small compared to other major front-end frameworks. It has easy and direct state and lifecycle management. I also highly prefer frameworks that write template code directly with variable placeholders instead of a generative approach like with React... yuck! For this reason you could have guessed I have used lots of Vue too, and you're right!
 
-## Layout
+## Content Management System
 
-## Font and Color
+The portfolio and blog section work in the same way. I have made myself a Content Management System (CMS) that's tailored to my needs. I have technical skills so I don't rely on laymen-targeting frameworks like WordPress and Wix which have limited customizations. I also aim to make this site fully static with no backend and database.
 
+Ideally, every post should be its own markdown file, with no limitation on filename. They should also be dynamically imported so that I don't have to manually add it to a "list of posts". So the final work-flow would be just writing a markdown file, put it into the "blog" folder in source, then just git push!
+
+For portfolio items, there need to be some record-keeping, for the title, short summary, and tags. This is achieved using the metadata fields in the markdown file. The metadata is parsed and used to generate the list of portfolio items.
+
+## Hosting
+
+This website is fully static with no backend. Hosted on Netlify, accessible through [lemuel.pp.ua](https://lemuel.pp.ua).
+
+The frontend software components are all open-source and free. The source code of this website is also available on my GitHub at [repo link](https://github.com/LemuelKL/lemuel.pp.ua).
+
+The running cost is free.
+
+## SvelteKit
+
+My personal favourite frontend framework. Svelte itself is very efficient and direct to work with. SvelteKit is a powerful addition with Vite and out-of-the-box file-based routing, my favourite also.
+
+-   https://vitejs.dev/
+-   https://svelte.dev/
+-   https://kit.svelte.dev/
+
+## MDsveX
+
+MDsveX is used to render markdown files into Svelte components. It also support a syntax which mixes markdown and Svelte (with a .svx extension). This is the backbone of my tailor-made CMS for my Projects and Blog sections of this website.
+
+I have also furthered in terms of technically to support dynamic loading of .svx files on the fly, client side. In a project post I demonstrated how to pull markdown sources from the internet and render it to be a part of the post.
+
+https://mdsvex.pngwn.io/
+
+## TailwindCSS
+
+My favourite CSS framework. I personally don't mind the class soup too much. I have used rigid frameworks like bootstrap, Vuetify, and Quasar before. They appear convenient at first. However, when building specific-purpose sites they will start to get in the way due to low customisability. They also make my sites look like all the other ones, unideal for personal portfolio site.
+
+Here's something that resembles an absorption spectrum:
+
+<div class="w-full p-3 outline">
+    <ColorBar />
+</div>
+
+```html
+<div class="outline w-full flex items-center justify-between">
+	<div class="w-8 h-8 bg-red-400" />
+	<div class="w-full h-8 bg-gradient-to-r from-red-400 to bg-orange-400" />
+	<div class="w-8 h-8 bg-orange-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-orange-400 to bg-yellow-400" />
+	<div class="w-8 h-8 bg-yellow-400" />
+	<div class="w-full h-8 bg-gradient-to-r from-yellow-400 to bg-green-400" />
+	<div class="w-8 h-8 bg-green-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-green-400 to bg-cyan-400" />
+	<div class="w-8 h-8 bg-cyan-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-cyan-400 to bg-blue-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-8 h-8 bg-blue-400" />
+	<div class="w-3 h-8 bg-black" />
+	<div class="w-full h-8 bg-gradient-to-r from-blue-400 to bg-purple-400" />
+	<div class="w-8 h-8 bg-purple-400" />
+</div>
+```
+In fact, you could probably write some generative functions that yield a mathematically correct and to-scale spectrum by manipulating the width of each flex item. I'll leave that to you.
+
+https://tailwindcss.com/
+
+## Prism.js
+
+Prism.js is used for code highlighting, supporting basically all major languages. I chose the "one" theme as it goes well with the overall theme of this website and it has light and dark variants.
+
+```python
+myMsg = 'Hello World!'
+print(myMsg)
+```
+
+```cpp
+int main() {
+    int n = 10;
+    for (int i = 0; i < n; i++) {
+        std::cout << "Hello World " << "x " << i << "\n";
+    }
+    return 0;
+}
+```
+
+Additionally I have installed the line-number and toolbar plugins. The toolbar plugin allows you to copy the code to clipboard, which is very useful.
+
+https://prismjs.com/
+
+## HTML
+
+HTML elements are also supported:
+
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+
+## Svelte Components
+
+Svelte components as well, try clicking this dark mode toggle button:
+
+<div class="w-full p-3 outline">
+    <DarkModeToggle />
+</div>
+
+By the way, that colour spectrum is a Svelte component too.
+
+## KaTeX
+
+Inline maths:
+$ax^2+bx+c=0$
+
+Display maths:
+
+$$
+x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+$$
+
+## References
+
+In the making of this website, these resources have helped me tremendously:
+
+-   https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog
+-   https://mdsvex-math-starter.vercel.app/
+
+I have also done many toy Svelte projects before that have never been published. One particular however has some interesting prototyping values. It's called Quaestio Factorem, stands for Question Factory/Maker in Greek. It allows writing of question blueprints in the form of a Svelte components, with all the markdown and KaTeX supports. These blueprints can then be "populated" with real variables to make a multiple choice questions for teaching mathematics or physics.
+
+Code is available here on my GitHub: https://github.com/LemuelKL/quaestio-factorem. However, the code base is severely outdated given how fast Svelte and SvelteKit has moved in the past year. You would also need to setup a Supabase instance.
