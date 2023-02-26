@@ -7,3 +7,27 @@ date: '2022-10-01'
 ---
 
 # 3230shell
+
+3230shell is a Linux shell written in C with process management. It supports the following features:
+- Process creation
+- Process termination
+- Multiple background processes
+- Process statistics
+- Forking and execing
+- Signal handling
+- Pipe with arbitrary number of commands
+
+They can be used in any combindations.
+
+## Usage Examples
+
+### Process creation
+
+```bash
+$ ./3230shell
+3230shell> ./prog1
+prog1 is running...
+3230shell> ./prog2
+prog2 is running...
+````
+
