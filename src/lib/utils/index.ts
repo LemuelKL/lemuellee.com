@@ -27,7 +27,6 @@ export const fetchPortfolioItems = async () => {
 	const allPortfolioItems = await Promise.all(
 		iterablePortfolioFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			console.log(path);
 			const portfolioPath = path.split('.')[0].split('/').slice(-1).toString();
 
 			return {
