@@ -4,6 +4,7 @@
 
 	const works: PortfolioItem[] = [
 		{
+			type: 'work',
 			id: 'holloray',
 			title: 'HolloRay',
 			summary: 'External 3D CAD DSL with JavaFX and Ambiguity Resolved Translators',
@@ -11,6 +12,7 @@
 			start_date: 'Jan 2023'
 		},
 		{
+			type: 'work',
 			id: 'svm-doped',
 			title: 'SVM Doped',
 			summary: 'Statistical image classifier for CIFAR-10.',
@@ -19,24 +21,28 @@
 			end_date: 'Dec 2022'
 		},
 		{
+            type: 'work',
 			id: 'parallel-samplesort',
 			title: 'Parallel Samplesort',
 			summary: 'Multi-threaded samplesort implementation in C.',
 			tags: ['Multi-threading', 'Semaphore', 'Mutex']
 		},
 		{
+            type: 'work',
 			id: '3230shell',
 			title: '3230shell',
 			summary: 'Linux shell written in C with process management.',
 			tags: ['OS', 'Process', 'Pipe', 'Fork', 'Exec', 'Signal']
 		},
 		{
+            type: 'work',
 			id: 'enoch-brc',
 			title: 'Enoch Bible Reading Challenge',
 			summary: 'Progressive web app to finish the Bible in 1189 days.',
 			tags: ['PWA', 'SPA', 'Vue', 'Supabase']
 		},
 		{
+            type: 'work',
 			id: 'spyc-eticket',
 			title: 'E-ticketing System',
 			organisation: 'Shatin Pui Ying College',
@@ -45,6 +51,7 @@
 			tags: ['Vue', 'Quasar', 'Supabase']
 		},
 		{
+            type: 'work',
 			id: 'spyc-timetable',
 			title: 'Timetable Generator',
 			organisation: 'Shatin Pui Ying College',
@@ -52,6 +59,7 @@
 			tags: ['Vue', 'Scheduling']
 		},
 		{
+            type: 'work',
 			id: 'hackos',
 			title: 'HackOS',
 			organisation: 'The University of Hong Kong',
@@ -59,42 +67,49 @@
 			tags: ['Unity', 'Game Development', 'Cyber Security']
 		},
 		{
+            type: 'work',
 			id: 'rna-fighter',
 			title: 'RNA Fighter',
 			summary: 'Terminal game about COVID-19.',
 			tags: ['Ncurses', 'Game Development']
 		},
 		{
+            type: 'work',
 			id: 'duckietown',
 			title: 'Self-driving',
 			summary: 'Self-driving robotic car for Duckietown.',
 			tags: ['DDPG', 'Deep Learning', 'Robotics']
 		},
 		{
+            type: 'work',
 			id: 'bubble-sheet-omr',
 			title: 'Bubble Sheet OMR',
 			summary: 'Optical Mark Recognition for classroom bubble sheet.',
 			tags: ['OpenCV', 'Qt']
 		},
 		{
+            type: 'work',
 			id: 'room-status',
 			title: 'Real-time Room Status System',
 			summary: 'Multi-user LAMP stack app for displaying room status.',
 			tags: ['LAMP', 'RFID']
 		},
 		{
+            type: 'work',
 			id: 'slms',
 			title: 'Library Management System',
 			summary: 'Qt app for library administration.',
 			tags: ['Qt', 'MySQL']
 		},
 		{
+            type: 'work',
 			id: 'clm',
 			title: 'Contact List Manager',
 			summary: 'Terminal app for managing multi-field contacts.',
 			tags: ['C++', 'Windows API']
 		},
 		{
+            type: 'work',
 			id: 'ble-car',
 			title: 'Remote Controlled Robotic Car',
 			summary: 'Robotic arduino car controlled by Android app via Bluetooth LE.',
@@ -104,6 +119,7 @@
 
 	const activities: PortfolioItem[] = [
 		{
+            type: 'activity',
 			id: 'algogene-actc',
 			title: 'Algo Crypto Trading Challenge',
 			organisation: 'ALGOGENE',
@@ -113,6 +129,7 @@
 			end_date: 'Jan 2023'
 		},
 		{
+            type: 'activity',
 			id: 'js-etc',
 			title: 'Electronic Trading Challange',
 			organisation: 'Jane Street',
@@ -120,6 +137,7 @@
 			tags: ['Algo Trading']
 		},
 		{
+            type: 'activity',
 			id: 'jpm-cfg',
 			title: 'Code for Good',
 			organisation: 'J.P. Morgan',
@@ -127,6 +145,7 @@
 			tags: ['App Development']
 		},
 		{
+            type: 'activity',
 			id: 'cathay-hackathon',
 			title: 'Hackathon',
 			organisation: 'Cathay Pacific',
@@ -135,6 +154,7 @@
 			tags: ['App Development']
 		},
 		{
+            type: 'activity',
 			id: 'stem-camp',
 			title: 'STEM Camp',
 			organisation: 'Shatin Pui Ying College',
@@ -142,6 +162,7 @@
 			tags: ['Education', 'Teamwork']
 		},
 		{
+            type: 'activity',
 			id: 'ee-camp',
 			title: 'EE Int. Summer Camp',
 			organisation: 'City U, HK',
@@ -152,9 +173,8 @@
 	];
 
 	$: tab = $page.url.pathname.split('/')[2];
-	$: itemId = $page.url.pathname.split('/')[3];
-
 	$: items = tab === 'work' ? works : activities;
+	$: itemId = $page.url.pathname.split('/')[3];
 </script>
 
 <div class="mx-auto h-full max-w-7xl py-2 px-2">
@@ -184,7 +204,7 @@
 						class="flex border-spacing-8 flex-col p-1 pr-1 hover:cursor-pointer hover:bg-orange-200/20"
 						class:bg-orange-200={item.id === itemId}
 						class:bg-opacity-20={item.id === itemId}
-						href={`/portfolio/${tab}/${item.id}`}
+						href={`/portfolio/${item.type}/${item.id}`}
 					>
 						<div class="flex items-center justify-between pt-2">
 							<div
