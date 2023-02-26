@@ -37,6 +37,8 @@
 	class="
 		prose prose-slate
 		min-w-full p-3
+		prose-img:mx-auto
+		prose-img:max-w-xs
 		dark:prose-invert"
 >
 	<svelte:component this={data.content} />
