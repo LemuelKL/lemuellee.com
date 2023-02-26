@@ -1,0 +1,3 @@
+# HolloRay
+
+An external domain-specific language for 3D computer-aided design (CAD), written in JavaFX and Ambiguity Resolved Translators (ART).

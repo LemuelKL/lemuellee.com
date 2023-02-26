@@ -4,12 +4,14 @@
 
 	const works: PortfolioItem[] = [
 		{
+			id: 'holloray',
 			title: 'HolloRay',
 			summary: 'External 3D CAD DSL with JavaFX and Ambiguity Resolved Translators',
 			tags: ['Domain-specific language'],
 			start_date: 'Jan 2023'
 		},
 		{
+			id: 'svm-doped',
 			title: 'SVM Doped',
 			summary: 'Statistical image classifier for CIFAR-10.',
 			tags: ['Sklearn', 'SVM', 'PCA', 'HOG'],
@@ -17,21 +19,25 @@
 			end_date: 'Dec 2022'
 		},
 		{
+			id: 'parallel-samplesort',
 			title: 'Parallel Samplesort',
 			summary: 'Multi-threaded samplesort implementation in C.',
 			tags: ['Multi-threading', 'Semaphore', 'Mutex']
 		},
 		{
+			id: '3230shell',
 			title: '3230shell',
 			summary: 'Linux shell written in C with process management.',
 			tags: ['OS', 'Process', 'Pipe', 'Fork', 'Exec', 'Signal']
 		},
 		{
+			id: 'enoch-brc',
 			title: 'Enoch Bible Reading Challenge',
 			summary: 'Progressive web app to finish the Bible in 1189 days.',
 			tags: ['PWA', 'SPA', 'Vue', 'Supabase']
 		},
 		{
+			id: 'spyc-eticket',
 			title: 'E-ticketing System',
 			organisation: 'Shatin Pui Ying College',
 			summary:
@@ -39,48 +45,57 @@
 			tags: ['Vue', 'Quasar', 'Supabase']
 		},
 		{
+			id: 'spyc-timetable',
 			title: 'Timetable Generator',
 			organisation: 'Shatin Pui Ying College',
 			summary: 'Web app for scheduling various school tasks.',
 			tags: ['Vue', 'Scheduling']
 		},
 		{
+			id: 'hackos',
 			title: 'HackOS',
 			organisation: 'The University of Hong Kong',
 			summary: 'Hacking simulator game.',
 			tags: ['Unity', 'Game Development', 'Cyber Security']
 		},
 		{
+			id: 'rna-fighter',
 			title: 'RNA Fighter',
 			summary: 'Terminal game about COVID-19.',
 			tags: ['Ncurses', 'Game Development']
 		},
 		{
+			id: 'duckietown',
 			title: 'Self-driving',
 			summary: 'Self-driving robotic car for Duckietown.',
 			tags: ['DDPG', 'Deep Learning', 'Robotics']
 		},
 		{
+			id: 'bubble-sheet-omr',
 			title: 'Bubble Sheet OMR',
 			summary: 'Optical Mark Recognition for classroom bubble sheet.',
 			tags: ['OpenCV', 'Qt']
 		},
 		{
+			id: 'room-status',
 			title: 'Real-time Room Status System',
 			summary: 'Multi-user LAMP stack app for displaying room status.',
 			tags: ['LAMP', 'RFID']
 		},
 		{
+			id: 'slms',
 			title: 'Library Management System',
 			summary: 'Qt app for library administration.',
 			tags: ['Qt', 'MySQL']
 		},
 		{
+			id: 'clm',
 			title: 'Contact List Manager',
 			summary: 'Terminal app for managing multi-field contacts.',
 			tags: ['C++', 'Windows API']
 		},
 		{
+			id: 'ble-car',
 			title: 'Remote Controlled Robotic Car',
 			summary: 'Robotic arduino car controlled by Android app via Bluetooth LE.',
 			tags: ['Robotics', 'Arduino', 'Android']
@@ -89,6 +104,7 @@
 
 	const activities: PortfolioItem[] = [
 		{
+			id: 'algogene-actc',
 			title: 'Algo Crypto Trading Challenge',
 			organisation: 'ALGOGENE',
 			summary: 'Finalist Python bot earned 53000% return.',
@@ -97,18 +113,21 @@
 			end_date: 'Jan 2023'
 		},
 		{
+			id: 'js-etc',
 			title: 'Electronic Trading Challange',
 			organisation: 'Jane Street',
 			summary: '1st runner-up in capital.',
 			tags: ['Algo Trading']
 		},
 		{
+			id: 'jpm-cfg',
 			title: 'Code for Good',
 			organisation: 'J.P. Morgan',
 			summary: 'Developed a job shadowing web app.',
 			tags: ['App Development']
 		},
 		{
+			id: 'cathay-hackathon',
 			title: 'Hackathon',
 			organisation: 'Cathay Pacific',
 			summary:
@@ -116,15 +135,18 @@
 			tags: ['App Development']
 		},
 		{
+			id: 'stem-camp',
 			title: 'STEM Camp',
 			organisation: 'Shatin Pui Ying College',
 			summary: 'Organised a day camp for students from 16 visiting schools.',
 			tags: ['Education', 'Teamwork']
 		},
 		{
-			title: 'EE International Summer Camp',
-			organisation: 'HKUST',
-			summary: '4-week full-time summer camp on Electronic Engineering and Computer Science.',
+			id: 'ee-camp',
+			title: 'EE Int. Summer Camp',
+			organisation: 'City U, HK',
+			summary:
+				'4-week full-time international summer camp on Electronic Engineering and Computer Science.',
 			tags: ['Robotic', 'App Development']
 		}
 	];
@@ -157,12 +179,13 @@
 				class="flex h-full max-h-full flex-col gap-1 divide-y divide-orange-400/50 overflow-scroll pr-3"
 			>
 				{#each items as item}
-					<div
+					<a
 						class="flex flex-col bg-orange-200 bg-opacity-0 p-1 hover:cursor-pointer hover:bg-opacity-20"
+						href={`/portfolio/${tab}/${item.id}`}
 					>
 						<div class="flex items-center justify-between pt-2">
 							<div class="text-2xl font-bold">{item.title}</div>
-							<div class="px-1 bg-blue-100/50 dark:bg-blue-900/50">
+							<div class="bg-blue-100/50 px-1 dark:bg-blue-900/50">
 								{#if item.organisation}
 									{item.organisation}
 								{/if}
@@ -171,15 +194,15 @@
 						<p>{item.summary}</p>
 						<div class="flex items-center gap-1 text-sm">
 							{#each item.tags as tag}
-								<span class="bg-zinc-100 dark:bg-zinc-800 px-1">{tag}</span>
+								<span class="bg-zinc-100 px-1 dark:bg-zinc-800">{tag}</span>
 								<div class="mx-1 h-1 w-1 rounded-full bg-zinc-400 last:hidden" />
 							{/each}
 						</div>
-					</div>
+					</a>
 				{/each}
 			</div>
 		</div>
-		<div class="col-span-8 bg-green-400">
+		<div class="col-span-8 ">
 			<slot />
 		</div>
 	</div>
