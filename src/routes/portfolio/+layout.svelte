@@ -152,6 +152,7 @@
 	];
 
 	$: tab = $page.url.pathname.split('/')[2];
+	$: itemId = $page.url.pathname.split('/')[3];
 
 	$: items = tab === 'work' ? works : activities;
 </script>
@@ -180,11 +181,18 @@
 			>
 				{#each items as item}
 					<a
-						class="flex flex-col bg-orange-200 bg-opacity-0 p-1 hover:cursor-pointer hover:bg-opacity-20"
+						class="flex border-spacing-8 flex-col p-1 pr-1 hover:cursor-pointer hover:bg-orange-200/20"
+						class:bg-orange-200={item.id === itemId}
+						class:bg-opacity-20={item.id === itemId}
 						href={`/portfolio/${tab}/${item.id}`}
 					>
 						<div class="flex items-center justify-between pt-2">
-							<div class="text-2xl font-bold">{item.title}</div>
+							<div
+								class="text-2xl font-bold"
+								class:text-orange-400={item.id === itemId}
+							>
+								{item.title}
+							</div>
 							<div class="bg-blue-100/50 px-1 dark:bg-blue-900/50">
 								{#if item.organisation}
 									{item.organisation}
@@ -202,7 +210,7 @@
 				{/each}
 			</div>
 		</div>
-		<div class="col-span-8 ">
+		<div class="col-span-8 overflow-scroll">
 			<slot />
 		</div>
 	</div>
