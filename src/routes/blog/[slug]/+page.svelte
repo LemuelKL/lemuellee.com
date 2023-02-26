@@ -36,6 +36,7 @@
 
 <div
 	class="
+		bg-white dark:bg-zinc-900
 		prose prose-slate
 		min-w-full p-3
 		dark:prose-invert"

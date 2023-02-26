@@ -20,7 +20,7 @@
 	/>
 </svelte:head>
 
-<div class="mx-auto h-full max-w-7xl py-2 px-2">
+<div class="mx-auto h-full max-w-7xl py-2 px-2 bg-white dark:bg-zinc-900">
 	<div class="lg:hidden">
 		{#if activeItem === undefined}
 			<ItemList {works} {activities} />

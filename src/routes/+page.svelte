@@ -29,16 +29,18 @@
 	/>
 </svelte:head>
 
-<div class="bg-pattern flex h-full w-full p-2 sm:p-4">
+<div class="flex h-full w-full bg-polka-light bg-polka p-2 dark:bg-polka-dark sm:p-4">
 	<div
-		class="m-auto flex w-full max-w-5xl flex-col items-center justify-center gap-2 lg:flex-row lg:gap-24"
+		class="relative m-auto flex w-full max-w-5xl flex-col items-center justify-center gap-2 lg:flex-row lg:gap-24"
 	>
 		<img
 			src={avatar}
-			class="max-w-[12em] object-cover p-4 drop-shadow-[0_35px_65px_rgba(0,0,0,0.7)] dark:drop-shadow-[0_35px_65px_rgba(255,255,255,0.2)] sm:max-w-[16em] lg:h-auto lg:w-1/4"
+			class="max-w-[12em] object-cover p-4 drop-shadow-[0_35px_65px_rgba(0,0,0,0.6)] dark:drop-shadow-[0_35px_65px_rgba(255,255,255,0.2)] sm:max-w-[16em] lg:h-auto lg:w-1/4"
 			alt=""
 		/>
-		<div class="flex flex-grow flex-col justify-center gap-2">
+		<div
+			class="flex flex-grow flex-col justify-center gap-2 bg-white p-4 dark:bg-zinc-900 dark:text-zinc-200"
+		>
 			<div class="text-center text-3xl font-bold lg:text-left">Lemuel Lee Kwok Lam</div>
 			<div class="text-center text-xl font-medium lg:text-left">
 				Theoretical Computer Science Student
@@ -51,21 +53,16 @@
 					<div>{identity.organisation}</div>
 				</div>
 			{/each}
-			<div class="text-bold flex w-full max-w-5xl justify-center lg:justify-end">
-				<a
-					class="text-orange-400 hover:cursor-pointer hover:underline "
-					href="https://www.overleaf.com/read/gdnzsswwgkvs"
-					target="_blank"
-					rel="noreferrer">Résumé in LaTeX & PDF</a
-				>
-			</div>
+		</div>
+		<div
+			class="text-bold absolute right-0 -bottom-12 flex w-full max-w-5xl justify-center lg:justify-end"
+		>
+			<a
+				class="bg-zinc-900 px-4 py-1 font-bold text-orange-400 hover:cursor-pointer hover:underline dark:bg-zinc-100 dark:text-orange-500"
+				href="https://www.overleaf.com/read/gdnzsswwgkvs"
+				target="_blank"
+				rel="noreferrer">Résumé in LaTeX & PDF</a
+			>
 		</div>
 	</div>
 </div>
-
-<style>
-	.bg-pattern {
-		background-image: radial-gradient(#a4a4a4 0.5px, transparent 0.5px);
-		background-size: 16px 16px;
-	}
-</style>
