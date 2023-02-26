@@ -1,0 +1,10 @@
+---
+type: work
+title: Bubble Sheet OMR
+summary: Optical Mark Recognition for classroom bubble sheet
+tags: ["OpenCV", "Qt"]
+year: 2019
+month: 6
+---
+
+# Bubble Sheet OMR

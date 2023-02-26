@@ -1,0 +1,14 @@
+---
+type: work
+id: ble-car
+title: Remote Controlled Robotic Car
+summary: Robotic arduino car controlled by Android app via Bluetooth LE.
+tags:
+- Robotics
+- Arduino
+- Android
+year: 2017
+month: 7
+---
+
+# Android & Arduino Remote Controlled Robotic Car

@@ -1,0 +1,77 @@
+---
+type: work
+title: HolloRay
+summary: External 3D CAD DSL with JavaFX and Ambiguity Resolved Translators
+tags: ['Domain-specific language']
+year: 2023
+month: 2
+---
+
+# HolloRay
+
+HolloRay is an external domain-specific language for 3D computer-aided design (CAD), written in JavaFX and Ambiguity Resolved Translators (ART).
+
+ART is a work by [Dr. Adrian Johnstone](https://pure.royalholloway.ac.uk/en/persons/adrian-johnstone) and [Dr. Elizabeth Scott](https://pure.royalholloway.ac.uk/en/persons/elizabeth-scott) at Royal Holloway, University of London.
+
+This is a coursework project for the module Software Language Engineering at Royal Holloway, University of London. At the writing of this (26 Feb, 2023), the project is still in progress.
+
+
+## External DSL
+
+This DSL is external, meaning it has its own syntax and semantics. It is not a subset of any other language, and is not embedded in any other language. ART provides a framework for writing a parser and the language specifications.
+
+HolloRay supports while loops, if statements, variable assignments and deferences, basic arithmetic. It is a full-fledged DSL, and so it supports infinitely nested expressions.
+
+## 3D CAD
+
+HolloRay does 3D CAD. It can create and manipulate 3D objects, and render them to a 3D space. The 3D capabilities are provided by JavaFX. There is a Java Plugin behind the scene, also developed by me, and is connected to the front-end via ART.
+
+Simple solids such as cubes, spheres, cylinders, cones, and tori can be created. These solids can be transformed by translation, rotation, and scaling. They can also be combined into a single object using union, intersection, and difference operations. The resulting object can be rendered to a 3D space.
+
+The 3D space can also be manipulated by the user. The user can rotate the camera, and zoom in and out. The user can also move the camera around the 3D space.
+
+## Internal Language Specifications
+
+The internal language specifications are written in ART's format, in `artSpecification.art`. It is a list of rules specifing how the internal functionalities of the language, represented by a bunch of functions, should be rewritten. In short, it specifies how to carry out term rewriting.
+
+Term rewriting is a technique for transforming a term into another term. It is a form of pattern matching. The term is a string of symbols, and the pattern is a string of symbols with some wildcards. The wildcards are replaced by the symbols in the term, and the result is the rewritten term. The rewriting is done recursively, until no more rewriting can be done. An important concept is that rewriting would not change the behavior of the program. In other words, the rewritten program should be equivalent to the original program, in fact, after every single rewriting step.
+
+The specifications are actually very much like writting Haskell code. It is highly declarative. Here is a segment as an example:
+
+```
+-sequenceDone
+---
+seq(__done, _C), _sig -> _C, _sig
+
+-sequence 
+_C1, _sig -> _C1P, _sigP
+---
+seq(_C1, _C2), _sig -> seq(_C1P, _C2), _sigP
+
+-ifTrue 
+---
+if(True, _C1, _C2),_sig -> _C1, _sig
+
+-ifFalse 
+---
+if(False, _C1, _C2),_sig -> _C2,_sig
+
+-ifResolve
+_E, _sig ->_EP, _sigP
+---
+if(_E,_C1,_C2),_sig -> if(_EP, _C1, _C2), _sigP
+
+-while
+---
+while(_E, _C),_sig -> if(_E, seq(_C, while(_E,_C)), __done), _sig
+```
+
+There are 6 rules in total. Each rule starts by its name, followed by (if any) a list of rules for matching parameters, then how the rewrite should be carried out. Left side of the arrow is the pattern, and right side is the rewrite. For `sequence`, you can see there is a recursive nature.
+
+## External Language Specifications
+
+To be written.
+
+
+
+

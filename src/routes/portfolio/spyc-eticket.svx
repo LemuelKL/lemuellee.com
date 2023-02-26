@@ -1,0 +1,11 @@
+---
+type: work
+title: E-ticketing System
+organisation: 'Shatin Pui Ying College'
+summary: 'Full stack system with multiple web apps: Administration, Mission Control, Admission'
+tags: ['Vue', 'Quasar', 'Supabase']
+year: 2022
+month: 10
+---
+
+# E-ticketing System

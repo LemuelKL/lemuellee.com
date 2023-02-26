@@ -1,0 +1,10 @@
+---
+type: work
+title: Contact List Manager
+summary: Terminal app for managing multi-field contacts.
+tags:
+- C++
+- Windows API
+year: 2018
+month: 5
+---

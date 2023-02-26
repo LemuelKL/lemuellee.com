@@ -1,0 +1,14 @@
+---
+type: activity
+title: Code for Good
+organisation: J.P. Morgan
+summary: Developed a job shadowing web app.
+tags:
+- App Development
+year: 2022
+month: 10
+---
+
+# J.P. Morgan Code for Good
+
+Developed a job shadowing web app for Junior Achievement.

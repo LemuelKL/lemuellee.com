@@ -1,0 +1,12 @@
+---
+type: work
+title: Library Management System
+summary: Qt app for library administration
+tags:
+- Qt
+- MySQL
+year: 2019
+month: 5
+---
+
+# School Library Management System
