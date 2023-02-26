@@ -6,8 +6,7 @@ summary: Organised a day camp for students from 16 visiting schools.
 tags:
 - Education
 - Teamwork
-year: 2019
-month: 4
+date: '2019-04-01'
 ---
 
 # STEM Camp 2019 - Shatin Pui Ying College

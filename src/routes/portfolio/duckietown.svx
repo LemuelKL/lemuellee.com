@@ -3,8 +3,7 @@ type: work
 title: Duckietown self-driving
 summary: Self-driving robotic car for Duckietown
 tags: ["DDPG", "Deep Learning", "Robotics"]
-year: 2020
-month: 12
+date: '2020-12-01'
 ---
 
 # Duckietown self-driving

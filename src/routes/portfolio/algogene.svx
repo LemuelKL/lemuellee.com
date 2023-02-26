@@ -5,8 +5,7 @@ organisation: ALGOGENE
 summary: Finalist Python bot earned 53000% return.
 tags:
 - Algo Trading
-year: 2023
-month: 1
+date: '2023-01-01'
 ---
 
 # Algo Crypto Trading Challenge

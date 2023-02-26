@@ -3,8 +3,7 @@ type: work
 title: 3230shell
 summary: Linux shell written in C with process management
 tags: ['OS', 'Process', 'Pipe', 'Fork', 'Exec', 'Signal']
-year: 2022
-month: 10
+date: '2022-10-01'
 ---
 
 # 3230shell

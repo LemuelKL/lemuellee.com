@@ -1,0 +1,30 @@
+---
+type: work
+title: This Website
+summary: Portfolio and blog
+tags: 
+    - Svelte
+    - Tailwind
+    - Netlify
+    - KaTeX
+    - Markdown
+date: '2023-01-01'
+---
+
+# This Website
+
+This website is built with [Svelte](https://svelte.dev/), [Tailwind](https://tailwindcss.com/), and [Netlify](https://www.netlify.com/). It uses [KaTeX](https://katex.org/) for math rendering and Markdown for content of Portfolio items and Blog posts. The source code is available on [GitHub](https://github.com/LemuelKL/lemuellee.com).
+
+
+## Why Svelte & Kit?
+
+## Why Tailwind CSS?
+
+## Why Netlify?
+
+## Why KaTeX and Markdown?
+
+## Layout
+
+## Font and Color
+

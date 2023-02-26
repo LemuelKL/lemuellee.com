@@ -7,6 +7,5 @@ summary: 4-week full-time international summer camp on Electronic Engineering an
 tags:
 - Robotic
 - App Development
-year: 2017
-month: 8
+date: '2017-08-01'
 ---

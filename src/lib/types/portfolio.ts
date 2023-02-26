@@ -3,10 +3,9 @@ export interface PortfolioItem {
 		title: string;
 		type: string;
 		organisation?: string;
-		tags: string[];
-		year: number;
-		month: number;
 		summary: string;
+		tags: string[];
+		date: string;
 	};
 	path: string;
 }

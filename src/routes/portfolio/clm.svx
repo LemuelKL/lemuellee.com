@@ -5,6 +5,5 @@ summary: Terminal app for managing multi-field contacts.
 tags:
 - C++
 - Windows API
-year: 2018
-month: 5
+date: '2018-05-01'
 ---

@@ -5,8 +5,7 @@ organisation: J.P. Morgan
 summary: Developed a job shadowing web app.
 tags:
 - App Development
-year: 2022
-month: 10
+date: '2022-10-01'
 ---
 
 # J.P. Morgan Code for Good

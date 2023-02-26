@@ -4,8 +4,7 @@ title: Timetable Generator
 organisation: Shatin Pui Ying College
 summary: Web app for scheduling various school tasks
 tags: ['Vue', 'Scheduling']
-year: 2022
-month: 8
+date: '2022-08-01'
 ---
 
 # Timetable Generator

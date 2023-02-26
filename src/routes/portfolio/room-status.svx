@@ -5,8 +5,7 @@ summary: Multi-user LAMP stack app for displaying room status.
 tags:
 - LAMP
 - RFID
-year: 2019
-month: 4
+date: '2019-04-01'
 ---
 
 # Real-time Room Status System

@@ -5,15 +5,12 @@ import { json } from '@sveltejs/kit';
 export const GET = async () => {
 	const allItems = await fetchPortfolioItems();
 
-	const sortedByYear = allItems.sort((a: PortfolioItem, b: PortfolioItem) => {
-		return b.meta.month - a.meta.month;
+	const sortedItems = allItems.sort((a: PortfolioItem, b: PortfolioItem) => {
+		return b.meta.date > a.meta.date ? 1 : -1;
 	});
 
-	const sorted = sortedByYear.sort((a: PortfolioItem, b: PortfolioItem) => {
-		return b.meta.year - a.meta.year;
-	});
 
-	return json(sorted);
+	return json(sortedItems);
 };
 
 export const prerender = true;

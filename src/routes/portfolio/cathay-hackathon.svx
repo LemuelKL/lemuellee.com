@@ -5,8 +5,7 @@ organisation: Cathay Pacific
 summary: Developed a React Native world map app to display COVID-19 tavel restrictions.
 tags:
 - App Development
-year: 2021
-month: 11
+date: '2021-11-01'
 ---
 
 # Cathay Pacific Hackathon

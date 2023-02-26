@@ -3,8 +3,7 @@ type: work
 title: Parallel Samplesort
 summary: Multi-threaded samplesort implementation in C
 tags: ['Multi-threading', 'Semaphore', 'Mutex']
-year: 2022
-month: 11
+date: '2022-11-01'
 ---
 
 # Parallel Samplesort

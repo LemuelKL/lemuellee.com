@@ -7,8 +7,7 @@ tags:
 - Robotics
 - Arduino
 - Android
-year: 2017
-month: 7
+date: '2017-07-01'
 ---
 
 # Android & Arduino Remote Controlled Robotic Car

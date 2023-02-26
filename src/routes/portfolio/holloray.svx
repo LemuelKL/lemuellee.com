@@ -3,8 +3,7 @@ type: work
 title: HolloRay
 summary: External 3D CAD DSL with JavaFX and Ambiguity Resolved Translators
 tags: ['Domain-specific language']
-year: 2023
-month: 2
+date: '2023-02-01'
 ---
 
 # HolloRay
