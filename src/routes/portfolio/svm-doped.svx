@@ -7,3 +7,103 @@ date: '2022-12-01'
 ---
 
 # SVM Doped
+
+[GitHub](https://github.com/LemuelKL/CIFAR10-HOG-PCA-SVM)
+[YouTube](https://youtu.be/gmTweV0eHhk)
+
+This is a simple image classifier for CIFAR-10 dataset. It is a Support Vector Machine (SVM) classifier with RBF kernel. It uses Principal Component Analysis (PCA) as dimensionality reduction and Histogram of Oriented Gradients (HOG) as feature extraction.
+
+## Introduction
+
+In recent years, the use of machine learning has been increasing in many fields, including image classification. Nowadays, Deep Learning and Convolutional Neural Networks (CNN) are the most popular, if not default techniques for image classification. However, they are computationally expensive and require a lot of data.
+
+In this project, I challenge myself to use "traditional" statistical models instead. One of the classics, Support Vector Machine (SVM) classifier, can be used to classify images. However, SVM alone does not provide good results. Therefore, I use Principal Component Analysis (PCA) as dimensionality reduction and Histogram of Oriented Gradients (HOG) as feature extraction to improve the performance of the classifier, as well as to reduce the computational cost and thus a faster training time.
+
+## Results
+
+The results are not bad. The accuracy of the classifier is **0.62**, with only **5 minutes** of training time. That is not bad for a simple statistical model. In fact, when compared to students in my Machine Learning course, my result is of **top 10%**.  The confusion matrix is shown below.
+
+![](https://user-images.githubusercontent.com/20835180/207023895-8bb3cf04-bb49-4e0e-afb9-d023409b3f39.png)
+
+## CIFAR-10 Dataset
+
+The dataset consists of 60,000 32x32 color images in 10 different classes, with 6,000 images per class. There are 50,000 training images and 10,000 test images. The classes are completely mutually exclusive and there is no overlap between them.
+
+![](https://production-media.paperswithcode.com/datasets/4fdf2b82-2bc3-4f97-ba51-400322b228b1.png)
+
+## Code
+
+The code is available on [Github](https://github.com/LemuelKL/CIFAR10-HOG-PCA-SVM). It is written in Python and Sklearn as a Jupyter Notebook. The code is developed on Google Colab. There is also I walkthrough video on [YouTube](https://youtu.be/gmTweV0eHhk).
+
+## Support Vector Machine
+
+Support Vector Machine (SVM) is a supervised machine learning model that uses classification algorithms for two-group classification problems. SVM is a discriminative classifier formally defined by a separating hyperplane. In other words, given labeled training data (supervised learning), the algorithm outputs an optimal hyperplane which categorizes new examples.
+
+Image below shows a linear SVM.
+
+![Linear SVM](https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/SVM_margin.png/600px-SVM_margin.png)
+
+## RBF Kernel
+
+The RBF kernel is a popular kernel function used in various kernelized learning algorithms. It is a radial basis function (RBF), a function whose value depends only on the distance from the origin. The RBF kernel is a good default choice for many problems.
+
+I have experimented with various kernels, including linear, polynomial, and sigmoid. RBF kernel gives the best result.
+
+![](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_svc_001.png)
+
+## Image Grayscaling
+
+The CIFAR-10 dataset consists of 32x32 color images. However, the 3 color channels added extra dimensionality which slows down the training process. Also, from the results of my experiments, colors do not provide better accuracy. Therefore, I convert the images to grayscale. This reduces the dimensionality of the data from 32x32x3 to 32x32.
+
+![](https://i0.wp.com/techtutorialsx.com/wp-content/uploads/2018/06/python-opencv-convert-image-to-gray-scale.png?resize=832%2C437&ssl=1)
+
+## Feature Extraction via HOG
+
+Histogram of Oriented Gradients (HOG) is a feature descriptor used in computer vision and image processing for the purpose of object detection. The technique counts occurrences of gradient orientation in localized portions of an image.
+
+HOG alone boosted the accuracy of the classifier from **0.4** to **0.6**. This makes sense because SVM alone is not really a classifier oriented towards images. The success of CNN is due to the fact that it is designed to work with images. It is designed to extract image related features like the edges, corners, and lines. HOG is doing similar things, but it is not as sophisticated as CNN. However, it is still a good and simple feature extractor for images.
+
+![](https://miro.medium.com/max/683/1*XZxX8V4OrVSwQ9e9snE3gA.png)
+
+## Dimensionality Reduction Steps
+
+1. Input `32x32x3 => 3072`
+2. Grayscaling `32x32x1 => 1024`
+3. HOG `1024 => 324`
+4. PCA `324 => 66`
+
+## Dimensionality Reduction via PCA
+
+Principal Component Analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components. The first principal component accounts for as much of the variability in the data as possible, and each succeeding component in turn has the highest variance possible under the constraint that it is orthogonal to the preceding components.
+
+In short, PCA finds in a multi-dimensional data, the few principal components that explain most of the variance in the data. It is a variance-maximising exercise.
+
+From 324 features, to 66 features, with 80% of explained variance. This is a huge reduction in dimensionality. The accuracy of the classifier is not affected much, but the training time is reduced drastically.
+
+PCA had helped reducing the training time drastically, from 1 hour to 5 minutes. Thanks to it, I was able to experiment with various parameters and models.
+
+![](https://miro.medium.com/max/596/1*QinDfRawRskupf4mU5bYSA.png)
+
+
+## References
+
+1. [CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
+2. [Histogram of Oriented Gradients](https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients)
+3. [Principal Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis)
+4. [Support Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+5. [RBF Kernel](https://en.wikipedia.org/wiki/Radial_basis_function_kernel)
+6. [OpenCV](https://opencv.org/)
+7. [Scikit-learn](https://scikit-learn.org/stable/)
+8. [Google Colab](https://colab.research.google.com/)
+9. [Jupyter Notebook](https://jupyter.org/)
+
+## Images
+
+1. [CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
+2. [Linear SVM](https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/SVM_margin.png/600px-SVM_margin.png)
+3. [RBF Kernel](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_svc_001.png)
+4. [Image Grayscaling](https://i0.wp.com/techtutorialsx.com/wp-content/uploads/2018/06/python-opencv-convert-image-to-gray-scale.png?resize=832%2C437&ssl=1)
+5. [HOG](https://miro.medium.com/max/683/1*XZxX8V4OrVSwQ9e9snE3gA.png)
+6. [PCA](https://miro.medium.com/max/596/1*QinDfRawRskupf4mU5bYSA.png)
+
+
