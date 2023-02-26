@@ -5,7 +5,6 @@ import { json } from '@sveltejs/kit';
 export const GET = async () => {
 	const allItems = await fetchPortfolioItems();
 
-	console.log(allItems)
 	const sortedByYear = allItems.sort((a: PortfolioItem, b: PortfolioItem) => {
 		return b.meta.month - a.meta.month;
 	});
@@ -16,3 +15,5 @@ export const GET = async () => {
 
 	return json(sorted);
 };
+
+export const prerender = true;
