@@ -1,0 +1,12 @@
+---
+type: activity
+title: Electronic Trading Challange
+organisation: Jane Street
+summary: 1st runner-up in capital.
+tags:
+- Algo Trading
+year: 2022
+month: 10
+---
+
+# Jane Street Electronic Trading Challenge

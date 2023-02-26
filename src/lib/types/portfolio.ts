@@ -1,10 +1,15 @@
 export interface PortfolioItem {
-	id: string;
-	type: string;
-	title: string;
-	organisation?: string;
-	tags: string[];
-	summary: string;
-	start_date?: string;
-	end_date?: string;
+	meta: {
+		title: string;
+		type: string;
+		organisation?: string;
+		tags: string[];
+		year: number;
+		month: number;
+		summary: string;
+	};
+	path: string;
 }
+
+export type Work = PortfolioItem
+export type Activity = PortfolioItem

@@ -20,3 +20,22 @@ export const humanDate = (date: string) => {
 	const options = { year: 'numeric', month: 'short', day: 'numeric' };
 	return new Date(date).toLocaleDateString('en-US', options as Intl.DateTimeFormatOptions);
 };
+
+export const fetchPortfolioItems = async () => {
+	const allPortfolioFiles = import.meta.glob('/src/routes/portfolio/*.svx');
+	const iterablePortfolioFiles = Object.entries(allPortfolioFiles);
+	const allPortfolioItems = await Promise.all(
+		iterablePortfolioFiles.map(async ([path, resolver]) => {
+			const { metadata } = await resolver();
+			console.log(path);
+			const portfolioPath = path.split('.')[0].split('/').slice(-1).toString();
+
+			return {
+				meta: metadata,
+				path: portfolioPath
+			};
+		})
+	);
+
+	return allPortfolioItems;
+}

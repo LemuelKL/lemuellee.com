@@ -14,7 +14,6 @@
 	import 'prismjs/components/prism-typescript';
 	import 'prismjs/components/prism-python';
 	import 'prismjs/components/prism-haskell';
-	import { humanDate } from '$lib/utils';
 
 	onMount(() => {
 		Prism.highlightAll();
@@ -40,11 +39,6 @@
 		min-w-full p-3
 		dark:prose-invert"
 >
-	<div class="font-serif text-2xl first-letter:text-3xl">{data.title}</div>
-	<div>
-		Published {humanDate(data.date)}
-	</div>
-	<div class="h-[1px] w-full bg-gray-400" />
 	<svelte:component this={data.content} />
 </div>
 

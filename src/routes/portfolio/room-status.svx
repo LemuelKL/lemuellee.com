@@ -1,0 +1,12 @@
+---
+type: work
+title: Real-time Room Status System
+summary: Multi-user LAMP stack app for displaying room status.
+tags:
+- LAMP
+- RFID
+year: 2019
+month: 4
+---
+
+# Real-time Room Status System

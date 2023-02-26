@@ -1,0 +1,10 @@
+---
+type: work
+title: Enoch Bible Reading Challenge
+summary: Progressive web app to finish the Bible in 1189 days
+tags: ['PWA', 'SPA', 'Vue', 'Supabase']
+year: 2022
+month: 10
+---
+
+# Enoch Bible Reading Challenge

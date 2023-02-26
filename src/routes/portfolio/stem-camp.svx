@@ -1,0 +1,13 @@
+---
+type: activity
+title: STEM Camp
+organisation: Shatin Pui Ying College
+summary: Organised a day camp for students from 16 visiting schools.
+tags:
+- Education
+- Teamwork
+year: 2019
+month: 4
+---
+
+# STEM Camp 2019 - Shatin Pui Ying College
