@@ -1,5 +1,6 @@
 export interface PortfolioItem {
 	id: string;
+	type: string;
 	title: string;
 	organisation?: string;
 	tags: string[];
