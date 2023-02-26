@@ -1,8 +1,8 @@
-export interface Work {
-		title: string;
-		tags: string[];
-		description: string[];
-		date: string;
-		links: string[];
-		thumbnail: string;
-	}
+export interface PortfolioItem {
+	title: string;
+	organisation?: string;
+	tags: string[];
+	summary: string;
+	start_date?: string;
+	end_date?: string;
+}
