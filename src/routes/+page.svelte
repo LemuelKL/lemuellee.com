@@ -29,7 +29,7 @@
 	/>
 </svelte:head>
 
-<div class="flex h-full w-full bg-polka-light bg-polka p-2 dark:bg-polka-dark sm:p-4">
+<div class="flex h-full w-full p-2 sm:p-4">
 	<div
 		class="relative m-auto flex w-full max-w-5xl flex-col items-center justify-center gap-2 lg:flex-row lg:gap-24"
 	>
