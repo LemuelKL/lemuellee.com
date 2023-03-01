@@ -4,6 +4,13 @@
 
 Live at https://lemuellee.com
 
+## Showcase
+
+![About Page](screenshots/about.png)
+![About Page Dark Mode](screenshots/about-dark.png)
+![About Page Mobile](screenshots/about-mobile.png)
+![About Page Mobile Dark Mode](screenshots/about-mobile-dark.png)
+
 ## Developing
 
 ```bash
