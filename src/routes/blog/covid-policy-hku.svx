@@ -1,6 +1,7 @@
 ---
 title: Theory vs Practice
 date: '2023-04-05'
+cover: https://imgur.com/qJ1akcU.jpg
 summary: An observation of an illogical COVID policy at my university.
 ---
 

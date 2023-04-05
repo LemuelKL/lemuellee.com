@@ -1,6 +1,7 @@
 ---
 title: Being Too Specific
 date: '2023-01-27'
+cover: https://imgur.com/Pg8THOm.jpg
 summary: Being too specific in speech might cause problems... in a barber shop.
 ---
 
