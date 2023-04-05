@@ -1,5 +1,5 @@
 ---
-title: Picture Gallery and Drinks Reception
+title: Picture Gallery & Drinks Reception
 date: '2023-01-18'
 cover: https://imgur.com/DoOHOx4.jpg
 summary: A visit to the Royal Holloway's Picture Gallery and a drinks reception. Meeting new people and friends.

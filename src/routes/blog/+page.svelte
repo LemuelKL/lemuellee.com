@@ -25,16 +25,15 @@
 			href={post.path}
 		>
 			<img
-				class="aspect-square h-32 w-32 rounded-sm object-cover md:h-48 md:w-48"
+				class="aspect-square h-16 w-16 rounded-sm object-cover md:h-32 md:w-32"
 				src={post.meta.cover ?? defaultCover}
 				alt=""
 			/>
-			<div class="flex flex-col md:gap-1 lg:gap-2">
-				<div class="text-2xl md:text-3xl">
-					{post.meta.title}
+			<div class="flex flex-col md:gap-2">
+				<div class="flex flex-col gap-1">
+					<div class="text-xl font-bold md:text-2xl">{post.meta.title}</div>
 				</div>
-				<div class="text">{humanDate(post.meta.date)}</div>
-				<div class="text">{post.meta.summary ?? ''}</div>
+				<div class="text-sm md:text-base text-gray-500 dark:text-gray-300">{post.meta.summary}</div>
 			</div>
 		</a>
 	{/each}
