@@ -1,0 +1,18 @@
+---
+title: Theory vs Practice
+date: '2023-04-05'
+summary: An observation of an illogical COVID policy at my university.
+---
+
+When I was doing a Teaching Assistant role for an introductory level computer programming course at my university in 2021, I experienced first hand what an impractical policy is.
+
+The exact time frame was the Fall Semester of 2021-2022. It was the first full resumption of face-to-face teaching since the start of the pandemic.
+
+The university had this illogical policy where they imposed a 75% capacity rule for all classrooms. Essentially, a classroom of 100 seats now could only hold a maximum of 75 people.
+
+I had no idea who came up with this 75% number. It seems arbitrary and lacks empirical support.
+
+From an infection-control perspective, I doubt this had any positive contribution. In a typical lecture room setting, the following seating behaviours are commonly observed. First, students tend to sit in groups. Humans are social animals, especially university students. Of course they sit with their friends and groupmates. Second, people do not fill out the seats orderly and evenly. Students tend to occupy the rows to the back, with virtually no one sitting in the first few rows. So imagine a lecture hall with 100 seats. When seated with 90 versus 70 students, if you only zoom in and focus on the rear 75% of the classroom, there would be no significant difference between the seating arrangement, and consequently social distancing.
+
+In fact, for my situation, the policy had actually increased my risk of infection. I was originally intended to be assigned to only 15 students. However, since the 75% policy, the whole university quickly runs out of these small conference rooms designed exactly for these small tutorials. The course administration team instead combined three classes together. So I had to work with two other TAs on 45 students in total. Consequently, we required a larger classroom, with a larger crowd. The class was designed to be interactive. For over half of the duration of the class, the TAs had to move around the classroom to help students with their course work. Similarly, the students are encouraged to walk around and discuss with people. Indeed such real-time discussion was really helpful and even shy students quickly realised the huge benefits of asking “stupid questions''. The problem is, no one would talk with 1.5m social distance. They bring their laptops, go to the other person’s seat, and point at their monitor. Naturally, and again, people converge into groups. Moreover, from what I have learnt from my discrete maths class, as the total number of people goes up, the probability of an “infection path” in these fully connected nodes increases rapidly.
+
