@@ -8,3 +8,166 @@ date: '2022-08-01'
 ---
 
 # E-ticketing System
+
+I was asked to prepare for an interview, a presentation on a software project I have worked on. This is the markdown version of the presentation. (converted to PDF with pandoc and beamer).
+
+Musical e-ticketing system at SPYC (my secondary school)
+
+Manage orders, arrange seats, generate tickets, and check in guests
+
+- Short time frame, drafting to production in 7 weeks
+- In-house with open source software
+- Vue.js, Quasar, Supabase, Netlify
+- Agile & Pair Programming in a team of 4, with my ex Maths teacher 
+
+## Requirements Analysis Methodology
+
+Analysis past years' workflow and identify possible point of automation
+
+Chat with the secretaries who will be using the system
+
+Chat with mangements to know what had went wrong before
+
+## Requirements Gathered
+
+- No expensive tools/licenses
+- Deliver in 7 weeks
+- Mission Control
+  - Manage orders
+  - Allocate seats
+  - Generate tickets (QR code)
+  - Mail merge
+
+- Admission System
+  - Web app 1: QR code display on guest's phone
+  - Web app 2: Scan guest's QR code and check in
+
+## Mission Control Design
+- To end users, should feel like a domain-specific spreadsheet app with readily available features
+
+Stack
+
+- Vue.js for front-end
+- Quasar for UI
+- Supabase for back-end
+- Netlify for hosting
+
+## Admission System Design
+- Inspired by COVID-19 tracking apps
+
+Stack
+
+- jQuery and Bootstrap for front-end
+- Supabase for back-end (shared with Mission Control)
+- Hosted on school's server
+
+## Implementation
+
+- Another person and I worked on Mission Control
+- Agile & Pair Programming
+
+Him:
+
+- connect front-end to back-end
+- database design
+- a reactive ORM wrapper
+
+Me:
+
+- front-end logics
+- UI design (both visual and mouse-keyboard interaction)
+- data visualisation
+
+## Front-end Logics
+
+Keep the UI in sync with the database by interacting with the ORM wrapper properly.
+
+Proper state management between pages, e.g. when an order is deleted, the seat should be freed.
+
+## Orders Page
+
+Interactive table with CRUD operations with search, sort, and filtering.
+
+Custom column type to enforce data validation.
+
+Supports CSV import and export.
+
+## Seats Page
+
+For secretaries to allocate seats to orders.
+
+Like a spreadsheet but with the iles and rows, four subpages for each Musical session.
+
+Each cell is a numbered seat, colour-coded to indicate guest's type (VIP, student, etc.).
+
+Workflow:
+
+- Panel on the right shows a list of orders, each with "4/5 allocated" progress bar
+- Click an order, then a seat to assign
+- Shortcuts and multiple selection are possible
+
+## Scans Page
+
+For on-duty staff to keep track of the guests' attendance and carry out manual check-in if things go wrong.
+
+A real-time log of scans.
+
+Alert when a VIP is admitted.
+
+## Data Visualisation
+
+- Show outstanding items
+- Simple statistics
+
+## Mail Merge
+
+- Google Script API endpoint that unpacks an incoming JSON and sends an email
+- Fontend can also query sent-box to check if the email has been sent
+
+## Testing
+
+Internal
+
+- Concurrency, we support multiple users editing seating plan at the same time
+- Edge cases testing
+- Peer review
+
+Gather feedback from secretaries
+
+- usually minor issues
+- small bugs fixed on the spot and deployed immediately
+- feature requests are added to the backlog, usually implemented and ready within few days
+
+## Deployment
+
+- Netlify: Git push will trigger a build and deploy
+- Supabase: Instant change reflection via a web portal
+- Fontend and backend are separated
+
+Users perspective:
+
+- Simply refresh the page to get the latest version
+- No need to install any software, just a browser
+- No need to worry about data loss
+- ZERO (basically) downtime
+
+## Maintenance
+
+- Supabase and Netlify are SaaS, no maintenance needed
+- Frontend backend separation, so can easily migration to another hosting service
+- Quality typescript code, hard to break
+
+## Reflection
+
+Proud of:
+
+- Reusable in the future
+- Codebase is well-structured and practises separation of concerns
+- Seamless integration between Mission Control, back-end, and Admission System
+- Very well received among all the users
+
+## What I Would Change
+
+Quasar might not be the best UI framework, it is rather riguid, and our app needed many custom UI components.
+
+More on-paper UI design before prototyping. I rewrote many UI components too many times.
