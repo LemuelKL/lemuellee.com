@@ -13,7 +13,7 @@
 <div class="static h-auto w-screen overflow-hidden">
 	<NavBar />
 	<main
-		class="absolute top-10 h-[calc(100%-80px)] w-full overflow-scroll bg-polka-light bg-polka dark:bg-polka-dark sm:top-12 sm:h-[calc(100%-96px)]"
+		class="absolute top-10 h-[calc(100%-80px)] w-full overflow-hidden bg-polka-light bg-polka dark:bg-polka-dark sm:top-12 sm:h-[calc(100%-96px)]"
 	>
 		<slot  />
 	</main>
