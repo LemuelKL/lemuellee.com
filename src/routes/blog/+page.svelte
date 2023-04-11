@@ -21,7 +21,7 @@
 <div class="flex w-full flex-col gap-3 justify-self-start p-3">
 	{#each data.posts as post}
 		<a
-			class="flex gap-4 rounded-sm bg-gray-100 p-2 ring-1 hover:cursor-pointer hover:bg-orange-100 dark:bg-zinc-700 dark:hover:bg-gray-900"
+			class="flex gap-4 rounded-sm p-2 ring-1 backdrop-blur-sm hover:cursor-pointer hover:ring-orange-500 ring-zinc-700 dark:ring-zinc-200"
 			href={post.path}
 		>
 			<img

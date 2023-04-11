@@ -50,7 +50,7 @@
 		class="relative m-auto flex w-full max-w-5xl flex-col items-center justify-center gap-2 md:flex-row lg:gap-24"
 	>
 		<div
-			class="flex w-full flex-grow flex-col justify-center gap-2 bg-white p-4 dark:bg-zinc-900 dark:text-zinc-200"
+			class="flex w-full flex-grow flex-col justify-center gap-2 backdrop-blur-sm p-4 dark:text-zinc-200"
 		>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-5">
 				<div class="text-3xl font-bold">BEng CompSc</div>
