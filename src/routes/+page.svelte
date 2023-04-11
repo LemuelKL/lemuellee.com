@@ -8,6 +8,14 @@
 	const email = 'lemuellee.kl@gmail.com';
 </script>
 
+<svelte:head>
+	<title>About - Lemuel LEE Kwok Lam</title>
+	<meta
+		name="description"
+		content="Lemuel is studying Computer Science in The University of Hong Kong. GitHub | LinkedIn | YouTube"
+	/>
+</svelte:head>
+
 <div class="mx-auto flex h-full max-w-5xl flex-col items-center justify-center gap-8">
 	<img
 		src={avatar}
