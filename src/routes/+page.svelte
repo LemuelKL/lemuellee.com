@@ -22,8 +22,9 @@
 		class="max-w-[12em] object-cover p-4 drop-shadow-[0_35px_65px_rgba(0,0,0,0.6)] dark:drop-shadow-[0_35px_65px_rgba(255,255,255,0.2)] sm:max-w-[14em] md:h-auto md:w-1/4"
 		alt=""
 	/>
+	<div class="p-4 text-2xl backdrop-blur-sm">Lemuel Lee Kwok Lam</div>
 	<div
-		class="flex h-14 w-full items-center justify-center gap-4 bg-white px-2 dark:bg-zinc-900 md:gap-8 md:px-8"
+		class="flex h-14 w-full items-center justify-center gap-4 px-2 backdrop-blur-sm md:gap-8 md:px-8"
 	>
 		<div class="hidden flex-col items-center sm:flex">
 			<div class="font-bold">Now at</div>
