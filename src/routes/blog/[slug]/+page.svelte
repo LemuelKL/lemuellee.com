@@ -36,10 +36,10 @@
 
 <div
 	class="
-		bg-white dark:bg-zinc-900
 		prose prose-slate
-		min-w-full p-3
-		dark:prose-invert"
+		min-w-full bg-white
+		p-3 dark:prose-invert
+		dark:bg-zinc-900"
 >
 	<div class="font-serif text-2xl first-letter:text-3xl">{data.title}</div>
 	<div>

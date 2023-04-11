@@ -6,7 +6,7 @@ export const load = (async ({ fetch }) => {
 	const items: PortfolioItem[] = await response.json();
 	const works: Work[] = items.filter((item) => item.meta.type === 'work');
 	const activities: Activity[] = items.filter((item) => item.meta.type === 'activity');
-	
+
 	return {
 		works,
 		activities

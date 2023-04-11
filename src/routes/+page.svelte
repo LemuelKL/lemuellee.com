@@ -1,79 +1,54 @@
 <script lang="ts">
-	import avatar from '$lib/assets/lemuel-casual.webp';
-	import ResumeBlock from './ResumeBlock.svelte';
+	import { GithubBrand, LinkedinBrand, YoutubeBrand } from 'svelte-awesome-icons';
 
-	const identities = [
-		{
-			title: 'International Exchange',
-			organisation: 'RHUL',
-			org_colour: 'text-orange-400'
-		},
-		{
-			title: 'BEng(CompSc)',
-			organisation: 'HKU',
-			org_colour: 'text-emerald-700'
-		},
-		{
-			title: 'Question Writer & Programmer',
-			organisation: 'SPYC',
-			org_colour: 'text-green-500'
-		},
-		{
-			title: 'Full Stack Developer',
-			organisation: 'SPYC',
-			org_colour: 'text-green-500'
-		},
-		{
-			title: 'Teaching Assistant',
-			organisation: 'HKU',
-			org_colour: 'text-emerald-700'
-		},
-		{
-			title: 'Class of 2020',
-			organisation: 'SPYC',
-			org_colour: 'text-green-500'
-		}
-	];
+	import avatar from '$lib/assets/lemuel-casual.webp';
+
+	const location = 'London';
+	const phone = '+44 07597 243186';
+	const email = 'lemuellee.kl@gmail.com';
 </script>
 
-<svelte:head>
-	<title>About - Lemuel LEE Kwok Lam</title>
-	<meta
-		name="description"
-		content="Lemuel is studying Theoretical Computer Science in The University of Hong Kong. Exchange student at Royal Holloway, University of London. Tutor at HKU for ENGG1330 and ENGG1340 in 2021-22."
+<div class="mx-auto flex h-full max-w-5xl flex-col items-center justify-center gap-8">
+	<img
+		src={avatar}
+		class="max-w-[12em] object-cover p-4 drop-shadow-[0_35px_65px_rgba(0,0,0,0.6)] dark:drop-shadow-[0_35px_65px_rgba(255,255,255,0.2)] sm:max-w-[14em] md:h-auto md:w-1/4"
+		alt=""
 	/>
-</svelte:head>
-
-<div class="flex h-full w-full p-2 sm:p-4">
 	<div
-		class="relative m-auto flex w-full max-w-5xl flex-col items-center justify-center gap-2 md:flex-row lg:gap-24"
+		class="flex h-14 w-full items-center justify-center gap-4 bg-white px-2 dark:bg-zinc-900 md:gap-8 md:px-8"
 	>
-		<img
-			src={avatar}
-			class="max-w-[12em] object-cover p-4 drop-shadow-[0_35px_65px_rgba(0,0,0,0.6)] dark:drop-shadow-[0_35px_65px_rgba(255,255,255,0.2)] sm:max-w-[14em] md:h-auto md:w-1/4"
-			alt=""
-		/>
-		<div
-			class="flex flex-grow flex-col justify-center gap-2 bg-white p-4 dark:bg-zinc-900 dark:text-zinc-200"
-		>
-			<div class="text-center text-3xl font-bold md:text-left">Lemuel Lee Kwok Lam</div>
-			<div class="text-center text-xl font-medium md:text-left">
-				Theoretical Computer Science
-			</div>
-			<div class="mb-2 h-1 w-full bg-orange-400" />
-			{#each identities as identity}
-				<div class="flex w-full items-center gap-4">
-					<div class="font-bold">{identity.title}</div>
-					<div class="flex-grow" />
-					<div class={identity.org_colour}>{identity.organisation}</div>
-				</div>
-			{/each}
+		<div class="hidden flex-col items-center sm:flex">
+			<div class="font-bold">Now at</div>
+			<div>{location}</div>
 		</div>
-		<div
-			class="text-bold absolute right-0 -bottom-12 hidden w-full max-w-5xl justify-end md:flex"
-		>
-			<ResumeBlock />
+		<div class="hidden flex-col items-center sm:flex">
+			<div class="font-bold">Call</div>
+			<div>{phone}</div>
 		</div>
-		<div class="p-1 md:hidden"><ResumeBlock /></div>
+		<div class="hidden flex-col items-center sm:flex">
+			<div class="font-bold">Write</div>
+			<div>{email}</div>
+		</div>
+		<div class="flex flex-col sm:hidden">
+			<div>{phone}</div>
+			<div>{email}</div>
+		</div>
+		<div class="flex items-center gap-2">
+			<a href="https://www.github.com/LemuelKL" target="_blank" rel="noreferrer">
+				<GithubBrand
+					class="h-8 w-8 transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-gray-700 dark:text-gray-200 hover:dark:text-white sm:h-12 sm:w-12"
+				/>
+			</a>
+			<a href="https://www.linkedin.com/in/lemuelkl/" target="_blank" rel="noreferrer">
+				<LinkedinBrand
+					class="h-8 w-8 text-blue-900 transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-blue-700 sm:h-12 sm:w-12"
+				/>
+			</a>
+			<a href="https://www.youtube.com/c/Luv2049" target="_blank" rel="noreferrer">
+				<YoutubeBrand
+					class="h-8 w-8 text-red-900 transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-red-700 sm:h-12 sm:w-12"
+				/>
+			</a>
+		</div>
 	</div>
 </div>

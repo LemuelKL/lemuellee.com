@@ -33,7 +33,9 @@
 				<div class="flex flex-col gap-1">
 					<div class="text-xl font-bold md:text-2xl">{post.meta.title}</div>
 				</div>
-				<div class="text-sm md:text-base text-gray-500 dark:text-gray-300">{post.meta.summary}</div>
+				<div class="text-sm text-gray-500 dark:text-gray-300 md:text-base">
+					{post.meta.summary}
+				</div>
 			</div>
 		</a>
 	{/each}

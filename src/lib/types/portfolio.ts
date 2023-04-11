@@ -10,5 +10,5 @@ export interface PortfolioItem {
 	path: string;
 }
 
-export type Work = PortfolioItem
-export type Activity = PortfolioItem
+export type Work = PortfolioItem;
+export type Activity = PortfolioItem;

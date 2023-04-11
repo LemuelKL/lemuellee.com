@@ -27,8 +27,8 @@ module.exports = {
 				'polka-dark': 'radial-gradient(#4a4a4a 0.5px, transparent 0.5px)'
 			},
 			backgroundSize: {
-				'polka': '12px 12px'
-			},
+				polka: '12px 12px'
+			}
 		}
 	},
 	plugins: [require('@tailwindcss/typography')],

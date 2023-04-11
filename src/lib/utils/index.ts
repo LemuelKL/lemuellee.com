@@ -37,4 +37,4 @@ export const fetchPortfolioItems = async () => {
 	);
 
 	return allPortfolioItems;
-}
+};

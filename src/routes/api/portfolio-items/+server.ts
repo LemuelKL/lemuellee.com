@@ -9,7 +9,6 @@ export const GET = async () => {
 		return b.meta.date > a.meta.date ? 1 : -1;
 	});
 
-
 	return json(sortedItems);
 };
 

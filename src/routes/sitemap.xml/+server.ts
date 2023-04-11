@@ -6,15 +6,19 @@ import type { PortfolioItem } from '$lib/types/portfolio';
 const website = 'https://lemuellee.com';
 
 export const GET = (async () => {
-  const posts = await fetchMarkdownBlogs();
-  const portfolioItems = await fetchPortfolioItems();
+	const posts = await fetchMarkdownBlogs();
+	const portfolioItems = await fetchPortfolioItems();
 	const pages = ['/portfolio', '/blog'];
 	return new Response(sitemap(portfolioItems, posts, pages));
 }) satisfies RequestHandler;
 
 export const prerender = true;
 
-const sitemap = (portfolioItems: PortfolioItem[], posts: Post[], pages: string[]) => `<?xml version="1.0" encoding="UTF-8" ?>
+const sitemap = (
+	portfolioItems: PortfolioItem[],
+	posts: Post[],
+	pages: string[]
+) => `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
@@ -51,7 +55,7 @@ const sitemap = (portfolioItems: PortfolioItem[], posts: Post[], pages: string[]
   </url>
   `
 		)
-  .join('')}
+		.join('')}
    ${portfolioItems
 		.map(
 			(item) =>
