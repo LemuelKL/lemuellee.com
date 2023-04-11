@@ -37,9 +37,8 @@
 <div
 	class="
 		prose prose-slate
-		min-w-full bg-white
-		p-3 dark:prose-invert
-		dark:bg-zinc-900"
+		mb-8 min-w-full p-3
+		backdrop-blur-sm dark:prose-invert"
 >
 	<div class="font-serif text-2xl first-letter:text-3xl">{data.title}</div>
 	<div>

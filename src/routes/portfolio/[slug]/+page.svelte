@@ -36,7 +36,7 @@
 <div
 	class="
 		prose prose-slate
-		min-w-full p-3
+		mb-8 min-w-full p-3
 		dark:prose-invert
 		prose-img:mx-auto
 		prose-img:max-w-xs"
