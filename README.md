@@ -7,9 +7,17 @@ Live at https://lemuellee.com
 ## Showcase
 
 ![About Page](screenshots/about.png)
-![About Page Dark Mode](screenshots/about-dark.png)
-![About Page Mobile](screenshots/about-mobile.png)
-![About Page Mobile Dark Mode](screenshots/about-mobile-dark.png)
+
+## Features
+
+- Extremely fast page load times.
+- Responsive design.
+- SEO friendly.
+- Consistent design across all pages.
+- Fully static site.
+- Custom content management system for blog posts and portfolio items.
+- MDsveX for markdown support in blog posts and portfolio items.
+- Automatic sitemap.xml generation.
 
 ## Developing
 
@@ -17,6 +25,11 @@ Live at https://lemuellee.com
 npm install
 npm run dev -- --open
 ```
+
+Tools and scripts used:
+- Prettier
+- ESLint
+- Opinionated ordering of TailwindCSS classes
 
 ## Building
 
