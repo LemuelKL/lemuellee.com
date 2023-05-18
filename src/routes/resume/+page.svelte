@@ -3,12 +3,20 @@
 
 	const identities = [
 		{
+			title: 'Modeller Intern',
+			organisation: 'Low Carbon Contracts Company',
+			org_short: 'LCCC',
+			org_colour: 'text-blue-500',
+			start_date: 'May 2023',
+			end_date: 'present'
+		},
+		{
 			title: 'International Exchange',
 			organisation: 'Royal Holloway, University of London',
 			org_short: 'RHUL',
 			org_colour: 'text-orange-400',
 			start_date: 'Jan 2023',
-			end_date: 'present'
+			end_date: 'Jun 2023'
 		},
 		{
 			title: 'Full Stack Developer',
