@@ -24,14 +24,14 @@
 	/>
 	<div class="p-4 text-2xl backdrop-blur-sm">Lemuel Lee Kwok Lam</div>
 	<div
-		class="flex h-14 w-full items-center justify-center gap-4 px-2 backdrop-blur-sm md:gap-8 md:px-8"
+		class="flex h-22 w-full items-center justify-center gap-4 px-2 backdrop-blur-sm md:gap-8 md:px-8"
 	>
 		<div class="hidden flex-col items-center sm:flex">
-			<div class="font-bold">Now at</div>
+			<div class="font-bold">Based at</div>
 			<div>{location}</div>
 		</div>
 		<div class="hidden flex-col items-center sm:flex">
-			<div class="font-bold">Call</div>
+			<div class="font-bold">Call / Signal</div>
 			<div>{phone}</div>
 		</div>
 		<div class="hidden flex-col items-center sm:flex">
@@ -45,17 +45,17 @@
 		<div class="flex items-center gap-2">
 			<a href="https://www.github.com/LemuelKL" target="_blank" rel="noreferrer">
 				<GithubBrand
-					class="h-8 w-8 transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-gray-700 dark:text-gray-200 hover:dark:text-white sm:h-12 sm:w-12"
+					class="h-8 w-8 hover:cursor-pointer hover:text-gray-700 dark:text-gray-200 hover:dark:text-white sm:h-12 sm:w-12"
 				/>
 			</a>
 			<a href="https://www.linkedin.com/in/lemuelkl/" target="_blank" rel="noreferrer">
 				<LinkedinBrand
-					class="h-8 w-8 text-blue-900 transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-blue-700 sm:h-12 sm:w-12"
+					class="h-8 w-8 text-blue-900 hover:cursor-pointer hover:text-blue-700 sm:h-12 sm:w-12"
 				/>
 			</a>
 			<a href="https://www.youtube.com/c/Luv2049" target="_blank" rel="noreferrer">
 				<YoutubeBrand
-					class="h-8 w-8 text-red-900 transition-all hover:-translate-y-1 hover:cursor-pointer hover:text-red-700 sm:h-12 sm:w-12"
+					class="h-8 w-8 text-red-900 hover:cursor-pointer hover:text-red-700 sm:h-12 sm:w-12"
 				/>
 			</a>
 		</div>
