@@ -3,12 +3,28 @@
 
 	const identities = [
 		{
+			title: 'Teaching Assistant',
+			organisation: 'The University of Hong Kong',
+			org_short: 'HKU',
+			org_colour: 'text-emerald-700',
+			start_date: 'Sep 2023',
+			end_date: 'Dec 2023'
+		},
+		{
+			title: 'Peer Mentor',
+			organisation: 'The University of Hong Kong',
+			org_short: 'HKU',
+			org_colour: 'text-emerald-700',
+			start_date: 'Aug 2023',
+			end_date: 'Jun 2024'
+		},
+		{
 			title: 'Modeller Intern',
 			organisation: 'Low Carbon Contracts Company',
 			org_short: 'LCCC',
 			org_colour: 'text-blue-500',
 			start_date: 'May 2023',
-			end_date: 'present'
+			end_date: 'Aug 2023'
 		},
 		{
 			title: 'International Exchange',
