@@ -6,3 +6,5 @@ export const GET = async () => {
 		description: 'CAES9542 FYP presentation',
 	}]);
 };
+
+export const prerender = true;
