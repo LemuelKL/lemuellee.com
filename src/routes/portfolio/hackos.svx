@@ -1,9 +1,0 @@
----
-type: work
-title: HackOS
-summary: Hacking simulator game
-tags: ["Unity", "Game Development", "Cyber Security"]
-date: '2022-05-01'
----
-
-# HackOS
