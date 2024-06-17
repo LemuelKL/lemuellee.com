@@ -14,7 +14,7 @@
 		},
 		{
 			label: 'PORTFOLIO + BLOG',
-			href: '/blog'
+			href: 'https://blog.lemuellee.com'
 		}
 	];
 
