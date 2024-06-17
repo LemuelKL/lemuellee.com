@@ -1,9 +1,0 @@
----
-type: work
-title: RNA Fighter
-summary: Terminal game about COVID-19.
-tags: ["Ncurses", "Game Development"]
-date: '2021-05-01'
----
-
-# HackOS

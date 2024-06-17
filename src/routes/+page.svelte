@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as Flag from 'svelte-flag-icons';
 	import { GithubBrand, LinkedinBrand, YoutubeBrand } from 'svelte-awesome-icons';
 
 	import avatar from '$lib/assets/lemuel-casual.webp';
@@ -9,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<title>About - Lemuel LEE Kwok Lam</title>
+	<title>About - Lemuel Lee</title>
 	<meta
 		name="description"
 		content="Lemuel is studying Computer Science in The University of Hong Kong. GitHub | LinkedIn | YouTube"
@@ -19,19 +20,30 @@
 <div class="mx-auto flex h-full max-w-5xl flex-col items-center justify-center gap-8">
 	<img
 		src={avatar}
-		class="max-w-[12em] object-cover p-4 drop-shadow-[0_35px_65px_rgba(0,0,0,0.6)] dark:drop-shadow-[0_35px_65px_rgba(255,255,255,0.2)] sm:max-w-[14em] md:h-auto md:w-1/4"
+		class="max-w-[12em] rounded-full border-4 border-gray-200 object-cover shadow-lg dark:border-gray-800 sm:max-w-[14em] md:h-auto md:w-1/4"
 		alt=""
 	/>
-	<div class="p-4 text-2xl backdrop-blur-sm">Lemuel Lee Kwok Lam</div>
+	<div class="flex space-x-2 p-4 text-2xl backdrop-blur-sm">
+		<svelte:component class="w-8" this={Flag['Gb']} icon={Flag['Gb']} />
+		<svelte:component class="w-8" this={Flag['Hk']} icon={Flag['Hk']} />
+		<svelte:component class="w-8" this={Flag['Tw']} icon={Flag['Tw']} />
+		<svelte:component class="w-8" this={Flag['Cn']} icon={Flag['Cn']} />
+	</div>
+	<div>
+		Born in Hong Kong, speaks English, Cantonese and Mandarin.<br />
+		Studied computer science in The University of Hong Kong.<br />
+		Lived in Surrey as an exchange student, and Canary Wharf as an intern.
+	</div>
+	<div class="h-0.5 w-4/6 bg-gray-200 dark:bg-gray-800" />
 	<div
-		class="flex h-22 w-full items-center justify-center gap-4 px-2 backdrop-blur-sm md:gap-8 md:px-8"
+		class="h-22 flex w-full items-center justify-center gap-4 px-2 backdrop-blur-sm md:gap-8 md:px-8"
 	>
 		<div class="hidden flex-col items-center sm:flex">
 			<div class="font-bold">Based at</div>
 			<div>{location}</div>
 		</div>
 		<div class="hidden flex-col items-center sm:flex">
-			<div class="font-bold">Call / Signal</div>
+			<div class="font-bold">Call / Text</div>
 			<div>{phone}</div>
 		</div>
 		<div class="hidden flex-col items-center sm:flex">

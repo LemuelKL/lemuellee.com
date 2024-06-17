@@ -8,28 +8,17 @@
 		org_short: string;
 		org_colour: string;
 		country_code: keyof typeof Flag;
-		start_date: string;
-		end_date: string;
+		time: string;
 	}
 
 	const identities: identity[] = [
 		{
 			title: 'Teaching Assistant',
-			organisation: 'The University of Hong Kong',
+			organisation: 'Dept. Computer Science, The University of Hong Kong',
 			org_short: 'HKU',
 			org_colour: 'text-emerald-700',
 			country_code: 'Hk',
-			start_date: 'Sep 2023',
-			end_date: 'Dec 2023'
-		},
-		{
-			title: 'Peer Mentor',
-			organisation: 'The University of Hong Kong',
-			org_short: 'HKU',
-			org_colour: 'text-emerald-700',
-			country_code: 'Hk',
-			start_date: 'Aug 2023',
-			end_date: 'Jun 2024'
+			time: 'Three semesters'
 		},
 		{
 			title: 'Modeller Intern',
@@ -37,17 +26,7 @@
 			org_short: 'LCCC',
 			org_colour: 'text-blue-500',
 			country_code: 'Gb',
-			start_date: 'May 2023',
-			end_date: 'Aug 2023'
-		},
-		{
-			title: 'International Exchange',
-			organisation: 'Royal Holloway, University of London',
-			org_short: 'RHUL',
-			org_colour: 'text-orange-400',
-			country_code: 'Gb',
-			start_date: 'Jan 2023',
-			end_date: 'Jun 2023'
+			time: 'Summer 2023'
 		},
 		{
 			title: 'Full Stack Developer',
@@ -55,17 +34,7 @@
 			org_short: 'SPYC',
 			org_colour: 'text-green-500',
 			country_code: 'Hk',
-			start_date: 'Jun 2022',
-			end_date: 'Aug 2022'
-		},
-		{
-			title: 'Teaching Assistant',
-			organisation: 'The University of Hong Kong',
-			org_short: 'HKU',
-			org_colour: 'text-emerald-700',
-			country_code: 'Hk',
-			start_date: 'Sep 2021',
-			end_date: 'Jun 2022'
+			time: 'Summer 2022'
 		},
 		{
 			title: 'Question Writer & Programmer',
@@ -73,17 +42,16 @@
 			org_short: 'SPYC',
 			org_colour: 'text-green-500',
 			country_code: 'Hk',
-			start_date: 'Mar 2021',
-			end_date: 'Aug 2021'
+			time: 'Spring & Summer 2021'
 		}
 	];
 </script>
 
 <svelte:head>
-	<title>Resume - Lemuel LEE Kwok Lam</title>
+	<title>Resume - Lemuel Lee</title>
 	<meta
 		name="description"
-		content="Lemuel is studying Theoretical Computer Science in The University of Hong Kong. Exchange student at Royal Holloway, University of London. Tutor at HKU for ENGG1330 and ENGG1340 in 2021-22."
+		content="Lemuel is a BEng Computer Science graduate from The University of Hong Kong. He has experience in teaching, mentoring, software engineering, and scientific modelling."
 	/>
 </svelte:head>
 
@@ -95,9 +63,19 @@
 			class="flex w-full flex-grow flex-col justify-center gap-2 p-4 backdrop-blur-sm dark:text-zinc-200"
 		>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-5">
-				<div class="text-3xl font-bold">BEng CompSc</div>
-				<div class="text-xl font-medium">class of 2024</div>
+				<div class="w-48 text-3xl font-bold">MSc EDSML</div>
+				<div class="w-36 text-xl font-medium">incoming</div>
+				<div class="text-xl font-medium">Imperial College London</div>
+			</div>
+			<div class="flex flex-col md:flex-row md:items-center md:gap-5">
+				<div class="w-48 text-3xl font-bold">BEng CompSc</div>
+				<div class="w-36 text-xl font-medium">class of 2024</div>
 				<div class="text-xl font-medium">The University of Hong Kong</div>
+			</div>
+			<div class="flex flex-col md:flex-row md:items-center md:gap-5">
+				<div class="w-48 hidden text-3xl font-bold md:invisible md:block">BEng CompSc</div>
+				<div class="w-36 text-xl font-medium">study abroad</div>
+				<div class="text-xl font-medium">Royal Holloway, University of London</div>
 			</div>
 			<div class="mb-2 h-1 w-full bg-orange-400" />
 			<!-- Desktop -->
@@ -106,7 +84,7 @@
 					{#each identities as identity}
 						<tr>
 							<td class="font-mono text-sm"
-								>{identity.start_date} - {identity.end_date}</td
+								>{identity.time}</td
 							>
 							<td class="text-lg font-semibold">{identity.title}</td>
 							<!-- <td class={identity.org_colour + ' text-right'} -->

@@ -1,10 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import { darkMode } from './../stores';
-	function toggleDarkMode() {
-		darkMode.set(!$darkMode);
-		document.documentElement.classList.toggle('dark');
-	}
 	import { BarsSolid } from 'svelte-awesome-icons';
 	import { page } from '$app/stores';
 	export let routes = [
@@ -17,23 +13,42 @@
 			href: '/resume'
 		},
 		{
-			label: 'PORTFOLIO',
-			href: '/portfolio'
-		},
-		{
-			label: 'BLOG',
+			label: 'PORTFOLIO + BLOG',
 			href: '/blog'
 		}
 	];
 
 	$: baseRoute = $page.url.pathname.split('/')[1];
 
-	onMount(() => {
+	function toggleDarkMode() {
+		darkMode.set(!$darkMode);
+		console.log($darkMode);
+	}
+	/**
+	 * @type {Document | null}
+	 */
+	let doc = null;
+
+	$: darkMode.subscribe((value) => {
+		if (!doc) return;
+		if (value) {
+			doc.documentElement.classList.add('dark');
+			localStorage.setItem('darkMode', 'true');
+		} else {
+			doc.documentElement.classList.remove('dark');
+			localStorage.setItem('darkMode', 'false');
+		}
+	});
+
+	onMount(() => {		
+		doc = document;
+		// if local storage has not been set, infer dark mode from system time
+		if (localStorage.getItem('darkMode') === null) {
+			const now = new Date();
+			const hour = now.getHours();
+			if (hour < 6 || hour >= 18) darkMode.set(true);
+		}
 		if (localStorage.getItem('darkMode') === 'true') darkMode.set(true);
-		darkMode.subscribe((value) => {
-			if (value) document.documentElement.classList.add('dark');
-			else document.documentElement.classList.remove('dark');
-		});
 	});
 
 	let showMenu = false;
@@ -48,7 +63,7 @@
 		alt=""
 		on:mousedown={toggleDarkMode}
 	/>
-	<div class="ml-1 text-xl font-extrabold">LemuelKL</div>
+	<div class="ml-1 text-xl font-extrabold">Lemuel Lee</div>
 	<div class="mx-auto hidden md:block" />
 	<div on:mousedown={() => (showMenu = !showMenu)}>
 		<BarsSolid class="h-6 w-6 hover:cursor-pointer md:hidden" />
