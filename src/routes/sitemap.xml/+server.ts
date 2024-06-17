@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 const website = 'https://lemuellee.com';
 
 export const GET = (async () => {
-	const pages = ['/portfolio', '/blog'];
+	const pages = ['/resume'];
 	return new Response(sitemap(pages));
 }) satisfies RequestHandler;
 
