@@ -14,14 +14,14 @@
 	const identities: identity[] = [
 		{
 			title: 'Teaching Assistant',
-			organisation: 'Dept. Computer Science, The University of Hong Kong',
+			organisation: 'The University of Hong Kong',
 			org_short: 'HKU',
 			org_colour: 'text-emerald-700',
 			country_code: 'Hk',
 			time: 'Three semesters'
 		},
 		{
-			title: 'Modeller Intern',
+			title: 'Quantitative Developer Intern',
 			organisation: 'Low Carbon Contracts Company',
 			org_short: 'LCCC',
 			org_colour: 'text-blue-500',
@@ -37,7 +37,7 @@
 			time: 'Summer 2022'
 		},
 		{
-			title: 'Question Writer & Programmer',
+			title: 'Question Programmer',
 			organisation: 'Shatin Pui Ying College',
 			org_short: 'SPYC',
 			org_colour: 'text-green-500',
@@ -64,18 +64,27 @@
 		>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-5">
 				<div class="w-48 text-3xl font-bold">MSc EDSML</div>
-				<div class="w-36 text-xl font-medium">incoming</div>
-				<div class="text-xl font-medium">Imperial College London</div>
+				<div class="w-36 text-xl font-light">incoming</div>
+				<div class="h-4 w-4 bg-blue-700" />
+				<div class="px-1 text-xl font-medium">
+					Imperial College London
+				</div>
 			</div>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-5">
 				<div class="w-48 text-3xl font-bold">BEng CompSc</div>
-				<div class="w-36 text-xl font-medium">class of 2024</div>
-				<div class="text-xl font-medium">The University of Hong Kong</div>
+				<div class="w-36 text-xl font-light">class of 2024</div>
+				<div class="h-4 w-4 bg-green-700" />
+				<div class="px-1 text-xl font-medium">
+					The University of Hong Kong
+				</div>
 			</div>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-5">
-				<div class="w-48 hidden text-3xl font-bold md:invisible md:block">BEng CompSc</div>
-				<div class="w-36 text-xl font-medium">study abroad</div>
-				<div class="text-xl font-medium">Royal Holloway, University of London</div>
+				<div class="hidden w-48 text-3xl font-bold md:invisible md:block">BEng CompSc</div>
+				<div class="w-36 text-xl font-light">study abroad</div>
+				<div class="h-4 w-4 bg-orange-700" />
+				<div class="px-1 text-xl font-medium">
+					Royal Holloway, University of London
+				</div>
 			</div>
 			<div class="mb-2 h-1 w-full bg-orange-400" />
 			<!-- Desktop -->
@@ -83,9 +92,7 @@
 				<tbody>
 					{#each identities as identity}
 						<tr>
-							<td class="font-mono text-sm"
-								>{identity.time}</td
-							>
+							<td class="font-mono text-sm">{identity.time}</td>
 							<td class="text-lg font-semibold">{identity.title}</td>
 							<!-- <td class={identity.org_colour + ' text-right'} -->
 							<td class={'text-right'}> {identity.organisation}</td>
