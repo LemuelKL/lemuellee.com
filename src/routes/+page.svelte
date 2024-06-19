@@ -11,10 +11,7 @@
 
 <svelte:head>
 	<title>About - Lemuel Lee</title>
-	<meta
-		name="description"
-		content="Lemuel. GitHub | LinkedIn | YouTube"
-	/>
+	<meta name="description" content="Lemuel. GitHub | LinkedIn | YouTube" />
 </svelte:head>
 
 <div class="mx-auto flex h-full max-w-5xl flex-col items-center justify-center gap-8">
@@ -24,15 +21,15 @@
 		alt=""
 	/>
 	<div class="flex space-x-2 p-4 text-2xl backdrop-blur-sm">
-		<svelte:component class="w-8" this={Flag['Gb']} icon={Flag['Gb']} />
-		<svelte:component class="w-8" this={Flag['Hk']} icon={Flag['Hk']} />
-		<svelte:component class="w-8" this={Flag['Tw']} icon={Flag['Tw']} />
-		<svelte:component class="w-8" this={Flag['Cn']} icon={Flag['Cn']} />
+		<svelte:component this={Flag['Gb']} class="w-8" icon={Flag['Gb']} />
+		<svelte:component this={Flag['Hk']} class="w-8" icon={Flag['Hk']} />
+		<svelte:component this={Flag['Tw']} class="w-8" icon={Flag['Tw']} />
+		<svelte:component this={Flag['Cn']} class="w-8" icon={Flag['Cn']} />
 	</div>
-	<div>
-		Born in Hong Kong, speaks English, Cantonese, Mandarin.<br />
-		BEng CompSc HKU<br />
-		Studied and worked in London and Hong Kong.
+	<div class="flex px-8 justify-center w-full">
+		<div>
+			Born in Hong Kong,<br class="block sm:hidden"/> speaks English, Cantonese, Mandarin.<br />BEng CompSc HKU<br />Studied and worked in London and Hong Kong.
+		</div>
 	</div>
 	<div class="h-0.5 w-4/6 bg-gray-200 dark:bg-gray-800" />
 	<div

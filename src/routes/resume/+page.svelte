@@ -62,28 +62,30 @@
 		<div
 			class="flex w-full flex-grow flex-col justify-center gap-2 p-4 backdrop-blur-sm dark:text-zinc-200"
 		>
-			<div class="flex flex-col md:flex-row md:items-center md:gap-5">
+			<div class="flex flex-col md:flex-row md:items-center md:gap-5 opacity-50">
 				<div class="w-48 text-3xl font-bold">MSc EDSML</div>
-				<div class="w-36 text-xl font-light">incoming</div>
-				<div class="h-4 w-4 bg-blue-700" />
-				<div class="px-1 text-xl font-medium">
-					Imperial College London
+				<div class="flex items-center">
+					<div class="hidden w-32 text-xl font-light sm:block">incoming</div>
+					<div class="mr-2 h-4 w-4 bg-blue-700" />
+					<div class="text-lg font-medium sm:text-xl">Imperial College London</div>
 				</div>
 			</div>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-5">
 				<div class="w-48 text-3xl font-bold">BEng CompSc</div>
-				<div class="w-36 text-xl font-light">class of 2024</div>
-				<div class="h-4 w-4 bg-green-700" />
-				<div class="px-1 text-xl font-medium">
-					The University of Hong Kong
+				<div class="flex items-center">
+					<div class="hidden w-32 text-xl font-light sm:block">2024</div>
+					<div class="mr-2 h-4 w-4 bg-green-700" />
+					<div class="text-lg font-medium sm:text-xl">The University of Hong Kong</div>
 				</div>
 			</div>
 			<div class="flex flex-col md:flex-row md:items-center md:gap-5">
 				<div class="hidden w-48 text-3xl font-bold md:invisible md:block">BEng CompSc</div>
-				<div class="w-36 text-xl font-light">study abroad</div>
-				<div class="h-4 w-4 bg-orange-700" />
-				<div class="px-1 text-xl font-medium">
-					Royal Holloway, University of London
+				<div class="flex items-center">
+					<div class="hidden w-32 text-xl font-light sm:block">exchange</div>
+					<div class="mr-2 h-4 w-4 bg-orange-700" />
+					<div class="text-lg font-medium sm:text-xl">
+						Royal Holloway, University of London
+					</div>
 				</div>
 			</div>
 			<div class="mb-2 h-1 w-full bg-orange-400" />
