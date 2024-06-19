@@ -11,7 +11,7 @@
 <div class="static h-auto w-screen overflow-hidden">
     <NavBar />
     <main
-        class="absolute top-10 h-[calc(100%-40px)] w-full overflow-hidden bg-polka-light bg-polka dark:bg-polka-dark sm:top-12 sm:h-[calc(100%-48px)]"
+        class="absolute top-10 h-[calc(100%-40px)] w-full overflow-hidden sm:top-12 sm:h-[calc(100%-48px)]"
     >
         <slot />
     </main>

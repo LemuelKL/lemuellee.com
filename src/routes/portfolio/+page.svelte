@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { PlusSolid, MinusSolid } from 'svelte-awesome-icons';
     let courses = [
         'COMP 2119|Introduction to Data Structures and Algorithms',
         'COMP 2120|Computer Organization',
@@ -90,29 +89,31 @@
 
 <div class="flex h-full w-full overflow-auto p-2 sm:p-4">
     <div class="relative m-auto flex w-full max-w-5xl flex-col items-start justify-center gap-2">
-        <div class="flex w-full items-center justify-between">
+        <div class="flex w-full items-end justify-between">
             <div class="text-3xl">Courses</div>
             <button
                 on:click={() => {
                     sectionsVisible.courses = !sectionsVisible.courses;
                 }}
+                class="delay-50 pl-4 transition duration-150 ease-in-out hover:scale-90 hover:text-orange-400"
             >
                 {#if sectionsVisible.courses}
-                    <MinusSolid class="h-6 w-6 text-orange-400 hover:cursor-pointer" />
+                    <div class="font-light">collapse</div>
                 {:else}
-                    <PlusSolid class="h-6 w-6 text-slate-400 hover:cursor-pointer" />
+                    <div class="font-light">expand</div>
                 {/if}
             </button>
         </div>
         <div
-            class="h-1 w-full"
+            class="h-1 w-full transition-colors"
             class:bg-orange-400={sectionsVisible.courses}
-            class:bg-slate-400={!sectionsVisible.courses}
+            class:bg-gray-200={!sectionsVisible.courses}
+            class:dark:bg-gray-800={!sectionsVisible.courses}
         />
-        <table class:hidden={!sectionsVisible.courses}>
+        <table class:hidden={!sectionsVisible.courses} class="w-full">
             <tbody>
                 {#each courses as course}
-                    <tr>
+                    <tr class="hover:bg-gray-200 dark:hover:bg-gray-800">
                         <td class="hidden font-mono sm:block">{course.split('|')[0]}</td>
                         <td class="block sm:hidden">-</td>
                         <td class="pl-4">{course.split('|')[1]}</td>
@@ -120,16 +121,18 @@
                 {/each}
             </tbody>
         </table>
-        <div class="text-3xl">Projects</div>
+        <div class="w-full text-3xl">Projects</div>
         <div class="h-1 w-full bg-orange-400" />
-        {#each projects as project}
-            <div class="flex w-full flex-col">
-                <div class="flex items-center justify-between gap-4">
-                    <div class="text-xl font-bold">{project.title}</div>
-                    <div class="font-light">{project.assoc}</div>
+        <div class=" w-full">
+            {#each projects as project}
+                <div class="mb-2 flex w-full flex-col hover:bg-gray-200 dark:hover:bg-gray-800">
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="text-xl font-bold">{project.title}</div>
+                        <div class="font-light">{project.assoc}</div>
+                    </div>
+                    <div>{project.desc}</div>
                 </div>
-                <div>{project.desc}</div>
-            </div>
-        {/each}
+            {/each}
+        </div>
     </div>
 </div>

@@ -20,7 +20,7 @@
         class="max-w-[12em] rounded-full border-4 border-gray-200 object-cover shadow-lg dark:border-gray-800 sm:max-w-[14em] md:h-auto"
         alt=""
     />
-    <div class="flex space-x-2 p-4 text-2xl backdrop-blur-sm">
+    <div class="flex space-x-2 p-4 text-2xl">
         <svelte:component this={Flag['Gb']} class="w-8" icon={Flag['Gb']} />
         <svelte:component this={Flag['Hk']} class="w-8" icon={Flag['Hk']} />
         <svelte:component this={Flag['Tw']} class="w-8" icon={Flag['Tw']} />
@@ -33,9 +33,7 @@
         </div>
     </div>
     <div class="h-0.5 w-4/6 bg-gray-200 dark:bg-gray-800" />
-    <div
-        class="h-22 flex w-full items-center justify-center gap-4 px-2 backdrop-blur-sm md:gap-8 md:px-8"
-    >
+    <div class="h-22 flex w-full items-center justify-center gap-4 px-2 md:gap-8 md:px-8">
         <div class="hidden flex-col items-center sm:flex">
             <div class="font-bold">Based at</div>
             <div>{location}</div>
