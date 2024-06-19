@@ -1,13 +1,29 @@
 import eslintPluginSvelte from 'eslint-plugin-svelte';
+import svelteConfig from './svelte.config.js';
+import tsEslintParser from '@typescript-eslint/parser';
+import svelteParser from 'svelte-eslint-parser';
 export default [
-  // add more generic rule sets here, such as:
-  // js.configs.recommended,
-  ...eslintPluginSvelte.configs['flat/recommended'],
-  {
-    rules: {
-      // override/add rules settings here, such as:
-          // 'svelte/rule-name': 'error'
-        files: ["src/**/*.js", "src/**/*.svelte", "src/**/*.ts"],
+    ...eslintPluginSvelte.configs['flat/recommended'],
+    {
+        ignores: ['.svelte-kit/']
+    },
+    {
+        files: ['**/*.ts'],
+        languageOptions: {
+            parser: tsEslintParser
+        }
+    },
+    {
+        ignores: ['app.d.ts', '**/+server.ts'],
+        files: ['src/routes/**/*.svelte', 'src/routes/**/*.ts'],
+        languageOptions: {
+            parser: svelteParser,
+            parserOptions: {
+                svelteConfig,
+                project: './tsconfig.json',
+                extraFileExtensions: ['.svelte'],
+                parser: tsEslintParser
+            }
+        }
     }
-  }
 ];
