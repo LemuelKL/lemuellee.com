@@ -13,7 +13,11 @@
 			href: '/resume'
 		},
 		{
-			label: 'PORTFOLIO + BLOG',
+			label: 'PORTFOLIO',
+			href: '/portfolio'
+		},
+		{
+			label: 'BLOG',
 			href: 'https://blog.lemuellee.com'
 		}
 	];
