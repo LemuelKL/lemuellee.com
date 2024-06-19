@@ -1,6 +1,7 @@
 <a
-	class="py-2 px-4 hover:underline backdrop-blur-sm"
-	href="/resume.pdf"
-	target="_blank"
-	rel="noreferrer">Full Résumé
+    class="px-4 py-2 backdrop-blur-sm hover:underline"
+    href="/resume.pdf"
+    target="_blank"
+    rel="noreferrer"
+    >Full Résumé
 </a>

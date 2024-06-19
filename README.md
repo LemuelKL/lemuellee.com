@@ -10,14 +10,14 @@ Live at https://lemuellee.com
 
 ## Features
 
-- Extremely fast page load times.
-- Responsive design.
-- SEO friendly.
-- Consistent design across all pages.
-- Fully static site.
-- Custom content management system for blog posts and portfolio items.
-- MDsveX for markdown support in blog posts and portfolio items.
-- Automatic sitemap.xml generation.
+-   Extremely fast page load times.
+-   Responsive design.
+-   SEO friendly.
+-   Consistent design across all pages.
+-   Fully static site.
+-   Custom content management system for blog posts and portfolio items.
+-   MDsveX for markdown support in blog posts and portfolio items.
+-   Automatic sitemap.xml generation.
 
 ## Developing
 
@@ -27,9 +27,10 @@ npm run dev -- --open
 ```
 
 Tools and scripts used:
-- Prettier
-- ESLint
-- Opinionated ordering of TailwindCSS classes
+
+-   Prettier
+-   ESLint
+-   Opinionated ordering of TailwindCSS classes
 
 ## Building
 
