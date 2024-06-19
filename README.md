@@ -6,18 +6,15 @@ Live at https://lemuellee.com
 
 ## Showcase
 
-![About Page](screenshots/about.png)
+![About Page](screenshots/about.jpeg)
 
 ## Features
 
--   Extremely fast page load times.
--   Responsive design.
--   SEO friendly.
--   Consistent design across all pages.
 -   Fully static site.
--   Custom content management system for blog posts and portfolio items.
--   MDsveX for markdown support in blog posts and portfolio items.
+-   Extremely fast page load times.
+-   SEO friendly.
 -   Automatic sitemap.xml generation.
+-   Responsive and consistent design.
 
 ## Developing
 
