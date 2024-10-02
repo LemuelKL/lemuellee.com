@@ -60,10 +60,10 @@
         class="relative m-auto flex w-full max-w-5xl flex-col items-center justify-center gap-2 md:flex-row lg:gap-24"
     >
         <div class="flex w-full flex-grow flex-col justify-center gap-2 p-4 dark:text-zinc-200">
-            <div class="flex flex-col opacity-50 md:flex-row md:items-center md:gap-5">
+            <div class="flex flex-col md:flex-row md:items-center md:gap-5">
                 <div class="w-48 text-3xl font-bold">MSc EDSML</div>
                 <div class="flex items-center">
-                    <div class="hidden w-32 text-xl font-light sm:block">incoming</div>
+                    <div class="hidden w-32 text-xl font-light sm:block">2025</div>
                     <div class="mr-2 h-4 w-4 bg-blue-700" />
                     <div class="text-lg font-medium sm:text-xl">Imperial College London</div>
                 </div>
