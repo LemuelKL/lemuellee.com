@@ -103,18 +103,16 @@
     />
 </svelte:head>
 
-<div class="flex h-full w-full p-2 sm:p-4">
+<div class="flex h-full w-full overflow-auto p-2 sm:p-4">
     <div
         class="relative m-auto flex w-full max-w-5xl flex-col items-center justify-center gap-2 md:flex-row lg:gap-24"
     >
         <div class="flex w-full flex-grow flex-col justify-center gap-1 p-4 dark:text-zinc-200">
             <div class="flex flex-col justify-between md:flex-row md:items-center md:gap-5">
-                <div class="text-xl font-semibold hidden md:block">
+                <div class="hidden text-xl font-semibold md:block">
                     MSc Environmental Data Science and Machine Learning
                 </div>
-                <div class="text-xl font-semibold md:hidden">
-                    MSc Environmental DS and ML
-                </div>
+                <div class="text-xl font-semibold md:hidden">MSc Environmental DS and ML</div>
                 <div class="flex items-center">
                     <div class="mr-2 h-2 w-2 bg-blue-700" />
                     <div>Imperial College London</div>
@@ -160,16 +158,16 @@
 
             <!-- Teaching Experiences -->
             <div class="my-2 h-1 w-full bg-orange-400" />
-            <div class="text-right font-semibold my-2">The University of Hong Kong</div>
+            <div class="my-2 text-right font-semibold">The University of Hong Kong</div>
             <!-- Desktop -->
             <table class="hidden border-separate border-spacing-y-2 border border-none md:table">
                 <tbody>
                     {#each teaching_experiences as exp}
                         <tr>
                             <td class="font-mono text-sm">{exp.time}</td>
-                            <td class="flex space-x-2 items-center">
+                            <td class="flex items-center space-x-2">
                                 <div class="text-lg font-semibold">{exp.title}</div>
-                                <div class="font-light"> {exp.content}</div>
+                                <div class="font-light">{exp.content}</div>
                             </td>
                             <td class={'text-right'}> {exp.organisation}</td>
                         </tr>
