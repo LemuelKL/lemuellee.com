@@ -3,6 +3,7 @@
 
     interface experience {
         title: string;
+        title_short: string;
         organisation: string;
         org_short: string;
         time: string;
@@ -11,30 +12,35 @@
     const experiences: experience[] = [
         {
             title: 'Founder',
+            title_short: 'Founder',
             organisation: 'AI Building Service Management Start-up',
             org_short: 'Start-up',
             time: ''
         },
         {
             title: 'Quantitative Developer Intern',
+            title_short: 'Quant Dev Intern',
             organisation: 'Low Carbon Contracts Company, London',
             org_short: 'LCCC, London',
             time: 'Summer 2023'
         },
         {
             title: 'Automation and Optimisation Developer',
+            title_short: 'Auto and Optim Dev',
             organisation: 'Shatin Pui Ying College',
             org_short: 'SPYC',
             time: 'Summer 2022'
         },
         {
             title: 'Mathematics and Physics Programmer',
+            title_short: 'Maths and Phy Programmer',
             organisation: 'Shatin Pui Ying College',
             org_short: 'SPYC',
             time: 'Summer 2022'
         },
         {
             title: 'Mathematics and Physics Programmer',
+            title_short: 'Maths and Phy Programmer',
             organisation: 'Shatin Pui Ying College',
             org_short: 'SPYC',
             time: 'Summer 2021'
@@ -48,6 +54,7 @@
     const teaching_experiences: teaching_experience[] = [
         {
             title: 'Faculty Peer Mentor',
+            title_short: 'Faculty Peer Mentor',
             content: 'first-year engineering students',
             organisation: 'Faculty of Engineering',
             org_short: 'Fac. Engg',
@@ -55,6 +62,7 @@
         },
         {
             title: 'Staff-Student Consultative Committee Member',
+            title_short: 'SSCC Member',
             content: '',
             organisation: 'Faculty of Engineering',
             org_short: 'Fac. Engg',
@@ -62,6 +70,7 @@
         },
         {
             title: 'Teaching Assistant',
+            title_short: 'Teaching Assistant',
             content: 'Computer Programming (COMP1117)',
             organisation: 'Department of Computer Science',
             org_short: 'Dept. CS',
@@ -69,6 +78,7 @@
         },
         {
             title: 'Teaching Assistant',
+            title_short: 'Teaching Assistant',
             content: 'Computer Programming II (ENGG1340)',
             organisation: 'Department of Computer Science',
             org_short: 'Dept. CS',
@@ -76,6 +86,7 @@
         },
         {
             title: 'Teaching Assistant',
+            title_short: 'Teaching Assistant',
             content: 'Computer Programming I (ENGG1330)',
             organisation: 'Department of Computer Science',
             org_short: 'Dept. CS',
@@ -98,8 +109,11 @@
     >
         <div class="flex w-full flex-grow flex-col justify-center gap-1 p-4 dark:text-zinc-200">
             <div class="flex flex-col justify-between md:flex-row md:items-center md:gap-5">
-                <div class="text-xl font-semibold">
+                <div class="text-xl font-semibold hidden md:block">
                     MSc Environmental Data Science and Machine Learning
+                </div>
+                <div class="text-xl font-semibold md:hidden">
+                    MSc Environmental DS and ML
                 </div>
                 <div class="flex items-center">
                     <div class="mr-2 h-2 w-2 bg-blue-700" />
@@ -137,9 +151,9 @@
             <div class="flex w-full flex-col md:hidden">
                 {#each experiences as exp}
                     <div class="flex flex-grow flex-row items-center justify-between gap-3">
-                        <div class="text-lg font-semibold">{exp.title}</div>
+                        <div class="text-lg font-semibold">{exp.title_short}</div>
                         <div class="flex-grow" />
-                        <div>{exp.org_short}</div>
+                        <div class="text-right">{exp.org_short}</div>
                     </div>
                 {/each}
             </div>
@@ -166,9 +180,9 @@
             <div class="flex w-full flex-col md:hidden">
                 {#each teaching_experiences as exp}
                     <div class="flex flex-grow flex-row items-center justify-between gap-3">
-                        <div class="text-lg font-semibold">{exp.title}</div>
+                        <div class="text-lg font-semibold">{exp.title_short}</div>
                         <div class="flex-grow" />
-                        <div>{exp.org_short}</div>
+                        <div class="text-right">{exp.org_short}</div>
                     </div>
                 {/each}
             </div>
