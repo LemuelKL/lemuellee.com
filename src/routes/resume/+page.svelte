@@ -29,7 +29,7 @@
             time: 'Summer 2023'
         },
         {
-            title: 'Full Stack Developer',
+            title: 'Automation and Optimisation Developer',
             organisation: 'Shatin Pui Ying College',
             org_short: 'SPYC',
             org_colour: 'text-green-500',
@@ -37,12 +37,12 @@
             time: 'Summer 2022'
         },
         {
-            title: 'Question Programmer',
+            title: 'Mathematics and Physics Programmer',
             organisation: 'Shatin Pui Ying College',
             org_short: 'SPYC',
             org_colour: 'text-green-500',
             country_code: 'Hk',
-            time: 'Spring & Summer 2021'
+            time: 'Summer 2021'
         }
     ];
 </script>
@@ -51,7 +51,7 @@
     <title>Resume - Lemuel Lee</title>
     <meta
         name="description"
-        content="Lemuel is a BEng Computer Science graduate from The University of Hong Kong. He has experience in teaching, mentoring, software engineering, and scientific modelling."
+        content="Lemuel is a MSc Environmental Data Science and Machine Learning student at Imperial College London. He has a BEng Computer Science from The University of Hong Kong. He has experience in teaching, mentoring, software engineering, and scientific modelling."
     />
 </svelte:head>
 
