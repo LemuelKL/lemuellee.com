@@ -1,48 +1,85 @@
 <script lang="ts">
     import ResumeBlock from './ResumeBlock.svelte';
-    import * as Flag from 'svelte-flag-icons';
 
-    interface identity {
+    interface experience {
         title: string;
         organisation: string;
         org_short: string;
-        org_colour: string;
-        country_code: keyof typeof Flag;
         time: string;
     }
 
-    const identities: identity[] = [
+    const experiences: experience[] = [
         {
-            title: 'Teaching Assistant',
-            organisation: 'The University of Hong Kong',
-            org_short: 'HKU',
-            org_colour: 'text-emerald-700',
-            country_code: 'Hk',
-            time: 'Three semesters'
+            title: 'Founder',
+            organisation: 'AI Building Service Management Start-up',
+            org_short: 'Start-up',
+            time: ''
         },
         {
             title: 'Quantitative Developer Intern',
-            organisation: 'Low Carbon Contracts Company',
-            org_short: 'LCCC',
-            org_colour: 'text-blue-500',
-            country_code: 'Gb',
+            organisation: 'Low Carbon Contracts Company, London',
+            org_short: 'LCCC, London',
             time: 'Summer 2023'
         },
         {
             title: 'Automation and Optimisation Developer',
             organisation: 'Shatin Pui Ying College',
             org_short: 'SPYC',
-            org_colour: 'text-green-500',
-            country_code: 'Hk',
             time: 'Summer 2022'
         },
         {
             title: 'Mathematics and Physics Programmer',
             organisation: 'Shatin Pui Ying College',
             org_short: 'SPYC',
-            org_colour: 'text-green-500',
-            country_code: 'Hk',
+            time: 'Summer 2022'
+        },
+        {
+            title: 'Mathematics and Physics Programmer',
+            organisation: 'Shatin Pui Ying College',
+            org_short: 'SPYC',
             time: 'Summer 2021'
+        }
+    ];
+
+    interface teaching_experience extends experience {
+        content: string;
+    }
+
+    const teaching_experiences: teaching_experience[] = [
+        {
+            title: 'Faculty Peer Mentor',
+            content: 'first-year engineering students',
+            organisation: 'Faculty of Engineering',
+            org_short: 'Fac. Engg',
+            time: '2023 - 2024'
+        },
+        {
+            title: 'Staff-Student Consultative Committee Member',
+            content: '',
+            organisation: 'Faculty of Engineering',
+            org_short: 'Fac. Engg',
+            time: 'Autumn 2023'
+        },
+        {
+            title: 'Teaching Assistant',
+            content: 'Computer Programming (COMP1117)',
+            organisation: 'Department of Computer Science',
+            org_short: 'Dept. CS',
+            time: 'Autumn 2023'
+        },
+        {
+            title: 'Teaching Assistant',
+            content: 'Computer Programming II (ENGG1340)',
+            organisation: 'Department of Computer Science',
+            org_short: 'Dept. CS',
+            time: 'Spring 2022'
+        },
+        {
+            title: 'Teaching Assistant',
+            content: 'Computer Programming I (ENGG1330)',
+            organisation: 'Department of Computer Science',
+            org_short: 'Dept. CS',
+            time: 'Autumn 2021'
         }
     ];
 </script>
@@ -59,65 +96,79 @@
     <div
         class="relative m-auto flex w-full max-w-5xl flex-col items-center justify-center gap-2 md:flex-row lg:gap-24"
     >
-        <div class="flex w-full flex-grow flex-col justify-center gap-2 p-4 dark:text-zinc-200">
-            <div class="flex flex-col md:flex-row md:items-center md:gap-5">
-                <div class="w-48 text-3xl font-bold">MSc EDSML</div>
+        <div class="flex w-full flex-grow flex-col justify-center gap-1 p-4 dark:text-zinc-200">
+            <div class="flex flex-col justify-between md:flex-row md:items-center md:gap-5">
+                <div class="text-xl font-semibold">
+                    MSc Environmental Data Science and Machine Learning
+                </div>
                 <div class="flex items-center">
-                    <div class="hidden w-32 text-xl font-light sm:block">2025</div>
-                    <div class="mr-2 h-4 w-4 bg-blue-700" />
-                    <div class="text-lg font-medium sm:text-xl">Imperial College London</div>
+                    <div class="mr-2 h-2 w-2 bg-blue-700" />
+                    <div>Imperial College London</div>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row md:items-center md:gap-5">
-                <div class="w-48 text-3xl font-bold">BEng CompSc</div>
+            <div class="flex flex-col justify-between md:flex-row md:items-center md:gap-5">
+                <div class="text-xl font-semibold">BEng Computer Science</div>
                 <div class="flex items-center">
-                    <div class="hidden w-32 text-xl font-light sm:block">2024</div>
-                    <div class="mr-2 h-4 w-4 bg-green-700" />
-                    <div class="text-lg font-medium sm:text-xl">The University of Hong Kong</div>
+                    <div class="mr-2 h-2 w-2 bg-green-700" />
+                    <div>The University of Hong Kong</div>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row md:items-center md:gap-5">
-                <div class="hidden w-48 text-3xl font-bold md:invisible md:block">BEng CompSc</div>
+            <div class="flex flex-col justify-between md:flex-row md:items-center md:gap-5">
+                <div class="text-xl font-light">study abroad</div>
                 <div class="flex items-center">
-                    <div class="hidden w-32 text-xl font-light sm:block">exchange</div>
-                    <div class="mr-2 h-4 w-4 bg-orange-700" />
-                    <div class="text-lg font-medium sm:text-xl">
-                        Royal Holloway, University of London
-                    </div>
+                    <div class="mr-2 h-2 w-2 bg-orange-700" />
+                    <div>Royal Holloway, University of London</div>
                 </div>
             </div>
-            <div class="mb-2 h-1 w-full bg-orange-400" />
+            <div class="my-2 h-1 w-full bg-orange-400" />
             <!-- Desktop -->
             <table class="hidden border-separate border-spacing-y-2 border border-none md:table">
                 <tbody>
-                    {#each identities as identity}
+                    {#each experiences as exp}
                         <tr>
-                            <td class="font-mono text-sm">{identity.time}</td>
-                            <td class="text-lg font-semibold">{identity.title}</td>
-                            <!-- <td class={identity.org_colour + ' text-right'} -->
-                            <td class={'text-right'}> {identity.organisation}</td>
-                            <td class="flex items-center justify-end">
-                                <svelte:component
-                                    this={Flag[identity.country_code]}
-                                    icon={Flag[identity.country_code]}
-                                />
-                            </td>
+                            <td class="font-mono text-sm">{exp.time}</td>
+                            <td class="text-lg font-semibold">{exp.title}</td>
+                            <td class={'text-right'}> {exp.organisation}</td>
                         </tr>
                     {/each}
                 </tbody>
             </table>
             <!-- Mobile -->
             <div class="flex w-full flex-col md:hidden">
-                {#each identities as identity}
+                {#each experiences as exp}
                     <div class="flex flex-grow flex-row items-center justify-between gap-3">
-                        <div class="text-lg font-semibold">{identity.title}</div>
+                        <div class="text-lg font-semibold">{exp.title}</div>
                         <div class="flex-grow" />
-                        <!-- <div class={identity.org_colour}>{identity.org_short}</div> -->
-                        <div>{identity.org_short}</div>
-                        <svelte:component
-                            this={Flag[identity.country_code]}
-                            icon={Flag[identity.country_code]}
-                        />
+                        <div>{exp.org_short}</div>
+                    </div>
+                {/each}
+            </div>
+
+            <!-- Teaching Experiences -->
+            <div class="my-2 h-1 w-full bg-orange-400" />
+            <div class="text-right font-semibold my-2">The University of Hong Kong</div>
+            <!-- Desktop -->
+            <table class="hidden border-separate border-spacing-y-2 border border-none md:table">
+                <tbody>
+                    {#each teaching_experiences as exp}
+                        <tr>
+                            <td class="font-mono text-sm">{exp.time}</td>
+                            <td class="flex space-x-2 items-center">
+                                <div class="text-lg font-semibold">{exp.title}</div>
+                                <div class="font-light"> {exp.content}</div>
+                            </td>
+                            <td class={'text-right'}> {exp.organisation}</td>
+                        </tr>
+                    {/each}
+                </tbody>
+            </table>
+            <!-- Mobile -->
+            <div class="flex w-full flex-col md:hidden">
+                {#each teaching_experiences as exp}
+                    <div class="flex flex-grow flex-row items-center justify-between gap-3">
+                        <div class="text-lg font-semibold">{exp.title}</div>
+                        <div class="flex-grow" />
+                        <div>{exp.org_short}</div>
                     </div>
                 {/each}
             </div>

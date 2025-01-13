@@ -26,60 +26,93 @@
         'CS3480|Software Language Engineering',
         'CS3490|Computational Optimization',
         'CS3510|Functional Programming & Applications',
-        'IY2840|Computer & Network Security'
+        'IY2840|Computer & Network Security',
+        '|Numerical Programming in Python',
+        '|Computational Mathematics',
+        '|Data Science and Machine Learning',
+        '|Deep Learning',
+        '|Environmental Data'
     ];
 
     let projects = [
         {
-            title: 'Graph Representation Learning on International Electricity Transfer',
-            desc: 'Spatial-temporal graph neural network modelling of Euoprean electricity market. Models based on GATs, STGCN, and Transformer',
-            assoc: 'Thesis'
-        },
-        {
-            title: 'HackOS',
-            desc: 'Educational offensive cyber-security Unity game',
-            assoc: 'COMP3329'
-        },
-        {
-            title: 'CIFAR10-HOG-PCA-SVM',
-            desc: 'SVM-based image classifier with histogram of oriented gradients as feature extractor',
-            assoc: 'COMP3314'
-        },
-        {
-            title: 'HolloRay',
-            desc: 'External domain-specific language for 3D CAD. Built with JavaFX and Ambiguity Resolved Translators',
-            assoc: 'CS3480'
-        },
-        {
-            title: '3230shell',
-            desc: 'Linux shell with program execution, signals, piping, background processes, and process statistics',
-            assoc: 'COMP3230'
-        },
-        {
-            title: '24 JPoker',
-            desc: 'Multieplayer card game with Java RMI and JMS',
-            assoc: 'COMP3358'
+            title: 'lemuellee.com',
+            desc: 'Personal website built with SvelteKit and TailwindCSS',
+            assoc: '7 stars'
         },
         {
             title: 'EnergieID/entsoe-py',
             desc: 'Python API client for ENTSO-E Transparency Platform',
-            assoc: 'Open Source'
+            assoc: '424 stars'
         },
         {
-            title: 'lemuellee.com',
-            desc: 'Personal website built with SvelteKit and TailwindCSS',
-            assoc: ''
+            title: 'raft/raft.github.io',
+            desc: 'Official website for the Raft Consensus Algorithm',
+            assoc: '1374 stars'
         },
         {
-            title: 'bible-reading-challenge',
-            desc: 'Full stack Bible Reading Challenge PWA & SPA in Vue, Quasar, Supabase, and Netlify.',
-            assoc: ''
+            title: 'd-mok/MathTree',
+            desc: 'Web editor and JavaScript-based DSL for generating Maths and Physics MCQs',
+            assoc: 'Featured on Sing Tao Daily'
+        },
+        {
+            title: '1189 Challenge',
+            desc: 'Full stack Bible Reading Challenge PWA & SPA in Vue, Quasar, Supabase, and Netlify',
+            assoc: '15 active users'
+        },
+        {
+            title: 'MC OMR',
+            desc: 'Cross-platform C++ bubble sheet processing app in Qt and OpenCV',
+            assoc: '13 stars'
         }
     ];
     let sectionsVisible = {
         courses: false,
         projects: true
     };
+
+    let courseworks = [
+        {
+            title: 'Deep Graph Representation Learning on Corss-border Electricity Trading',
+            desc: 'Corss-border electricity trading modelling with spatial-temporal graph NNs: GATs, STGCN, and Transformer'
+        },
+        {
+            title: 'Python ODE solver',
+            desc: 'by Taylor expansion and piecewise polynomial interpolation'
+        },
+        {
+            title: 'Monte Carlo simlation',
+            desc: 'of magnetic quasi-particle for stable energy configurations'
+        },
+        {
+            title: 'Statistical image classifier',
+            desc: 'with HOG, SVM, and PCA at global top 10% accuracy'
+        },
+        {
+            title: 'Statistical time-series acoustic sensing',
+            desc: 'of in-door human presence with autocorrelation and fourier analysis'
+        },
+        {
+            title: 'Pacman AI',
+            desc: 'with Bayesian Networks, Hidden Markov Models, and Particle Filters'
+        },
+        {
+            title: 'External domain-specific language',
+            desc: 'for 3D CAD with Backus–Naur form parser, elided Structural Operational Semantics rules, and interpreter in action semantics powered by JavaFX and Ambiguity Resolved Translators'
+        },
+        {
+            title: 'HackOS',
+            desc: 'Educational offensive cyber-security Unity game'
+        },
+        {
+            title: 'Linux shell',
+            desc: 'with program execution, signals, piping, background processes, and process statistics'
+        },
+        {
+            title: 'Multieplayer poker card game',
+            desc: 'with Java RMI and JMS'
+        }
+    ];
 </script>
 
 <svelte:head>
@@ -123,7 +156,7 @@
         </table>
         <div class="w-full text-3xl">Projects</div>
         <div class="h-1 w-full bg-orange-400" />
-        <div class=" w-full">
+        <div class="w-full">
             {#each projects as project}
                 <div class="mb-2 flex w-full flex-col hover:bg-gray-200 dark:hover:bg-gray-800">
                     <div class="flex items-center justify-between gap-4">
@@ -131,6 +164,19 @@
                         <div class="font-light">{project.assoc}</div>
                     </div>
                     <div>{project.desc}</div>
+                </div>
+            {/each}
+        </div>
+
+        <div class="w-full text-3xl">Coursework</div>
+        <div class="h-1 w-full bg-orange-400" />
+        <div class="w-full">
+            {#each courseworks as coursework}
+                <div class="mb-2 flex w-full flex-col hover:bg-gray-200 dark:hover:bg-gray-800">
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="text-xl font-bold">{coursework.title}</div>
+                    </div>
+                    <div>{coursework.desc}</div>
                 </div>
             {/each}
         </div>
