@@ -1,9 +1,11 @@
 <script>
+    import { run } from 'svelte/legacy';
+
     import { onMount } from 'svelte';
     import { darkMode } from './../stores';
     import { BarsSolid } from 'svelte-awesome-icons';
     import { page } from '$app/stores';
-    export let routes = [
+    let { routes = [
         {
             label: 'ABOUT',
             href: '/'
@@ -20,9 +22,9 @@
             label: 'BLOG',
             href: 'https://blog.lemuellee.com'
         }
-    ];
+    ] } = $props();
 
-    $: baseRoute = $page.url.pathname.split('/')[1];
+    let baseRoute = $derived($page.url.pathname.split('/')[1]);
 
     function toggleDarkMode() {
         darkMode.set(!$darkMode);
@@ -31,17 +33,19 @@
     /**
      * @type {Document | null}
      */
-    let doc = null;
+    let doc = $state(null);
 
-    $: darkMode.subscribe((value) => {
-        if (!doc) return;
-        if (value) {
-            doc.documentElement.classList.add('dark');
-            localStorage.setItem('darkMode', 'true');
-        } else {
-            doc.documentElement.classList.remove('dark');
-            localStorage.setItem('darkMode', 'false');
-        }
+    run(() => {
+        darkMode.subscribe((value) => {
+            if (!doc) return;
+            if (value) {
+                doc.documentElement.classList.add('dark');
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                doc.documentElement.classList.remove('dark');
+                localStorage.setItem('darkMode', 'false');
+            }
+        });
     });
 
     onMount(() => {
@@ -55,19 +59,19 @@
         if (localStorage.getItem('darkMode') === 'true') darkMode.set(true);
     });
 
-    let showMenu = false;
+    let showMenu = $state(false);
 </script>
 
 <header
     class="absolute flex h-10 w-full items-center justify-between gap-2 border-b bg-white px-4 dark:bg-zinc-900 sm:h-12 sm:px-8 md:justify-start"
 >
-    <button on:click={toggleDarkMode}>
+    <button onclick={toggleDarkMode}>
         <img src="/favicon.png" class="h-8 w-8 hover:cursor-pointer" alt="" />
     </button>
 
     <div class="ml-1 text-xl font-extrabold">Lemuel Lee</div>
-    <div class="mx-auto hidden md:block" />
-    <button on:click={() => (showMenu = !showMenu)}>
+    <div class="mx-auto hidden md:block"></div>
+    <button onclick={() => (showMenu = !showMenu)}>
         <BarsSolid class="h-6 w-6 hover:cursor-pointer md:hidden" />
     </button>
 
@@ -97,7 +101,7 @@
             class="bg-zinc-100 py-2 pl-8 pr-4 text-right text-2xl font-bold hover:text-orange-500 dark:bg-zinc-700"
             href={route.href}
             class:text-orange-500={route.href === '/' + baseRoute}
-            on:mouseup={() => (showMenu = !showMenu)}
+            onmouseup={() => (showMenu = !showMenu)}
         >
             {route.label}
         </a>

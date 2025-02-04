@@ -18,8 +18,8 @@
             uri: '/121134.jpg'
         }
     ];
-    $: baseRoute = '/' + $page.url.pathname.split('/')[1];
-    $: currentWallpaper = wallpapers.find((wallpaper) => wallpaper.route === baseRoute);
+    let baseRoute = $derived('/' + $page.url.pathname.split('/')[1]);
+    let currentWallpaper = $derived(wallpapers.find((wallpaper) => wallpaper.route === baseRoute));
 </script>
 
 <div class="h-full border-b-2 dark:border-black">
@@ -28,5 +28,5 @@
         style="background-image: url(/wallpaper/{currentWallpaper
             ? currentWallpaper.uri
             : 'eagle-3840x2160.jpg'})"
-    />
+></div>
 </div>

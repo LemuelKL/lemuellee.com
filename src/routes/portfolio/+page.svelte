@@ -66,10 +66,10 @@
             assoc: '13 stars'
         }
     ];
-    let sectionsVisible = {
+    let sectionsVisible = $state({
         courses: false,
         projects: true
-    };
+    });
 
     let courseworks = [
         {
@@ -125,7 +125,7 @@
         <div class="flex w-full items-end justify-between">
             <div class="text-3xl">Courses</div>
             <button
-                on:click={() => {
+                onclick={() => {
                     sectionsVisible.courses = !sectionsVisible.courses;
                 }}
                 class="delay-50 pl-4 transition duration-150 ease-in-out hover:scale-90 hover:text-orange-400"
@@ -142,7 +142,7 @@
             class:bg-orange-400={sectionsVisible.courses}
             class:bg-gray-200={!sectionsVisible.courses}
             class:dark:bg-gray-800={!sectionsVisible.courses}
-        />
+></div>
         <table class:hidden={!sectionsVisible.courses} class="w-full">
             <tbody>
                 {#each courses as course}
@@ -155,7 +155,7 @@
             </tbody>
         </table>
         <div class="w-full text-3xl">Projects</div>
-        <div class="h-1 w-full bg-orange-400" />
+        <div class="h-1 w-full bg-orange-400"></div>
         <div class="w-full">
             {#each projects as project}
                 <div class="mb-2 flex w-full flex-col hover:bg-gray-200 dark:hover:bg-gray-800">
@@ -169,7 +169,7 @@
         </div>
 
         <div class="w-full text-3xl">Coursework</div>
-        <div class="h-1 w-full bg-orange-400" />
+        <div class="h-1 w-full bg-orange-400"></div>
         <div class="w-full">
             {#each courseworks as coursework}
                 <div class="mb-2 flex w-full flex-col hover:bg-gray-200 dark:hover:bg-gray-800">

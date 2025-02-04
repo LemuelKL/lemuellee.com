@@ -114,25 +114,25 @@
                 </div>
                 <div class="text-xl font-semibold md:hidden">MSc Environmental DS and ML</div>
                 <div class="flex items-center">
-                    <div class="mr-2 h-2 w-2 bg-blue-700" />
+                    <div class="mr-2 h-2 w-2 bg-blue-700"></div>
                     <div>Imperial College London</div>
                 </div>
             </div>
             <div class="flex flex-col justify-between md:flex-row md:items-center md:gap-5">
                 <div class="text-xl font-semibold">BEng Computer Science</div>
                 <div class="flex items-center">
-                    <div class="mr-2 h-2 w-2 bg-green-700" />
+                    <div class="mr-2 h-2 w-2 bg-green-700"></div>
                     <div>The University of Hong Kong</div>
                 </div>
             </div>
             <div class="flex flex-col justify-between md:flex-row md:items-center md:gap-5">
                 <div class="text-xl font-light">study abroad</div>
                 <div class="flex items-center">
-                    <div class="mr-2 h-2 w-2 bg-orange-700" />
+                    <div class="mr-2 h-2 w-2 bg-orange-700"></div>
                     <div>Royal Holloway, University of London</div>
                 </div>
             </div>
-            <div class="my-2 h-1 w-full bg-orange-400" />
+            <div class="my-2 h-1 w-full bg-orange-400"></div>
             <!-- Desktop -->
             <table class="hidden border-separate border-spacing-y-2 border border-none md:table">
                 <tbody>
@@ -150,14 +150,14 @@
                 {#each experiences as exp}
                     <div class="flex flex-grow flex-row items-center justify-between gap-3">
                         <div class="text-lg font-semibold">{exp.title_short}</div>
-                        <div class="flex-grow" />
+                        <div class="flex-grow"></div>
                         <div class="text-right">{exp.org_short}</div>
                     </div>
                 {/each}
             </div>
 
             <!-- Teaching Experiences -->
-            <div class="my-2 h-1 w-full bg-orange-400" />
+            <div class="my-2 h-1 w-full bg-orange-400"></div>
             <div class="my-2 text-right font-semibold">The University of Hong Kong</div>
             <!-- Desktop -->
             <table class="hidden border-separate border-spacing-y-2 border border-none md:table">
@@ -179,7 +179,7 @@
                 {#each teaching_experiences as exp}
                     <div class="flex flex-grow flex-row items-center justify-between gap-3">
                         <div class="text-lg font-semibold">{exp.title_short}</div>
-                        <div class="flex-grow" />
+                        <div class="flex-grow"></div>
                         <div class="text-right">{exp.org_short}</div>
                     </div>
                 {/each}

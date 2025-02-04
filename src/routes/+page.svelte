@@ -7,6 +7,11 @@
     const location = 'London';
     const phone = '+44 07597 243186';
     const email = 'lemuellee.kl@gmail.com';
+
+    const SvelteComponent = $derived(Flag['Gb']);
+    const SvelteComponent_1 = $derived(Flag['Hk']);
+    const SvelteComponent_2 = $derived(Flag['Tw']);
+    const SvelteComponent_3 = $derived(Flag['Cn']);
 </script>
 
 <svelte:head>
@@ -21,10 +26,10 @@
         alt=""
     />
     <div class="flex space-x-2 p-4 text-2xl">
-        <svelte:component this={Flag['Gb']} class="w-8" icon={Flag['Gb']} />
-        <svelte:component this={Flag['Hk']} class="w-8" icon={Flag['Hk']} />
-        <svelte:component this={Flag['Tw']} class="w-8" icon={Flag['Tw']} />
-        <svelte:component this={Flag['Cn']} class="w-8" icon={Flag['Cn']} />
+        <SvelteComponent class="w-8" icon={Flag['Gb']} />
+        <SvelteComponent_1 class="w-8" icon={Flag['Hk']} />
+        <SvelteComponent_2 class="w-8" icon={Flag['Tw']} />
+        <SvelteComponent_3 class="w-8" icon={Flag['Cn']} />
     </div>
     <div class="flex w-full justify-center px-8">
         <div>
@@ -32,7 +37,7 @@
             />BEng CompSc HKU<br />Studied and worked in London and Hong Kong.
         </div>
     </div>
-    <div class="h-0.5 w-4/6 bg-gray-200 dark:bg-gray-800" />
+    <div class="h-0.5 w-4/6 bg-gray-200 dark:bg-gray-800"></div>
     <div class="h-22 flex w-full items-center justify-center gap-4 px-2 md:gap-8 md:px-8">
         <div class="hidden flex-col items-center sm:flex">
             <div class="font-bold">Based at</div>

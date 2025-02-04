@@ -2,6 +2,11 @@
     import './../app.css';
     import NavBar from './NavBar.svelte';
     import { darkMode } from './../stores';
+    interface Props {
+        children?: import('svelte').Snippet;
+    }
+
+    let { children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -13,6 +18,6 @@
     <main
         class="absolute top-10 h-[calc(100%-40px)] w-full overflow-hidden sm:top-12 sm:h-[calc(100%-48px)]"
     >
-        <slot />
+        {@render children?.()}
     </main>
 </div>
