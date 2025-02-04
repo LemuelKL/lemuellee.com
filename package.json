@@ -43,6 +43,6 @@
     },
     "type": "module",
     "dependencies": {
-        "eslint-plugin-svelte": "^2.40.0"
+        "eslint-plugin-svelte": "^2.46.1"
     }
 }
