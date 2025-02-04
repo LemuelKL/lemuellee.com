@@ -32,6 +32,7 @@
         "prettier-plugin-svelte": "^3.2.6",
         "prettier-plugin-tailwindcss": "^0.2.7",
         "svelte": "^5.0.0",
+        "svelte-awesome-icons": "^2.0.1",
         "svelte-check": "^4.0.0",
         "svelte-eslint-parser": "^0.42.0",
         "svelte-flag-icons": "^0.7.2",

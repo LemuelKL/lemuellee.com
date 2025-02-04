@@ -1,6 +1,6 @@
 <script lang="ts">
     import * as Flag from 'svelte-flag-icons';
-    import { GithubBrand, LinkedinBrand, YoutubeBrand } from 'svelte-awesome-icons';
+    import { GithubBrands, LinkedinInBrands, YoutubeBrands } from 'svelte-awesome-icons';
 
     import avatar from '$lib/assets/lemuel-casual.webp';
 
@@ -57,17 +57,17 @@
         </div>
         <div class="flex items-center gap-2">
             <a href="https://www.github.com/LemuelKL" target="_blank" rel="noreferrer">
-                <GithubBrand
+                <GithubBrands
                     class="h-8 w-8 hover:cursor-pointer hover:text-gray-700 dark:text-gray-200 hover:dark:text-white sm:h-12 sm:w-12"
                 />
             </a>
             <a href="https://www.linkedin.com/in/lemuelkl/" target="_blank" rel="noreferrer">
-                <LinkedinBrand
+                <LinkedinInBrands
                     class="h-8 w-8 text-blue-900 hover:cursor-pointer hover:text-blue-700 sm:h-12 sm:w-12"
                 />
             </a>
             <a href="https://www.youtube.com/c/Luv2049" target="_blank" rel="noreferrer">
-                <YoutubeBrand
+                <YoutubeBrands
                     class="h-8 w-8 text-red-900 hover:cursor-pointer hover:text-red-700 sm:h-12 sm:w-12"
                 />
             </a>
