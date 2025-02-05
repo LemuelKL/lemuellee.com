@@ -131,9 +131,9 @@
                 class="delay-50 pl-4 transition duration-150 ease-in-out hover:scale-90 hover:text-orange-400"
             >
                 {#if sectionsVisible.courses}
-                    <div class="font-light">collapse</div>
+                    <div class="font-light cursor-pointer">collapse</div>
                 {:else}
-                    <div class="font-light">expand</div>
+                    <div class="font-light cursor-pointer">expand</div>
                 {/if}
             </button>
         </div>
