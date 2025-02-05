@@ -8,10 +8,10 @@
     const phone = '+44 07597 243186';
     const email = 'lemuellee.kl@gmail.com';
 
-    const SvelteComponent = $derived(Flag['Gb']);
-    const SvelteComponent_1 = $derived(Flag['Hk']);
-    const SvelteComponent_2 = $derived(Flag['Tw']);
-    const SvelteComponent_3 = $derived(Flag['Cn']);
+    const Flag_GB = $derived(Flag['Gb']);
+    const Flag_HK = $derived(Flag['Hk']);
+    const Flag_TW = $derived(Flag['Tw']);
+    const Flag_CN = $derived(Flag['Cn']);
 </script>
 
 <svelte:head>
@@ -26,10 +26,10 @@
         alt=""
     />
     <div class="flex space-x-2 p-4 text-2xl">
-        <SvelteComponent class="w-8" icon={Flag['Gb']} />
-        <SvelteComponent_1 class="w-8" icon={Flag['Hk']} />
-        <SvelteComponent_2 class="w-8" icon={Flag['Tw']} />
-        <SvelteComponent_3 class="w-8" icon={Flag['Cn']} />
+        <Flag_GB class="w-8" />
+        <Flag_HK class="w-8" />
+        <Flag_TW class="w-8" />
+        <Flag_CN class="w-8" />
     </div>
     <div class="flex w-full justify-center px-8">
         <div>
