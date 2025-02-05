@@ -10,11 +10,11 @@ Live at https://lemuellee.com
 
 ## Features
 
--   Fully static site.
--   Extremely fast page load times.
--   SEO friendly.
--   Automatic sitemap.xml generation.
--   Responsive and consistent design.
+- Fully static site.
+- Extremely fast page load times.
+- SEO friendly.
+- Automatic sitemap.xml generation.
+- Responsive and consistent design.
 
 ## Developing
 
@@ -25,9 +25,9 @@ npm run dev -- --open
 
 Tools and scripts used:
 
--   Prettier
--   ESLint
--   Opinionated ordering of TailwindCSS classes
+- Prettier
+- ESLint
+- Opinionated ordering of TailwindCSS classes
 
 ## Building
 

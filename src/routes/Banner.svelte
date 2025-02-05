@@ -28,5 +28,5 @@
         style="background-image: url(/wallpaper/{currentWallpaper
             ? currentWallpaper.uri
             : 'eagle-3840x2160.jpg'})"
-></div>
+    ></div>
 </div>

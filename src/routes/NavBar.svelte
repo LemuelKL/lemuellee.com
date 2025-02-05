@@ -5,24 +5,26 @@
     import { darkMode } from './../stores';
     import { BarsSolid } from 'svelte-awesome-icons';
     import { page } from '$app/stores';
-    let { routes = [
-        {
-            label: 'ABOUT',
-            href: '/'
-        },
-        {
-            label: 'RESUME',
-            href: '/resume'
-        },
-        {
-            label: 'PORTFOLIO',
-            href: '/portfolio'
-        },
-        {
-            label: 'BLOG',
-            href: 'https://blog.lemuellee.com'
-        }
-    ] } = $props();
+    let {
+        routes = [
+            {
+                label: 'ABOUT',
+                href: '/'
+            },
+            {
+                label: 'RESUME',
+                href: '/resume'
+            },
+            {
+                label: 'PORTFOLIO',
+                href: '/portfolio'
+            },
+            {
+                label: 'BLOG',
+                href: 'https://blog.lemuellee.com'
+            }
+        ]
+    } = $props();
 
     let baseRoute = $derived($page.url.pathname.split('/')[1]);
 
