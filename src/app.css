@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia%20Sans:wght@200..900&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+    --font-sofia: 'Sofia Sans', sans-serif;
+}

@@ -142,12 +142,12 @@
             class:bg-orange-400={sectionsVisible.courses}
             class:bg-gray-200={!sectionsVisible.courses}
             class:dark:bg-gray-800={!sectionsVisible.courses}
-></div>
+        ></div>
         <table class:hidden={!sectionsVisible.courses} class="w-full">
             <tbody>
                 {#each courses as course}
                     <tr class="hover:bg-gray-200 dark:hover:bg-gray-800">
-                        <td class="hidden font-mono sm:block">{course.split('|')[0]}</td>
+                        <td class="hidden font-mono text-sm sm:block">{course.split('|')[0]}</td>
                         <td class="block sm:hidden">-</td>
                         <td class="pl-4">{course.split('|')[1]}</td>
                     </tr>

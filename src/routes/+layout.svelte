@@ -3,7 +3,7 @@
     import NavBar from './NavBar.svelte';
     import { darkMode } from './../stores';
     interface Props {
-        children?: import('svelte').Snippet;
+        children?: typeof import('svelte').SvelteComponent;
     }
 
     let { children }: Props = $props();
