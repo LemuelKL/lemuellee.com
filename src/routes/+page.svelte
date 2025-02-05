@@ -5,7 +5,7 @@
     import avatar from '$lib/assets/lemuel-casual.webp';
 
     const location = 'London';
-    const phone = '+44 07597 243186';
+    const phone = '+44 7597 243186';
     const email = 'lemuellee.kl@gmail.com';
 
     const Flag_GB = $derived(Flag['Gb']);
