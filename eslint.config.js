@@ -14,7 +14,15 @@ export default [
         }
     },
     {
-        ignores: ['app.d.ts', '**/+server.ts'],
+        ignores: [
+            'app.d.ts',
+            '**/+server.ts',
+            '.DS_Store',
+            'node_modules/',
+            '/build',
+            '/.svelte-kit',
+            'package-lock.json'
+        ],
         files: ['src/routes/**/*.svelte', 'src/routes/**/*.ts'],
         languageOptions: {
             parser: svelteParser,
