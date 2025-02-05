@@ -1,18 +1,26 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" href="%sveltekit.assets%/favicon.png" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <meta name="viewport" content="width=device-width" />
-        %sveltekit.head%
-    </head>
 
-    <body
-        id="body"
-        data-sveltekit-preload-data="hover"
-        class="bg-white font-sofia transition-colors dark:bg-zinc-900 dark:text-zinc-200"
-    >
-        <div style="display: contents">%sveltekit.body%</div>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <meta name="viewport" content="width=device-width" />
+    %sveltekit.head%
+</head>
+
+<body
+      id="body"
+      data-sveltekit-preload-data="hover"
+      class="bg-white font-sofia transition-colors dark:bg-zinc-900 dark:text-zinc-200">
+    <div style="display: contents">%sveltekit.body%</div>
+</body>
+
 </html>
+
+<style>
+    /* This should not be neccessary! */
+    .font-sofia {
+        font-family: 'Sofia Sans', sans-serif;
+    }
+</style>
