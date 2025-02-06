@@ -186,7 +186,7 @@
             </div>
         </div>
         <div
-            class="text-bold absolute -bottom-12 right-0 hidden w-full max-w-5xl justify-end md:flex"
+            class="text-bold absolute right-0 -bottom-12 hidden w-full max-w-5xl justify-end md:flex"
         >
             <ResumeBlock />
         </div>

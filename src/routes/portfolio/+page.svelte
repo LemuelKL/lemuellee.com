@@ -128,12 +128,12 @@
                 onclick={() => {
                     sectionsVisible.courses = !sectionsVisible.courses;
                 }}
-                class="delay-50 pl-4 transition duration-150 ease-in-out hover:scale-90 hover:text-orange-400"
+                class="pl-4 transition delay-50 duration-150 ease-in-out hover:scale-90 hover:text-orange-400"
             >
                 {#if sectionsVisible.courses}
-                    <div class="font-light cursor-pointer">collapse</div>
+                    <div class="cursor-pointer font-light">collapse</div>
                 {:else}
-                    <div class="font-light cursor-pointer">expand</div>
+                    <div class="cursor-pointer font-light">expand</div>
                 {/if}
             </button>
         </div>

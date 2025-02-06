@@ -22,7 +22,7 @@
 <div class="mx-auto flex h-full max-w-5xl flex-col items-center justify-center gap-8">
     <img
         src={avatar}
-        class="max-w-[12em] rounded-full border-4 border-gray-200 object-cover shadow-lg dark:border-gray-800 sm:max-w-[14em] md:h-auto"
+        class="max-w-[12em] rounded-full border-4 border-gray-200 object-cover shadow-lg sm:max-w-[14em] md:h-auto dark:border-gray-800"
         alt=""
     />
     <div class="flex space-x-2 p-4 text-2xl">
@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="h-0.5 w-4/6 bg-gray-200 dark:bg-gray-800"></div>
-    <div class="h-22 flex w-full items-center justify-center gap-4 px-2 md:gap-8 md:px-8">
+    <div class="flex h-22 w-full items-center justify-center gap-4 px-2 md:gap-8 md:px-8">
         <div class="hidden flex-col items-center sm:flex">
             <div class="font-bold">Based at</div>
             <div>{location}</div>
@@ -58,7 +58,7 @@
         <div class="flex items-center gap-2">
             <a href="https://www.github.com/LemuelKL" target="_blank" rel="noreferrer">
                 <GithubBrands
-                    class="h-8 w-8 hover:cursor-pointer hover:text-gray-700 dark:text-gray-200 hover:dark:text-white sm:h-12 sm:w-12"
+                    class="h-8 w-8 hover:cursor-pointer hover:text-gray-700 sm:h-12 sm:w-12 dark:text-gray-200 hover:dark:text-white"
                 />
             </a>
             <a href="https://www.linkedin.com/in/lemuelkl/" target="_blank" rel="noreferrer">

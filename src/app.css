@@ -4,5 +4,5 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --font-sofia: 'Sofia Sans', sans-serif;
+    --font-sofia: 'Sofia Sans', 'sans-serif';
 }
