@@ -8,18 +8,12 @@
         %sveltekit.head%
     </head>
 
-    <body
-        id="body"
-        data-sveltekit-preload-data="hover"
-        class="font-sofia bg-white transition-colors dark:bg-zinc-900 dark:text-zinc-200"
-    >
-        <div style="display: contents">%sveltekit.body%</div>
+    <body id="body" data-sveltekit-preload-data="hover">
+        <div
+            style="display: contents"
+            class="font-sofia bg-white transition-colors dark:bg-zinc-900 dark:text-zinc-200"
+        >
+            %sveltekit.body%
+        </div>
     </body>
 </html>
-
-<style>
-    /* This should not be neccessary! */
-    /* .font-sofia {
-        font-family: 'Sofia Sans', sans-serif;
-    } */
-</style>
