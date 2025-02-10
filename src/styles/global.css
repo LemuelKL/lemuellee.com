@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@theme {
+  --color-primary: var(--color-stone-100);
+  --color-secondary: var(--color-stone-800);
+  --color-accent: var(--color-red-900);
+  --color-highlight: --alpha(var(--color-red-900)/30%);
+
+}
+/* CSS */
+:root {
+  /* Typography */
+  font-feature-settings: "liga" 1, "calt" 1,
+    /* Contextual Alternates */ "dlig" 1, /* Discretionary Ligatures */ "ss07" 1,
+    /* fSquare punctuation */ "ss08" 1, /* Square quotes */ "zero" 1,
+    /* Slashed zero */ "tnum" 1, /* Tabular numbers */ "cv03" 1,
+    /* Open six */ "cv04" 1, /* Open nine */ "cv01" 1,
+    /* Alternate one */ "cv09", /* Flat-top three */ "cv02" 1; /* Open 4 */
+  font-family: Inter, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+@supports (font-variation-settings: normal) {
+  /* Use variable font if supported */
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+a:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cv-item:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transition: background-color 0.2s ease-in-out;
+}
