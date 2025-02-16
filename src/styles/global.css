@@ -4,8 +4,8 @@
   --color-secondary: var(--color-stone-800);
   --color-accent: var(--color-red-900);
   --color-highlight: --alpha(var(--color-red-900)/30%);
-
 }
+
 /* CSS */
 :root {
   /* Typography */
