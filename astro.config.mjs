@@ -9,5 +9,9 @@ export default defineConfig({
   // add yur domain name here
   site: 'https://lemuellee.com',
   compressHTML: true,
-  integrations: [sitemap()]
+  integrations: [sitemap()],
+
+  experimental: {
+    svg: true,
+  },
 });
