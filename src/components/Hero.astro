@@ -1,6 +1,7 @@
 ---
-import Lemuel from './../images/lemuel.svg';
-import BHKCoA from './../images/bhk-coa.svg';
+import { Image } from 'astro:assets'
+import Lemuel from './../images/lemuel.svg'
+import Blazon from './../images/blazon.png'
 ---
 
 <section class="bg-primary">
@@ -11,7 +12,8 @@ import BHKCoA from './../images/bhk-coa.svg';
     >
         <div class="flex justify-between items-center gap-6 sm:gap-12">
             <Lemuel class="w-lg" />
-            <BHKCoA class="max-h-24 md:max-h-28 w-auto" />
+            <Image src={Blazon} alt="Blazon" class="max-h-24 md:max-h-32 w-auto hover:scale-105 transform transition duration-1000" />
+            <!-- Created with myblazon.com -->
         </div>
     </div>
 </section>
