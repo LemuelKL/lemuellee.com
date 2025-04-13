@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @theme {
     --color-primary: var(--color-stone-100);
-    --color-secondary: var(--color-stone-800);
+    --color-secondary: var(--color-stone-700);
 }
 
 /* CSS */

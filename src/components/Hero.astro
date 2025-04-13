@@ -1,43 +1,24 @@
 ---
-import { Image } from 'astro:assets'
 import Lemuel from './../images/lemuel.svg'
-import Blazon from './../images/blazon.png'
 ---
 
-<section class="bg-primary">
-    <div
-        class="px-8 2xl:max-w-7xl mx-auto pt-12"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-    >
-        <div class="flex justify-between items-center gap-6 sm:gap-12">
-            <Lemuel class="w-lg" />
-            <Image src={Blazon} alt="Blazon" class="max-h-24 md:max-h-32 w-auto hover:scale-105 transform transition duration-1000" />
-            <!-- Created with myblazon.com -->
-        </div>
-    </div>
-</section>
-
-<div class="px-8 2xl:max-w-7xl mx-auto pb-12">
+<div class="px-8 2xl:max-w-7xl mx-auto">
     <div class="mt-6 space-y-2">
-        <div
-            class="h-px bg-secondary"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-        >
-        </div>
         <div
             class="flex flex-col sm:flex-row gap-3 justify-between lg:items-center"
             data-aos="fade-up"
             data-aos-duration="1500"
         >
-            <div class="flex gap-2 text-secondary">
-                <p class="text-xs font-light">A Hongkonger</p>
-                <p class="text-xs">in London</p>
+            <div class="flex gap-4 text-secondary">
+                <p class="text-xs">Hongkonger</p>
+                <p class="text-xs">Londoner</p>
+                <p class="text-xs">Cantonese</p>
+                <p class="text-xs">李氏</p>
+                <p class="text-xs">לְמוּאֵל</p>
             </div>
             <div>
                 <ul
-                    class="lg:items-center flex justify-between w-full gap-3 relative text-xs"
+                    class="lg:items-center flex justify-between w-full gap-4 relative text-xs"
                 >
                     <li>
                         <a
@@ -64,36 +45,17 @@ import Blazon from './../images/blazon.png'
                 </ul>
             </div>
         </div>
-        <div
-            class="h-0.5 bg-secondary"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-        >
-        </div>
-        <div
-            class="h-1 bg-secondary"
-            data-aos="fade-up"
-            data-aos-duration="2500"
-        >
-        </div>
-        <div
-            class="h-1.5 bg-secondary"
-            data-aos="fade-up"
-            data-aos-duration="3000"
-        >
-        </div>
-        <div
-            class="h-2 bg-secondary"
-            data-aos="fade-up"
-            data-aos-duration="3000"
-        >
-        </div>
-        <div
-            class="h-2.5 bg-secondary flex items-end"
-            data-aos="fade-up"
-            data-aos-duration="3000"
-            data-aos-delay="150"
-        >
-        </div>
     </div>
 </div>
+
+<section class="bg-primary">
+    <div
+        class="px-8 2xl:max-w-7xl mx-auto my-8"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+    >
+        <div class="flex justify-between items-center gap-6 sm:gap-12">
+            <Lemuel class="w-lg" />
+        </div>
+    </div>
+</section>

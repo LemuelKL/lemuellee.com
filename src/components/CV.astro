@@ -1,19 +1,24 @@
 ---
 const items = [
     {
+        organisation: 'Zendo Energy',
+        role: 'Quantitative Developer',
+        time: '25 - Now'
+    },
+    {
         organisation: 'Low Carbon Contracts Company',
         role: 'Quantitative Developer Intern',
-        time: '2023'
+        time: '23'
     },
     {
         organisation: 'The University of Hong Kong',
         role: 'Teaching Assistant',
-        time: '2021 - 2023'
+        time: '21 - 23'
     },
     {
         organisation: 'Shatin Pui Ying College',
         role: 'Maths and Physics Programmer',
-        time: '2021 - 2022'
+        time: '21 - 22'
     },
     {
         organisation: '.',
@@ -22,18 +27,18 @@ const items = [
     },
     {
         organisation: 'Imperial College London',
-        role: 'MSc Environmental Data Science and Machine Learning',
-        time: '2024 - 2025'
+        role: 'MSc Environmental Data Sc. and ML.',
+        time: '25'
     },
     {
         organisation: 'The University of Hong Kong',
         role: 'BEng Computer Science',
-        time: '2020 - 2024'
+        time: '24'
     },
     {
         organisation: 'Royal Holloway, University of London',
         role: 'Study Abroad',
-        time: '2023'
+        time: '23'
     }
 ];
 // Function to calculate `data-aos-duration` based on index
@@ -43,14 +48,8 @@ function calculateAosDuration(index) {
 ---
 
 <section class="bg-primary">
-    <div class="px-8 2xl:max-w-7xl mx-auto py-6">
+    <div class="px-8 2xl:max-w-7xl mx-auto pt-32">
         <div class="mt-6 space-y-2">
-            <div
-                class="h-0.5 bg-secondary"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-            >
-            </div>
             <h3
                 class="text-secondary text-base font-medium"
                 data-aos="fade-up"
@@ -66,24 +65,20 @@ function calculateAosDuration(index) {
                         data-aos="fade-up"
                         data-aos-duration={calculateAosDuration(index)}
                     >
-                        <div class="flex flex-col justify-between items-start lg:grid grid-cols-8 lg:gap-3 lg:items-center cv-item py-1">
-                            <span class="font-light text-sm col-start-2 col-end-4">
+                        <div class="flex flex-col justify-between items-start lg:grid grid-cols-10 lg:gap-3 lg:items-center py-1">
+                            <span class="font-light text-sm col-start-1 col-end-4">
                                 {item.organisation}
                             </span>
                             <span class="font-light text-sm col-start-4 col-end-7">
                                 {item.role}
                             </span>
-                            <span class="font-light text-sm col-start-8 col-end-9 text-right">
+                            <span class="hidden lg:block font-light text-sm col-start-7 col-end-9 text-right">
                                 {item.time}
                             </span>
                         </div>
                     </div>
                 ))
             }
-            <!-- <a
-                class="text-sm font-light ml-auto mt-12 underline hover:bg-highlight cursor-pointer"
-                href="https://lemuellee.com/cv.pdf">Full PDF</a
-            > -->
         </div>
     </div>
 </section>
