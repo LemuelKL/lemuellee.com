@@ -21,11 +21,6 @@ const items = [
         time: '21 - 22'
     },
     {
-        organisation: '.',
-        role: '.',
-        time: '.'
-    },
-    {
         organisation: 'Imperial College London',
         role: 'MSc Environmental Data Science and Machine Learning',
         time: '24 - 25'
@@ -64,15 +59,17 @@ function calculateAosDuration(index) {
                     <div
                         data-aos="fade-up"
                         data-aos-duration={calculateAosDuration(index)}
+                        class="group"
                     >
-                        <div class="flex flex-col justify-between items-start lg:grid grid-cols-10 lg:gap-3 lg:items-center py-1">
-                            <span class="hidden lg:block font-light text-sm col-start-1 col-end-1">
+                        <div class="flex flex-col justify-between items-start lg:grid grid-cols-10 lg:gap-3 lg:items-center py-1 group-hover:font-bold">
+                            <span class="hidden lg:block text-sm col-start-1 col-end-1">
                                 {item.time}
                             </span>
-                            <span class="font-light text-sm col-start-3 col-end-6">
+                            
+                            <span class="text-sm col-start-3 col-end-6">
                                 {item.organisation}
                             </span>
-                            <span class="font-light text-sm col-start-6 col-end-10">
+                            <span class="text-sm col-start-6 col-end-10">
                                 {item.role}
                             </span>
                         </div>

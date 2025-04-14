@@ -1,74 +1,116 @@
 ---
-const otherprojects = [
+const projects = [
+    {
+        url: 'https://github.com/tailwindlabs/tailwindcss',
+        title: 'Tailwindcss',
+        type: 'Open Source',
+        stars: '81.7k★',
+        description: 'A utility-first CSS framework for rapid UI development.',
+        time: '2025'
+    },
+    {
+        url: 'https://github.com/ther0n/UnnaturalScrollWheels',
+        title: 'UnnaturalScrollWheels',
+        type: 'Open Source',
+        stars: '3.6k★',
+        description: 'MacOS helper app for scrolling with mouse and trackpad.',
+        time: '2025'
+    },
+    {
+        url: 'https://github.com/raft/raft.github.io',
+        title: 'Raft Website',
+        type: 'Open Source',
+        stars: '1.4k★',
+        description: 'Website of the Raft Consensus Algorithm.',
+        time: '2024'
+    },
+    {
+        url: 'https://github.com/EnergieID/entsoe-py',
+        title: 'ENTSOE Py',
+        type: 'Open Source',
+        stars: '492★',
+        description:
+            'Python API client for European Network of Transmission System Operators for Electricity.',
+        time: '2023'
+    },
+    {
+        url: 'https://github.com/LemuelKL/Android-Controlled-Arduino-Bluetooth-Car',
+        title: 'Mini Robotic Car',
+        type: 'Competition',
+        stars: '11★',
+        description:
+            'Android app to remote control an Arduino robotic car through Bluetooth LE.',
+        time: '2017 - 2018'
+    },
+    {
+        url: 'https://github.com/LemuelKL/lemuellee.com',
+        title: 'lemuellee.com',
+        type: 'Personal',
+        stars: '7★',
+        description: 'My personal website, built with Astro and Tailwind CSS.',
+        time: '2025 - Present'
+    },
+    {
+        url: 'https://github.com/LemuelKL/Bubble-Sheet-OMR-OpenCV-Qt',
+        title: 'Bubble Sheet OMR',
+        type: 'Freelance',
+        stars: '7★',
+        description: 'Qt program using OpenCV to process bubble sheets.',
+        time: '2018'
+    },
+    {
+        url: 'https://github.com/LemuelKL/CSGO-Auto-Reconnect',
+        title: 'CSGO Auto Reconnect',
+        type: 'Personal',
+        stars: '6★',
+        description:
+            'Simple Python script to reconnect to a CSGO community server on disconnect.',
+        time: '2022'
+    },
+    {
+        url: 'https://github.com/d-mok/MathTree',
+        title: 'MathTree',
+        type: 'Freelance',
+        stars: '3★',
+        description:
+            'Web editor and JavaScript-based DSL for generating Maths and Physics MCQs',
+        time: '2022'
+    },
+    {
+        url: 'https://github.com/LemuelKL/HKU-Calendar-Takeout',
+        title: 'HKU Calender Takeout',
+        type: 'Personal',
+        stars: '2★',
+        description:
+            'Exports HKU Portal course schedules to ics calendar format.',
+        time: '2022'
+    },
+    {
+        url: 'https://github.com/LemuelKL/HolloRay',
+        title: 'Holloray',
+        type: 'Coursework',
+        stars: '2★',
+        description:
+            'JavaFX 3D CAD DSL with BNF parser, elided SOS, and action semantics interpreter.',
+        time: '2023'
+    },
+    {
+        url: 'https://github.com/LemuelKL/SLMS',
+        title: 'SLMS',
+        type: 'Coursework',
+        stars: '2★',
+        description:
+            'School Library Management System written with Qt 5.13.0 and C++11.',
+        time: '2020'
+    },
     {
         url: 'https://github.com/LemuelKL/fyp23049',
         title: 'Bachelor Thesis',
         type: 'Coursework',
         stars: '',
         description:
-            'Deep Graph Representation Learning on Corss-border Electricity Trading.'
-    },
-    {
-        url: 'https://github.com/EnergieID/entsoe-py',
-        title: 'EnergieID/entsoe-py',
-        type: 'Open Source',
-        stars: '492★',
-        description:
-            'Python API client for European Network of Transmission System Operators for Electricity.'
-    },
-    {
-        url: 'https://github.com/d-mok/MathTree',
-        title: 'd-mok/MathTree',
-        type: 'Open Source',
-        stars: '3★',
-        description:
-            'Web editor and JavaScript-based DSL for generating Maths and Physics MCQs'
-    },
-    {
-        url: 'https://github.com/LemuelKL/3230shell',
-        title: 'Linux Shell',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'Linux Shell with program execution, signals, piping, background processes, and process statistics.'
-    },
-    {
-        url: 'https://github.com/raft/raft.github.io',
-        title: 'raft/raft.github.io',
-        type: 'Open Source',
-        stars: '1.4k★',
-        description: 'Website of the Raft Consensus Algorithm.'
-    },
-    {
-        url: 'https://github.com/tailwindlabs/tailwindcss',
-        title: 'tailwindlabs/tailwindcss',
-        type: 'Open Source',
-        stars: '81.7k★',
-        description: 'A utility-first CSS framework for rapid UI development.'
-    },
-    {
-        url: 'https://github.com/ther0n/UnnaturalScrollWheels',
-        title: 'ther0n/UnnaturalScrollWheels',
-        type: 'Open Source',
-        stars: '3.6k★',
-        description:
-            'Invert scroll direction for physical scroll wheels while maintaining "Natural" scrolling for trackpads on MacOS.'
-    },
-    {
-        url: '',
-        title: 'ODE Solver',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'Python ODE solver by Taylor expansion and piecewise polynomial interpolation.'
-    },
-    {
-        url: '',
-        title: 'Magnetic Monte Carlo',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'Monte Carlo simlation of magnetic quasi-particle for stable energy configurations.'
+            'Deep Graph Representation Learning on Corss-border Electricity Trading.',
+        time: '2024'
     },
     {
         url: '',
@@ -76,7 +118,52 @@ const otherprojects = [
         type: 'Coursework',
         stars: '',
         description:
-            'Statistical time-series acoustic sensing of in-door human presence with autocorrelation and fourier analysis.'
+            'Statistical time-series acoustic sensing of in-door human presence with autocorrelation and fourier analysis.',
+        time: '2024'
+    },
+    {
+        url: '',
+        title: 'Magnetic Monte Carlo',
+        type: 'Coursework',
+        stars: '',
+        description:
+            'Monte Carlo simlation of magnetic quasi-particle for stable energy configurations.',
+        time: '2024'
+    },
+    {
+        url: '',
+        title: 'ODE Solver',
+        type: 'Coursework',
+        stars: '',
+        description:
+            'Python ODE solver by Taylor expansion and piecewise polynomial interpolation.',
+        time: '2024'
+    },
+    {
+        url: 'https://github.com/LemuelKL/bible-reading-challenge',
+        title: 'Bible Reading Challenge',
+        type: 'Personal',
+        stars: '',
+        description:
+            'Full stack Bible Reading Challenge PWA & SPA in Vue, Quasar, Supabase, and Netlify.',
+        time: '2022 - Present'
+    },
+    {
+        url: 'https://github.com/LemuelKL/3230shell',
+        title: 'Linux Shell',
+        type: 'Coursework',
+        stars: '',
+        description:
+            'Linux shell with prog exec, signals, piping, bg processes, and proc stats.',
+        time: '2022'
+    },
+    {
+        url: 'https://github.com/LemuelKL/svelte-tetris',
+        title: 'Svelte Tetris',
+        type: 'Personal',
+        stars: '',
+        description: 'Tetris in Svelte and Tailwind CSS.',
+        time: '2022'
     },
     {
         url: '',
@@ -84,21 +171,32 @@ const otherprojects = [
         type: 'Coursework',
         stars: '',
         description:
-            'Pacman AI with Bayesian Networks, Hidden Markov Models, and Particle Filters.'
-    },
-    {
-        url: '',
-        title: 'Holloray',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'External domain-specific language for 3D CAD with Backus–Naur form parser, elided Structural Operational Semantics rules, and interpreter in action semantics powered by JavaFX and Ambiguity Resolved Translators.'
+            'Pacman AI with Bayesian Networks, Hidden Markov Models, and Particle Filters.',
+        time: '2023'
     }
 ]
 
 // Function to calculate `data-aos-duration` based on index
 function calculateAosDuration(index) {
-    return 1500 + index * 500 // Example: Increment duration by 500ms for each project
+    return 1500 + (index * 1500) / projects.length
+}
+
+// Function to map project type to a color
+function getProjectTypeColor(type) {
+    switch (type) {
+        case 'Open Source':
+            return 'bg-yellow-300/20'
+        case 'Freelance':
+            return 'bg-blue-300/20'
+        case 'Coursework':
+            return 'bg-green-300/20'
+        case 'Competition':
+            return 'bg-red-300/20'
+        case 'Personal':
+            return 'bg-purple-300/20'
+        default:
+            return 'bg-gray-300/20'
+    }
 }
 ---
 
@@ -116,30 +214,67 @@ function calculateAosDuration(index) {
         </div>
 
         <ul
-            class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-secondary lg:grid-cols-4 items-start gap-6 mt-4"
+            class="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-secondary lg:grid-cols-4 items-start gap-6 mt-4"
             role="list"
         >
             {
-                otherprojects.map((project, index) => (
+                projects.map((project, index) => (
                     <li
-                        class="flow-root h-full group"
+                        class="flow-root h-full"
                         data-aos="fade-up"
                         data-aos-duration={calculateAosDuration(index)}
                     >
-                        <a href={project.url}>
-                            <div class="p-4 gap-4 h-full flex flex-col justify-top group-hover:bg-secondary ease-in-out transition-all duration-300">
-                                <div class="text-xs font-medium flex flex-row justify-between items-center">
-                                    <p class="text-3xl font-semibold lg:mb-8 xl:mb-0">
-                                        {index + 1 < 10
-                                            ? `0${index + 1}`
-                                            : index + 1}
-                                    </p>
-                                    <p>{project.stars}</p>
-                                </div>
-                                <p class="italic shrink-0">{project.title}</p>
-                                <p class="text-xs">{project.description}</p>
+                        <div class="h-full flex flex-col text-sm">
+                            <div class="text-xs font-medium flex flex-row justify-between items-center py-1">
+                                <p class="text-7xl">
+                                    {index + 1 < 10
+                                        ? `0${index + 1}`
+                                        : index + 1}
+                                </p>
+                                <p>{project.stars}</p>
                             </div>
-                        </a>
+
+                            <div class="py-1 border-t border-t-secondary/20">
+                                <p
+                                    class={`w-fit px-2 rounded font-medium ${getProjectTypeColor(
+                                        project.type
+                                    )}`}
+                                >
+                                    {project.type}
+                                </p>
+                            </div>
+
+                            <div class="py-1 border-t border-t-secondary/20">
+                                <p class="font-bold shrink-0 text-black">
+                                    {project.title}
+                                </p>
+                            </div>
+
+                            <div class="py-1 border-t border-t-secondary/20">
+                                <p>{project.time}</p>
+                            </div>
+
+                            {project.url.length > 0 && (
+                                <div class="py-1 border-t border-t-secondary/20">
+                                    <a
+                                        class="w-fit truncate block"
+                                        href={project.url}
+                                        target="_blank"
+                                        style="max-width: 100%;"
+                                    >
+                                        {
+                                            project.url.split(
+                                                'https://github.com/'
+                                            )[1]
+                                        }
+                                    </a>
+                                </div>
+                            )}
+
+                            <div class="py-1 border-t border-t-secondary/20">
+                                {project.description}
+                            </div>
+                        </div>
                     </li>
                 ))
             }
