@@ -3,7 +3,7 @@ const items = [
     {
         organisation: 'Zendo Energy',
         role: 'Quantitative Developer',
-        time: '25 - Now'
+        time: 'Now'
     },
     {
         organisation: 'Low Carbon Contracts Company',
@@ -27,23 +27,23 @@ const items = [
     },
     {
         organisation: 'Imperial College London',
-        role: 'MSc Environmental Data Sc. and ML.',
-        time: '25'
+        role: 'MSc Environmental Data Science and Machine Learning',
+        time: '24 - 25'
     },
     {
         organisation: 'The University of Hong Kong',
         role: 'BEng Computer Science',
-        time: '24'
+        time: '20 - 24'
     },
     {
         organisation: 'Royal Holloway, University of London',
         role: 'Study Abroad',
         time: '23'
     }
-];
+]
 // Function to calculate `data-aos-duration` based on index
 function calculateAosDuration(index) {
-    return 1500 + index * 200; // Example: Increment duration by 200ms for each project
+    return 1500 + index * 200 // Example: Increment duration by 200ms for each project
 }
 ---
 
@@ -66,14 +66,14 @@ function calculateAosDuration(index) {
                         data-aos-duration={calculateAosDuration(index)}
                     >
                         <div class="flex flex-col justify-between items-start lg:grid grid-cols-10 lg:gap-3 lg:items-center py-1">
-                            <span class="font-light text-sm col-start-1 col-end-4">
+                            <span class="hidden lg:block font-light text-sm col-start-1 col-end-1">
+                                {item.time}
+                            </span>
+                            <span class="font-light text-sm col-start-3 col-end-6">
                                 {item.organisation}
                             </span>
-                            <span class="font-light text-sm col-start-4 col-end-7">
+                            <span class="font-light text-sm col-start-6 col-end-10">
                                 {item.role}
-                            </span>
-                            <span class="hidden lg:block font-light text-sm col-start-7 col-end-9 text-right">
-                                {item.time}
                             </span>
                         </div>
                     </div>
