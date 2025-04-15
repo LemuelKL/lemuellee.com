@@ -5,44 +5,31 @@ import Lemuel from './../images/lemuel.svg'
 <div class="px-8 2xl:max-w-7xl mx-auto">
     <div class="mt-6 space-y-2">
         <div
-            class="flex flex-col sm:flex-row gap-3 justify-between lg:items-center"
+            class="text-xs text-secondary"
             data-aos="fade-up"
-            data-aos-duration="1500"
+            data-aos-duration="300"
         >
-            <div class="flex gap-4 text-secondary">
-                <p class="text-xs">Hongkonger</p>
-                <p class="text-xs">Londoner</p>
-                <p class="text-xs">Cantonese</p>
-                <p class="text-xs">李氏</p>
-                <p class="text-xs">לְמוּאֵל</p>
-            </div>
-            <div>
-                <ul
-                    class="lg:items-center flex justify-between w-full gap-4 relative text-xs"
+            <div class="grid grid-cols-4 md:grid-cols-8 gap-4">
+                <p>Hongkonger</p>
+                <p>Londoner</p>
+                <p>Cantonese</p>
+                <p>Student</p>
+                <a
+                    class="border-b border-b-secondary/30"
+                    href="https://github.com/LemuelKL">GitHub</a
                 >
-                    <li>
-                        <a
-                            href="https://github.com/LemuelKL"
-                            class="text-secondary">GitHub</a
-                        >
-                    </li><li>
-                        <a
-                            href="https://www.linkedin.com/in/lemuelkl/"
-                            class="text-secondary">LinkedIn</a
-                        >
-                    </li><li>
-                        <a
-                            href="mailto:lemuellee.kl@gmail.com"
-                            class="text-secondary">Email</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://blog.lemuellee.com"
-                            class="text-secondary">Blog</a
-                        >
-                    </li>
-                </ul>
+                <a
+                    class="border-b border-b-secondary/30"
+                    href="https://www.linkedin.com/in/lemuelkl/">LinkedIn</a
+                >
+                <a
+                    class="border-b border-b-secondary/30"
+                    href="mailto:lemuellee.kl@gmail.com">Email</a
+                >
+                <a
+                    class="border-b border-b-secondary/30"
+                    href="https://blog.lemuellee.com">Blog</a
+                >
             </div>
         </div>
     </div>
@@ -52,10 +39,15 @@ import Lemuel from './../images/lemuel.svg'
     <div
         class="px-8 2xl:max-w-7xl mx-auto mt-16"
         data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos-duration="5000"
     >
-        <div class="flex justify-between items-center">
-            <Lemuel class="w-3xl" />
+        <div
+            class="grid grid-cols-1 border-b border-b-secondary/20"
+        >
+            <Lemuel class="max-w-xl mb-16" />
+            <p class="text-sm text-right">
+                Western values and Cantonese work ethics
+            </p>
         </div>
     </div>
 </section>

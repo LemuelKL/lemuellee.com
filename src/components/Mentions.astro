@@ -1,5 +1,5 @@
 ---
-const features = [
+const mentions = [
     {
         url: 'https://std.stheadline.com/smartparents/article/2572/%E5%91%A8%E5%88%8A%E5%85%A7%E5%AE%B9-%E5%8D%87%E5%AD%B8%E6%95%99%E8%82%B2-%E6%B2%99%E7%94%B0%E5%9F%B9%E8%8B%B1%E4%B8%AD%E5%AD%B8-STEM%E6%88%90%E8%B3%87%E5%84%AA%E6%95%99%E8%82%B2%E9%87%8D%E9%BB%9E-610%E6%9C%9F',
         title: 'Headline Daily'
@@ -36,40 +36,34 @@ const features = [
         url: 'https://www.ee.cityu.edu.hk/events/summer_camp2017',
         title: 'CityU EE'
     }
-];
+]
 ---
 
 <section class="bg-primary">
     <div class="px-8 2xl:max-w-7xl mx-auto">
         <div class="mt-32 space-y-2">
-            <h3
-                class="text-secondary text-base font-medium"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-            >
-                <span class="font-bold">Features</span>
-            </h3>
-            <ul
-                class="mx-auto flex flex-col lg:flex-row text-left gap-4 items-start text-secondary mt-3"
+            <div class="my-12" data-aos="fade-up" data-aos-duration="1500">
+                <p class="text-7xl">Mentions</p>
+            </div>
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-left gap-1 items-start text-secondary mt-3"
                 data-aos="fade-up"
                 data-aos-duration="1500"
             >
                 {
-                    features.map((template) => (
+                    mentions.map((template) => (
                         <>
-                            <li class="flow-root col-span-full h-full hover:bg-secondary hover:text-primary transition duration-200 ease-in-out">
+                            <div class="hover:bg-secondary hover:text-primary transition duration-200 ease-in-out">
                                 <a href={template.url} target="_blank">
                                     <div>
-                                        <p class="italic shrink-0 text-xs ">
-                                            {template.title}
-                                        </p>
+                                        <p class="text-sm">{template.title}</p>
                                     </div>
                                 </a>
-                            </li>
+                            </div>
                         </>
                     ))
                 }
-            </ul>
+            </div>
         </div>
     </div>
 </section>

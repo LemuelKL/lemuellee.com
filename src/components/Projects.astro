@@ -202,15 +202,12 @@ function getProjectTypeColor(type) {
 
 <section class="bg-primary">
     <div class="px-8 2xl:max-w-7xl mx-auto my-32">
-        <div class="space-y-2">
-            <h3
-                class="text-secondary text-base font-medium"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-            >
-                <span>Selected</span>
-                <span class="font-bold">projects</span>
-            </h3>
+        <div
+            class="my-12"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+        >
+            <p class="text-7xl">Projects</p>
         </div>
 
         <ul
@@ -226,7 +223,7 @@ function getProjectTypeColor(type) {
                     >
                         <div class="h-full flex flex-col text-sm">
                             <div class="text-xs font-medium flex flex-row justify-between items-center py-1">
-                                <p class="text-7xl">
+                                <p class="text-6xl">
                                     {index + 1 < 10
                                         ? `0${index + 1}`
                                         : index + 1}
