@@ -202,28 +202,23 @@ function getProjectTypeColor(type) {
 
 <section class="bg-primary">
     <div class="px-8 2xl:max-w-7xl mx-auto my-32">
-        <div
-            class="my-12"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-        >
-            <p class="text-7xl">Projects</p>
+        <div class="my-12" data-aos="fade-up" data-aos-duration="1500">
+            <span class="text-6xl font-extralight">PROJECTS</span>
         </div>
 
-        <ul
+        <div
             class="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-secondary lg:grid-cols-4 items-start gap-6 mt-4"
-            role="list"
         >
             {
                 projects.map((project, index) => (
-                    <li
+                    <div
                         class="flow-root h-full"
                         data-aos="fade-up"
                         data-aos-duration={calculateAosDuration(index)}
                     >
                         <div class="h-full flex flex-col text-sm">
-                            <div class="text-xs font-medium flex flex-row justify-between items-center py-1">
-                                <p class="text-6xl">
+                            <div class="text-xs flex flex-row justify-between items-center py-1">
+                                <p class="text-5xl font-light">
                                     {index + 1 < 10
                                         ? `0${index + 1}`
                                         : index + 1}
@@ -272,9 +267,9 @@ function getProjectTypeColor(type) {
                                 {project.description}
                             </div>
                         </div>
-                    </li>
+                    </div>
                 ))
             }
-        </ul>
+        </div>
     </div>
 </section>
