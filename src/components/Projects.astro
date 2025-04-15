@@ -104,6 +104,14 @@ const projects = [
         time: '2020'
     },
     {
+        url: '',
+        title: 'Musical Ticketing',
+        type: 'Freelance',
+        stars: '',
+        description: 'Full stack ticketing system for a musical event.',
+        time: '2022'
+    },
+    {
         url: 'https://github.com/LemuelKL/fyp23049',
         title: 'Bachelor Thesis',
         type: 'Coursework',
@@ -158,6 +166,14 @@ const projects = [
         time: '2022'
     },
     {
+        url: 'https://github.com/LemuelKL/COMP3230-PA2',
+        title: 'Parrellel Sample Sort',
+        type: 'Coursework',
+        stars: '',
+        description: 'C++ implementation of parallelised sample sort.',
+        time: '2022'
+    },
+    {
         url: 'https://github.com/LemuelKL/svelte-tetris',
         title: 'Svelte Tetris',
         type: 'Personal',
@@ -173,6 +189,24 @@ const projects = [
         description:
             'Pacman AI with Bayesian Networks, Hidden Markov Models, and Particle Filters.',
         time: '2023'
+    },
+    {
+        url: 'https://youtu.be/C9JVxHDk_iU',
+        title: 'RnaFighter',
+        type: 'Coursework',
+        stars: '',
+        description:
+            'Command line game with COVID-19 theme, using C++ and NCurses.',
+        time: '2021'
+    },
+    {
+        url: 'https://github.com/LemuelKL/1T-MS-GroupAssigning',
+        title: 'Teacher Duty Assigner',
+        type: 'Freelance',
+        stars: '',
+        description:
+            'Optimal relationship assignment of teachers to students.',
+        time: '2018'
     }
 ]
 
@@ -254,11 +288,7 @@ function getProjectTypeColor(type) {
                                         target="_blank"
                                         style="max-width: 100%;"
                                     >
-                                        {
-                                            project.url.split(
-                                                'https://github.com/'
-                                            )[1]
-                                        }
+                                        {project.url.split('https://')[1]}
                                     </a>
                                 </div>
                             )}
