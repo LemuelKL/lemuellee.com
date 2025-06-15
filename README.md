@@ -7,9 +7,11 @@ This personal website uses the grid layout and follows a Swiss-like design philo
 <!-- Images from the images folder -->
 ![Page Desktop 1](./images/page_desktop_1.png)
 ![Page Desktop 2](./images/page_desktop_2.png)
+![Page Desktop 3](./images/page_desktop_3.png)
 <p float="left">
   <img src="/images/page_mobile_1.png" width="505" /> 
   <img src="/images/page_mobile_2.png" width="500" />
+  <img src="/images/page_mobile_3.png" width="500" />
 </p>
 
 ## License
