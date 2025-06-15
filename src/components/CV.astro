@@ -1,41 +1,45 @@
 ---
-const industry_experiences = [
+import SectionList from './SectionList.astro'
+
+const calculateAosDuration = (index) => 1500 + index * 100
+
+const professional = [
     {
         organisation: 'Zendo Energy',
-        role: 'Quantative Researcher',
+        title: 'Quantative Researcher',
         time: 'Now'
     },
     {
         organisation: 'Low Carbon Contracts Company',
-        role: 'Quantitative Developer Intern',
+        title: 'Quantitative Developer Intern',
         time: '23'
     },
     {
         organisation: 'The University of Hong Kong',
-        role: 'Teaching Assistant',
+        title: 'Teaching Assistant',
         time: '21 - 23'
     },
     {
         organisation: 'Shatin Pui Ying College',
-        role: 'Maths and Physics Programmer',
+        title: 'Maths and Physics Programmer',
         time: '21 - 22'
     }
 ]
 
-const academic_experiences = [
+const academia = [
     {
         organisation: 'Imperial College London',
-        role: 'MSc Environmental Data Science and Machine Learning',
+        title: 'MSc Environmental Data Science and Machine Learning',
         time: '24 - 25'
     },
     {
         organisation: 'The University of Hong Kong',
-        role: 'BEng Computer Science',
+        title: 'BEng Computer Science',
         time: '20 - 24'
     },
     {
         organisation: 'Royal Holloway, University of London',
-        role: 'Study Abroad',
+        title: 'Study Abroad',
         time: '23'
     }
 ]
@@ -58,6 +62,11 @@ const events = [
         url: 'https://www.linkedin.com/in/lemuelkl/overlay/1635521413764/single-media-viewer/',
         title: '2nd in Electronic Trading Challenge',
         organisation: 'Jane Street'
+    },
+    {
+        time: '22',
+        title: 'Winner of Scrum Master Competition',
+        organisation: 'Morgan Stanley'
     },
     {
         time: '22',
@@ -84,113 +93,20 @@ const events = [
         organisation: 'City University of Hong Kong'
     }
 ]
-
-// Function to calculate `data-aos-duration` based on index
-function calculateAosDuration(index) {
-    return 1500 + index * 200
-}
 ---
 
-<section class="bg-primary">
-    <div class="px-8 2xl:max-w-7xl mx-auto mt-32">
-        <div class="mt-6 space-y-2">
-            <div class="my-12" data-aos="fade-up" data-aos-duration="1500">
-                <span class="text-7xl font-extralight">PROFESSIONAL</span>
-            </div>
-        </div>
-        <div
-            class="flex flex-col text-secondary pt-2 mt-2 gap-1 divide-y divide-secondary/20 lg:divide-y-0"
-        >
-            {
-                industry_experiences.map((item, index) => (
-                    <div
-                        data-aos="fade-up"
-                        data-aos-duration={calculateAosDuration(index)}
-                    >
-                        <div class="flex flex-col justify-between items-start lg:grid grid-cols-4 lg:gap-3 lg:items-center py-1 ">
-                            <span class="hidden lg:block text-sm col-start-1 col-end-2">
-                                {item.time}
-                            </span>
-
-                            <span class="text-sm col-start-2 col-end-3">
-                                {item.organisation}
-                            </span>
-
-                            <span class="text-sm col-start-3 col-end-5">
-                                {item.role}
-                            </span>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
-    </div>
-</section>
-
-<section class="bg-primary">
-    <div class="px-8 2xl:max-w-7xl mx-auto mt-32">
-        <div class="my-12" data-aos="fade-up" data-aos-duration="1500">
-            <span class="text-6xl font-extralight">ACADEMIA</span>
-        </div>
-        <div
-            class="flex flex-col text-secondary pt-2 mt-2 gap-1 divide-y divide-secondary/20 lg:divide-y-0"
-        >
-            {
-                academic_experiences.map((item, index) => (
-                    <div
-                        data-aos="fade-up"
-                        data-aos-duration={calculateAosDuration(index)}
-                    >
-                        <div class="flex flex-col justify-between items-start lg:grid grid-cols-4 lg:gap-3 lg:items-center py-1 ">
-                            <span class="hidden lg:block text-sm col-start-1 col-end-2">
-                                {item.time}
-                            </span>
-
-                            <span class="text-sm col-start-2 col-end-3">
-                                {item.organisation}
-                            </span>
-
-                            <span class="text-sm col-start-3 col-end-5">
-                                {item.role}
-                            </span>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
-    </div>
-</section>
-
-<section class="bg-primary">
-    <div class="px-8 2xl:max-w-7xl mx-auto mt-32">
-        <div class="my-12" data-aos="fade-up" data-aos-duration="1500">
-            <span class="text-6xl font-extralight">EVENTS</span>
-        </div>
-        <div
-            class="flex flex-col text-secondary pt-2 mt-2 gap-1 divide-y divide-secondary/20 lg:divide-y-0"
-        >
-            {
-                events.map((item, index) => (
-                    <div
-                        data-aos="fade-up"
-                        data-aos-duration={calculateAosDuration(index)}
-                    >
-                        <div class="flex flex-col justify-between items-start lg:grid grid-cols-4 lg:gap-3 lg:items-center py-1 ">
-                            <span class="hidden lg:block text-sm col-start-1 col-end-2">
-                                {item.time}
-                            </span>
-
-                            <span class="text-sm col-start-2 col-end-3">
-                                {item.organisation}
-                            </span>
-
-                            <span class="text-sm col-start-3 col-end-5">
-                                {item.title}
-                            </span>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
-    </div>
-</section>
+<SectionList
+    title="PROFESSIONAL"
+    data={professional}
+    calculateAosDuration={calculateAosDuration}
+/>
+<SectionList
+    title="ACADEMIA"
+    data={academia}
+    calculateAosDuration={calculateAosDuration}
+/>
+<SectionList
+    title="EVENTS"
+    data={events}
+    calculateAosDuration={calculateAosDuration}
+/>
