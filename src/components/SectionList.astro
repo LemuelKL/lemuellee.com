@@ -5,17 +5,17 @@ const { title, data, calculateAosDuration } = Astro.props
 
 <section class="bg-primary">
     <div
-        class="px-8 2xl:max-w-7xl mx-auto mt-48 lg:grid grid-cols-4 grid-rows-2"
+        class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols-4 grid-rows-2 mt-12"
     >
         <div
-            class="col-span-1 row-start-1 mb-12"
+            class="col-span-1 row-start-1"
             data-aos="fade-up"
             data-aos-duration="1500"
         >
             <span class="font-extralight text-4xl">{title} </span>
         </div>
         <div
-            class="row-start-1 col-start-2 col-span-3 flex flex-col justify-items-start text-secondary pb-2 mb-2 gap-1 "
+            class="row-start-1 col-start-2 col-span-3 flex flex-col justify-items-start text-secondary pb-2 mb-2 gap-1"
         >
             {
                 data.map((item, index) => (
@@ -24,7 +24,9 @@ const { title, data, calculateAosDuration } = Astro.props
                         data-aos-duration={calculateAosDuration(index)}
                     >
                         <div class="grid lg:grid-cols-3 lg:gap-6 py-1">
-                            <span class="hidden lg:block text-sm text-right">{item.time}</span>
+                            <span class="hidden lg:block text-sm text-right">
+                                {item.time}
+                            </span>
                             <span class="text-sm">{item.organisation}</span>
                             <span class="text-sm">{item.title}</span>
                         </div>

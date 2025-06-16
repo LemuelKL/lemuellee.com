@@ -1,35 +1,56 @@
+---
+import { Image } from 'astro:assets'
+import hk_img from '../images/dan-freeman-ckxoFlEtlUc-unsplash.jpg'
+---
+
 <section class="bg-primary">
     <div
-        class="px-8 2xl:max-w-7xl mx-auto mb-64"
+        class="px-2 lg:px-8 2xl:max-w-7xl mx-auto mb-64"
         data-aos="fade-up"
         data-aos-duration="5000"
     >
         <div class="grid grid-cols-3 md:grid-cols-4 gap-6">
-            <div class="col-span-1 my-16">
+            <div class="col-span-1 my-8 lg:my-16 pt-6">
                 ABOUT <span class="text-orange-500">LEMUEL LEE</span>
             </div>
+            <Image
+                src={hk_img}
+                alt="Hong Kong"
+                class="col-span-4 row-start-2"
+                data-aos="fade-up"
+                data-aos-duration="1500"
+                loading="lazy"
+            />
             <div class="col-start-1 col-span-1 flex flex-col">
                 <div class="flex flex-col gap-0 text-sm font-extralight">
                     <a
                         class="border-b border-b-secondary/30"
                         target="_blank"
-                        href="https://github.com/LemuelKL">GitHub</a
+                        href="https://github.com/LemuelKL"
                     >
+                        GitHub
+                    </a>
                     <a
                         class="border-b border-b-secondary/30"
                         target="_blank"
-                        href="https://www.linkedin.com/in/lemuelkl/">LinkedIn</a
+                        href="https://www.linkedin.com/in/lemuelkl/"
                     >
+                        LinkedIn
+                    </a>
                     <a
                         class="border-b border-b-secondary/30"
                         target="_blank"
-                        href="mailto:lemuellee.kl@gmail.com">Email</a
+                        href="mailto:lemuellee.kl@gmail.com"
                     >
+                        Email
+                    </a>
                     <a
                         class="border-b border-b-secondary/30"
                         target="_blank"
-                        href="https://blog.lemuellee.com">Blog</a
+                        href="https://blog.lemuellee.com"
                     >
+                        Blog
+                    </a>
                     <div class="opacity-0">a</div>
                     <div>Londoner</div>
                     <div>Hongkonger</div>
@@ -49,15 +70,12 @@
                         ourselves
                     </div>
                     <div>
-                        It's the hardest thing
-                        in the world — to do what we want
+                        It's the hardest thing in the world — to do what we want
                     </div>
+                    <div>And it takes the greatest kind of courage</div>
                     <div>
-                        And it takes the greatest kind of courage
-                    </div>
-                    <div>
-                        I mean, what we <span class="text-orange-500">really want</span
-                        >
+                        I mean, what we{' '}
+                        <span class="text-orange-500">really want</span>
                     </div>
                 </div>
                 <div class="text-sm font-extralight">

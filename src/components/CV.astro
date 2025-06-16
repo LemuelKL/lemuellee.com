@@ -93,6 +93,12 @@ const events = [
         organisation: 'City University of Hong Kong'
     }
 ]
+
+import { Image } from 'astro:assets'
+import hk_architecture from '../images/1250_10_1.jpg'
+import swizterland from '../images/pexels-pixabay-355747.jpg'
+import queens_tower from '../images/255155.jpg'
+import stone_lion from '../images/164807.jpg'
 ---
 
 <SectionList
@@ -100,6 +106,18 @@ const events = [
     data={professional}
     calculateAosDuration={calculateAosDuration}
 />
+<section class="bg-primary">
+    <div class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols-4 gap-6">
+        <Image
+            src={stone_lion}
+            alt="The Queen's Tower, Imperial College London"
+            class="col-start-1 col-span-3 row-start-1"
+            loading="lazy"
+        />
+        <div class="col-start-4 col-span-1 row-start-1 text-sm font-extralight">
+            A stone lion at the Queen's Tower, Imperial College London.
+    </div>
+</section>
 <SectionList
     title="EDUCATION"
     data={academia}
@@ -110,3 +128,13 @@ const events = [
     data={events}
     calculateAosDuration={calculateAosDuration}
 />
+<section class="bg-primary">
+    <div class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols-4 gap-6">
+        <Image
+            src={swizterland}
+            alt="Swizterland"
+            class="col-start-1 col-span-4 row-start-1 object-none max-h-64"
+            loading="lazy"
+        />
+    </div>
+</section>
