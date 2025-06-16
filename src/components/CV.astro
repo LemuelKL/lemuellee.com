@@ -105,7 +105,11 @@ import stone_lion from '../images/164807.jpg'
         data={professional}
         calculateAosDuration={calculateAosDuration}
     />
-    <div class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols-4 gap-6">
+    <div
+        class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols-4 gap-6 my-16"
+        data-aos="fade-right"
+        data-aos-duration="3000"
+    >
         <Image
             src={stone_lion}
             alt="The Queen's Tower, Imperial College London"
@@ -126,11 +130,15 @@ import stone_lion from '../images/164807.jpg'
         data={events}
         calculateAosDuration={calculateAosDuration}
     />
-    <div class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols-4 gap-6">
+    <div
+        class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols-4 gap-6 my-16"
+    >
         <Image
             src={swizterland}
             alt="Swizterland"
-            class="col-start-1 col-span-4 row-start-1 object-none max-h-64"
+            class="col-start-1 col-span-4 row-start-1 object-none max-h-128"
+            data-aos="fade-up"
+            data-aos-duration="3000"
             loading="lazy"
         />
     </div>

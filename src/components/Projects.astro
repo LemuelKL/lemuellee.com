@@ -4,7 +4,7 @@ const projects = [
         url: 'https://github.com/tailwindlabs/tailwindcss',
         title: 'Tailwindcss',
         type: 'Open Source',
-        stars: '81.7k★',
+        stars: '81.7k',
         description: 'A utility-first CSS framework for rapid UI development.',
         time: '2025'
     },
@@ -12,7 +12,7 @@ const projects = [
         url: 'https://github.com/ther0n/UnnaturalScrollWheels',
         title: 'UnnaturalScrollWheels',
         type: 'Open Source',
-        stars: '3.6k★',
+        stars: '3.6k',
         description: 'MacOS helper app for scrolling with mouse and trackpad.',
         time: '2025'
     },
@@ -20,7 +20,7 @@ const projects = [
         url: 'https://github.com/raft/raft.github.io',
         title: 'Raft Website',
         type: 'Open Source',
-        stars: '1.4k★',
+        stars: '1.4k',
         description: 'Website of the Raft Consensus Algorithm.',
         time: '2024'
     },
@@ -28,7 +28,7 @@ const projects = [
         url: 'https://github.com/EnergieID/entsoe-py',
         title: 'ENTSOE Py',
         type: 'Open Source',
-        stars: '492★',
+        stars: '492',
         description:
             'Python API client for European Network of Transmission System Operators for Electricity.',
         time: '2023'
@@ -37,24 +37,33 @@ const projects = [
         url: 'https://github.com/LemuelKL/Android-Controlled-Arduino-Bluetooth-Car',
         title: 'Mini Robotic Car',
         type: 'Competition',
-        stars: '11★',
+        stars: '11',
         description:
             'Android app to remote control an Arduino robotic car through Bluetooth LE.',
-        time: '2017 - 2018'
+        time: '2017'
+    },
+    {
+        url: '',
+        title: 'Trading Bot',
+        type: 'Competition',
+        stars: '',
+        description:
+            'Python high-frequency trading bot for bonds, stocks, and ETFs. Real-time data stream from Jane Street server.',
+        time: '2022'
     },
     {
         url: 'https://github.com/LemuelKL/lemuellee.com',
         title: 'lemuellee.com',
         type: 'Personal',
-        stars: '7★',
+        stars: '7',
         description: 'My personal website, built with Astro and Tailwind CSS.',
-        time: '2025 - Present'
+        time: 'Present'
     },
     {
         url: 'https://github.com/LemuelKL/Bubble-Sheet-OMR-OpenCV-Qt',
         title: 'Bubble Sheet OMR',
         type: 'Freelance',
-        stars: '7★',
+        stars: '7',
         description: 'Qt program using OpenCV to process bubble sheets.',
         time: '2018'
     },
@@ -62,7 +71,7 @@ const projects = [
         url: 'https://github.com/LemuelKL/CSGO-Auto-Reconnect',
         title: 'CSGO Auto Reconnect',
         type: 'Personal',
-        stars: '6★',
+        stars: '6',
         description:
             'Simple Python script to reconnect to a CSGO community server on disconnect.',
         time: '2022'
@@ -71,7 +80,7 @@ const projects = [
         url: 'https://github.com/d-mok/MathTree',
         title: 'MathTree',
         type: 'Freelance',
-        stars: '3★',
+        stars: '3',
         description:
             'Web editor and JavaScript-based DSL for generating Maths and Physics MCQs',
         time: '2022'
@@ -80,7 +89,7 @@ const projects = [
         url: 'https://github.com/LemuelKL/HKU-Calendar-Takeout',
         title: 'HKU Calender Takeout',
         type: 'Personal',
-        stars: '2★',
+        stars: '2',
         description:
             'Exports HKU Portal course schedules to ics calendar format.',
         time: '2022'
@@ -89,7 +98,7 @@ const projects = [
         url: 'https://github.com/LemuelKL/HolloRay',
         title: 'Holloray',
         type: 'Coursework',
-        stars: '2★',
+        stars: '2',
         description:
             'JavaFX 3D CAD DSL with BNF parser, elided SOS, and action semantics interpreter.',
         time: '2023'
@@ -98,7 +107,7 @@ const projects = [
         url: 'https://github.com/LemuelKL/SLMS',
         title: 'SLMS',
         type: 'Coursework',
-        stars: '2★',
+        stars: '2',
         description:
             'School Library Management System written with Qt 5.13.0 and C++11.',
         time: '2020'
@@ -122,7 +131,7 @@ const projects = [
     },
     {
         url: '',
-        title: 'Humen Presence Detection',
+        title: 'Human Presence Detection',
         type: 'Coursework',
         stars: '',
         description:
@@ -213,91 +222,104 @@ const projects = [
 function calculateAosDuration(index) {
     return 1500 + (index * 1500) / projects.length
 }
-
-// Function to map project type to a color
-function getProjectTypeColor(type) {
-    switch (type) {
-        case 'Open Source':
-            return 'bg-yellow-300/20'
-        case 'Freelance':
-            return 'bg-blue-300/20'
-        case 'Coursework':
-            return 'bg-green-300/20'
-        case 'Competition':
-            return 'bg-red-300/20'
-        case 'Personal':
-            return 'bg-purple-300/20'
-        default:
-            return 'bg-gray-300/20'
-    }
-}
 ---
 
 <section class="bg-primary">
     <div class="px-2 lg:px-8 2xl:max-w-7xl mx-auto">
-        <div class="my-12" data-aos="fade-up" data-aos-duration="1500">
-            <span class="text-4xl font-extralight">PROJECTS</span>
-        </div>
-
+        <!-- Replace single header with multiple type headers -->
         <div
-            class="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-secondary lg:grid-cols-4 items-start gap-6 mt-4"
+            class="grid grid-cols-4 gap-6 text-secondary"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+        >
+            <div class="uppercase text-4xl font-extralight my-12">
+                Open Source
+            </div>
+            <div class="uppercase text-4xl font-extralight my-12">
+                Freelance
+            </div>
+            <div class="uppercase text-4xl font-extralight my-12">
+                Coursework
+            </div>
+            <div class="uppercase text-4xl font-extralight my-12">
+                Competition
+            </div>
+        </div>
+        <div
+            class="grid grid-cols-4 grid-flow-col gap-6 text-secondary"
+            data-aos="fade-up"
+            data-aos-duration="1500"
         >
             {
-                projects.map((project, index) => (
-                    <div
-                        class="flow-root h-full"
-                        data-aos="fade-up"
-                        data-aos-duration={calculateAosDuration(index)}
-                    >
-                        <div class="h-full flex flex-col text-sm">
-                            <div class="text-xs flex flex-row justify-between items-center py-1">
-                                <p class="text-3xl font-light">
-                                    {index + 1 < 10
-                                        ? `0${index + 1}`
-                                        : index + 1}
-                                </p>
-                                <p>{project.stars}</p>
-                            </div>
-
-                            <div class="py-1 border-t border-t-secondary/20">
-                                <p
-                                    class={`w-fit px-2 rounded font-medium ${getProjectTypeColor(
-                                        project.type
-                                    )}`}
+                // For each column, filter and map projects of that type
+                ['Open Source', 'Freelance', 'Coursework', 'Competition'].map(
+                    (type, colIdx) =>
+                        projects
+                            .filter((p) => p.type === type)
+                            .map((project, rowIdx) => (
+                                <div
+                                    class={`col-start-${colIdx + 1} col-end-${colIdx + 1} row-start-${1 + rowIdx} row-end-${1 + rowIdx} flex flex-col items-start`}
+                                    data-aos="fade-up"
+                                    data-aos-duration={calculateAosDuration(
+                                        rowIdx
+                                    )}
                                 >
-                                    {project.type}
-                                </p>
-                            </div>
-
-                            <div class="py-1 border-t border-t-secondary/20">
-                                <p class="font-bold shrink-0 text-black">
-                                    {project.title}
-                                </p>
-                            </div>
-
-                            <div class="py-1 border-t border-t-secondary/20">
-                                <p>{project.time}</p>
-                            </div>
-
-                            {project.url.length > 0 && (
-                                <div class="py-1 border-t border-t-secondary/20">
+                                    <div class="text-base font-bold">
+                                        {project.title}
+                                    </div>
+                                    <div class="text-sm">
+                                        {project.description}
+                                    </div>
+                                    <div class="text-sm font-semibold">
+                                        {project.time}
+                                    </div>
+                                    {project.stars && (
+                                        <div class="text-sm font-light">
+                                            {project.stars} stars
+                                        </div>
+                                    )}
                                     <a
-                                        class="w-fit truncate block"
+                                        class="text-sm font-extralight"
                                         href={project.url}
                                         target="_blank"
-                                        style="max-width: 100%;"
                                     >
-                                        {project.url.split('https://')[1]}
+                                        Read more
                                     </a>
                                 </div>
-                            )}
-
-                            <div class="py-1 border-t border-t-secondary/20">
-                                {project.description}
+                            ))
+                )
+            }
+            {
+                // Personal projects: appear below Open Source column
+                projects
+                    .filter((p) => p.type === 'Personal')
+                    .map((project, rowIdx) => (
+                        <div
+                            class={`col-start-1 col-end-1 row-start-${projects.filter((p) => p.type === 'Open Source').length + 1 + rowIdx} row-end-${projects.filter((p) => p.type === 'Open Source').length + 1 + rowIdx} flex flex-col items-start`}
+                            data-aos="fade-up"
+                            data-aos-duration={calculateAosDuration(rowIdx)}
+                        >
+                            <div class="text-base font-bold">
+                                {project.title}
                             </div>
+                            <div class="text-sm">{project.description}</div>
+                            <div class="text-sm font-semibold">
+                                {project.time}
+                            </div>
+                            {project.stars && (
+                                <div class="text-sm font-light">
+                                    {project.stars} stars
+                                </div>
+                            )}
+                            <a
+                                class="text-sm font-extralight"
+                                href={project.url}
+                                target="_blank"
+                            >
+                                Read more
+                            </a>
                         </div>
-                    </div>
-                ))
+                    ))
             }
         </div>
     </div>

@@ -38,11 +38,5 @@
 a:hover {
     background-color: var(--color-secondary);
     color: var(--color-primary);
-    transition: background-color 0.2s ease-in-out;
-}
-
-.cv-item:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
 }
