@@ -41,5 +41,30 @@ a:hover {
     text-decoration-color: var(--color-secondary);
     text-decoration-thickness: 1px;
     /* animate */
-    transition: text-decoration-color 0.3s ease-in-out, text-decoration-thickness 0.3s ease-in-out;
+    transition:
+        text-decoration-color 0.3s ease-in-out,
+        text-decoration-thickness 0.3s ease-in-out;
+}
+
+body {
+    cursor: none !important;
+}
+
+#custom-cursor {
+    top: -8px;
+    left: -8px;
+    pointer-events: none;
+    background: black;
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    transition:
+        background 0.2s,
+        transform 0.03s;
+    will-change: transform;
+    position: fixed;
+    z-index: 9999;
 }

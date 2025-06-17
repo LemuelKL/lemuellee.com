@@ -1,5 +1,5 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import BaseHead from '../components/BaseHead.astro'
 ---
 
 <html lang="en" class="selection:bg-secondary selection:text-secondary">
@@ -15,7 +15,13 @@ import BaseHead from '../components/BaseHead.astro';
             type="text/javascript"
             src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script type="text/javascript">
-            AOS.init();
+            AOS.init()
+            // Custom Cursor Movement
+            const cursor = document.getElementById('custom-cursor')
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
+                console.log(`Cursor position: ${e.clientX}, ${e.clientY}`)
+            })
         </script>
     </body>
 </html>
