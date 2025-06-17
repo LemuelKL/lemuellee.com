@@ -296,17 +296,17 @@ function calculateAosDuration(index) {
     <div class="px-2 lg:px-8 2xl:max-w-7xl mx-auto">
         <div class="uppercase text-4xl font-extralight my-30">Portfolio</div>
         <div
-            class="grid grid-cols-6 grid-flow-col gap-5 text-secondary font-bold mb-10"
+            class="grid grid-cols-4 grid-flow-col gap-5 text-secondary font-bold mb-10"
         >
             <div>Open Source</div>
             <div>Freelance</div>
             <div>Competition</div>
-            <div>Personal</div>
-            <div>Coursework</div>
+            <!-- <div>Personal</div>
+            <div>Coursework</div> -->
             <div>Used</div>
         </div>
         <div
-            class="grid grid-cols-6 grid-flow-col gap-x-5 gap-y-10 text-secondary auto-rows-auto"
+            class="grid grid-cols-4 grid-flow-col gap-x-5 gap-y-10 text-secondary auto-rows-auto"
             data-aos="fade-up"
             data-aos-duration="1500"
         >
@@ -314,9 +314,9 @@ function calculateAosDuration(index) {
                 [
                     'Open Source',
                     'Freelance',
-                    'Competition',
-                    'Personal',
-                    'Coursework'
+                    'Competition'
+                    // 'Personal',
+                    // 'Coursework'
                 ].map((type, colIdx) =>
                     projects
                         .filter((p) => p.type === type)
@@ -327,18 +327,18 @@ function calculateAosDuration(index) {
                                 data-aos-duration={calculateAosDuration(rowIdx)}
                             >
                                 <div class="text-base/5 font-semibold">
-                                    {project.title}
-                                </div>
-                                <div class="text-sm">{project.description}</div>
-                                <div class="text-sm font-semibold">
-                                    {project.time}
+                                    {project.title} ↗
                                 </div>
                                 {project.stars && (
                                     <div class="text-sm font-light">
                                         {project.stars} stars
                                     </div>
                                 )}
-                                {project.url && (
+                                <div class="text-sm">{project.description}</div>
+                                <div class="text-sm font-semibold">
+                                    {project.time}
+                                </div>
+                                {/* {project.url && (
                                     <a
                                         class="text-sm font-extralight"
                                         href={project.url}
@@ -346,13 +346,13 @@ function calculateAosDuration(index) {
                                     >
                                         Read more
                                     </a>
-                                )}
+                                )} */}
                             </div>
                         ))
                 )
             }
             <div
-                class="col-start-6 font-semibold text-sm flex flex-col row-span-12"
+                class="col-start-4 font-semibold text-sm flex flex-col row-span-12"
             >
                 {
                     skills
