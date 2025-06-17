@@ -5,7 +5,7 @@ const { title, data, calculateAosDuration } = Astro.props
 
 <section class="bg-primary">
     <div
-        class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols-4"
+        class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols-4 gap-10"
     >
         <div
             class="col-span-1 row-start-1 mb-6"
@@ -15,7 +15,7 @@ const { title, data, calculateAosDuration } = Astro.props
             <span class="font-extralight text-4xl">{title} </span>
         </div>
         <div
-            class="row-start-1 col-start-2 col-span-3 flex flex-col justify-items-start text-secondary pb-2 mb-2 gap-1"
+            class="row-start-1 col-start-2 col-span-3 flex flex-col justify-items-start text-secondary pb-2 mb-2"
         >
             {
                 data.map((item, index) => (

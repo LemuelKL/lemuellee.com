@@ -294,16 +294,17 @@ function calculateAosDuration(index) {
 
 <section class="bg-primary">
     <div class="px-2 lg:px-8 2xl:max-w-7xl mx-auto">
-        <div class="uppercase text-4xl font-extralight my-30">Portfolio</div>
-        <div class="grid grid-cols-4 gap-10">
+        <div class="grid grid-cols-4 gap-10 my-30">
+            <div class="uppercase text-4xl font-extralight">Portfolio</div>
+            <div class="grid grid-cols-3 gap-10 col-span-3">
             {
                 projects.map((project, index) => (
-                    <div class="col-start-1 col-span-2 flex justify-between items-start">
+                    <div class="col-start-1 col-span-1 flex justify-between items-start">
                         <div class="text-sm">{index + 1}</div>
                         <div class="flex-1 mx-2 border-b border-dotted border-gray-400 h-3"></div>
-                        <div class="text-sm font-semibold">{project.title}</div>
+                        <div class="text-sm font-semibold text-right">{project.title}</div>
                     </div>
-                    <div class="text-sm col-start-3 col-span-2 flex flex-col">
+                    <div class="text-sm col-start-2 col-span-2 flex flex-col">
                         <div>{project.description}</div>
                         <br/>
                         {project.url
@@ -315,6 +316,7 @@ function calculateAosDuration(index) {
                     </div>
                 ))
             }
+            </div>
         </div>
     </div>
 </section>
