@@ -1,8 +1,6 @@
 ---
 import SectionList from './SectionList.astro'
 
-const calculateAosDuration = (index) => 1500 + index * 100
-
 const professional = [
     {
         organisation: 'Zendo Energy',
@@ -93,56 +91,19 @@ const events = [
         organisation: 'City University of Hong Kong'
     }
 ]
-
-import { Image } from 'astro:assets'
-import swizterland from '../images/pexels-pixabay-355747.jpg'
-import stone_lion from '../images/164807.jpg'
 ---
 
 <div class="flex flex-col gap-24">
     <SectionList
         title="EXPERIENCE"
         data={professional}
-        calculateAosDuration={calculateAosDuration}
     />
-    <!-- <div
-        class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols- my-16"
-        data-aos="fade-right"
-        data-aos-duration="3000"
-    >
-        <Image
-            src={stone_lion}
-            alt="The Queen's Tower, Imperial College London"
-            class="col-start-2 col-span-3 row-start-2"
-            loading="lazy"
-        />
-        <div
-            class="col-start-1 col-span-3 row-start-1 uppercase text-2xl lg:text-4xl"
-        >
-            Combining the best of East and West — work ethics and
-            individual responsibility
-        </div>
-    </div> -->
     <SectionList
         title="EDUCATION"
         data={academia}
-        calculateAosDuration={calculateAosDuration}
     />
     <SectionList
         title="COMPETITION"
         data={events}
-        calculateAosDuration={calculateAosDuration}
     />
-    <!-- <div
-        class="px-2 lg:px-8 2xl:max-w-7xl mx-auto lg:grid grid-cols-4 gap-6 my-16"
-    >
-        <Image
-            src={swizterland}
-            alt="Swizterland"
-            class="col-start-1 col-span-4 row-start-1 object-none max-h-128"
-            data-aos="fade-up"
-            data-aos-duration="3000"
-            loading="lazy"
-        />
-    </div> -->
 </div>

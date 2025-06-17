@@ -1,6 +1,6 @@
 ---
 // SectionList.astro
-const { title, data, calculateAosDuration } = Astro.props
+const { title, data } = Astro.props
 ---
 
 <section class="bg-primary">
@@ -21,7 +21,7 @@ const { title, data, calculateAosDuration } = Astro.props
                 data.map((item, index) => (
                     <div
                         data-aos="fade-up"
-                        data-aos-duration={calculateAosDuration(index)}
+                        data-aos-duration={1500}
                     >
                         <div class="grid lg:grid-cols-3 lg:gap-10 py-1">
                             <span class="hidden lg:block text-sm text-right">
