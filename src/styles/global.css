@@ -36,7 +36,10 @@
 }
 
 a:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    transition: background-color 0.4s ease-in-out;
+    underline: none;
+    text-decoration: underline;
+    text-decoration-color: var(--color-secondary);
+    text-decoration-thickness: 1px;
+    /* animate */
+    transition: text-decoration-color 0.3s ease-in-out, text-decoration-thickness 0.3s ease-in-out;
 }

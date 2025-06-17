@@ -2,7 +2,7 @@
 const projects = [
     {
         url: 'https://github.com/tailwindlabs/tailwindcss',
-        title: 'Tailwindcss',
+        title: 'Tailwind CSS',
         type: 'Open Source',
         stars: '81.7k',
         description: 'A utility-first CSS framework for rapid UI development.',
@@ -10,7 +10,7 @@ const projects = [
     },
     {
         url: 'https://github.com/ther0n/UnnaturalScrollWheels',
-        title: 'UnnaturalScrollWheels',
+        title: 'Unnatural Scroll Wheels',
         type: 'Open Source',
         stars: '3.6k',
         description: 'MacOS helper app for scrolling with mouse and trackpad.',
@@ -57,7 +57,7 @@ const projects = [
         type: 'Competition',
         stars: '',
         description:
-            'Python crypto trading bot connected to various exchange APIs and execute on ALGOGENE platform.',
+            'Python crypto trading bot connected to various exchange APIs and executes on ALGOGENE platform.',
         time: '2022'
     },
     {
@@ -129,15 +129,15 @@ const projects = [
         description: 'Full stack ticketing system for a musical event.',
         time: '2022'
     },
-    // {
-    //     url: 'https://github.com/LemuelKL/fyp23049',
-    //     title: 'Bachelor Thesis',
-    //     type: 'Coursework',
-    //     stars: '',
-    //     description:
-    //         'Deep Graph Representation Learning on Corss-border Electricity Trading.',
-    //     time: '2024'
-    // },
+    {
+        url: 'https://github.com/LemuelKL/fyp23049',
+        title: 'Bachelor Thesis',
+        type: 'Coursework',
+        stars: '',
+        description:
+            'Deep Graph Representation Learning on Corss-border Electricity Trading.',
+        time: '2024'
+    },
     {
         url: '',
         title: 'Human Presence Detection',
@@ -156,15 +156,15 @@ const projects = [
             'Monte Carlo simlation of magnetic quasi-particle for stable energy configurations.',
         time: '2024'
     },
-    // {
-    //     url: '',
-    //     title: 'ODE Solver',
-    //     type: 'Coursework',
-    //     stars: '',
-    //     description:
-    //         'Python ODE solver by Taylor expansion and piecewise polynomial interpolation.',
-    //     time: '2024'
-    // },
+    {
+        url: '',
+        title: 'ODE Solver',
+        type: 'Coursework',
+        stars: '',
+        description:
+            'Python ODE solver by Taylor expansion and piecewise polynomial interpolation.',
+        time: '2024'
+    },
     {
         url: 'https://github.com/LemuelKL/bible-reading-challenge',
         title: 'Bible Reading Challenge',
@@ -208,15 +208,15 @@ const projects = [
             'Pacman AI with Bayesian Networks, Hidden Markov Models, and Particle Filters.',
         time: '2023'
     },
-    // {
-    //     url: 'https://youtu.be/C9JVxHDk_iU',
-    //     title: 'RnaFighter',
-    //     type: 'Coursework',
-    //     stars: '',
-    //     description:
-    //         'Command line game with COVID-19 theme, using C++ and NCurses.',
-    //     time: '2021'
-    // },
+    {
+        url: 'https://youtu.be/C9JVxHDk_iU',
+        title: 'RnaFighter',
+        type: 'Coursework',
+        stars: '',
+        description:
+            'Command line game with COVID-19 theme, using C++ and NCurses.',
+        time: '2021'
+    },
     {
         url: 'https://github.com/LemuelKL/1T-MS-GroupAssigning',
         title: 'Teacher Duty Assigner',
@@ -226,7 +226,7 @@ const projects = [
         time: '2018'
     },
     {
-        url: 'http://innoacademy.engg.hku.hk/hack/',
+        url: 'https://innoacademy.engg.hku.hk/hack/',
         title: 'HackOS',
         type: 'Competition',
         stars: '',
@@ -295,74 +295,26 @@ function calculateAosDuration(index) {
 <section class="bg-primary">
     <div class="px-2 lg:px-8 2xl:max-w-7xl mx-auto">
         <div class="uppercase text-4xl font-extralight my-30">Portfolio</div>
-        <div
-            class="grid grid-cols-4 grid-flow-col gap-5 text-secondary font-bold mb-10"
-        >
-            <div>Open Source</div>
-            <div>Freelance</div>
-            <div>Competition</div>
-            <!-- <div>Personal</div>
-            <div>Coursework</div> -->
-            <div>Used</div>
-        </div>
-        <div
-            class="grid grid-cols-4 grid-flow-col gap-x-5 gap-y-10 text-secondary auto-rows-auto"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-        >
+        <div class="grid grid-cols-4 gap-10">
             {
-                [
-                    'Open Source',
-                    'Freelance',
-                    'Competition'
-                    // 'Personal',
-                    // 'Coursework'
-                ].map((type, colIdx) =>
-                    projects
-                        .filter((p) => p.type === type)
-                        .map((project, rowIdx) => (
-                            <div
-                                class={`col-start-${colIdx + 1} row-start-${1 + rowIdx} flex flex-col items-start`}
-                                data-aos="fade-up"
-                                data-aos-duration={calculateAosDuration(rowIdx)}
-                            >
-                                <div class="text-base/5 font-semibold">
-                                    {project.title} ↗
-                                </div>
-                                {project.stars && (
-                                    <div class="text-sm font-light">
-                                        {project.stars} stars
-                                    </div>
-                                )}
-                                <div class="text-sm">{project.description}</div>
-                                <div class="text-sm font-semibold">
-                                    {project.time}
-                                </div>
-                                {/* {project.url && (
-                                    <a
-                                        class="text-sm font-extralight"
-                                        href={project.url}
-                                        target="_blank"
-                                    >
-                                        Read more
-                                    </a>
-                                )} */}
-                            </div>
-                        ))
-                )
+                projects.map((project, index) => (
+                    <div class="col-start-1 col-span-2 flex justify-between items-start">
+                        <div class="text-sm">{index + 1}</div>
+                        <div class="flex-1 mx-2 border-b border-dotted border-gray-400 h-3"></div>
+                        <div class="text-sm font-semibold">{project.title}</div>
+                    </div>
+                    <div class="text-sm col-start-3 col-span-2 flex flex-col">
+                        <div>{project.description}</div>
+                        <br/>
+                        {project.url
+                            ? <a href={project.url} target="_blank" class="mr-auto font-light">{project.url}</a>
+                            : <span class="mr-auto font-light">Private</span>
+                        }
+                        <div class="font-light">{project.type}</div>
+                        <div class="font-light">{project.time}</div>
+                    </div>
+                ))
             }
-            <div
-                class="col-start-4 font-semibold text-sm flex flex-col row-span-12"
-            >
-                {
-                    skills
-                        .slice()
-                        .sort((a, b) => a.localeCompare(b))
-                        .map((skill) => (
-                            <div class="text-secondary truncate">{skill}</div>
-                        ))
-                }
-            </div>
         </div>
     </div>
 </section>
