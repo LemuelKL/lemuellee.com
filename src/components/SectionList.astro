@@ -24,7 +24,9 @@ const { title, data } = Astro.props
                         data-aos-duration={1500}
                     >
                         <div class="grid lg:grid-cols-3 lg:gap-10 py-1">
-                            <span class="hidden lg:block text-sm text-right">
+                            <span
+                                class={`hidden lg:block text-sm text-right ${item.time === "Now" ? "text-accent" : ""}`}
+                            >
                                 {item.time}
                             </span>
                             <span class="text-sm">{item.organisation}</span>
