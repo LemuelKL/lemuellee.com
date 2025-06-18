@@ -9,6 +9,36 @@ import hk_img from '../images/dan-freeman-ckxoFlEtlUc-unsplash.jpg'
             <div class="col-span-1 my-8 lg:my-16 pt-6">
                 ABOUT <span class="text-accent">LEMUEL LEE</span>
             </div>
+            <div
+                class="col-start-4 my-8 lg:my-16 pt-6 text-right text-sm font-light"
+            >
+                <script type="module" is:inline>
+                    function getTimeInZone(timeZone) {
+                        return new Date().toLocaleTimeString('en-GB', {
+                            hour: '2-digit',
+                            minute: '2-digit',
+                            second: '2-digit',
+                            hour12: false,
+                            timeZone
+                        })
+                    }
+                    function updateClocks() {
+                        document.getElementById('nyc-clock').textContent =
+                            getTimeInZone('America/New_York')
+                        document.getElementById('lnd-clock').textContent =
+                            getTimeInZone('Europe/London') // Handles BST/GMT
+                        document.getElementById('hkg-clock').textContent =
+                            getTimeInZone('Asia/Hong_Kong')
+                    }
+                    setInterval(updateClocks, 1000)
+                    window.addEventListener('DOMContentLoaded', updateClocks)
+                </script>
+                <div class="flex flex-row justify-end gap-4">
+                    <div>NYC <span id="nyc-clock">--:--:--</span></div>
+                    <div>LND <span id="lnd-clock">--:--:--</span></div>
+                    <div>HKG <span id="hkg-clock">--:--:--</span></div>
+                </div>
+            </div>
             <Image
                 src={hk_img}
                 alt="Hong Kong"
