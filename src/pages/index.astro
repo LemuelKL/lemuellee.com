@@ -6,23 +6,25 @@ import Projects from '../components/Projects.astro'
 ---
 
 <BaseLayout>
-    <div id="custom-cursor" class="mix-blend-difference"></div>
-    <Hero />
-    <CV />
-    <Projects />
-    <footer
-        class="text-xs my-8 px-8 2xl:max-w-7xl mx-auto flex justify-start gap-6 mt-48"
-    >
-        <p>&copy; {new Date().getFullYear()} Lemuel Lee</p>
-        <p>
-            Open Source on <a
-                href="https://github.com/LemuelKL/lemuellee.com"
-                target="_blank"
-                class="cursor-none"
-            >
-                GitHub
-            </a>
-        </p>
-        <p>Hosted in U.S.A.</p>
-    </footer>
+    <div class="cursor-none">
+        <div id="custom-cursor" class="mix-blend-difference"></div>
+        <Hero />
+        <CV />
+        <Projects />
+        <footer
+            class="text-xs py-8 px-8 2xl:max-w-7xl mx-auto flex justify-start gap-6 mt-48"
+        >
+            <p>&copy; {new Date().getFullYear()} Lemuel Lee</p>
+            <p>
+                Open Source on <a
+                    href="https://github.com/LemuelKL/lemuellee.com"
+                    target="_blank"
+                    class="cursor-none"
+                >
+                    GitHub
+                </a>
+            </p>
+            <p>Hosted in U.S.A.</p>
+        </footer>
+    </div>
 </BaseLayout>

@@ -48,10 +48,6 @@ a:hover {
         text-decoration-thickness 0.3s ease-in-out;
 }
 
-body {
-    cursor: none !important;
-}
-
 #custom-cursor {
     top: -8px;
     left: -8px;
