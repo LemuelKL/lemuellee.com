@@ -35,7 +35,7 @@ const repoStars = await Promise.all(
         class="bg-white text-black w-[210mm] h-[297mm] mx-auto flex flex-col border p-[1.27cm] gap-4"
     >
         <!-- Header  -->
-        <div class="flex justify-between">
+        <div class="grid grid-cols-3">
             <div class="text-3xl">Lemuel Lee</div>
             <div class="flex flex-col">
                 <div class="font-light text-xs">lemuellee.kl@gmail.com</div>
@@ -55,9 +55,13 @@ const repoStars = await Promise.all(
                     target="_blank">lemuellee.com</a
                 >
             </div>
+            <div class="text-xs">
+                Quantitative background with public and private sector
+                experience, seeking roles in finance and energy tech
+            </div>
         </div>
         <!-- Experience -->
-        <div class="w-full border-t border-accent"></div>
+        <div class="w-full border-t border-accent text-accent">Experience</div>
         <div class="flex flex-col gap-6">
             <!-- Zendo Energy -->
             <div class="grid grid-cols-3">
@@ -98,12 +102,11 @@ const repoStars = await Promise.all(
                     <div class="mt-3 text-xs">
                         Applied stochastic processes with risk constraints in a
                         cashflow engine to minimise Interim Levy Rate and Total
-                        Reserve Amount
+                        Reserve Amount (£370M Q1 2025)
                     </div>
                     <div class="mt-3 text-xs">
-                        Designed Databricks AutoML infrastructure for modelling
-                        interconnectors, with automated model selection and
-                        retraining
+                        Built Databricks AutoML pipeline for interconnector
+                        modelling with automated model selection and retraining
                     </div>
                 </div>
             </div>
@@ -117,12 +120,13 @@ const repoStars = await Promise.all(
                 <div class="col-span-2">
                     <div class="text-sm font-semibold">Fullstack Developer</div>
                     <div class="text-xs">
-                        Architected, developed, and deployed a multi-user
-                        e-ticketing solution
+                        Architected, developed, and deployed a e-ticketing
+                        system in Quasar Vue.js and Supabase, serving over 6k
+                        individuals since
                     </div>
                     <div class="mt-3 text-xs">
-                        Developed a timetable scheduler with spatial-temporal
-                        and relational constraints
+                        Automated various scheduling processes, reducing
+                        teachers' admin workloads
                     </div>
                 </div>
             </div>
@@ -137,17 +141,13 @@ const repoStars = await Promise.all(
                         Mathematics and Physics Programmer
                     </div>
                     <div class="text-xs">
-                        Developed numerical tests for float precision, edge
-                        cases, and counterexamples
-                    </div>
-                    <div class="mt-3 text-xs">
-                        Prototyped a Haskell web service to convert
-                        HTML+Markdown+KaTeX into Docx
-                    </div>
-                    <div class="mt-3 text-xs">
                         Contributed to a question bank using an in-house
                         JavaScript-based functional domain-specific language for
                         generating typesets, graphs, and 3D graphics
+                    </div>
+                    <div class="mt-3 text-xs">
+                        Prototyped a Haskell Pandac web service for markup
+                        conversion to .docx
                     </div>
                     <div class="mt-3 text-xs underline">
                         Featured in Sing Tao Headline, February 2022
@@ -173,7 +173,7 @@ const repoStars = await Promise.all(
             </div>
         </div>
         <!-- Education -->
-        <div class="w-full border-t border-accent"></div>
+        <div class="w-full border-t border-accent text-accent">Education</div>
         <div class="flex flex-col gap-6">
             <!-- Imperial College London -->
             <div class="grid grid-cols-3">
@@ -228,7 +228,7 @@ const repoStars = await Promise.all(
                 </div>
             </div>
         </div>
-        <div class="w-full border-t border-accent"></div>
+        <div class="w-full border-t border-accent text-accent">Achievement</div>
         <!-- Open Source Contributions -->
         <div class="grid grid-cols-4 text-xs gap-1">
             {
@@ -263,9 +263,9 @@ const repoStars = await Promise.all(
                 <span>CityUHK</span>
             </div>
         </div>
-        <div class="text-xs font-light text-right">
+        <!-- <div class="text-xs font-light text-right">
             see <a href="lemuellee.com" target="_blank">lemuellee.com</a> for full
             list
-        </div>
+        </div> -->
     </div>
 </BaseLayout>

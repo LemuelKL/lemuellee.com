@@ -19,6 +19,7 @@ import BaseHead from '../components/BaseHead.astro'
             // Custom Cursor Movement
             const cursor = document.getElementById('custom-cursor')
             document.addEventListener('mousemove', (e) => {
+                if (!cursor) return
                 cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
                 // console.log(`Cursor position: ${e.clientX}, ${e.clientY}`)
             })
