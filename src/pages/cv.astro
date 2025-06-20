@@ -1,8 +1,32 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Hero from '../components/Hero.astro'
-import CV from '../components/CV.astro'
-import Projects from '../components/Projects.astro'
+// List of repos to display
+const repos = [
+    { owner: 'EnergieID', name: 'entsoe-py' },
+    { owner: 'raft', name: 'raft.github.io' },
+    { owner: 'tailwindlabs', name: 'tailwindcss' },
+    { owner: 'ther0n', name: 'UnnaturalScrollWheels' }
+]
+
+// Fetch star counts from GitHub API at build time
+const fetchStarCount = async (owner, name) => {
+    try {
+        const res = await fetch(`https://api.github.com/repos/${owner}/${name}`)
+        if (!res.ok) return null
+        const data = await res.json()
+        return data.stargazers_count?.toLocaleString() ?? null
+    } catch {
+        return null
+    }
+}
+
+// Get all star counts in parallel
+const repoStars = await Promise.all(
+    repos.map(async (repo) => ({
+        ...repo,
+        stars: await fetchStarCount(repo.owner, repo.name)
+    }))
+)
 ---
 
 <BaseLayout>
@@ -207,13 +231,18 @@ import Projects from '../components/Projects.astro'
             </div>
         </div>
         <div class="w-full border-t border-accent"></div>
-        <!-- Competitions and open source -->
+        <!-- Open Source Contributions -->
         <div class="grid grid-cols-4 text-xs gap-1">
-            <div>EnergieID/entsoe-py <br /> 509 stars</div>
-            <div>raft/raft.github.io <br /> 1397 stars</div>
-            <div>tailwindlabs/tailwindcss <br /> 86.1k+ stars</div>
-            <div>ther0n/UnnaturalScrollWheels <br /> 3562 stars</div>
+            {
+                repoStars.map((repo) => (
+                    <div>
+                        {repo.owner}/{repo.name} <br />
+                        {repo.stars ? `${repo.stars} stars` : 'N/A'}
+                    </div>
+                ))
+            }
         </div>
+        <!-- Competitions -->
         <div class="grid grid-cols-4 text-xs gap-1">
             <div class="flex flex-col">
                 <span>2nd</span>
