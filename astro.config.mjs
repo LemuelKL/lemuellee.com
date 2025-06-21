@@ -10,8 +10,4 @@ export default defineConfig({
     site: 'https://lemuellee.com',
     compressHTML: true,
     integrations: [sitemap()],
-
-    experimental: {
-        svg: true
-    }
 });
