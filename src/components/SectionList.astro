@@ -5,29 +5,24 @@ const { title, subtitle, data } = Astro.props
 
 <section class="bg-primary">
     <div class="px-8 2xl:max-w-7xl mx-auto grid grid-cols-4 gap-12">
-        <div class="col-start-1 col-span-4 md:col-start-4 mb-6 row-start-1">
-            <div class="text-right md:text-left">{title}</div>
+        <div class="mb-6 col-start-1 col-span-1">
+            <div>{title}</div>
             <div class="text-xs font-light hidden md:block">
                 {subtitle}
             </div>
         </div>
         <div
-            class="row-start-2 md:row-start-1 col-start-1 col-span-4 md:col-span-3 flex flex-col justify-items-start text-secondary pb-2 mb-2 gap-6"
+            class="col-start-3 col-span-2 flex flex-col justify-items-start text-secondary pb-2 mb-2 gap-6"
         >
             {
                 data.map((item, index) => (
-                    <div class="grid grid-cols-2 gap-x-12">
-                        <span class="text-sm row-start-1 md:row-start-2">
-                            {item.organisation}
-                        </span>
-                        <span class="text-sm row-start-2 col-span-2 flex justify-between">
-                            <div>{item.title}</div>
-                            <div
-                                class={`text-sm ${item.time === 'Now' ? 'text-accent font-bold' : ''}`}
-                            >
-                                {item.time}
-                            </div>
-                        </span>
+                    <div class="text-sm leading-6">
+                        <div>{item.time}</div>
+                        <div>{item.title}</div>
+                        <div>{item.organisation}</div>
+                        <a href={item.link} target="_blank" class="text-accent/50 hover:text-accent">
+                            {item.link ? item.link.replace(/^https?:\/\//, '') : ''}
+                        </a>
                     </div>
                 ))
             }

@@ -289,31 +289,51 @@ const skills = [
 
 <section class="bg-primary">
     <div class="px-8 2xl:max-w-7xl mx-auto">
-        <div class="grid grid-cols-4 gap-12 my-30">
-            <div class="col-start-1 col-span-4 md:col-start-4 mb-6 row-start-1">
-                <div class="text-right md:text-left">Portfolio</div>
+        <div class="grid grid-cols-3 gap-12 my-30">
+            <div class="col-span-1 col-start-1 mb-6 row-start-1">
+                <div>Portfolio</div>
                 <div class="text-xs font-light hidden md:block">
-                    A collection of works, documents, or investments held by a person or organization, typically used to showcase skills or assets.
+                    A collection of works, documents, or investments held by a
+                    person or organization, typically used to showcase skills or
+                    assets.
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-y-12 col-span-4 md:col-span-3 row-start-2 md:row-start-1 col-start-1">
-            {
-                projects.map((project) => (
-                    <div class="text-sm col-start-1">{project.title}</div>
-                    <div class="text-sm col-start-2 flex justify-between gap-6">
-                        <div>{project.description}</div>
-                        <div class="text-sm flex flex-col text-right">
-                        {project.url
-                            ? <a href={project.url} target="_blank" class="mr-auto font-light w-full">
-                                Link
-                              </a>
-                            : <span class="mr-auto font-light opacity-0">Link</span>
-                        }
-                    </div>
-                    </div>
-                    
-                ))
-            }
+            <div
+                class="flex flex-col w-full col-span-4 row-start-2 col-start-1 divide-y-1 divide-secondary/20"
+            >
+                {
+                    projects.map((project) =>
+                        project.url ? (
+                            <a
+                                class="group grid grid-cols-3 py-6 w-full"
+                                href={project.url}
+                                target="_blank"
+                            >
+                                <div class="text-sm col-start-1">
+                                    {project.title}
+                                </div>
+                                <div class="text-sm col-start-2 col-span-2 flex justify-between gap-6">
+                                    <div>{project.description}</div>
+                                    <div>
+                                        {project.url && (
+                                            <span class="group-hover:text-accent transition-colors">{'-->'}</span>
+                                        )}
+                                    </div>
+                                </div>
+                            </a>
+                        ) : (
+                            <div class="group grid grid-cols-3 py-6 w-full cursor-default">
+                                <div class="text-sm col-start-1">
+                                    {project.title}
+                                </div>
+                                <div class="text-sm col-start-2 col-span-2 flex justify-between">
+                                    <div>{project.description}</div>
+                                    <div />
+                                </div>
+                            </div>
+                        )
+                    )
+                }
             </div>
         </div>
     </div>
