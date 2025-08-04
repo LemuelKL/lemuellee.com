@@ -48,8 +48,6 @@
 
 a {
     position: relative;
-    text-decoration: none;
-    color: inherit; /* optional, keeps link color from changing */
 }
 
 a::after {
@@ -57,7 +55,7 @@ a::after {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 1px;
+    height: 0.5px;
     width: 100%;
     background-color: currentColor;
     transform: scaleX(0);
