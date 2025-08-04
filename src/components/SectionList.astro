@@ -17,17 +17,16 @@ const { title, subtitle, data } = Astro.props
             {
                 data.map((item, index) => (
                     <div class="md:grid flex flex-col md:grid-cols-3 gap-x-12">
-                        {/* <span
-                                class={`text-sm ${item.time === 'Now' ? 'text-accent' : ''}`}
-                            >
-                                {item.time}
-                            </span> */}
                         <span class="text-sm row-start-2">
                             {item.organisation}
                         </span>
                         <span class="text-sm row-start-2 col-span-2 flex justify-between">
                             <div>{item.title}</div>
-                            <div>{item.time}</div>
+                            <div
+                                class={`text-sm ${item.time === 'Now' ? 'text-accent font-bold' : ''}`}
+                            >
+                                {item.time}
+                            </div>
                         </span>
                     </div>
                 ))
