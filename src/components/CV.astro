@@ -1,5 +1,15 @@
 ---
 import SectionList from './SectionList.astro'
+import { Image } from 'astro:assets'
+import Blade_Runner_2049_Limo_and_Spinner_02 from '../images/Blade-Runner-2049-Limo-and-Spinner-02.gif'
+import Blade_Runner_2049_Limo_and_Spinner_03 from '../images/Blade-Runner-2049-Limo-and-Spinner-03.gif'
+import Blade_Runner_2049_Limo_and_Spinner_04 from '../images/Blade-Runner-2049-Limo-and-Spinner-04.gif'
+import Luv_K_Cont_630x262 from '../images/Luv&K_Cont_630x262.gif'
+import Luv_K_630x262 from '../images/Luv&K_630x262.gif'
+import VbFLmG5 from '../images/VbFLmG5.png'
+import tumblr_oym1fpLWmj1s01gf9o1_500 from '../images/tumblr_oym1fpLWmj1s01gf9o1_500.gif'
+import blade_runner_2049_sylvia_hoeks_luv from '../images/blade-runner-2049-sylvia-hoeks-luv.png'
+import img_65u58rpc4r921 from '../images/65u58rpc4r921.jpg'
 
 const professional = [
     {
@@ -121,19 +131,66 @@ const events = [
 ---
 
 <div class="flex flex-col gap-48">
+    <div class="2xl:max-w-7xl mr-auto flex gap-6 items-start">
+        <Image
+            class=""
+            src={Blade_Runner_2049_Limo_and_Spinner_02}
+            alt="Blade Runner 2049 Limo and Spinner"
+            loading="lazy"
+        />
+        <Image
+            class=""
+            src={Blade_Runner_2049_Limo_and_Spinner_03}
+            alt="Blade Runner 2049 Limo and Spinner"
+            loading="lazy"
+        />
+    </div>
     <SectionList
         title="Experience"
         subtitle="The knowledge or practical wisdom gained from what one has observed, encountered, or undergone."
         data={professional}
     />
+    <div class="ml-auto flex items-end gap-6">
+        <Image
+            class="max-w-[315px]"
+            src={img_65u58rpc4r921}
+            alt="Blade Runner 2049 Limo and Spinner"
+            loading="lazy"
+        />
+        <Image
+            class=""
+            src={Luv_K_Cont_630x262}
+            alt="Blade Runner 2049 Limo and Spinner"
+            loading="lazy"
+        />
+    </div>
     <SectionList
         title="Education"
         subtitle="The process of receiving or giving systematic instruction, especially at a school or university."
         data={academia}
     />
+    <div class="flex gap-6 items-start">
+        <Image
+            class=""
+            src={tumblr_oym1fpLWmj1s01gf9o1_500}
+            alt="Blade Runner 2049 Limo and Spinner"
+            loading="lazy"
+        />
+        <Image
+            class=""
+            src={blade_runner_2049_sylvia_hoeks_luv}
+            alt="Blade Runner 2049 Limo and Spinner"
+            loading="lazy"
+        />
+    </div>
     <SectionList
         title="Competition"
         subtitle="The activity or condition of striving to gain or win something by defeating or establishing superiority over others."
         data={events}
+    />
+    <Image
+        src={VbFLmG5}
+        alt="Blade Runner 2049 Limo and Spinner"
+        loading="lazy"
     />
 </div>
