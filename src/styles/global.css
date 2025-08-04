@@ -2,7 +2,7 @@
 @theme {
     --color-primary: #fbfbfb;
     --color-secondary: #0f0a01;
-    --color-accent: #FFA500;
+    --color-accent: #ffa500;
     /* 08327d */
 }
 
@@ -58,11 +58,10 @@ a::after {
     height: 0.5px;
     width: 100%;
     background-color: currentColor;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 a:hover::after {
-    transform: scaleX(1);
+    opacity: 1;
 }
