@@ -34,7 +34,7 @@
 
 @font-face {
     font-family: 'CaladanFutura';
-    src: url('CaladanFutura-Regular-Book.woff2') format('woff2');
+    src: url('/fonts/CaladanFutura-Regular-Book.woff2') format('woff2');
 }
 /* https://duneinfo.com/Content/fonts/caladanfutura/CaladanFutura-Regular-Book.woff2?v=9 */
 .galach-font {
