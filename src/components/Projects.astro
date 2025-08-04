@@ -290,25 +290,23 @@ const skills = [
 <section class="bg-primary">
     <div class="px-2 lg:px-8 2xl:max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-4 gap-10 my-30">
-            <div class="uppercase text-4xl font-extralight mb-6" data-aos="fade-up" data-aos-duration={1500}>Portfolio</div>
+            <div class="flex flex-col mb-6" data-aos="fade-up" data-aos-duration={1500}>
+                <div>Portfolio</div>
+                <div class="text-xs font-light">A collection of works, documents, or investments held by a person or organization, typically used to showcase skills or assets.</div>
+            </div>
             <div class="grid grid-cols-3 gap-10 col-span-3">
             {
                 projects.map((project, index) => (
-                    <div class="col-start-1 col-span-1 flex justify-between items-start" data-aos="fade-right" data-aos-duration={1500}>
-                        {/* <div class="text-sm">{index + 1}</div>
-                        <div class="flex-1 mx-2 border-b border-dotted border-secondary h-2.5"></div> */}
-                        <div class="text-sm font-semibold text-right">{project.title}</div>
-                    </div>
                     <div class="text-sm col-start-2 col-span-1 flex flex-col" data-aos="fade-left" data-aos-duration={1500}>
+                        <div class="text-sm font-semibold">{project.title}</div>
                         <div>{project.description}</div>
                     </div>
                     <div class="text-sm col-start-3 col-span-1 flex flex-col" data-aos="fade-left" data-aos-duration={1500}>
+                        <div class="font-light">{project.time}</div>
                         {project.url
                             ? <a href={project.url} target="_blank" class="mr-auto font-light">{project.url}</a>
                             : <span class="mr-auto font-light">Private</span>
                         }
-                        <div class="font-light">{project.type}</div>
-                        <div class="font-light">{project.time}</div>
                     </div>
                 ))
             }
