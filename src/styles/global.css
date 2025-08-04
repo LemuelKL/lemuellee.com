@@ -32,37 +32,39 @@
     }
 }
 
+@font-face {
+    font-family: 'CaladanFutura';
+    src: url('CaladanFutura-Regular-Book.woff2') format('woff2');
+}
+/* https://duneinfo.com/Content/fonts/caladanfutura/CaladanFutura-Regular-Book.woff2?v=9 */
+.galach-font {
+    font-family: 'CaladanFutura';
+}
+
 ::selection {
     background-color: var(--color-secondary);
     color: var(--color-primary);
 }
 
-a:hover {
-    underline: none;
-    text-decoration: underline;
-    text-decoration-color: var(--color-secondary);
-    text-decoration-thickness: 1px;
-    /* animate */
-    transition:
-        text-decoration-color 0.3s ease-in-out,
-        text-decoration-thickness 0.3s ease-in-out;
+a {
+    position: relative;
+    text-decoration: none;
+    color: inherit; /* optional, keeps link color from changing */
 }
 
-#custom-cursor {
-    top: -8px;
-    left: -8px;
-    pointer-events: none;
-    background: black;
-    border: 2px solid white;
-    border-radius: 50%;
-    height: 16px;
-    width: 16px;
-    aspect-ratio: 1;
-    transform: translate(-50%, -50%);
-    transition:
-        background 0.2s,
-        transform 0.03s;
-    will-change: transform;
-    position: fixed;
-    z-index: 9999;
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
 }
