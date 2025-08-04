@@ -312,11 +312,12 @@ const skills = [
                                 <div class="text-sm col-start-1">
                                     {project.title}
                                 </div>
-                                <div class="text-sm col-start-2 col-span-2 flex justify-between gap-6">
+                                <div class="text-sm col-start-2 col-span-2 flex justify-between md:gap-6 gap-2">
                                     <div>{project.description}</div>
                                     <div>
                                         {project.url && (
-                                            <span class="group-hover:text-accent transition-colors">{'-->'}</span>
+                                            <span class="group-hover:text-accent transition-colors hidden md:block">{'-->'}</span>
+                                            <span class="group-hover:text-accent transition-colors md:hidden">{'>'}</span>
                                         )}
                                     </div>
                                 </div>
