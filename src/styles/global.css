@@ -1,10 +1,8 @@
 @import 'tailwindcss';
 @theme {
-    --color-secondary: #fbfbfb;
     --color-primary: #000000;
-    /* --color-accent: #ffa500; */
-    --color-accent: #a30502;
-    /* 08327d */
+    --color-secondary: #fbfbfb;
+    --color-accent: var(--color-red-600);
 }
 
 /* CSS */
@@ -66,3 +64,36 @@ a::after {
 a:hover::after {
     opacity: 1;
 }
+
+/* CSS hacks for the code syntax highlight */
+/*
+.astro-code {
+    counter-reset: line;
+    font-variant-ligatures: none; 
+}
+
+.astro-code .line {
+    display: inline-block;
+    width: 100%;
+    min-height: 1.2em;
+    position: relative;
+    padding-left: 2.5em;
+}
+
+.astro-code .line::before {
+    counter-increment: line;
+    content: counter(line);
+    position: absolute;
+    left: 0;
+    width: 2em;
+    text-align: right;
+    color: #888;
+    padding-right: 0.5em;
+    user-select: none;
+}
+
+.astro-code .line:empty::after {
+    content: ' ';
+    white-space: pre;
+}
+*/

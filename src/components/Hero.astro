@@ -4,6 +4,8 @@ import Blade_Runner_2049_Limo_and_Spinner_02 from '../images/Blade-Runner-2049-L
 import Blade_Runner_2049_Header from '../images/Blade-Runner-2049-Header.gif'
 import Blade_Runner_Concept_Header from '../images/Blade-Runner-Concept-Header.gif'
 import door from '../images/maxresdefault.jpg'
+import Bio from './biography.md'
+import MovingAverage from './moving_average.md'
 
 const headerSrc = Blade_Runner_2049_Header.src
 ---
@@ -117,59 +119,14 @@ const headerSrc = Blade_Runner_2049_Header.src
                 loading="lazy"
             />
         </div>
-        <div class="mt-64 text-xs grid md:grid-cols-2 gap-6">
-            <Image
-                class="col-span-1"
-                src={door}
-                alt="Blade Runner 2049 Header"
-                loading="lazy"
-            />
+        <div class="mt-64 grid md:grid-cols-2 gap-6">
             <div class="flex flex-col gap-6">
-                <div>
-                    Lemuel was born and raised in Hong Kong, where the blend of
-                    East and West shaped both his values and curiosities. He is
-                    guided by a deep belief in individual liberty, free markets,
-                    and the rule of law. He sees computing not just as a
-                    profession, but as humanity's most powerful tool for
-                    progress.
-                </div>
-                <div>
-                    He wrote his first programs at age 12, driven by curiosity
-                    more than instruction. That curiosity evolved into a formal
-                    study of Computer Science at the University of Hong Kong,
-                    where he also taught programming and explored everything
-                    from operating systems to machine learning.
-                </div>
-                <div>
-                    A semester abroad in the UK during the tail end of COVID-19
-                    expanded his worldview — both culturally and intellectually
-                    — introducing him to functional programming and language
-                    design. He stayed on that summer for a pivotal internship as
-                    a Quantitative Developer at Low Carbon Contracts Company,
-                    where he gained insight into the intersection of markets,
-                    policy, and climate.
-                </div>
-                <div>
-                    Now pursuing a Master's at Imperial College London, Lemuel
-                    is focused on applying data science to real-world energy
-                    challenges. His current work involves building tools to
-                    optimize energy use in data centers — bridging software and
-                    sustainability, with the same spirit of independence that's
-                    guided him since the beginning.
-                </div>
-                <div>
-                    Outside of work, Lemuel finds inspiration in the quiet halls
-                    of museums and the sweeping movements of classical music.
-                    He's drawn to science fiction not just for its imagination,
-                    but for what it says about our present. From military
-                    technology to urban planning, fashion to political history,
-                    his interests reflect a deep fascination with systems — how
-                    things work, how they're designed, and how they could be
-                    better. Whether he's studying the architecture of a city or
-                    the structure of a musical composition, Lemuel sees patterns
-                    everywhere — and in them, the potential for change, beauty,
-                    and progress.
-                </div>
+                <div>Biography</div>
+            </div>
+            <div
+                class="text-sm flex flex-col gap-6 [&_.line:hover]:underline [&_.line]:inline-block [&_.line]:w-full outline p-6"
+            >
+                <MovingAverage />
             </div>
         </div>
     </div>
