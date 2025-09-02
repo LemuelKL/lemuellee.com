@@ -3,6 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 // List of repos to display
 const repos = [
     {
+        owner: 'Nixtla',
+        name: 'neuralforecast',
+        description: 'Scalable and user friendly neural forecasting algorithms'
+    },
+    {
         owner: 'EnergieID',
         name: 'entsoe-py',
         description: 'Python client for the ENTSO-E API'
@@ -107,7 +112,7 @@ if (import.meta.env.PROD) {
                 </div>
                 <div class="col-span-2">
                     <div class="text-sm font-semibold">
-                        Quantitative Researcher <span class="text-xs font-light"
+                        Researcher <span class="text-xs font-light"
                             >(industry thesis)</span
                         >
                     </div>
