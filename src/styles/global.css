@@ -4,11 +4,6 @@
     --color-secondary: #fbfbfb;
     --color-accent: var(--color-red-600);
 }
-@layer base {
-    .page-cv {
-        --color-accent: #7851a9;
-    }
-}
 
 /* CSS */
 :root {
@@ -45,11 +40,6 @@
     font-family: 'CaladanFutura';
 }
 
-::selection {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-}
-
 a {
     position: relative;
 }
@@ -68,9 +58,4 @@ a::after {
 
 a:hover::after {
     opacity: 1;
-}
-
-/* 12px is half of TW's 6 */
-.cv-experience-item {
-    @apply relative after:absolute after:left-0 after:bottom-[-12px] after:w-full after:h-[1px] after:bg-gray-200;
 }
