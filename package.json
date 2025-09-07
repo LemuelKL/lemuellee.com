@@ -9,16 +9,16 @@
         "astro": "astro"
     },
     "devDependencies": {
-        "@astrojs/sitemap": "^3.4.1",
+        "@astrojs/sitemap": "^3.5.1",
         "@tailwindcss/forms": "^0.5.9",
         "@tailwindcss/typography": "^0.5.15",
         "@tailwindcss/vite": "^4.1.10",
-        "astro": "^5.10.0",
+        "astro": "^5.13.5",
         "prettier": "^3.5.1",
         "prettier-plugin-astro": "^0.14.1",
         "tailwindcss": "^4.1.10"
     },
     "dependencies": {
-        "@astrojs/mdx": "^4.3.3"
+        "@astrojs/mdx": "^4.3.4"
     }
 }
