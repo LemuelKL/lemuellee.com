@@ -1,15 +1,19 @@
 @import 'tailwindcss';
 
 @layer base {
-    .page-cv {
+    /* .page-cv {
         --color-accent: #7851a9;
+    } */
+    .page-cv {
+        --color-accent: #144014;
     }
 }
 
+/* Experience item separator */
 /* 12px is half of TW's 6 */
-.cv-experience-item {
+/* .cv-experience-item {
     @apply relative after:absolute after:left-0 after:bottom-[-12px] after:w-full after:h-[1px] after:bg-gray-200;
-}
+} */
 
 ::selection {
     color: var(--color-secondary);
