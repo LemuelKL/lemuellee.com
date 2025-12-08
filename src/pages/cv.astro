@@ -75,8 +75,8 @@ if (import.meta.env.PROD) {
     >
         <!-- Header  -->
         <div class="grid grid-cols-3 gap-6">
-            <div class="flex flex-col">
-                <div class="text-2xl">Lemuel Lee</div>
+            <div class="flex flex-col col-span-3">
+                <div class="text-9xl font-light">Lemuel Lee</div>
             </div>
             <div class="flex flex-col">
                 <div class="font-light text-xs">lemuellee.kl@gmail.com</div>
@@ -97,15 +97,37 @@ if (import.meta.env.PROD) {
                 >
             </div>
             <div class="text-xs">
-                International quantitative experience across public, private,
-                and academic domains
+                International quantitative experience in energy markets and
+                systematic finance, with public-sector and academic exposure
             </div>
         </div>
         <!-- Experience -->
-        <div class="w-full border-t-2 border-accent text-accent mt-3">
-            Experience
-        </div>
-        <div class="flex flex-col gap-6">
+        <div class="w-full text-accent mt-3 font-bold">Experience</div>
+        <div class="flex flex-col gap-9">
+            <!-- Timera Energy -->
+            <div class="grid grid-cols-3 gap-6 cv-experience-item">
+                <div class="col-span-1 flex flex-col">
+                    <div class="text-sm">Timera Energy</div>
+                    <div class="text-xs my-3">
+                        Expert advice & analysis on energy markets and flexible
+                        assets
+                    </div>
+                    <div class="text-xs">London</div>
+                    <div class="text-xs">Dec 2025 - Present</div>
+                </div>
+                <div class="col-span-2">
+                    <div class="text-sm font-semibold mb-3">
+                        Technical Analyst
+                    </div>
+                    <div class="text-xs">
+                        Built end-to-end data, modelling, and cloud compute
+                        infrastructure for scalable stochastic valuation and
+                        market analytics.
+                    </div>
+                    <div class="mt-3 text-xs"></div>
+                </div>
+            </div>
+
             <!-- Zendo Energy -->
             <div class="grid grid-cols-3 gap-6 cv-experience-item">
                 <div class="col-span-1 flex flex-col">
@@ -210,6 +232,13 @@ if (import.meta.env.PROD) {
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
+    <div
+        class="bg-white text-black w-[210mm] h-[297mm] mx-auto flex flex-col border p-[1.27cm] gap-6 page-cv"
+    >
+        <!-- Experience contd. -->
+        <div class="flex flex-col gap-9">
             <!-- HKU TA -->
             <div class="grid grid-cols-3 gap-6">
                 <div class="col-span-1 flex flex-col">
@@ -231,22 +260,21 @@ if (import.meta.env.PROD) {
                 </div>
             </div>
         </div>
+
         <!-- Education -->
-        <div class="w-full border-t-2 border-accent text-accent mt-3">
-            Education
-        </div>
-        <div class="flex flex-col gap-6">
+        <div class="w-full text-accent font-bold mt-3">Education</div>
+        <div class="flex flex-col gap-9">
             <!-- Imperial College London -->
             <div class="grid grid-cols-3 gap-6 cv-experience-item">
                 <div class="col-span-1 flex flex-col">
                     <div class="text-sm">Imperial College London</div>
-                    <div class="text-xs">2024 - 2025</div>
+                    <div class="text-xs mt-3">2024 - 2025</div>
                 </div>
                 <div class="col-span-2">
                     <div class="text-sm font-semibold">
                         MSc Environmental Data Science and Machine Learning
                     </div>
-                    <div class="text-xs">
+                    <div class="text-xs mt-3">
                         Industry thesis: Decarbonising Computing Power<br />
                     </div>
                 </div>
@@ -255,18 +283,18 @@ if (import.meta.env.PROD) {
             <div class="grid grid-cols-3 gap-6 cv-experience-item">
                 <div class="col-span-1 flex flex-col">
                     <div class="text-sm">The University of Hong Kong</div>
-                    <div class="text-xs">2020 - 2024</div>
+                    <div class="text-xs mt-3">2020 - 2024</div>
                 </div>
                 <div class="col-span-2">
                     <div class="text-sm font-semibold">
                         BEng Computer Science, spc. AI & Robotics
                     </div>
-                    <div class="text-xs">
-                        <!-- Minor in Sustaining Cities, Cultures, and the Earth<br
-                            /> -->
+                    <div class="text-xs mt-3">
+                        Minor in Sustaining Cities, Cultures, and the Earth<br
+                        />
                         Thesis: Deep Graph Learning on Corss-border Electricity Trading<br
                         />
-                        <span class="pl-0 block">
+                        <span class="pl-0 block mt-3">
                             Faculty Peer Mentor for first-year engineering
                             students<br />
                             Staff-Student Consultative Committee student representative
@@ -278,11 +306,11 @@ if (import.meta.env.PROD) {
             <div class="grid grid-cols-3 gap-6">
                 <div class="col-span-1 flex flex-col">
                     <div class="text-sm">Royal Holloway, U. of London</div>
-                    <div class="text-xs">2023</div>
+                    <div class="text-xs mt-3">2023</div>
                 </div>
                 <div class="col-span-2">
                     <div class="text-sm font-semibold">Academic Exchange</div>
-                    <div class="text-xs">
+                    <div class="text-xs mt-3">
                         Fully funded by HKU Worldwide Undergraduate Student
                         Exchange Scholarships<br />
                     </div>
@@ -309,23 +337,20 @@ if (import.meta.env.PROD) {
                 </div>
             </div> -->
         </div>
-    </div>
-    <div
-        class="bg-white text-black w-[210mm] h-[297mm] mx-auto flex flex-col border p-[1.27cm] gap-4 page-cv"
-    >
-        <div class="w-full border-t-2 border-accent flex justify-between">
-            <div class="text-accent">Open Source Contributions</div>
+
+        <div class="w-full flex justify-between mt-3">
+            <div class="text-accent font-bold">Open Source Contributions</div>
         </div>
         <!-- Open Source Contributions -->
         <div class="flex flex-col text-xs">
             {
                 repoStars.map((repo) => (
-                    <div class="grid grid-cols-8 gap-y-1">
-                        <div class="col-span-1">
-                            {repo.stars ? `✴ ${repo.stars}` : 'N/A'}
-                        </div>
+                    <div class="grid grid-cols-8 mb-3">
+                        {/* <div class="col-span-1">
+                            {repo.stars ? `${repo.stars}` : 'N/A'}
+                        </div> */}
                         <a
-                            class="col-span-3"
+                            class="col-span-4"
                             href={`https://github.com/${repo.owner}/${repo.name}`}
                             target="_blank"
                         >
@@ -337,10 +362,10 @@ if (import.meta.env.PROD) {
             }
         </div>
         <!-- Competitions -->
-        <div class="w-full border-t-2 border-accent flex justify-between">
-            <div class="text-accent">Competitions</div>
+        <div class="w-full flex justify-between mt-3">
+            <div class="text-accent font-bold">Competitions</div>
         </div>
-        <div class="grid grid-cols-2 text-xs gap-y-3">
+        <div class="grid grid-cols-2 text-xs gap-y-6">
             <span
                 >Jane Street Capital<br />Electronic Trading Challenge, 2nd</span
             >
@@ -349,11 +374,11 @@ if (import.meta.env.PROD) {
                 analysis and mean reversion strategies</span
             >
 
-            <span>Jane Street Capital<br />Estimathon</span>
+            <!-- <span>Jane Street Capital<br />Estimathon</span>
             <span
                 >Team-based contest on trivia, game theory, and mathematical
                 thinking</span
-            >
+            > -->
 
             <span>Algogene<br /> Algo Crypto Trading Challenge, Finalist</span>
             <span
@@ -367,19 +392,19 @@ if (import.meta.env.PROD) {
                 Achievement Hong Kong</span
             >
 
-            <span>Morgan Stanley<br /> Scrum Master Competition, Winner</span>
+            <!-- <span>Morgan Stanley<br /> Scrum Master Competition, Winner</span>
             <span
                 >Fast-paced team-based town-planning emulation game played in
                 the Scrum methodology</span
-            >
+            > -->
 
-            <span
+            <!-- <span
                 >The University of Hong Kong<br /> 6th InnoShow, Selected Project</span
             >
             <span
                 >Offensive cyber-security Unity game featuring an emulated Linux
                 shell, file-system, networking, and users</span
-            >
+            > -->
 
             <span
                 >City University of Hong Kong<br /> Mini Robotic Car Competition,
@@ -401,7 +426,7 @@ if (import.meta.env.PROD) {
         </div>
 
         <!-- Coursework -->
-        <div class="w-full border-t-2 border-accent flex justify-between">
+        <!-- <div class="w-full border-t-2 border-accent flex justify-between">
             <div class="text-accent">Coursework</div>
         </div>
         <div class="grid grid-cols-2 text-xs gap-y-3">
@@ -445,12 +470,12 @@ if (import.meta.env.PROD) {
                 External DSL for 3D CAD with BNF parser, elided Structural
                 Operational Semantics rules, and interpreter in action semantics
                 powered by JavaFX
-                <!-- <a
+                <!~~ <a
                     class="text-xs underline"
                     href="https://pure.royalholloway.ac.uk/ws/portalfiles/portal/25269180/artTool.pdf"
                     target="_blank"
                     >A. Johnstone, E. Scott, Translator generation using ART</a
-                > -->
+                > ~~>
             </div>
             <div>Principles of Operating Systems</div>
             <div>
@@ -462,6 +487,6 @@ if (import.meta.env.PROD) {
                 Multiplayer card game in JavaFX, Java RMI, and JMS and an image
                 processor using AWS SQS, EC2, and S3
             </div>
-        </div>
+        </div> -->
     </div>
 </BaseLayout>
