@@ -1,8 +1,26 @@
-<p class="font-extralight text-7xl md:text-8xl lg:text-9xl">
-    REJECT COLLECTIVISM EMBRACE RATIONAL SELF INTEREST
-</p>
+---
+import { Image } from 'astro:assets'
+import bWXMh1a9rVw from '../images/marek-pavlik-bWXMh1a9rVw-unsplash.jpg'
+---
 
-<section class="my-[25vh] grid grid-cols-6 lg:grid-cols-12 text-sm px-1">
+<section class="relative mt-[20vh] h-[70vh] overflow-hidden">
+    <Image
+        src={bWXMh1a9rVw}
+        alt="A brutalist building"
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="eager"
+    />
+
+    <p
+        class="absolute top-8 left-4 right-4 z-10 font-extralight
+              text-7xl md:text-8xl lg:text-9xl leading-[0.9] text-white"
+    >
+        REJECT COLLECTIVISM<br />
+        EMBRACE RATIONAL SELF INTEREST
+    </p>
+</section>
+
+<section class="grid grid-cols-6 lg:grid-cols-12 text-sm px-1">
     <a target="_blank" href="https://github.com/LemuelKL"> GitHub </a>
     <a target="_blank" href="https://www.linkedin.com/in/lemuelkl/">
         LinkedIn
