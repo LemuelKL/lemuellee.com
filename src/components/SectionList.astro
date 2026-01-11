@@ -3,29 +3,31 @@
 const { title, subtitle, data } = Astro.props
 ---
 
-<section class="bg-primary">
-    <div class="px-8 2xl:max-w-7xl mx-auto grid grid-cols-4 gap-12">
-        <div class="mb-6 col-start-1 col-span-1">
-            <div>{title}</div>
-            <div class="text-xs font-light hidden md:block">
-                {subtitle}
-            </div>
+<section class="bg-primary grid grid-cols-12 gap-6 p-6">
+    <div class="mb-6 col-span-12 md:col-span-3 border-t">
+        <div>{title}</div>
+        <div class="text-xs font-light hidden md:block">
+            {subtitle}
         </div>
-        <div
-            class="row-start-2 md:row-start-1 md:col-start-3 col-span-4 md:col-span-2 flex flex-col justify-items-start text-secondary pb-2 mb-2 gap-6"
-        >
-            {
-                data.map((item, index) => (
-                    <div class="text-sm">
-                        <div>{item.time}</div>
-                        <div>{item.title}</div>
-                        <div>{item.organisation}</div>
-                        <a href={item.link} target="_blank" class="text-accent/70 hover:text-accent">
-                            {item.link ? item.link.replace(/^https?:\/\//, '') : ''}
-                        </a>
-                    </div>
-                ))
-            }
-        </div>
+    </div>
+    <div class="col-span-12 md:col-span-9 grid grid-cols-9 text-secondary pb-2 mb-2 gap-6 text-sm">
+        {
+            data.map((item, index) => (
+                <div class="col-span-3">{item.title}</div>
+                <div class="col-span-3 flex flex-col">
+                    <div>{item.organisation}</div>
+                    <a
+                        href={item.link}
+                        target="_blank"
+                        class="text-white/70 hover:text-accent text-xs font-mono"
+                    >
+                        {item.link
+                            ? item.link.replace(/^https?:\/\//, '')
+                            : ''}
+                    </a>
+                </div>
+                <div class="font-mono col-span-3">{item.time}</div>
+            ))
+        }
     </div>
 </section>
