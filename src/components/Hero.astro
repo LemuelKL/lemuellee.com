@@ -1,133 +1,16 @@
----
-import { Image } from 'astro:assets'
-import Blade_Runner_2049_Limo_and_Spinner_02 from '../images/Blade-Runner-2049-Limo-and-Spinner-02-biloop.gif'
-import Blade_Runner_2049_Header from '../images/Blade-Runner-2049-Header.gif'
-import Blade_Runner_Concept_Header from '../images/Blade-Runner-Concept-Header.gif'
-import door from '../images/maxresdefault.jpg'
-import Bio from './biography.md'
-import MovingAverage from './moving_average.md'
+<p class="font-extralight text-7xl md:text-8xl lg:text-9xl">
+    REJECT COLLECTIVISM EMBRACE RATIONAL SELF INTEREST
+</p>
 
-const headerSrc = Blade_Runner_2049_Header.src
----
-
-<section class="bg-primary">
-    <Image
-        id="image-1"
-        class="w-full h-96 object-cover absolute border-b-2 inset-0 transition-opacity duration-1000 opacity-100"
-        src={Blade_Runner_2049_Header}
-        alt="Blade Runner 2049 Header"
-        loading="lazy"
-    />
-    <Image
-        id="image-2"
-        class="w-full h-96 object-cover border-b-2 inset-0 transition-opacity duration-1000 opacity-0"
-        src={Blade_Runner_Concept_Header}
-        alt="Blade Runner Concept Header"
-        loading="lazy"
-    />
-
-    <script is:inline>
-        setTimeout(() => {
-            const img1 = document.getElementById('image-1')
-            const img2 = document.getElementById('image-2')
-            img1.classList.remove('opacity-100')
-            img1.classList.add('opacity-0')
-            img2.classList.remove('opacity-0')
-            img2.classList.add('opacity-100')
-        }, 3630)
-    </script>
-    <div class="px-8 2xl:max-w-7xl mx-auto mb-64">
-        <div class="grid grid-cols-4 gap-y-24 gap-x-6">
-            <div class="col-span-4 col-start-1"></div>
-            <div
-                class="col-span-1 pt-6 font-normal text-3xl md:text-4xl lg:text-7xl tracking-wider galach-font"
-            >
-                LEMUEL
-            </div>
-            <div
-                class="col-start-2 col-span-3 pt-6 text-right md:text-sm text-xs font-light"
-            >
-                <script type="module" is:inline>
-                    function getTimeInZone(timeZone) {
-                        return new Date().toLocaleTimeString('en-GB', {
-                            hour: '2-digit',
-                            minute: '2-digit',
-                            second: '2-digit',
-                            hour12: false,
-                            timeZone
-                        })
-                    }
-                    function updateClocks() {
-                        document.getElementById('nyc-clock').textContent =
-                            getTimeInZone('America/New_York')
-                        document.getElementById('lnd-clock').textContent =
-                            getTimeInZone('Europe/London') // Handles BST/GMT
-                        document.getElementById('hkg-clock').textContent =
-                            getTimeInZone('Asia/Hong_Kong')
-                    }
-                    setInterval(updateClocks, 1000)
-                    window.addEventListener('DOMContentLoaded', updateClocks)
-                </script>
-                <div class="flex flex-row justify-end gap-4">
-                    <div class="flex flex-col">
-                        <div>NYC 紐約</div><span id="nyc-clock">--:--:--</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <div>LND 倫敦</div><span id="lnd-clock">--:--:--</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <div>HKG 香港</div><span id="hkg-clock">--:--:--</span>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="flex flex-col text-sm font-light divide-y-1 divide-dotted w-full"
-            >
-                <div class="flex flex-col gap-0 mb-6 pb-6">
-                    <a target="_blank" href="https://github.com/LemuelKL">
-                        GitHub
-                    </a>
-                    <a
-                        target="_blank"
-                        href="https://www.linkedin.com/in/lemuelkl/"
-                    >
-                        LinkedIn
-                    </a>
-                    <a target="_blank" href="mailto:lemuellee.kl@gmail.com">
-                        Email
-                    </a>
-                    <a target="_blank" href="https://blog.lemuellee.com">
-                        Blog
-                    </a>
-                    <a target="_blank" href="/cv"> CV </a>
-                </div>
-                <div class="flex flex-col gap-0 mb-6 pb-6">
-                    <div>Londoner</div>
-                    <div>Hongkonger</div>
-                </div>
-                <div class="flex flex-col gap-0">
-                    <div>Cantonese</div>
-                    <div>English</div>
-                    <div>Mandarin</div>
-                </div>
-            </div>
-            <Image
-                class="col-span-3 ml-auto"
-                src={Blade_Runner_2049_Limo_and_Spinner_02}
-                alt="Blade Runner 2049"
-                loading="lazy"
-            />
-        </div>
-        <div class="mt-64 grid md:grid-cols-2 gap-6">
-            <div class="flex flex-col gap-6">
-                <div>Biography</div>
-            </div>
-            <div
-                class="text-sm flex flex-col gap-6 [&_.line:hover]:underline [&_.line]:inline-block [&_.line]:w-full outline p-6"
-            >
-                <MovingAverage />
-            </div>
-        </div>
-    </div>
+<section
+    class="mt-24 px-8 2xl:max-w-7xl mx-auto mb-64 grid grid-cols-12 text-sm"
+>
+    <a target="_blank" href="https://github.com/LemuelKL"> GitHub </a>
+    <a target="_blank" href="https://www.linkedin.com/in/lemuelkl/">
+        LinkedIn
+    </a>
+    <a target="_blank" href="mailto:lemuellee.kl@gmail.com"> Email </a>
+    <a target="_blank" href="https://blog.lemuellee.com"> Blog </a>
+    <a target="_blank" href="/cv"> CV </a>
+    <p class="col-start-7">London, UK</p>
 </section>
