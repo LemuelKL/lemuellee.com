@@ -1,57 +1,50 @@
 ---
 import { Image } from 'astro:assets'
-import bWXMh1a9rVw from '../images/marek-pavlik-bWXMh1a9rVw-unsplash_L.webp'
+import DdOrxWAY6cI from '../images/helena-lopes-bunLmHpu1hg-unsplash.jpg'
 ---
-
-<section class="relative mt-[20vh] h-[70vh] overflow-hidden">
-    <Image
-        src={bWXMh1a9rVw}
-        alt="A brutalist building"
-        class="absolute inset-0 w-full h-full object-cover"
-        loading="eager"
-    />
-
-    <p
-        class="absolute top-8 left-4 right-4 z-10 font-extralight
-              text-7xl md:text-8xl lg:text-9xl leading-[0.9] text-white font-sans-serif"
-    >
-        REJECT COLLECTIVISM<br />
-        EMBRACE RATIONAL SELF INTEREST
-    </p>
-</section>
 
 <section
     class="grid grid-cols-6 lg:grid-cols-12 text-sm px-6 gap-6 text-white/70 hover:text-accent"
 >
+    <Image
+        src={DdOrxWAY6cI}
+        alt="A brutalist building"
+        class="h-[40vh] object-cover brightness-50 col-span-6 lg:col-span-9"
+        loading="eager"
+    />
     <a
         target="_blank"
         href="https://github.com/LemuelKL"
-        class="text-white/70 hover:text-accent"
+        class="text-white/70 hover:text-accent row-start-2 col-span-6 md:col-span-1"
     >
         GITHUB
     </a>
     <a
         target="_blank"
         href="https://www.linkedin.com/in/lemuelkl/"
-        class="text-white/70 hover:text-accent"
+        class="text-white/70 hover:text-accent row-start-3 md:row-start-2 col-span-6 md:col-span-1"
     >
         LINKEDIN
     </a>
     <a
         target="_blank"
         href="mailto:lemuellee.kl@gmail.com"
-        class="text-white/70 hover:text-accent"
+        class="text-white/70 hover:text-accent row-start-4 md:row-start-2 col-span-6 md:col-span-1"
     >
         EMAIL
     </a>
     <a
         target="_blank"
         href="https://blog.lemuellee.com"
-        class="text-white/70 hover:text-accent"
+        class="text-white/70 hover:text-accent row-start-5 md:row-start-2 col-span-6 md:col-span-1"
     >
         BLOG
     </a>
-    <a target="_blank" href="/cv" class="text-white/70 hover:text-accent">
+    <a
+        target="_blank"
+        href="/cv"
+        class="text-white/70 hover:text-accent row-start-6 md:row-start-2 col-span-6 md:col-span-1"
+    >
         CV
     </a>
 </section>

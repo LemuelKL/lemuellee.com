@@ -2,16 +2,11 @@
 import SectionList from './SectionList.astro'
 import { Image } from 'astro:assets'
 import VbFLmG5 from '../images/VbFLmG5.png'
-import face_scan from '../images/BR2049_Face_Scan.webp'
-import img_9kw9d7ihqkpa1 from '../images/9kw9d7ihqkpa1.gif'
-import eye from '../images/5b85273e54e3c176a065c0eb8e521783.gif'
-import rain from '../images/tumblr_b7f3d751d7c983d4a963da72e1295202_1387c5cf_540.gif'
 import miguel_ortiz_triboro_5 from '../images/miguel-ortiz-triboro-5.gif'
-import cake from '../images/tumblr_p33k7fyJ6z1r49x55o5_540.webp'
 
 const professional = [
     {
-        organisation: "Timera Energy",
+        organisation: 'Timera Energy',
         link: 'https://timera-energy.com',
         title: 'Technical Analyst',
         time: '2025 - present'
@@ -134,29 +129,8 @@ const events = [
 ]
 ---
 
-<div class="flex flex-col gap-48 pt-64">
-    <div class="2xl:max-w-7xl mr-auto flex gap-6 items-start">
-        <Image
-            src={face_scan}
-            alt="Blade Runner 2049 Limo and Spinner"
-            loading="lazy"
-        />
-        <Image
-            src={img_9kw9d7ihqkpa1}
-            alt="Blade Runner 2049 Limo and Spinner"
-            loading="lazy"
-        />
-        <Image
-            src={eye}
-            alt="Blade Runner 2049 Limo and Spinner"
-            loading="lazy"
-        />
-        <Image
-            src={rain}
-            alt="Blade Runner 2049 Limo and Spinner"
-            loading="lazy"
-        />
-    </div>
+<div class="flex flex-col gap-60">
+    <div class="2xl:max-w-7xl mr-auto flex gap-6 items-start"></div>
     <SectionList
         title="Experience"
         subtitle="The knowledge or practical wisdom gained from what one has observed, encountered, or undergone."
@@ -167,28 +141,9 @@ const events = [
         subtitle="The process of receiving or giving systematic instruction, especially at a school or university."
         data={academia}
     />
-    <div class="flex gap-6 items-start">
-        <Image
-            class=""
-            src={miguel_ortiz_triboro_5}
-            alt="Blade Runner 2049 Limo and Spinner"
-            loading="lazy"
-        />
-        <Image
-            src={cake}
-            alt="Blade Runner 2049 Limo and Spinner"
-            loading="lazy"
-        />
-    </div>
     <SectionList
         title="Competition"
         subtitle="The activity or condition of striving to gain or win something by defeating or establishing superiority over others."
         data={events}
-    />
-    <Image
-        class="border-t-2"
-        src={VbFLmG5}
-        alt="Blade Runner 2049 Limo and Spinner"
-        loading="lazy"
     />
 </div>

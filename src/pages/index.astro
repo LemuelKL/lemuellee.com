@@ -6,14 +6,12 @@ import CV from '../components/CV.astro'
 import Projects from '../components/Projects.astro'
 ---
 
-<BaseLayout>
-    <div class="font-mono">
+<BaseLayout class="font-mono">
+    <div class="gap-60 flex flex-col">
         <Hero />
         <CV />
         <Projects />
-        <footer
-            class="text-xs py-8 px-8 2xl:max-w-7xl mx-auto flex justify-start gap-6 mt-48"
-        >
+        <footer class="text-xs py-8 px-8">
             <p>&copy; {new Date().getFullYear()} Lemuel Lee</p>
             <p>
                 Open Source on <a
@@ -31,12 +29,6 @@ import Projects from '../components/Projects.astro'
                 and <a href="https://tailwindcss.com" target="_blank">
                     Tailwind CSS
                 </a>
-            </p>
-            <p>
-                Images sourced from <a
-                    href="https://territorystudio.com"
-                    target="_blank">Territory Studio</a
-                > and Blade Runner 2049
             </p>
         </footer>
     </div>

@@ -235,107 +235,29 @@ const projects = [
         time: '2022'
     }
 ]
-
-const skills = [
-    'Astro',
-    'Graph Rep. Learning',
-    'Classical ML',
-    'Deep Learning',
-    'PyTorch',
-    'Apache Hadoop',
-    'Azure',
-    'Databricks',
-    'C/C++',
-    'C#',
-    'VBA',
-    'Visual Basic',
-    'Python',
-    'Qt',
-    'Tailwind CSS',
-    'Svelte',
-    'Vue.js',
-    'Flask',
-    'Git',
-    'Quasar',
-    'Google Apps Script',
-    'Supabase',
-    'Netlify',
-    'Arduino',
-    'Java',
-    'Unix',
-    'NCurses',
-    'SQL',
-    'MongoDB',
-    'PostgreSQL',
-    'Kali Linux',
-    'Anaconda',
-    'Jira',
-    'JQuery',
-    'Swift',
-    'PHP',
-    'R',
-    'Numpy',
-    'Pandas',
-    'Matplotlib',
-    'Scikit-learn',
-    'OpenCV',
-    'TypeScript',
-    'JavaScript',
-    'Hugging Face',
-    'Duckietown',
-    'Unity'
-]
 ---
 
-<section class="bg-primary">
-    <div class="px-8 2xl:max-w-7xl mx-auto">
-        <div class="grid grid-cols-3 gap-12 my-30">
-            <div class="col-span-1 col-start-1 mb-6 row-start-1">
-                <div>Portfolio</div>
-                <div class="text-xs font-light hidden md:block">
-                    A collection of works, documents, or investments held by a
-                    person or organization, typically used to showcase skills or
-                    assets.
-                </div>
-            </div>
-            <div
-                class="flex flex-col w-full col-span-4 row-start-2 col-start-1 divide-y-1 divide-secondary/20"
-            >
-                {
-                    projects.map((project) =>
-                        project.url ? (
-                            <a
-                                class="group grid grid-cols-3 py-6 w-full"
-                                href={project.url}
-                                target="_blank"
-                            >
-                                <div class="text-sm col-start-1">
-                                    {project.title}
-                                </div>
-                                <div class="text-sm col-start-2 col-span-2 flex justify-between md:gap-6 gap-2">
-                                    <div>{project.description}</div>
-                                    <div>
-                                        {project.url && (
-                                            <span class="group-hover:text-accent transition-colors hidden md:block">{'-->'}</span>
-                                            <span class="group-hover:text-accent transition-colors md:hidden">{'>'}</span>
-                                        )}
-                                    </div>
-                                </div>
-                            </a>
-                        ) : (
-                            <div class="group grid grid-cols-3 py-6 w-full cursor-default">
-                                <div class="text-sm col-start-1">
-                                    {project.title}
-                                </div>
-                                <div class="text-sm col-start-2 col-span-2 flex justify-between">
-                                    <div>{project.description}</div>
-                                    <div />
-                                </div>
-                            </div>
-                        )
-                    )
-                }
-            </div>
+<section class="bg-primary grid grid-cols-12 gap-12 px-6">
+    <div class="col-span-3 mb-6 border-t">
+        <div>Portfolio</div>
+        <div class="text-xs font-light hidden md:block">
+            A collection of works, documents, or investments held by a person or
+            organization, typically used to showcase skills or assets.
         </div>
+    </div>
+    <div
+        class="flex flex-col w-full col-span-12 row-start-2 divide-y divide-secondary/10"
+    >
+        {
+            projects.map((project) => (
+                <div class="text-sm col-span-3">{project.title}</div>
+                <div class="text-sm col-span-9">
+                    <div>{project.description}</div>
+                    <a href={project.url} target="_blank" class="text-white/70 hover:text-accent">{project.url}</a>
+                </div>
+                <pre> </pre>
+                <pre> </pre>
+            ))
+        }
     </div>
 </section>
