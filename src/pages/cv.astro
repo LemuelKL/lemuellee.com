@@ -1,6 +1,6 @@
 ---
-import '../styles/cv.css'
-import BaseLayout from '../layouts/BaseLayout.astro'
+import '../styles/cv.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 // List of repos to display
 const repos = [
     {
@@ -33,39 +33,7 @@ const repos = [
         name: 'UnnaturalScrollWheels',
         description: 'Mouse movement and scroll customiser for macOS'
     }
-]
-
-let repoStars
-
-// Fetch star counts from GitHub API at build time on Production
-if (import.meta.env.PROD) {
-    const fetchStarCount = async (owner, name) => {
-        try {
-            const res = await fetch(
-                `https://api.github.com/repos/${owner}/${name}`
-            )
-            if (!res.ok) return null
-            const data = await res.json()
-            return data.stargazers_count?.toLocaleString() ?? null
-        } catch {
-            return null
-        }
-    }
-
-    repoStars = await Promise.all(
-        repos.map(async (repo) => ({
-            ...repo,
-            stars: await fetchStarCount(repo.owner, repo.name)
-        }))
-    )
-} else {
-    // Use static data locally for Dev
-    repoStars = []
-    repos.forEach((repo) => {
-        const random_stars = Math.floor(Math.random() * 1000) + 1
-        repoStars.push({ ...repo, stars: random_stars.toLocaleString() })
-    })
-}
+];
 ---
 
 <BaseLayout>
@@ -76,7 +44,7 @@ if (import.meta.env.PROD) {
         <!-- Header  -->
         <div class="grid grid-cols-3 gap-6">
             <div class="flex flex-col col-span-3">
-                <div class="text-9xl font-light">Lemuel Lee</div>
+                <div class="text-2xl">Lemuel Lee</div>
             </div>
             <div class="flex flex-col">
                 <div class="font-light text-xs">lemuellee.kl@gmail.com</div>
@@ -108,12 +76,12 @@ if (import.meta.env.PROD) {
             <div class="grid grid-cols-3 gap-6 cv-experience-item">
                 <div class="col-span-1 flex flex-col">
                     <div class="text-sm">Timera Energy</div>
-                    <div class="text-xs my-3">
+                    <div class="text-xs">London</div>
+                    <div class="text-xs">Dec 2025 - Present</div>
+                    <div class="text-xs mt-6">
                         Expert advice & analysis on energy markets and flexible
                         assets
                     </div>
-                    <div class="text-xs">London</div>
-                    <div class="text-xs">Dec 2025 - Present</div>
                 </div>
                 <div class="col-span-2">
                     <div class="text-sm font-semibold mb-3">
@@ -125,8 +93,9 @@ if (import.meta.env.PROD) {
                         market analytics
                     </div>
                     <div class="mt-3 text-xs">
-                        Fullstack development of LNG portfolio optimisation model with client base
-                        covering more than 25% of global physical cargo volumes
+                        Fullstack development of LNG portfolio optimisation
+                        model with client base covering more than 25% of global
+                        physical cargo volumes
                     </div>
                 </div>
             </div>
@@ -135,19 +104,15 @@ if (import.meta.env.PROD) {
             <div class="grid grid-cols-3 gap-6 cv-experience-item">
                 <div class="col-span-1 flex flex-col">
                     <div class="text-sm">Zendo Energy</div>
-                    <div class="text-xs my-3">
-                        Deep tech startup building the AI 'Energy OS' for data
-                        centers
-                    </div>
                     <div class="text-xs">London</div>
                     <div class="text-xs">May - Sep 2025</div>
+                    <div class="text-xs mt-6">
+                        Deep tech startup building the AI Energy OS for data
+                        centers
+                    </div>
                 </div>
                 <div class="col-span-2">
-                    <div class="text-sm font-semibold mb-3">
-                        Researcher <span class="text-xs font-light"
-                            >(industry thesis)</span
-                        >
-                    </div>
+                    <div class="text-sm font-semibold mb-3">Researcher</div>
                     <div class="text-xs">
                         Built forecasting and clustering models for data centre
                         energy demand to manage tariff risk, carbon intensity,
@@ -163,11 +128,11 @@ if (import.meta.env.PROD) {
             <div class="grid grid-cols-3 gap-6 cv-experience-item">
                 <div class="col-span-1 flex flex-col">
                     <div class="text-sm">Low Carbon Contracts Company</div>
-                    <div class="text-xs my-3">
-                        Regulatory counterparty to the UK government CfD scheme
-                    </div>
                     <div class="text-xs">London</div>
                     <div class="text-xs">May - Sep 2023</div>
+                    <div class="text-xs mt-6">
+                        Regulatory counterparty to the UK government CfD scheme
+                    </div>
                 </div>
                 <div class="col-span-2">
                     <div class="text-sm font-semibold mb-3">
@@ -185,6 +150,26 @@ if (import.meta.env.PROD) {
                     <div class="mt-3 text-xs">
                         Delivered audit-ready JIRA documentation and
                         executive-level presentations
+                    </div>
+                </div>
+            </div>
+            <!-- HKU TA -->
+            <div class="grid grid-cols-3 gap-6 cv-experience-item">
+                <div class="col-span-1 flex flex-col">
+                    <div class="text-sm mb-3">The University of Hong Kong</div>
+                    <div class="text-xs">Hong Kong</div>
+                    <div class="text-xs">2021 - 2023</div>
+                </div>
+                <div class="col-span-2">
+                    <div class="text-sm font-semibold mb-3">
+                        Teaching Assistant
+                    </div>
+                    <div class="text-xs">
+                        Courses: COMP1117, ENGG1330, ENGG1340
+                    </div>
+                    <div class="text-xs">
+                        Topics: Python, C/C++, data structures & algorithms,
+                        Unix, separate compilation
                     </div>
                 </div>
             </div>
@@ -240,30 +225,6 @@ if (import.meta.env.PROD) {
     <div
         class="bg-white text-black w-[210mm] h-[297mm] mx-auto flex flex-col border p-[1.27cm] gap-6 page-cv"
     >
-        <!-- Experience contd. -->
-        <div class="flex flex-col gap-9">
-            <!-- HKU TA -->
-            <div class="grid grid-cols-3 gap-6">
-                <div class="col-span-1 flex flex-col">
-                    <div class="text-sm mb-3">The University of Hong Kong</div>
-                    <div class="text-xs">Hong Kong</div>
-                    <div class="text-xs">2021 - 2023</div>
-                </div>
-                <div class="col-span-2">
-                    <div class="text-sm font-semibold mb-3">
-                        Teaching Assistant
-                    </div>
-                    <div class="text-xs">
-                        Courses: COMP1117, ENGG1330, ENGG1340
-                    </div>
-                    <div class="text-xs">
-                        Topics: Python, C/C++, data structures & algorithms,
-                        Unix, separate compilation
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Education -->
         <div class="w-full text-accent font-bold mt-3">Education</div>
         <div class="flex flex-col gap-9">
@@ -347,11 +308,8 @@ if (import.meta.env.PROD) {
         <!-- Open Source Contributions -->
         <div class="flex flex-col text-xs">
             {
-                repoStars.map((repo) => (
+                repos.map((repo) => (
                     <div class="grid grid-cols-8 mb-3">
-                        {/* <div class="col-span-1">
-                            {repo.stars ? `${repo.stars}` : 'N/A'}
-                        </div> */}
                         <a
                             class="col-span-4"
                             href={`https://github.com/${repo.owner}/${repo.name}`}
@@ -419,8 +377,8 @@ if (import.meta.env.PROD) {
             >
 
             <span
-                >TiG (ASUS sponsored)<br /> Hong Kong CS 1.6 Retro LAN Showmatch
-                2023, Invitee</span
+                >TiG (ASUS sponsored)<br /> Hong Kong CS 1.6 Retro LAN Showmatch 2023,
+                Invitee</span
             >
             <span
                 >Competed in a round-robin 5v5 CS 1.6 showmatch with
