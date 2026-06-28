@@ -1,9 +1,6 @@
 @import 'tailwindcss';
 
 @layer base {
-    /* .page-cv {
-        --color-accent: #7851a9;
-    } */
     .page-cv {
         --color-accent: #03045e;
     }
