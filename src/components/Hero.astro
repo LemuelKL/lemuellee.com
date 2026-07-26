@@ -3,66 +3,52 @@ import { Image } from 'astro:assets';
 import horse from '../images/pexels-helenalopes-1996333.jpg';
 ---
 
-<section
-    class="grid grid-cols-6 lg:grid-cols-12 text-sm px-6 gap-6 hover:text-accent"
->
-    <section class="relative col-span-12">
-        <h1
-            class="absolute top-1/12
-                    text-2xl
-                    lg:text-4xl
-                    font-light
-                    tracking-tight
-                    leading-none
-                    text-white
-                    mix-blend-difference
-                    pointer-events-none
-                    font-mono"
-        >
-            [lemuel@london ~]$
-        </h1>
-
-        <div class="grid grid-cols-12">
-            <Image
-                src={horse}
-                alt=""
-                class="col-span-9 h-[40vh] object-cover"
-            />
+<section class="grid grid-cols-6 lg:grid-cols-12 text-sm px-6 gap-3 lg:gap-6">
+    <Image src={horse} alt="" class="col-span-6 h-[40vh] object-cover" />
+    <div class="col-span-6 pt-6">
+        <div class="font-mono text-4xl pb-3">[lemuel@E14 ~]$</div>
+        <div class="font-mono text-xl">0. Grew up in Hong Kong.</div>
+        <div class="font-mono text-xl">1. Living in London.</div>
+        <div class="font-mono text-xl">
+            2. <a
+                target="_blank"
+                href="https://github.com/LemuelKL"
+                class="hover:text-accent"
+            >
+                GitHub
+            </a>
         </div>
-    </section>
-    <a
-        target="_blank"
-        href="https://github.com/LemuelKL"
-        class="hover:text-accent row-start-2 col-span-6 md:col-span-1"
-    >
-        GitHub
-    </a>
-    <a
-        target="_blank"
-        href="https://www.linkedin.com/in/lemuelkl/"
-        class="hover:text-accent row-start-3 md:row-start-2 col-span-6 md:col-span-1"
-    >
-        LinkedIn
-    </a>
-    <a
-        target="_blank"
-        href="mailto:lemuellee.kl@gmail.com"
-        class="hover:text-accent row-start-4 md:row-start-2 col-span-6 md:col-span-1"
-    >
-        Email
-    </a>
-    <a
-        target="_blank"
-        href="https://blog.lemuellee.com"
-        class="hover:text-accent row-start-5 md:row-start-2 col-span-6 md:col-span-1"
-    >
-        Blog
-    </a>
-    <a
-        target="_blank"
-        href="/cv"
-        class="hover:text-accent row-start-6 md:row-start-2 col-span-6 md:col-span-1"
-    >
-        Resume
-    </a>
+        <div class="font-mono text-xl">
+            3. <a
+                target="_blank"
+                href="https://www.linkedin.com/in/lemuelkl/"
+                class="hover:text-accent"
+            >
+                LinkedIn
+            </a>
+        </div>
+        <div class="font-mono text-xl">
+            4. <a
+                target="_blank"
+                href="mailto:lemuellee.kl@gmail.com"
+                class="hover:text-accent"
+            >
+                Email
+            </a>
+        </div>
+        <div class="font-mono text-xl">
+            5. <a
+                target="_blank"
+                href="https://blog.lemuellee.com"
+                class="hover:text-accent"
+            >
+                Blog
+            </a>
+        </div>
+        <div class="font-mono text-xl">
+            6. <a target="_blank" href="/cv" class="hover:text-accent">
+                Resume
+            </a>
+        </div>
+    </div>
 </section>
