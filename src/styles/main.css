@@ -1,6 +1,0 @@
-@import 'tailwindcss';
-
-::selection {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-}

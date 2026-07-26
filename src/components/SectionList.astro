@@ -1,33 +1,40 @@
 ---
 // SectionList.astro
-const { title, subtitle, data } = Astro.props
+const { title, data } = Astro.props
 ---
 
-<section class="bg-primary grid grid-cols-12 gap-6 p-6">
-    <div class="mb-6 col-span-12 md:col-span-3 border-t">
+<section class="flex flex-col gap-6 p-6">
+    <div class="mb-6 border-t">
         <div>{title}</div>
-        <div class="text-xs font-light hidden md:block">
-            {subtitle}
-        </div>
     </div>
-    <div class="col-span-12 md:col-span-9 grid grid-cols-9 text-secondary pb-2 mb-2 gap-6 text-sm">
+    <div class="pb-2 mb-2 text-sm flex flex-col">
         {
             data.map((item, index) => (
-                <div class="col-span-3">{item.title}</div>
-                <div class="col-span-3 flex flex-col">
-                    <div>{item.organisation}</div>
-                    <a
-                        href={item.link}
-                        target="_blank"
-                        class="text-white/70 hover:text-accent font-mono"
-                    >
-                        {item.link
-                            ? item.link.replace(/^https?:\/\//, '')
-                            : ''}
-                    </a>
+                <div>
+                    {item.link ? (
+                        <a href={item.link} target="_blank" class="title-link">
+                            {item.title}
+                        </a>
+                    ) : (
+                        item.title
+                    )}
                 </div>
-                <div class="font-mono col-span-3">{item.time}</div>
+                <div class="flex flex-col">
+                    <div>{item.organisation}</div>
+                </div>
+                <div>{item.time}</div>
+                <div class="mb-6"></div>
             ))
         }
     </div>
 </section>
+
+<style>
+    a.title-link {
+        color: inherit;
+    }
+
+    a.title-link:hover {
+        color: var(--color-accent);
+    }
+</style>
