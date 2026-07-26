@@ -1,263 +1,199 @@
 ---
-const projects = [
+import SectionList from './SectionList.astro';
+
+const openSource = [
     {
-        url: 'https://github.com/tailwindlabs/tailwindcss',
         title: 'Tailwind CSS',
-        type: 'Open Source',
-        stars: '81.7k',
-        description: 'A utility-first CSS framework for rapid UI development.',
-        time: '2025'
+        organisation: 'A utility-first CSS framework for rapid UI development.',
+        time: '2025',
+        link: 'https://github.com/tailwindlabs/tailwindcss'
     },
     {
-        url: 'https://github.com/ther0n/UnnaturalScrollWheels',
         title: 'Unnatural Scroll Wheels',
-        type: 'Open Source',
-        stars: '3.6k',
-        description: 'MacOS helper app for scrolling with mouse and trackpad.',
-        time: '2025'
+        organisation: 'MacOS helper app for scrolling with mouse and trackpad.',
+        time: '2025',
+        link: 'https://github.com/ther0n/UnnaturalScrollWheels'
     },
     {
-        url: 'https://github.com/raft/raft.github.io',
         title: 'Raft Website',
-        type: 'Open Source',
-        stars: '1.4k',
-        description: 'Website of the Raft Consensus Algorithm.',
-        time: '2024'
+        organisation: 'Website of the Raft Consensus Algorithm.',
+        time: '2024',
+        link: 'https://github.com/raft/raft.github.io'
     },
     {
-        url: 'https://github.com/EnergieID/entsoe-py',
         title: 'ENTSOE Py',
-        type: 'Open Source',
-        stars: '492',
-        description:
+        organisation:
             'Python API client for European Network of Transmission System Operators for Electricity.',
-        time: '2023'
-    },
-    {
-        url: 'https://github.com/LemuelKL/Android-Controlled-Arduino-Bluetooth-Car',
-        title: 'Mini Robotic Car',
-        type: 'Competition',
-        stars: '11',
-        description:
-            'Android app to remote control an Arduino robotic car through Bluetooth LE.',
-        time: '2017'
-    },
-    {
-        url: '',
-        title: 'HF Trading Bot',
-        type: 'Competition',
-        stars: '',
-        description:
-            'Python high-frequency trading bot for bonds, stocks, and ETFs. Real-time data stream from Jane Street server.',
-        time: '2022'
-    },
-    {
-        url: '',
-        title: 'Crypto Trading Bot',
-        type: 'Competition',
-        stars: '',
-        description:
-            'Python crypto trading bot connected to various exchange APIs and executes on ALGOGENE platform.',
-        time: '2022'
-    },
-    {
-        url: 'https://github.com/LemuelKL/lemuellee.com',
-        title: 'lemuellee.com',
-        type: 'Personal',
-        stars: '7',
-        description: 'My personal website, built with Astro and Tailwind CSS.',
-        time: 'Present'
-    },
-    {
-        url: 'https://github.com/LemuelKL/Bubble-Sheet-OMR-OpenCV-Qt',
-        title: 'Bubble Sheet OMR',
-        type: 'Freelance',
-        stars: '7',
-        description: 'Qt program using OpenCV to process bubble sheets.',
-        time: '2018'
-    },
-    {
-        url: 'https://github.com/LemuelKL/CSGO-Auto-Reconnect',
-        title: 'CSGO Auto Reconnect',
-        type: 'Personal',
-        stars: '6',
-        description:
-            'Simple Python script to reconnect to a CSGO community server on disconnect.',
-        time: '2022'
-    },
-    {
-        url: 'https://github.com/d-mok/MathTree',
-        title: 'MathTree',
-        type: 'Freelance',
-        stars: '3',
-        description:
-            'Web editor and JavaScript-based DSL for generating Maths and Physics MCQs',
-        time: '2022'
-    },
-    {
-        url: 'https://github.com/LemuelKL/HKU-Calendar-Takeout',
-        title: 'HKU Calender Takeout',
-        type: 'Personal',
-        stars: '2',
-        description:
-            'Exports HKU Portal course schedules to ics calendar format.',
-        time: '2022'
-    },
-    {
-        url: 'https://github.com/LemuelKL/HolloRay',
-        title: 'Holloray',
-        type: 'Coursework',
-        stars: '2',
-        description:
-            'JavaFX 3D CAD DSL with BNF parser, elided SOS, and action semantics interpreter.',
-        time: '2023'
-    },
-    {
-        url: 'https://github.com/LemuelKL/SLMS',
-        title: 'SLMS',
-        type: 'Personal',
-        stars: '2',
-        description:
-            'School Library Management System written with Qt 5.13.0 and C++11.',
-        time: '2020'
-    },
-    {
-        url: '',
-        title: 'Musical Ticketing',
-        type: 'Freelance',
-        stars: '',
-        description: 'Full stack ticketing system for a musical event.',
-        time: '2022'
-    },
-    {
-        url: 'https://github.com/LemuelKL/fyp23049',
-        title: 'Bachelor Thesis',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'Deep Graph Representation Learning on Corss-border Electricity Trading.',
-        time: '2024'
-    },
-    {
-        url: '',
-        title: 'Human Presence Detection',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'Statistical time-series acoustic sensing of in-door human presence with autocorrelation and fourier analysis.',
-        time: '2024'
-    },
-    {
-        url: '',
-        title: 'Magnetic Monte Carlo',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'Monte Carlo simlation of magnetic quasi-particle for stable energy configurations.',
-        time: '2024'
-    },
-    {
-        url: '',
-        title: 'ODE Solver',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'Python ODE solver by Taylor expansion and piecewise polynomial interpolation.',
-        time: '2024'
-    },
-    {
-        url: 'https://github.com/LemuelKL/bible-reading-challenge',
-        title: 'Bible Reading Challenge',
-        type: 'Personal',
-        stars: '',
-        description:
-            'Full stack Bible Reading Challenge PWA & SPA in Vue, Quasar, Supabase, and Netlify.',
-        time: '2022 - Present'
-    },
-    {
-        url: 'https://github.com/LemuelKL/3230shell',
-        title: 'Linux Shell',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'Linux shell with prog exec, signals, piping, bg processes, and proc stats.',
-        time: '2022'
-    },
-    {
-        url: 'https://github.com/LemuelKL/COMP3230-PA2',
-        title: 'Parrellel Sample Sort',
-        type: 'Coursework',
-        stars: '',
-        description: 'C++ implementation of parallelised sample sort.',
-        time: '2022'
-    },
-    {
-        url: 'https://github.com/LemuelKL/svelte-tetris',
-        title: 'Svelte Tetris',
-        type: 'Personal',
-        stars: '',
-        description: 'Tetris in Svelte and Tailwind CSS.',
-        time: '2022'
-    },
-    {
-        url: '',
-        title: 'Pacman AI',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'Pacman AI with Bayesian Networks, Hidden Markov Models, and Particle Filters.',
-        time: '2023'
-    },
-    {
-        url: 'https://youtu.be/C9JVxHDk_iU',
-        title: 'RnaFighter',
-        type: 'Coursework',
-        stars: '',
-        description:
-            'Command line game with COVID-19 theme, using C++ and NCurses.',
-        time: '2021'
-    },
-    {
-        url: 'https://github.com/LemuelKL/1T-MS-GroupAssigning',
-        title: 'Teacher Duty Assigner',
-        type: 'Freelance',
-        stars: '',
-        description: 'Optimal relationship assignment of teachers to students.',
-        time: '2018'
-    },
-    {
-        url: 'https://innoacademy.engg.hku.hk/hack/',
-        title: 'HackOS',
-        type: 'Competition',
-        stars: '',
-        description:
-            'A sandbox offensive cyber-security simulator game made with Unity.',
-        time: '2022'
+        time: '2023',
+        link: 'https://github.com/EnergieID/entsoe-py'
     }
-]
+];
+
+const academic = [
+    {
+        title: 'Bachelor Thesis',
+        organisation:
+            'Deep Graph Representation Learning on Cross-border Electricity Trading.',
+        time: '2024',
+        link: 'https://github.com/LemuelKL/fyp23049'
+    },
+    {
+        title: 'Human Presence Detection',
+        organisation:
+            'Statistical time-series acoustic sensing of in-door human presence with autocorrelation and fourier analysis.',
+        time: '2024',
+        link: ''
+    },
+    {
+        title: 'Magnetic Monte Carlo',
+        organisation:
+            'Monte Carlo simulation of magnetic quasi-particle for stable energy configurations.',
+        time: '2024',
+        link: ''
+    },
+    {
+        title: 'ODE Solver',
+        organisation:
+            'Python ODE solver by Taylor expansion and piecewise polynomial interpolation.',
+        time: '2024',
+        link: ''
+    },
+    {
+        title: 'Holloray',
+        organisation:
+            'JavaFX 3D CAD DSL with BNF parser, elided SOS, and action semantics interpreter.',
+        time: '2023',
+        link: 'https://github.com/LemuelKL/HolloRay'
+    },
+    {
+        title: 'Pacman AI',
+        organisation:
+            'Pacman AI with Bayesian Networks, Hidden Markov Models, and Particle Filters.',
+        time: '2023',
+        link: ''
+    },
+    {
+        title: 'Linux Shell',
+        organisation:
+            'Linux shell with prog exec, signals, piping, bg processes, and proc stats.',
+        time: '2022',
+        link: 'https://github.com/LemuelKL/3230shell'
+    },
+    {
+        title: 'Parallel Sample Sort',
+        organisation: 'C++ implementation of parallelised sample sort.',
+        time: '2022',
+        link: 'https://github.com/LemuelKL/COMP3230-PA2'
+    },
+    {
+        title: 'RnaFighter',
+        organisation:
+            'Command line game with COVID-19 theme, using C++ and NCurses.',
+        time: '2021',
+        link: 'https://youtu.be/C9JVxHDk_iU'
+    }
+];
+
+const personal = [
+    {
+        title: 'lemuellee.com',
+        organisation: 'My personal website, built with Astro and Tailwind CSS.',
+        time: 'Present',
+        link: 'https://github.com/LemuelKL/lemuellee.com'
+    },
+    {
+        title: 'Bible Reading Challenge',
+        organisation:
+            'Full stack Bible Reading Challenge PWA & SPA in Vue, Quasar, Supabase, and Netlify.',
+        time: '2022 - Present',
+        link: 'https://github.com/LemuelKL/bible-reading-challenge'
+    },
+    {
+        title: 'HF Trading Bot',
+        organisation:
+            'Python high-frequency trading bot for bonds, stocks, and ETFs. Real-time data stream from Jane Street server.',
+        time: '2022',
+        link: ''
+    },
+    {
+        title: 'Crypto Trading Bot',
+        organisation:
+            'Python crypto trading bot connected to various exchange APIs and executes on ALGOGENE platform.',
+        time: '2022',
+        link: ''
+    },
+    {
+        title: 'CSGO Auto Reconnect',
+        organisation:
+            'Simple Python script to reconnect to a CSGO community server on disconnect.',
+        time: '2022',
+        link: 'https://github.com/LemuelKL/CSGO-Auto-Reconnect'
+    },
+    {
+        title: 'MathTree',
+        organisation:
+            'Web editor and JavaScript-based DSL for generating Maths and Physics MCQs',
+        time: '2022',
+        link: 'https://github.com/d-mok/MathTree'
+    },
+    {
+        title: 'HKU Calendar Takeout',
+        organisation:
+            'Exports HKU Portal course schedules to ics calendar format.',
+        time: '2022',
+        link: 'https://github.com/LemuelKL/HKU-Calendar-Takeout'
+    },
+    {
+        title: 'Musical Ticketing',
+        organisation: 'Full stack ticketing system for a musical event.',
+        time: '2022',
+        link: ''
+    },
+    {
+        title: 'Svelte Tetris',
+        organisation: 'Tetris in Svelte and Tailwind CSS.',
+        time: '2022',
+        link: 'https://github.com/LemuelKL/svelte-tetris'
+    },
+    {
+        title: 'HackOS',
+        organisation:
+            'A sandbox offensive cyber-security simulator game made with Unity.',
+        time: '2022',
+        link: 'https://innoacademy.engg.hku.hk/hack/'
+    },
+    {
+        title: 'SLMS',
+        organisation:
+            'School Library Management System written with Qt 5.13.0 and C++11.',
+        time: '2020',
+        link: 'https://github.com/LemuelKL/SLMS'
+    },
+    {
+        title: 'Bubble Sheet OMR',
+        organisation: 'Qt program using OpenCV to process bubble sheets.',
+        time: '2018',
+        link: 'https://github.com/LemuelKL/Bubble-Sheet-OMR-OpenCV-Qt'
+    },
+    {
+        title: 'Teacher Duty Assigner',
+        organisation:
+            'Optimal relationship assignment of teachers to students.',
+        time: '2018',
+        link: 'https://github.com/LemuelKL/1T-MS-GroupAssigning'
+    },
+    {
+        title: 'Mini Robotic Car',
+        organisation:
+            'Android app to remote control an Arduino robotic car through Bluetooth LE.',
+        time: '2017',
+        link: 'https://github.com/LemuelKL/Android-Controlled-Arduino-Bluetooth-Car'
+    }
+];
 ---
 
-<section class="bg-primary grid grid-cols-12 gap-12 px-6">
-    <div class="col-span-3 mb-6 border-t">
-        <div>Portfolio</div>
-        <div class="text-xs font-light hidden md:block">
-            A collection of works, documents, or investments held by a person or
-            organization, typically used to showcase skills or assets.
-        </div>
-    </div>
-    <div
-        class="flex flex-col w-full col-span-12 row-start-2 divide-y divide-secondary/10"
-    >
-        {
-            projects.map((project) => (
-                <div class="text-sm col-span-3">{project.title}</div>
-                <div class="text-sm col-span-9">
-                    <div>{project.description}</div>
-                    <a href={project.url} target="_blank" class="text-white/70 hover:text-accent">{project.url}</a>
-                </div>
-                <pre> </pre>
-                <pre> </pre>
-            ))
-        }
-    </div>
-</section>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+    <SectionList title="Open-source" data={openSource} />
+    <SectionList title="Academic" data={academic} />
+    <SectionList title="Personal" data={personal} />
+</div>

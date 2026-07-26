@@ -1,8 +1,5 @@
 ---
-import SectionList from './SectionList.astro'
-import { Image } from 'astro:assets'
-import VbFLmG5 from '../images/VbFLmG5.png'
-import miguel_ortiz_triboro_5 from '../images/miguel-ortiz-triboro-5.gif'
+import SectionList from './SectionList.astro';
 
 const professional = [
     {
@@ -41,7 +38,7 @@ const professional = [
         title: 'Maths and Physics Programmer',
         time: '2021 - 2022'
     }
-]
+];
 
 const academia = [
     {
@@ -62,7 +59,7 @@ const academia = [
         title: 'Study Abroad',
         time: '2023'
     }
-]
+];
 
 const events = [
     {
@@ -126,24 +123,11 @@ const events = [
         organisation: 'City University of Hong Kong',
         link: 'https://www.ee.cityu.edu.hk/events/summer_camp2017'
     }
-]
+];
 ---
 
-<div class="flex flex-col gap-60">
-    <div class="2xl:max-w-7xl mr-auto flex gap-6 items-start"></div>
-    <SectionList
-        title="Experience"
-        subtitle="The knowledge or practical wisdom gained from what one has observed, encountered, or undergone."
-        data={professional}
-    />
-    <SectionList
-        title="Education"
-        subtitle="The process of receiving or giving systematic instruction, especially at a school or university."
-        data={academia}
-    />
-    <SectionList
-        title="Competition"
-        subtitle="The activity or condition of striving to gain or win something by defeating or establishing superiority over others."
-        data={events}
-    />
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+    <SectionList title="Education" data={academia} />
+    <SectionList title="Experience" data={professional} />
+    <SectionList title="Competition" data={events} />
 </div>

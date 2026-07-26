@@ -1,50 +1,68 @@
 ---
-import { Image } from 'astro:assets'
-import DdOrxWAY6cI from '../images/helena-lopes-bunLmHpu1hg-unsplash.jpg'
+import { Image } from 'astro:assets';
+import horse from '../images/pexels-helenalopes-1996333.jpg';
 ---
 
 <section
-    class="grid grid-cols-6 lg:grid-cols-12 text-sm px-6 gap-6 text-white/70 hover:text-accent"
+    class="grid grid-cols-6 lg:grid-cols-12 text-sm px-6 gap-6 hover:text-accent"
 >
-    <Image
-        src={DdOrxWAY6cI}
-        alt="A brutalist building"
-        class="h-[40vh] object-cover brightness-50 col-span-6 lg:col-span-9"
-        loading="eager"
-    />
+    <section class="relative col-span-12">
+        <h1
+            class="absolute top-1/12
+                    text-2xl
+                    lg:text-4xl
+                    font-light
+                    tracking-tight
+                    leading-none
+                    text-white
+                    mix-blend-difference
+                    pointer-events-none
+                    font-mono"
+        >
+            [lemuel@london ~]$
+        </h1>
+
+        <div class="grid grid-cols-12">
+            <Image
+                src={horse}
+                alt=""
+                class="col-span-9 h-[40vh] object-cover"
+            />
+        </div>
+    </section>
     <a
         target="_blank"
         href="https://github.com/LemuelKL"
-        class="text-white/70 hover:text-accent row-start-2 col-span-6 md:col-span-1"
+        class="hover:text-accent row-start-2 col-span-6 md:col-span-1"
     >
-        GITHUB
+        GitHub
     </a>
     <a
         target="_blank"
         href="https://www.linkedin.com/in/lemuelkl/"
-        class="text-white/70 hover:text-accent row-start-3 md:row-start-2 col-span-6 md:col-span-1"
+        class="hover:text-accent row-start-3 md:row-start-2 col-span-6 md:col-span-1"
     >
-        LINKEDIN
+        LinkedIn
     </a>
     <a
         target="_blank"
         href="mailto:lemuellee.kl@gmail.com"
-        class="text-white/70 hover:text-accent row-start-4 md:row-start-2 col-span-6 md:col-span-1"
+        class="hover:text-accent row-start-4 md:row-start-2 col-span-6 md:col-span-1"
     >
-        EMAIL
+        Email
     </a>
     <a
         target="_blank"
         href="https://blog.lemuellee.com"
-        class="text-white/70 hover:text-accent row-start-5 md:row-start-2 col-span-6 md:col-span-1"
+        class="hover:text-accent row-start-5 md:row-start-2 col-span-6 md:col-span-1"
     >
-        BLOG
+        Blog
     </a>
     <a
         target="_blank"
         href="/cv"
-        class="text-white/70 hover:text-accent row-start-6 md:row-start-2 col-span-6 md:col-span-1"
+        class="hover:text-accent row-start-6 md:row-start-2 col-span-6 md:col-span-1"
     >
-        CV
+        Resume
     </a>
 </section>

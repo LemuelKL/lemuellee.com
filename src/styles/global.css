@@ -1,11 +1,72 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import 'tailwindcss';
+
 @theme {
-    --color-primary: #000000;
-    --color-secondary: #fbfbfb;
-    --color-accent: var(--color-red-600);
-    --font-mono: "Jetbrains Mono", monospace;
-    --font-sans-serif: "InterVariable", sans-serif;
+    /* ------------------------------------------------------------------
+     * Brand
+     * ------------------------------------------------------------------ */
+    --color-primary: #223127; /* Deep Forest */
+    --color-secondary: #46515a; /* Slate */
+    --color-accent: #a67c37; /* Antique Brass */
+
+    /* ------------------------------------------------------------------
+     * Surfaces
+     * ------------------------------------------------------------------ */
+    --color-background: #faf8f3; /* Warm Ivory */
+    --color-surface: #ffffff;
+    --color-surface-alt: #f2efe8;
+
+    /* ------------------------------------------------------------------
+     * Typography
+     * ------------------------------------------------------------------ */
+    --color-text: #223127;
+    --color-text-muted: #6a7174;
+    --color-heading: #172019;
+    --color-inverse: #faf8f3;
+
+    /* ------------------------------------------------------------------
+     * Borders
+     * ------------------------------------------------------------------ */
+    --color-border: #ddd7cd;
+    --color-border-strong: #bfb7aa;
+
+    /* ------------------------------------------------------------------
+     * Semantic
+     * ------------------------------------------------------------------ */
+    --color-success: #2f5d3a;
+    --color-warning: #c3922e;
+    --color-danger: #9a3d3d;
+    --color-info: #365e7d;
+
+    /* ------------------------------------------------------------------
+     * Typography
+     * ------------------------------------------------------------------ */
+    --font-sans: 'InterVariable', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* ------------------------------------------------------------------
+     * Radius
+     * ------------------------------------------------------------------ */
+    --radius-xs: 0.25rem;
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+
+    /* ------------------------------------------------------------------
+     * Shadows
+     * ------------------------------------------------------------------ */
+    --shadow-sm: 0 1px 2px rgb(34 49 39 / 0.05);
+    --shadow-md: 0 4px 12px rgb(34 49 39 / 0.08);
+    --shadow-lg: 0 10px 30px rgb(34 49 39 / 0.12);
+
+    /* ------------------------------------------------------------------
+     * Motion
+     * ------------------------------------------------------------------ */
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 400ms;
 }
 
 /* CSS */
@@ -14,21 +75,22 @@
     font-feature-settings:
         'liga' 1,
         'calt' 1,
-        /* Contextual Alternates */ 'dlig' 1,
-        /* Discretionary Ligatures */ 'ss07' 1,
-        /* fSquare punctuation */ 'ss08' 1,
-        /* Square quotes */ 'zero' 1,
-        /* Slashed zero */ 'tnum' 1,
-        /* Tabular numbers */ 'cv03' 1,
-        /* Open six */ 'cv04' 1,
-        /* Open nine */ 'cv01' 1,
-        /* Alternate one */ 'cv09',
-        /* Flat-top three */ 'cv02' 1; /* Open 4 */
+        'dlig' 1,
+        'ss07' 1,
+        'ss08' 1,
+        'zero' 1,
+        'tnum' 1,
+        'cv03' 1,
+        'cv04' 1,
+        'cv01' 1,
+        'cv09' 1,
+        'cv02' 1;
+
     font-family: InterVariable, sans-serif;
     font-variant-numeric: tabular-nums;
 }
+
 @supports (font-variation-settings: normal) {
-    /* Use variable font if supported */
     :root {
         font-family: InterVariable, sans-serif;
     }
@@ -36,6 +98,12 @@
 
 a {
     position: relative;
+    color: var(--color-secondary);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
 }
 
 a::after {
