@@ -121,3 +121,8 @@ a::after {
 a:hover::after {
     opacity: 1;
 }
+
+::selection {
+    background: var(--color-accent);
+    color: var(--color-inverse);
+}
