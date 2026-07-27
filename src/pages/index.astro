@@ -4,28 +4,22 @@ import Hero from '../components/Hero.astro';
 import CV from '../components/CV.astro';
 ---
 
-<BaseLayout class="font-mono">
-    <div class="gap-48 flex flex-col">
+<BaseLayout>
+    <div class="flex flex-col">
         <Hero />
         <CV />
-        <footer class="text-xs py-8 px-8">
+        <footer
+            class="border-t border-border py-6 flex flex-col sm:flex-row sm:justify-between gap-1 font-mono text-xs text-muted"
+        >
             <p>&copy; {new Date().getFullYear()} Lemuel Lee</p>
             <p>
-                Open Source on <a
+                <a
                     href="https://github.com/LemuelKL/lemuellee.com"
                     target="_blank"
                 >
-                    GitHub
+                    Source
                 </a>
-            </p>
-            <p>Hosted in U.S.A.</p>
-            <p>
-                Built with <a href="https://astro.build" target="_blank">
-                    Astro
-                </a>
-                and <a href="https://tailwindcss.com" target="_blank">
-                    Tailwind CSS
-                </a>
+                — built with Astro and Tailwind CSS
             </p>
         </footer>
     </div>

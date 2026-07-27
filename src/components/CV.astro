@@ -316,11 +316,23 @@ const personal = [
 ];
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
-    <SectionList title="Education" data={academia} />
-    <SectionList title="Experience" data={professional} />
-    <SectionList title="Competition" data={events} />
-    <SectionList title="Open-source" data={openSource} />
-    <SectionList title="Academic" data={academic} />
-    <SectionList title="Personal" data={personal} />
+<div class="grid grid-cols-6 lg:grid-cols-12">
+    <div class="col-span-6 lg:col-span-4">
+        <SectionList number="02" title="Education" data={academia} />
+    </div>
+    <div class="col-span-6 lg:col-span-4">
+        <SectionList number="03" title="Experience" data={professional} />
+    </div>
+    <div class="col-span-6 lg:col-span-4">
+        <SectionList number="04" title="Competition" data={events} />
+    </div>
+    <div class="col-span-6 lg:col-span-4">
+        <SectionList number="05" title="Open-source" data={openSource} />
+    </div>
+    <div class="col-span-6 lg:col-span-4">
+        <SectionList number="06" title="Academic" data={academic} />
+    </div>
+    <div class="col-span-6 lg:col-span-4">
+        <SectionList number="07" title="Personal" data={personal} />
+    </div>
 </div>

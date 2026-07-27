@@ -1,32 +1,40 @@
 ---
 // SectionList.astro
-const { title, data } = Astro.props
+const { title, number, data } = Astro.props;
 ---
 
-<section class="flex flex-col gap-6 p-6">
-    <div class="mb-6 border-t">
-        <div>{title}</div>
+<section class="flex flex-col p-6 border-t border-border">
+    <div class="flex items-baseline gap-2 mb-6">
+        <span class="font-mono text-xs text-muted">{number}</span>
+        <h2 class="text-xs uppercase tracking-[0.15em] text-muted">
+            {title}
+        </h2>
     </div>
-    <div class="pb-2 mb-2 text-sm flex flex-col">
+    <ul class="flex flex-col gap-5 text-sm">
         {
-            data.map((item, index) => (
-                <div>
-                    {item.link ? (
-                        <a href={item.link} target="_blank" class="title-link">
-                            {item.title}
-                        </a>
-                    ) : (
-                        item.title
-                    )}
-                </div>
-                <div class="flex flex-col">
-                    <div>{item.organisation}</div>
-                </div>
-                <div>{item.time}</div>
-                <div class="mb-6"></div>
+            data.map((item) => (
+                <li>
+                    <div>
+                        {item.link ? (
+                            <a
+                                href={item.link}
+                                target="_blank"
+                                class="title-link"
+                            >
+                                {item.title}
+                            </a>
+                        ) : (
+                            item.title
+                        )}
+                    </div>
+                    <div class="text-muted">{item.organisation}</div>
+                    <div class="font-mono text-xs text-muted mt-1">
+                        {item.time}
+                    </div>
+                </li>
             ))
         }
-    </div>
+    </ul>
 </section>
 
 <style>
