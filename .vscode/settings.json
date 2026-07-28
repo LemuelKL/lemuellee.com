@@ -1,4 +1,0 @@
-{
-    "eslint.validate": ["javascript", "javascriptreact", "svelte"],
-    "eslint.useFlatConfig": true
-}

@@ -2,14 +2,24 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import CV from '../components/CV.astro';
+import LL from '../images/IMG_0018.jpg';
+import { Image } from 'astro:assets';
 ---
 
 <BaseLayout>
     <div class="flex flex-col">
         <Hero />
+        <div class="grid grid-cols-4 mb-32 font-serif italic">
+            <div class="text-9xl">lemuellee</div>
+            <Image
+                src={LL}
+                alt="Lemuel Lee headshot"
+                class="lg:col-start-3 col-start-4 row-span-3"
+            />
+        </div>
         <CV />
         <footer
-            class="border-t border-border py-6 flex flex-col sm:flex-row sm:justify-between gap-1 font-mono text-xs text-muted"
+            class="mt-60 border-t border-border py-6 flex flex-col sm:flex-row sm:justify-between gap-1 font-mono text-xs text-muted"
         >
             <p>&copy; {new Date().getFullYear()} Lemuel Lee</p>
             <p>

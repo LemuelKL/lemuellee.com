@@ -1,15 +1,12 @@
 ---
 // SectionList.astro
-const { title, number, data } = Astro.props;
+const { title, data } = Astro.props;
 ---
 
-<section class="flex flex-col p-6 border-t border-border">
-    <div class="flex items-baseline gap-2 mb-6">
-        <span class="font-mono text-xs text-muted">{number}</span>
-        <h2 class="text-xs uppercase tracking-[0.15em] text-muted">
-            {title}
-        </h2>
-    </div>
+<section class="flex flex-col border-t border-border">
+    <h2 class="text-xl uppercase tracking-[0.15em] my-12">
+        {title}
+    </h2>
     <ul class="flex flex-col gap-5 text-sm">
         {
             data.map((item) => (

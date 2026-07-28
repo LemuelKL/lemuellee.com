@@ -1,4 +1,5 @@
 ---
+import Linksvg from './arrow-top-right-svgrepo-com.svg';
 const links = [
     { label: 'GitHub', href: 'https://github.com/LemuelKL' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lemuelkl/' },
@@ -10,36 +11,30 @@ const links = [
 
 <header class="grid grid-cols-6 lg:grid-cols-12 gap-3 lg:gap-6 pt-16 pb-12">
     <div class="col-span-6 lg:col-span-8">
-        <p class="font-mono text-xs text-muted mb-4">01 — Lemuel Lee</p>
-        <h1 class="text-5xl lg:text-7xl leading-[0.95] tracking-tight text-heading">
-            Technical Analyst,
-            <br />
-            energy markets.
+        <h1
+            class="text-5xl lg:text-7xl leading-[0.95] tracking-tight text-heading"
+        >
+            formal optimal rational logical canonical structural methodical
+            minimal original fundamental universal practical intentional
         </h1>
         <p class="mt-8 max-w-md text-sm text-muted leading-relaxed">
             International quantitative experience in energy markets and
-            systematic finance, with public-sector and academic exposure.
-            Grew up in Hong Kong, based in London.
+            systematic finance, with public-sector and academic exposure. Grew
+            up in Hong Kong, based in London.
         </p>
     </div>
     <nav class="col-span-6 lg:col-span-4 lg:pt-1">
-        <ol class="border-t border-border">
-            {
-                links.map((link, index) => (
-                    <li class="border-b border-border">
-                        <a
-                            href={link.href}
-                            target={link.href.startsWith('/') ? undefined : '_blank'}
-                            class="flex items-baseline justify-between py-3 text-sm"
-                        >
-                            <span class="font-mono text-xs text-muted">
-                                {String(index).padStart(2, '0')}
-                            </span>
-                            <span>{link.label}</span>
-                        </a>
-                    </li>
-                ))
-            }
-        </ol>
+        {
+            links.map((link, index) => (
+                <a
+                    href={link.href}
+                    target={link.href.startsWith('/') ? undefined : '_blank'}
+                    class="flex items-center justify-between py-3 text-sm"
+                >
+                    <span>{link.label}</span>
+                    <Linksvg class="max-h-5 aspect-square" />
+                </a>
+            ))
+        }
     </nav>
 </header>
