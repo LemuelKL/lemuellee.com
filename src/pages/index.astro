@@ -2,30 +2,34 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import CV from '../components/CV.astro';
+import LL from '../images/IMG_0018.jpg';
+import { Image } from 'astro:assets';
 ---
 
-<BaseLayout class="font-mono">
-    <div class="gap-48 flex flex-col">
+<BaseLayout>
+    <div class="flex flex-col">
         <Hero />
+        <div class="grid grid-cols-4 mb-32 font-serif italic">
+            <div class="text-9xl">lemuellee</div>
+            <Image
+                src={LL}
+                alt="Lemuel Lee headshot"
+                class="lg:col-start-3 col-start-4 row-span-3"
+            />
+        </div>
         <CV />
-        <footer class="text-xs py-8 px-8">
+        <footer
+            class="mt-60 border-t border-border py-6 flex flex-col sm:flex-row sm:justify-between gap-1 font-mono text-xs text-muted"
+        >
             <p>&copy; {new Date().getFullYear()} Lemuel Lee</p>
             <p>
-                Open Source on <a
+                <a
                     href="https://github.com/LemuelKL/lemuellee.com"
                     target="_blank"
                 >
-                    GitHub
+                    Source
                 </a>
-            </p>
-            <p>Hosted in U.S.A.</p>
-            <p>
-                Built with <a href="https://astro.build" target="_blank">
-                    Astro
-                </a>
-                and <a href="https://tailwindcss.com" target="_blank">
-                    Tailwind CSS
-                </a>
+                — built with Astro and Tailwind CSS
             </p>
         </footer>
     </div>

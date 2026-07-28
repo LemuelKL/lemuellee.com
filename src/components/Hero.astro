@@ -1,54 +1,40 @@
 ---
-import { Image } from 'astro:assets';
-import horse from '../images/pexels-helenalopes-1996333.jpg';
+import Linksvg from './arrow-top-right-svgrepo-com.svg';
+const links = [
+    { label: 'GitHub', href: 'https://github.com/LemuelKL' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lemuelkl/' },
+    { label: 'Email', href: 'mailto:lemuellee.kl@gmail.com' },
+    { label: 'Blog', href: 'https://blog.lemuellee.com' },
+    { label: 'Résumé', href: '/cv' }
+];
 ---
 
-<section class="grid grid-cols-6 lg:grid-cols-12 text-sm px-6 gap-3 lg:gap-6">
-    <Image src={horse} alt="" class="col-span-6 h-[40vh] object-cover" />
-    <div class="col-span-6 pt-6">
-        <div class="font-mono text-4xl pb-3">[lemuel@E14 ~]$</div>
-        <div class="font-mono text-xl">0. Grew up in Hong Kong.</div>
-        <div class="font-mono text-xl">1. Living in London.</div>
-        <div class="font-mono text-xl">
-            2. <a
-                target="_blank"
-                href="https://github.com/LemuelKL"
-                class="hover:text-accent"
-            >
-                GitHub
-            </a>
-        </div>
-        <div class="font-mono text-xl">
-            3. <a
-                target="_blank"
-                href="https://www.linkedin.com/in/lemuelkl/"
-                class="hover:text-accent"
-            >
-                LinkedIn
-            </a>
-        </div>
-        <div class="font-mono text-xl">
-            4. <a
-                target="_blank"
-                href="mailto:lemuellee.kl@gmail.com"
-                class="hover:text-accent"
-            >
-                Email
-            </a>
-        </div>
-        <div class="font-mono text-xl">
-            5. <a
-                target="_blank"
-                href="https://blog.lemuellee.com"
-                class="hover:text-accent"
-            >
-                Blog
-            </a>
-        </div>
-        <div class="font-mono text-xl">
-            6. <a target="_blank" href="/cv" class="hover:text-accent">
-                Resume
-            </a>
-        </div>
+<header class="grid grid-cols-6 lg:grid-cols-12 gap-3 lg:gap-6 pt-16 pb-12">
+    <div class="col-span-6 lg:col-span-8">
+        <h1
+            class="text-5xl lg:text-7xl leading-[0.95] tracking-tight text-heading"
+        >
+            formal optimal rational logical canonical structural methodical
+            minimal original fundamental universal practical intentional
+        </h1>
+        <p class="mt-8 max-w-md text-sm text-muted leading-relaxed">
+            International quantitative experience in energy markets and
+            systematic finance, with public-sector and academic exposure. Grew
+            up in Hong Kong, based in London.
+        </p>
     </div>
-</section>
+    <nav class="col-span-6 lg:col-span-4 lg:pt-1">
+        {
+            links.map((link, index) => (
+                <a
+                    href={link.href}
+                    target={link.href.startsWith('/') ? undefined : '_blank'}
+                    class="flex items-center justify-between py-3 text-sm"
+                >
+                    <span>{link.label}</span>
+                    <Linksvg class="max-h-5 aspect-square" />
+                </a>
+            ))
+        }
+    </nav>
+</header>
